@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any">
+         <menu
+               id="ocarinapopup"
+               label="Ocarina">
+            <command
+                  commandId="org.osate.ocarina.commands.generate"
+                  label="Generate Code"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="org.osate.ocarina.commands.generate"
+            name="Generate Code">
+      </command>
+   </extension>
+   <extension
+         id="ocarina"
+         name="ocarina"
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="org.osate.ocarina.HandlerGenerate"
+            commandId="org.osate.ocarina.commands.generate">
+      </handler>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="Ocarina.actionSet"
+            label="Ocarina Menu"
+            visible="true">
+         <menu	id="menu.main"
+               	label="Ocarina">
+            <groupMarker name="generation.grp"/>
+         </menu>
+         <action
+               class="org.osate.ocarina.ActionGenerate"
+               icon="icons/sample.gif"
+               id="org.osate.ocarina.ActionGenerate"
+               label="&amp;Generate Code"
+               menubarPath="menu.main/generation.grp"
+               toolbarPath="generatorGroup"
+               tooltip="Generate code using Ocarina">
+         </action>
+         
+
+         
+         
+         
+      </actionSet>
+   </extension>
+   <extension
+         id="org.osate.ocarina.OcarinaPath"
+         name="Ocarina Path"
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.osate.ocarina.PreferenceInitializer">
+      </initializer>
+   </extension>
+    <extension
+         id="org.osate.ocarina.PokPath"
+         name="POK Path"
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.osate.ocarina.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         id="org.osate.ocarina.UseAADLv2"
+         name="Use AADL version 2"
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.osate.ocarina.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         id="org.osate.ocarina.Generator"
+         name="Kind of generator used"
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.osate.ocarina.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         id="org.osate.ocarina.PropertySets"
+         name="Property sets used by Ocarina"
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.osate.ocarina.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.osate.ocarina.PreferencePage"
+            id="org.osate.fr.ocarina.generator.PreferencePage"
+            name="Ocarina Preferences">
+      </page>
+   </extension>
+   <extension
+         id="org.osate.ocarina.ValidationMarker"
+         name="Ocarina Validation Marker"
+         point="org.eclipse.core.resources.markers">
+             <super type="org.osate.aadl2.modelsupport.AadlObjectMarker"/>
+      <persistent
+            value="true">
+      </persistent>
+   </extension>
+   
+
+</plugin>
