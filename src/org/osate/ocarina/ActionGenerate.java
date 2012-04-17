@@ -3,12 +3,15 @@ package org.osate.ocarina;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 
+/**
+ * Implementation of the "Generate" Eclipse action 
+ * @author hugues
+ */
 public class ActionGenerate extends ActionCommon {
 
 	/**
 	 * The constructor.
 	 */
-
 	public ActionGenerate() {
 	}
 

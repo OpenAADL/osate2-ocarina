@@ -36,9 +36,6 @@ public class Utils {
 	
 	/**
 	 * Check that Ocarina is correctly installed
-	 * 
-	 * Return True if the path to Ocarina is correctly set up
-	 * 
 	 * @param window
 	 * @return Return True is Ocarina is correctly installed
 	 */
@@ -65,12 +62,11 @@ public class Utils {
 		if (isWindows())
 			return 0;
 		else
-			return 2;
+			return 2; // TODO
 	}
 
 	/**
 	 * Return true if the execution platform is Windows
-	 *
 	 * @return True if the execution platform is Windows
 	 */
 	public static boolean isWindows() {
@@ -79,6 +75,11 @@ public class Utils {
 
 	}
 
+	/**
+	 * Return a handle to a console for displaying status
+	 * @param name name of the console
+	 * @return a handle to a console
+	 */
 	public static MessageConsole findConsole(String name) {
 		ConsolePlugin plugin = ConsolePlugin.getDefault();
 		IConsoleManager conMan = plugin.getConsoleManager();

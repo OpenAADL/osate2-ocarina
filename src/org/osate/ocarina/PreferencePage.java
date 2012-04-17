@@ -71,7 +71,8 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 						{ "PolyORB-HI-Ada", PreferenceConstants.GENERATOR_POLYORB_HI_ADA },
 						{ "Cheddar",PreferenceConstants.GENERATOR_CHEDDAR },
 						{ "MAST",PreferenceConstants.GENERATOR_MAST },
-						{ "Petri Nets", PreferenceConstants.GENERATOR_PETRI_NETS } },
+						{ "Petri Nets", PreferenceConstants.GENERATOR_PETRI_NETS },
+						{ "REAL", PreferenceConstants.GENERATOR_REAL}},
 				getFieldEditorParent());
 		addField(generatorsButton);
 	}

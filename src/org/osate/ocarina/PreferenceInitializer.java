@@ -8,17 +8,13 @@ import org.eclipse.jface.preference.IPreferenceStore;
  */
 public class PreferenceInitializer extends AbstractPreferenceInitializer {
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer#
-	 * initializeDefaultPreferences()
+	/**
+	 * Initialize defaults value for preferences of the plug-in
 	 */
 	public void initializeDefaultPreferences() {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		store.setDefault(PreferenceConstants.OCARINA_PATH, "/usr/share/local");
 		store.setDefault(PreferenceConstants.USE_AADLV2, true);
-		
 	}
 
 }

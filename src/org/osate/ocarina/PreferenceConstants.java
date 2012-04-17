@@ -2,6 +2,7 @@ package org.osate.ocarina;
 
 /**
  * Constant definitions for plug-in preferences
+ * @author hugues
  */
 public class PreferenceConstants {
 
@@ -21,5 +22,6 @@ public class PreferenceConstants {
     public static final String GENERATOR_CHEDDAR			= "cheddar";
     public static final String GENERATOR_MAST				= "mast";
     public static final String GENERATOR_PETRI_NETS			= "petri_nets";
-
+    public static final String GENERATOR_REAL				= "real_theorem";
+    
 }

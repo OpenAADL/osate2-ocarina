@@ -1,4 +1,5 @@
 package org.osate.ocarina;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -20,11 +21,15 @@ import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 import org.eclipse.ui.console.MessageConsole;
 import org.eclipse.ui.console.MessageConsoleStream;
 
+/**
+ * Common class for all actions of the Ocarina plug-in for OSATE
+ * @author hugues
+ */
 public class ActionCommon implements IWorkbenchWindowActionDelegate {
 	protected IWorkbenchWindow window;
 	protected IStructuredSelection selection;
 
-	protected IStructuredSelection getSelection() {
+	private IStructuredSelection getSelection() {
 		return selection;
 	}
 
@@ -54,11 +59,7 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 
 	}
 
-	public void setWindow(IWorkbenchWindow win) {
-		this.window = win;
-	}
-
-	public boolean checkSelection() {
+	private boolean checkSelection() {
 		if (selection == null) {
 			MessageDialog.openInformation(window.getShell(),
 					PreferenceConstants.PLUGIN_ID, "Please select at least one file");
@@ -66,15 +67,23 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 		}
 		return true;
 	}
-
+	
+	/**
+	 * Put marker in the workspace
+	 * @param v message to be printed
+	 * @param Severity severity marker
+	 */
 	private void putMarker(String v, int Severity) {
 		List<?> mylist = selection.toList();
 		int firstIndex, lastIndex;
 		int lineNumber;	
-		firstIndex = v.indexOf(":") + 1;
-		lastIndex = v.indexOf(":",firstIndex);
-		
+
+		// Parse output from Ocarina
 		try {
+			// Error/warnings messages are of the form <filename>:<line>:<col> message
+			// We extract the line element to put the marker at the right place.
+			firstIndex = v.indexOf(":") + 1;
+			lastIndex = v.indexOf(":",firstIndex);
 			lineNumber = Integer.parseInt (v.substring(firstIndex, lastIndex));
 		} catch (NumberFormatException e) {
 			lineNumber = 1;	
@@ -82,6 +91,8 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 			lineNumber = 1;	
 		}
 		
+		// TODO: we should not update all files from the selection, but instead
+		// extract filename and update the corresponding resource
 		for (int i = 0; i < mylist.size(); i++) {
 			Object o = mylist.get(i);
 			try {
@@ -97,18 +108,36 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 		}
 	}
 
+	/**
+	 * Put error marker in the workspace
+	 * @param v message to be printed, this line is parsed to look for file name and line
+	 */
 	public void putErrorMarker(String v) {
 		putMarker (v, IMarker.SEVERITY_ERROR);
 	}
 
+	/**
+	 * Put info marker in the workspace
+	 * @param v message to be printed, this line is parsed to look for file name and line
+	 */
 	public void putInfoMarker(String v) {
 		putMarker (v, IMarker.SEVERITY_INFO);
 	}
 
+	/**
+	 * Put warning marker in the workspace
+	 * @param v message to be printed, this line is parsed to look for file name and line
+	 */
 	public void putWarningMarker(String v) {
 		putMarker(v, IMarker.SEVERITY_WARNING);
 	}
 
+	/**
+	 * Run Ocarina 
+	 * @param useAADLv2 select variant of AADL
+	 * @param compileCode true to compile code
+	 * @param generatorName name of the generator
+	 */
 	public void runOcarina (boolean useAADLv2, boolean compileCode, String generatorName) {	
 		String ocarinaPath;
 		int nb_args;
@@ -143,9 +172,8 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 			cmd[argn++] = "-aadlv1";
 		}
 	
-		if (compileCode) {
+		if (compileCode) 
 			cmd[argn++] = "-b"; // Force Ocarina to compile code after generation
-		}	
 		
 		cmd[argn++] = "-f"; // Parse predefined non standard property sets
 		cmd[argn++] = "-g"; // Name of the generator
@@ -182,11 +210,8 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 				String line = null;
 				MessageConsole myConsole = Utils.findConsole("OcarinaConsole");
 
-				/*
-				 * We take the last element of the array to determine the
-				 * directory to generate code. In fact, it should work because
-				 * we add the model at the end of the array.
-				 */
+				// Per Ocarina CLI, last parameter is the AADL file, 
+				// use this to compute the name of the directory where we generate files 
 				generationDirectoryFile = new File(cmd[cmd.length - 1]);
 				generationDirectoryFile = generationDirectoryFile
 						.getParentFile();
@@ -198,12 +223,13 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 					e.printStackTrace();
 				}
 
+				// Redirect the output of Ocarina to both an Eclipse console and problem markers
 				if (!Utils.isWindows()) {
 					stdin = process.getErrorStream();
 				} else {
 					stdin = process.getInputStream();
 				}
-
+				
 				isr = new InputStreamReader(stdin);
 				br = new BufferedReader(isr);
 				try {
@@ -233,7 +259,7 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 						putErrorMarker("Cannot generate code. See console for details");
 					}
 				} catch (InterruptedException e) {
-					e.printStackTrace();
+					putErrorMarker("Operation interrupted!");
 				}
 			};
 		};
