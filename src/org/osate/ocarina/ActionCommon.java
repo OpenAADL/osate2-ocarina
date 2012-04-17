@@ -86,9 +86,9 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 			lastIndex = v.indexOf(":",firstIndex);
 			lineNumber = Integer.parseInt (v.substring(firstIndex, lastIndex));
 		} catch (NumberFormatException e) {
-			lineNumber = 1;	
+			return;	
 		} catch (StringIndexOutOfBoundsException e) {
-			lineNumber = 1;	
+			return;	
 		}
 		
 		// TODO: we should not update all files from the selection, but instead
@@ -204,6 +204,7 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 			public void run() {
 				File generationDirectoryFile;
 				Process process = null;
+				ProcessBuilder processBuilder = null;
 				InputStream stdin;
 				InputStreamReader isr;
 				BufferedReader br;
@@ -217,18 +218,17 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 						.getParentFile();
 
 				try {
-					process = Runtime.getRuntime().exec(cmd, null,
-							generationDirectoryFile);
+					processBuilder = new ProcessBuilder(cmd);
+					processBuilder.directory(generationDirectoryFile);
+					processBuilder.redirectErrorStream(true);
+					process = processBuilder.start();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
 
 				// Redirect the output of Ocarina to both an Eclipse console and problem markers
-				if (!Utils.isWindows()) {
-					stdin = process.getErrorStream();
-				} else {
-					stdin = process.getInputStream();
-				}
+			
+				stdin = process.getInputStream();
 				
 				isr = new InputStreamReader(stdin);
 				br = new BufferedReader(isr);
@@ -253,10 +253,12 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 				}
 
 				try {
-					if (process.waitFor() == Utils.returnValue()) {
+					int returnValue = process.waitFor();
+					
+					if (returnValue == Utils.returnValue()) {
 						putInfoMarker("Code successfully generated. See console for details");
 					} else {
-						putErrorMarker("Cannot generate code. See console for details");
+						putErrorMarker("Cannot generate code. See console for details " + returnValue);
 					}
 				} catch (InterruptedException e) {
 					putErrorMarker("Operation interrupted!");
