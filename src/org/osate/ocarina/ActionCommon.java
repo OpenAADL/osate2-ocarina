@@ -220,7 +220,15 @@ public class ActionCommon implements IWorkbenchWindowActionDelegate {
 				try {
 					processBuilder = new ProcessBuilder(cmd);
 					processBuilder.directory(generationDirectoryFile);
+					
+					processBuilder.environment().put("PATH",
+							PreferencesValues.getGCC_PATH() + File.pathSeparator
+							+ processBuilder.environment().get("PATH"));
+					System.out.println (processBuilder.environment().get ("PATH"));
+					// Redirect stderr to stdout
 					processBuilder.redirectErrorStream(true);
+					
+					// Start the process
 					process = processBuilder.start();
 				} catch (IOException e) {
 					e.printStackTrace();

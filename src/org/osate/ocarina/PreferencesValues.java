@@ -37,4 +37,13 @@ public class PreferencesValues {
 		return (store.getBoolean(PreferenceConstants.COMPILE_CODE));
 	}
 
+	/**
+	 * Get the value of the GCC_PATH preference
+	 * @return Value of the GCC_PATH preference
+	 */
+	public static String getGCC_PATH() {
+		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+		return (store.getString(PreferenceConstants.GCC_PATH));
+	}
+	
 }

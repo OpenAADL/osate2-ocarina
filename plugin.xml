@@ -7,11 +7,12 @@
       <menuContribution
             locationURI="popup:org.eclipse.ui.popup.any">
          <menu
-               id="ocarinapopup"
+               id="org.osate.ui.popupMenu.Aadl.ocarinapopup"
                label="Ocarina">
             <command
                   commandId="org.osate.ocarina.commands.generate"
-                  label="Generate Code"
+                  menubarPath="org.osate.ui.popupMenu.Aadl.ocarinapopup/group1" 
+                  label="Generate Code pop up"
                   style="push">
             </command>
          </menu>
@@ -21,7 +22,7 @@
          point="org.eclipse.ui.commands">
       <command
             id="org.osate.ocarina.commands.generate"
-            name="Generate Code">
+            name="Generate Code commands">
       </command>
    </extension>
    <extension
@@ -43,6 +44,7 @@
          <menu	id="menu.main"
                	label="Ocarina">
             <groupMarker name="generation.grp"/>
+             <separator name="group1"/>
          </menu>
          <action
                class="org.osate.ocarina.ActionGenerate"
@@ -50,14 +52,10 @@
                id="org.osate.ocarina.ActionGenerate"
                label="&amp;Generate Code"
                menubarPath="menu.main/generation.grp"
-               toolbarPath="generatorGroup"
+               toolbarPath="org.osate.ui.actionSet/generatorGroup"
                tooltip="Generate code using Ocarina">
          </action>
-         
 
-         
-         
-         
       </actionSet>
    </extension>
    <extension
@@ -101,11 +99,20 @@
       </initializer>
    </extension>
    <extension
+         id="org.osate.ocarina.GCC"
+         name="GCC Path"
+         point="org.eclipse.core.runtime.preferences">
+          <initializer
+            class="org.osate.ocarina.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
          point="org.eclipse.ui.preferencePages">
       <page
+            category="org.osate.internal.ui.preferences.OsatePreferencePage"
             class="org.osate.ocarina.PreferencePage"
             id="org.osate.fr.ocarina.generator.PreferencePage"
-            name="Ocarina Preferences">
+            name="Ocarina">
       </page>
    </extension>
    <extension
