@@ -1,5 +1,6 @@
 package org.osate.ocarina;
 
+import java.io.File;
 import org.eclipse.jface.preference.IPreferenceStore;
 
 /**
@@ -44,6 +45,32 @@ public class PreferencesValues {
 	public static String getGCC_PATH() {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		return (store.getString(PreferenceConstants.GCC_PATH));
+	}
+
+	/**
+	 * Get the value of the CHEDDAR_PATH preference
+	 * @return Value of the CHEDDAR_PATH preference
+	 */
+	public static String getCHEDDAR_PATH() {
+		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+		return (store.getString(PreferenceConstants.CHEDDAR_PATH));
+	}
+	
+	/**
+	 * Get the value of the OCARINA_PATH preference
+	 * @return Value of the OCARINA_PATH preference
+	 */
+	public static String getOCARINA_PATH() {
+		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+		String ocarinaPath = store.getString(PreferenceConstants.OCARINA_PATH);
+	
+		// We ensure that the path of Ocarina has a final / or \
+		if (!ocarinaPath.equals("")) {
+			if (!ocarinaPath.endsWith(File.separator)) {
+				ocarinaPath += File.separator;
+			} 	
+		}
+		return ocarinaPath;
 	}
 	
 }

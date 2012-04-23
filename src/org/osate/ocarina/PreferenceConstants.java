@@ -25,6 +25,6 @@ public class PreferenceConstants {
     public static final String GENERATOR_REAL				= "real_theorem";
     
     // External tools
-    public static final String GCC_PATH = "org.osate.ocarina.GCC";
-    
+    public static final String GCC_PATH     = "org.osate.ocarina.GCC";
+    public static final String CHEDDAR_PATH = "org.osate.ocarina.CHEDDAR"; 
 }

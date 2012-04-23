@@ -3,7 +3,6 @@ package org.osate.ocarina;
 import java.io.File;
 
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
@@ -13,35 +12,13 @@ import org.eclipse.ui.console.MessageConsole;
 public class Utils {
 
 	/**
-	 * Return the path to Ocarina
-	 *
-	 * Return the path to bin/ subdirectory of Ocarina installed. 
-	 * It is expected this value is set through Eclipse preference mechanism.
-	 *
-	 * @return Return the path to bin/ subdirectory of Ocarina installed
-	 */
-	public static String getOcarinaPath() {
-		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-		String ocarinaPath = store.getString(PreferenceConstants.OCARINA_PATH);
-	
-		// We ensure that the path of Ocarina is finished with a final / or \
-		 
-		if (!ocarinaPath.equals("")) {
-			if (!ocarinaPath.endsWith(File.separator)) {
-				ocarinaPath += File.separator;
-			} 	
-		}
-		return ocarinaPath;
-	}
-	
-	/**
 	 * Check that Ocarina is correctly installed
 	 * @param window
 	 * @return Return True is Ocarina is correctly installed
 	 */
 	public static boolean checkOcarina(IWorkbenchWindow window) {
 		File ocarinaBinary = null;
-		String ocarinaPath = getOcarinaPath();
+		String ocarinaPath = PreferencesValues.getOCARINA_PATH();
 	
 		if (!isWindows()) {
 			ocarinaBinary = new File(ocarinaPath + "ocarina");
@@ -52,14 +29,14 @@ public class Utils {
 		if (!ocarinaBinary.isFile()) {
 			MessageDialog.openInformation(window.getShell(),
 					PreferenceConstants.PLUGIN_ID,
-					"Path to Ocarina is not set up, see preferences");
+					"Path to Ocarina is not set up, update your preferences");
 			return false;
 		}
 		return true;
 	}
 
 	public static int returnValue() {
-		if (isWindows())
+		if (!isWindows())
 			return 0;
 		else
 			return 2; // TODO
@@ -72,7 +49,6 @@ public class Utils {
 	public static boolean isWindows() {
 		String os = System.getProperty("os.name").toLowerCase();
 		return (os.indexOf("win") >= 0);
-
 	}
 
 	/**

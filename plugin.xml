@@ -107,6 +107,14 @@
       </initializer>
    </extension>
    <extension
+         id="org.osate.ocarina.CHEDDAR"
+         name="Cheddar Path"
+         point="org.eclipse.core.runtime.preferences">
+          <initializer
+            class="org.osate.ocarina.PreferenceInitializer">
+      </initializer>
+   </extension>
+      <extension
          point="org.eclipse.ui.preferencePages">
       <page
             category="org.osate.internal.ui.preferences.OsatePreferencePage"

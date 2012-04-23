@@ -32,8 +32,9 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 	 */
 	public void createFieldEditors() {
 
+		// First tab: configuration of Ocarina
+		
 		addTab("Ocarina");
-
 		
 		addField(new DirectoryFieldEditor(PreferenceConstants.OCARINA_PATH,
 				"&Path to Ocarina bin/ directory:", getFieldEditorParent()));
@@ -58,10 +59,16 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 				getFieldEditorParent());
 		addField(generatorsButton);
 		
-		addTab("External tool");
+		// Tab for external tools
+		
+		addTab("External tools");
 		
 		addField(new DirectoryFieldEditor(PreferenceConstants.GCC_PATH,
 				"&Path to gcc bin/ directory:", getFieldEditorParent()));
+		
+		addField(new DirectoryFieldEditor(PreferenceConstants.CHEDDAR_PATH,
+				"&Path to Cheddar bin/ directory:", getFieldEditorParent()));
+
 	}
 
 	/*
