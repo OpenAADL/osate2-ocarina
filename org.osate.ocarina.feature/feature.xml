@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.osate.ocarina.feature"
-      label="Feature"
+      label="OSATE2-Ocarina"
       version="0.0.1.qualifier">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="https://github.com/yoogx/osate2-ocarina">
+      OSATE 2 plug-in that provides integration with Ocarina.
    </description>
-
-   <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
-   </copyright>
 
    <license url="http://www.example.com/license">
       [Enter License Description here.]
    </license>
+
+   <url>
+      <update label="Ocarina OSATE 2 Plug-in" url="https://raw.github.com/yoogx/osate2-ocarina/master/org.osate.ocarina.update/"/>
+   </url>
 
    <requires>
       <import plugin="org.eclipse.core.runtime"/>
