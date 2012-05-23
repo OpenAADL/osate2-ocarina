@@ -53,7 +53,15 @@ public class PreferencesValues {
 	 */
 	public static String getCHEDDAR_PATH() {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-		return (store.getString(PreferenceConstants.CHEDDAR_PATH));
+		String path = store.getString(PreferenceConstants.CHEDDAR_PATH);
+		
+		// We ensure that the path has a final / or \
+		if (!path.equals("")) {
+			if (!path.endsWith(File.separator)) {
+				path += File.separator;
+			} 	
+		}
+		return path;
 	}
 	
 	/**

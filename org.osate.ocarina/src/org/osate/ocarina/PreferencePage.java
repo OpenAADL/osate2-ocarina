@@ -68,7 +68,6 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 		
 		addField(new DirectoryFieldEditor(PreferenceConstants.CHEDDAR_PATH,
 				"&Path to Cheddar bin/ directory:", getFieldEditorParent()));
-
 	}
 
 	/*

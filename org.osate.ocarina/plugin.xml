@@ -17,6 +17,51 @@
             </command>
          </menu>
       </menuContribution>
+		
+      <menuContribution allPopups="false" locationURI="popup:#TextEditorContext?after=additions">
+      	<menu
+               id="org.osate.ui.popupMenu.Aadl.ocarinapopup"
+               label="Ocarina">
+			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push">
+				<visibleWhen checkEnabled="false">
+	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
+				</visibleWhen>
+	    	</command>
+			<command commandId="org.osate.ocarina.commands.runbasictests" style="push">
+				<visibleWhen checkEnabled="false">
+	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
+				</visibleWhen>
+	    	</command>
+			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push">
+				<visibleWhen checkEnabled="false">
+	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
+				</visibleWhen>
+	    	</command>
+			<command commandId="org.osate.ocarina.commands.computepriority" tyle="push">
+				<visibleWhen checkEnabled="false">
+	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
+				</visibleWhen>
+	    	</command>
+			<command commandId="org.osate.ocarina.commands.checkreal" tyle="push">
+				<visibleWhen checkEnabled="false">
+	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
+				</visibleWhen>
+	    	</command>
+	    </menu>
+  	</menuContribution>
+  	
+	<menuContribution allPopups="false" locationURI="popup:org.osate.xtext.aadl2.ui.outline?after=additions ">
+		<menu
+               id="org.osate.ui.popupMenu.Aadl.ocarinapopup"
+               label="Ocarina">
+			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
+			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
+			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
+			<command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
+			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
+		</menu>
+	</menuContribution>
+	  	
    </extension>
    <extension
          point="org.eclipse.ui.commands">
@@ -43,8 +88,11 @@
             visible="true">
          <menu	id="menu.main"
                	label="Ocarina">
-            <groupMarker name="generation.grp"/>
+             <groupMarker name="generation.grp"/>
              <separator name="group1"/>
+             <groupMarker name="cheddar.grp"/>
+             <separator name="group2"/>
+			 <groupMarker name="real.grp"/>
          </menu>
          <action
                class="org.osate.ocarina.ActionGenerate"
@@ -55,6 +103,57 @@
                toolbarPath="org.osate.ui.actionSet/generatorGroup"
                tooltip="Generate code using Ocarina">
          </action>
+         
+		<action
+              class="org.osate.ocarina.actions.RunBasicFeasibilityTestsAction"
+              icon="icons/sample.gif"
+              id="org.osate.ocarina.actions.RunBasicFeasibilityTestsAction"
+              label="Run Basic Feasibility Tests"
+              menubarPath="menu.main/cheddar.grp"
+              toolbarPath="cheddarGroup"
+              tooltip="Run basic feasibility tests with cheddar"
+              definitionId="org.osate.ocarina.commands.runbasictests">
+        </action>
+        <action
+              class="org.osate.ocarina.actions.RunSchedulingTestsAction"
+              icon="icons/sample.gif"
+              id="org.osate.ocarina.actions.RunSchedulingTestsAction"
+              label="Run Scheduling Tests"
+              menubarPath="menu.main/cheddar.grp"
+              toolbarPath="cheddarGroup"
+              tooltip="Run scheduling tests with cheddar"
+              definitionId="org.osate.ocarina.commands.runschedulingtests">
+        </action>
+        <action
+              class="org.osate.ocarina.actions.ComputePriorityAction"
+              icon="icons/sample.gif"
+              id="org.osate.ocarina.actions.ComputePriorityAction"
+              label="Compute Priority"
+              menubarPath="menu.main/cheddar.grp"
+              toolbarPath="cheddarGroup"
+              tooltip="Compute priority with cheddar"
+              definitionId="org.osate.ocarina.commands.computepriority">
+        </action>
+        <action
+              class="org.osate.ocarina.actions.LaunchCheddarAction"
+              icon="icons/sample.gif"
+              id="org.osate.ocarina.actions.LaunchCheddarAction"
+              label="Launch Cheddar"
+              menubarPath="menu.main/cheddar.grp"
+              toolbarPath="cheddarGroup"
+              tooltip="Instantiate the currently selected System Implementation and open in cheddar"
+              definitionId="org.osate.ocarina.commands.launchcheddar">
+        </action>
+        <action
+              class="org.osate.ocarina.actions.CheckREALTheoremsAction"
+              icon="icons/sample.gif"
+              id="org.osate.ocarina.actions.CheckREALTheoremsAction"
+              label="Check REAL Theorems"
+              menubarPath="menu.main/real.grp"
+              toolbarPath="realGroup"
+              tooltip="Instantiate the currently selected System Implementation and check the REAL theorems"
+              definitionId="org.osate.ocarina.commands.checkreal">
+        </action>
 
       </actionSet>
    </extension>

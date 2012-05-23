@@ -3,10 +3,16 @@ package org.osate.ocarina;
 import java.io.File;
 
 import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.ui.IWorkbench;
+import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
+import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
+import org.eclipse.ui.console.IConsoleConstants;
 import org.eclipse.ui.console.IConsoleManager;
+import org.eclipse.ui.console.IConsoleView;
 import org.eclipse.ui.console.MessageConsole;
 
 public class Utils {
@@ -34,7 +40,35 @@ public class Utils {
 		}
 		return true;
 	}
+	
+	// Returns the path to cheddar or null of it does not exist
+	public static String getCheddarPath() {
+		String executablePath = PreferencesValues.getCHEDDAR_PATH();
+	
+		if (!isWindows()) {
+			executablePath += "cheddar";
+			
+		} else {
+			executablePath += "cheddar.exe";
+		}
+		
+		return new File(executablePath).isFile() ? executablePath : null; 
+	}
 
+	// Returns the path to cheddarlite or null of it does not exist
+	public static String getCheddarlitePath() {
+		String executablePath = PreferencesValues.getCHEDDAR_PATH();
+	
+		if (!isWindows()) {
+			executablePath += "cheddarlite";
+			
+		} else {
+			executablePath += "cheddarlite.exe";
+		}
+		
+		return new File(executablePath).isFile() ? executablePath : null; 
+	}
+	
 	public static int returnValue() {
 		if (!isWindows())
 			return 0;
@@ -69,4 +103,23 @@ public class Utils {
 		return myConsole;
 	   }
 
+	public static void showConsole(IConsole console) {
+		IWorkbench workbench = PlatformUI.getWorkbench();
+		IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
+		if (window != null) {
+			IWorkbenchPage page = window.getActivePage();
+			if (page != null) {
+				try
+				{
+					IConsoleView view = (IConsoleView) page
+							.showView(IConsoleConstants.ID_CONSOLE_VIEW);
+					view.display(console);
+				} catch (PartInitException e)
+				{
+					throw new RuntimeException(e);
+				}
+			}
+		}
+	}
+	
 }
