@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Ocarina plug-in for OSATEv2
 Bundle-SymbolicName: org.osate.ocarina;singleton:=true
-Bundle-Version: 0.0.1
+Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: org.osate.ocarina.Activator
 Bundle-Vendor: ISAE
 Require-Bundle: org.eclipse.core.runtime,

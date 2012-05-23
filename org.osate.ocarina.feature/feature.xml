@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.osate.ocarina.feature"
+      label="Feature"
+      version="0.0.1.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.osate.aadl2"/>
+      <import plugin="org.osate.aadl2.modelsupport"/>
+      <import plugin="org.osate.ui"/>
+      <import plugin="org.osate.pluginsupport"/>
+      <import plugin="org.osate.workspace"/>
+      <import plugin="org.osate.xtext.aadl2.properties" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.osate.xtext.aadl2.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.console" version="3.5.100" match="greaterOrEqual"/>
+      <import plugin="org.apache.commons.lang" version="2.4.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.osate.ocarina"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
