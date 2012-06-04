@@ -59,7 +59,7 @@ public class LaunchCheddarHandler extends AbstractOcarinaHandler {
 
 		// Launch Cheddar
 		try {
-			launchCheddar(cheddarProjectFilepath, workingDirectory());
+			launchCheddar(cheddarProjectFilepath, ocarinaWorkingDirectory());
 		} catch (InterruptedException e) {
 			throw new RuntimeException("Interrupted");
 		}

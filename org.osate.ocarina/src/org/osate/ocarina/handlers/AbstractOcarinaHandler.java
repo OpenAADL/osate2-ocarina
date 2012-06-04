@@ -51,7 +51,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private final String jobName;
 	private String generator;
 	private boolean buildCode;
-	private File workingDirectory;
+	private File ocarinaWorkingDirectory;
 	private SystemImplementation systemImplementation; 
 	private Set<Resource> sourceResources;
 	
@@ -81,15 +81,15 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	// Helper method that returns the path to the cheddar project file generated
 	// by Ocarina
 	protected String getCheddarProjectFilepath() {
-		return workingDirectory().getAbsolutePath()
+		return ocarinaWorkingDirectory().getAbsolutePath()
 				+ File.separatorChar
 				+ systemImplementation.getName().toLowerCase()
 						.replace('.', '_') + "_cheddar.xml";
 	}
 
 	// Used to get values set during execute()
-	protected final File workingDirectory() {
-		return this.workingDirectory;
+	protected final File ocarinaWorkingDirectory() {
+		return this.ocarinaWorkingDirectory;
 	}
 	
 	protected final SystemImplementation systemImplementation() {
@@ -134,8 +134,8 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			final URI uri = systemImplementation.eResource().getURI();
 			final IPath projectPath = new Path(uri.toPlatformString(false)).uptoSegment(1);
 			final IResource projectResource = ResourcesPlugin.getWorkspace().getRoot().findMember(projectPath);
-			this.workingDirectory = new File(projectResource.getLocation().toFile(), "ocarina_out");
-			this.workingDirectory.mkdir();
+			this.ocarinaWorkingDirectory = new File(projectResource.getLocation().toFile(), "ocarina_out");
+			this.ocarinaWorkingDirectory.mkdir();
 			
 			onBeforeStartJob();
 
@@ -201,7 +201,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			cmd.add(getAbsoluteSourceFilepath(srcResource));
 		}
 
-		launchCommand(cmd, workingDirectory());
+		launchCommand(cmd, ocarinaWorkingDirectory());
 	}
 	
 	// Removes all markers from the source resources

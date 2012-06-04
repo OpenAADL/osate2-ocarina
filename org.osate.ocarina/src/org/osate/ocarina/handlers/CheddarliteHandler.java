@@ -25,7 +25,7 @@ public abstract class CheddarliteHandler extends AbstractOcarinaHandler {
 	protected void handleOcarinaResults() {
 		String cheddarProjectFilepath = this.getCheddarProjectFilepath();
 		try {
-			launchCheddarlite(cheddarProjectFilepath, workingDirectory());
+			launchCheddarlite(cheddarProjectFilepath, ocarinaWorkingDirectory());
 		} catch (InterruptedException e) {
 			throw new RuntimeException("Interrupted");
 		}
