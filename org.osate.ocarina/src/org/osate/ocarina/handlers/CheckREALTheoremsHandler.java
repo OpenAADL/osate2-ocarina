@@ -1,4 +1,4 @@
-package org.osate.ocarina.actions;
+package org.osate.ocarina.handlers;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -6,11 +6,11 @@ import java.util.List;
 import org.osate.ocarina.real.REALResultsParser;
 import org.osate.ocarina.real.TheoremResult;
 
-public class CheckREALTheoremsAction extends OcarinaAction {
+public class CheckREALTheoremsHandler extends AbstractOcarinaHandler {
 	private REALResultsParser parser = new REALResultsParser();
 
-	public CheckREALTheoremsAction() {
-		super("Checking REAL Theorems", "real_theorem");
+	public CheckREALTheoremsHandler() {
+		super("Checking REAL Theorems", "real_theorem", false);
 	}
 
 	@Override
@@ -26,6 +26,7 @@ public class CheckREALTheoremsAction extends OcarinaAction {
 
 		// TODO: Create/Update View, Create markers, etc
 		// and theorem.
+		/*
 		out().println("REAL Results Summary");
 		for (TheoremResult theorem : results) {
 			out().println("\t" + theorem.name + " - " + theorem.result);
@@ -33,5 +34,6 @@ public class CheckREALTheoremsAction extends OcarinaAction {
 				out().println("\t\t" + instance.sourceFile + ":" + instance.lineNumber + ":" + instance.characterNumber + ":" + instance.elementName);
 			}
 		}
+		*/
 	}
 }

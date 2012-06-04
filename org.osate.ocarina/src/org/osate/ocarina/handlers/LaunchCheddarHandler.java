@@ -1,4 +1,4 @@
-package org.osate.ocarina.actions;
+package org.osate.ocarina.handlers;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -10,13 +10,13 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.eclipse.jface.action.IAction;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.osate.ocarina.PreferenceConstants;
-import org.osate.ocarina.PreferencesValues;
 import org.osate.ocarina.Utils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -27,15 +27,14 @@ import org.w3c.dom.ls.DOMImplementationLS;
 import org.w3c.dom.ls.LSOutput;
 import org.w3c.dom.ls.LSSerializer;
 
-// TODO: Use ocarina functionality to launch cheddar instead
-public class LaunchCheddarAction extends OcarinaAction {
-	public LaunchCheddarAction() {
-		super("Running Cheddar", "cheddar");
+public class LaunchCheddarHandler extends AbstractOcarinaHandler {
+	public LaunchCheddarHandler() {
+		super("Running Cheddar", "cheddar", false);
 	}
 
 	@Override
-	public void run(IAction action) {
-		if(Utils.getCheddarlitePath() == null)
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		if(Utils.getCheddarPath() == null)
 		{
 			IWorkbench wb = PlatformUI.getWorkbench();
 			IWorkbenchWindow window = wb.getActiveWorkbenchWindow();
@@ -45,8 +44,10 @@ public class LaunchCheddarAction extends OcarinaAction {
 		}
 		else
 		{
-			super.run(action);
+			super.execute(event);
 		}
+		
+		return null;
 	}
 	
 	protected void handleOcarinaResults() {
@@ -58,7 +59,7 @@ public class LaunchCheddarAction extends OcarinaAction {
 
 		// Launch Cheddar
 		try {
-			launchCheddar(cheddarProjectFilepath, projectFile());
+			launchCheddar(cheddarProjectFilepath, workingDirectory());
 		} catch (InterruptedException e) {
 			throw new RuntimeException("Interrupted");
 		}

@@ -1,4 +1,4 @@
-package org.osate.ocarina.actions;
+package org.osate.ocarina.handlers;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,8 +8,13 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -23,19 +28,15 @@ import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.console.MessageConsole;
 import org.eclipse.ui.console.MessageConsoleStream;
 import org.osate.aadl2.AadlPackage;
-import org.osate.aadl2.Element;
 import org.osate.aadl2.ModelUnit;
 import org.osate.aadl2.PackageSection;
 import org.osate.aadl2.SystemImplementation;
@@ -46,66 +47,84 @@ import org.osate.ocarina.PreferencesValues;
 import org.osate.ocarina.Utils;
 import org.osate.ocarina.util.SelectionHelper;
 
-public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
+public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private final String jobName;
-	private final String generator;
-	private File projectFile;
-	private SystemImplementation systemImplementation;
-	private Set<String> processedMessages = new HashSet<String>(); // Output messages that have already been converted to markers 
-
+	private String generator;
+	private boolean buildCode;
+	private File workingDirectory;
+	private SystemImplementation systemImplementation; 
+	private Set<Resource> sourceResources;
+	
 	// Results from the last execution of launchCommand()
 	private int retVal;
 	private List<String> output;
 	private List<String> errors;
 
-	public OcarinaAction(String jobName, String generator) {
+	public AbstractOcarinaHandler(String jobName, String generator, boolean buildCode) {
 		this.jobName = jobName;
 		this.generator = generator;
+		this.buildCode = buildCode;
 	}
 
-	public void init(IWorkbenchWindow window) {
+	public AbstractOcarinaHandler(String jobName) {
+		this(jobName, null, false);
 	}
-
-	public void dispose() {
+	
+	protected void setGenerator(String value) {
+		this.generator = value;
 	}
-
+	
+	protected void setBuildCode(boolean value) {
+		this.buildCode = value;
+	}
+	
 	// Helper method that returns the path to the cheddar project file generated
 	// by Ocarina
 	protected String getCheddarProjectFilepath() {
-		return projectFile.getAbsolutePath()
+		return workingDirectory().getAbsolutePath()
 				+ File.separatorChar
 				+ systemImplementation.getName().toLowerCase()
 						.replace('.', '_') + "_cheddar.xml";
 	}
 
-	protected abstract void handleOcarinaResults();
-
-	// Used to get values set during run()
-	protected final File projectFile() {
-		return this.projectFile;
+	// Used to get values set during execute()
+	protected final File workingDirectory() {
+		return this.workingDirectory;
 	}
-
+	
 	protected final SystemImplementation systemImplementation() {
 		return this.systemImplementation;
 	}
+	
+	protected final Set<Resource> sourceResources() {
+		return this.sourceResources;
+	}
 
-	protected int retVal() {
+	protected final int retVal() {
 		return this.retVal;
 	}
 
-	protected List<String> output() {
+	protected final List<String> output() {
 		return this.output;
 	}
 
-	protected List<String> errors() {
+	protected final List<String> errors() {
 		return this.errors;
 	}
+	
+	protected void handleOcarinaResults() {
+	}
 
-	public void run(IAction action) {
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		if(generator == null) {
+			throw new RuntimeException("Generator is null");
+		}
+		
 		final IWorkbench wb = PlatformUI.getWorkbench();
 		final IWorkbenchWindow window = wb.getActiveWorkbenchWindow();
 		if(!Utils.checkOcarina(window)) {
-			return;
+			return null;
 		}
 		
 		this.systemImplementation = SelectionHelper
@@ -113,18 +132,23 @@ public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
 		if (this.systemImplementation != null) {
 			// Get the project that contains the system implementation
 			final URI uri = systemImplementation.eResource().getURI();
-			final IPath projectPath = new Path(uri.toPlatformString(false))
-					.uptoSegment(1);
-			final IResource projectResource = ResourcesPlugin.getWorkspace()
-					.getRoot().findMember(projectPath);
-			this.projectFile = projectResource.getLocation().toFile();
-
+			final IPath projectPath = new Path(uri.toPlatformString(false)).uptoSegment(1);
+			final IResource projectResource = ResourcesPlugin.getWorkspace().getRoot().findMember(projectPath);
+			this.workingDirectory = new File(projectResource.getLocation().toFile(), "ocarina_out");
+			this.workingDirectory.mkdir();
+			
 			onBeforeStartJob();
 
 			// Create a job to run the analysis
 			Job job = new Job(jobName) {
 				@Override
 				protected IStatus run(IProgressMonitor monitor) {
+					// Get the AADL source resources to use during the analysis
+					sourceResources = getTransitiveClosure(systemImplementation);
+					
+					// Remove all markers from the source resources
+					resetMarkers();
+					
 					// Launch Ocarina
 					try {
 						launchOcarina();
@@ -152,29 +176,53 @@ public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
 					PreferenceConstants.PLUGIN_ID,
 					"Please select a System Implementation");
 		}
+		
+		return null;
 	}
 
-	public void selectionChanged(IAction action, ISelection selection) {
-	}
-
-	private void launchOcarina() throws InterruptedException {
+	private final void launchOcarina() throws InterruptedException {
 		// Build the command
 		List<String> cmd = new LinkedList<String>();
-		cmd.add(PreferencesValues.getOCARINA_PATH() + File.separatorChar + "ocarina");
+		cmd.add(getOcarinaExecutablePath());
+		
 		cmd.add("-aadlv2");
+		
+		if (buildCode) {
+			cmd.add("-b");
+		}
+		
 		cmd.add("-g");
 		cmd.add(generator);
 		cmd.add("-r");
 		cmd.add(systemImplementation.getName());
 
-		getTransitiveClosure(systemImplementation);
-
 		// Need to get paths to all the AADL files.
-		for (String srcFilepath : getTransitiveClosure(systemImplementation)) {
-			cmd.add(srcFilepath);
+		for (Resource srcResource : sourceResources) {
+			cmd.add(getAbsoluteSourceFilepath(srcResource));
 		}
 
-		launchCommand(cmd, projectFile());
+		launchCommand(cmd, workingDirectory());
+	}
+	
+	// Removes all markers from the source resources
+	private final void resetMarkers()	{
+		for(Resource srcResource : sourceResources) {
+			IResource res = getIResource(srcResource);
+			try {
+				IMarker[] markers = res.findMarkers(IMarker.PROBLEM, true, IResource.DEPTH_INFINITE);
+				for (int j = 0; j < markers.length; j++) {
+					if (markers[j].getAttribute(PreferenceConstants.OCARINA_MARKER) != null) {
+						markers[j].delete();
+					}
+				}
+			} catch (CoreException e) {
+				throw new RuntimeException(e);
+			}
+		}
+	}
+	private static String getOcarinaExecutablePath() {
+		String executableName = Utils.isWindows() ? "ocarina.exe" : "ocarina";
+		return PreferencesValues.getOCARINA_PATH() + executableName;
 	}
 
 	// orignalModelUnits may be null
@@ -205,9 +253,8 @@ public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
 		return modelUnits;
 	}
 
-	private static Set<String> getTransitiveClosure(
-			SystemImplementation systemImplementation) {
-		Set<String> filepaths = new HashSet<String>();
+	private static Set<Resource> getTransitiveClosure(SystemImplementation systemImplementation) {
+		Set<Resource> resources = new HashSet<Resource>();
 		Resource r = systemImplementation.eResource();
 		EObject e = r.getContents().get(0);
 		if (e instanceof AadlPackage) {
@@ -215,25 +262,28 @@ public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
 
 			// Convert to filenames
 			for (ModelUnit m : closure) {
-				String filepath = getAbsoluteSourceFilepath(m);
-				filepaths.add(filepath);
+				resources.add(m.eResource());
 			}
 		}
 
-		return filepaths;
+		return resources;
 	}
 
-	private static String getAbsoluteSourceFilepath(Element e) {
-		// TODO: Check for null, etc..
-		final URI uri = e.eResource().getURI();
-		final IPath path = new Path(uri.toPlatformString(false));
-		final IResource resource = ResourcesPlugin.getWorkspace().getRoot().findMember(path);
+	private static String getAbsoluteSourceFilepath(Resource r) {
+		final IResource resource = getIResource(r);
 		File file = resource.getLocation().toFile();
 		return file.getAbsolutePath();
 	}
+	
+	private static IResource getIResource(Resource r) {
+		final URI uri = r.getURI();
+		final IPath path = new Path(uri.toPlatformString(false));
+		final IResource resource = ResourcesPlugin.getWorkspace().getRoot().findMember(path);
+		return resource;
+	}
 
 	// If workingDirectory is null, then it is not set
-	protected void launchCommand(List<String> cmd, File workingDirectory)
+	protected final void launchCommand(List<String> cmd, File workingDirectory)
 			throws InterruptedException {
 		retVal = -1000;
 		output = new LinkedList<String>();
@@ -262,7 +312,8 @@ public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
 			pb.directory(workingDirectory);
 		}
 
-		onBeforeLaunchCommand(cmd);
+		// Print the arguments used to execute the command
+		out.println(StringUtils.join(cmd, ' '));
 
 		try {
 			Process process = pb.start();
@@ -298,7 +349,6 @@ public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
 		// Get the console
 		final MessageConsole console = Utils.findConsole("ocarina");
 		console.clearConsole();
-		Utils.showConsole(console);
 
 		// Create and configure streams
 		this.out = console.newMessageStream();
@@ -306,21 +356,59 @@ public abstract class OcarinaAction implements IWorkbenchWindowActionDelegate {
 		this.err.setColor(new Color(Display.getCurrent(), 255, 0, 0));
 	}
 
-	protected void onBeforeLaunchCommand(List<String> cmd) {
-		// Print the arguments used to execute the command
-		out.println(StringUtils.join(cmd, ' '));
+	protected void showConsole() {
+		final MessageConsole console = Utils.findConsole("ocarina");
+		Utils.showConsole(console);
 	}
-
-	protected void handleProcess(Process process) {
-	}
-
-	protected void onAfterLaunchCommand() {
+	
+	private final void onAfterLaunchCommand() {
 		for (String error : errors()) {
 			err.println(error);
 		}
 
 		for (String line : output()) {
-			out.println(line);
+			handleOutputLine(line);
 		}
+	}
+	
+	// Error/warnings messages are of the form
+	// <filename>:<line>:<col> message
+	// and hold the string "Warning" or "Error"
+	private final Pattern warningErrorPattern = Pattern.compile("([^:]+):([0-9]+):([0-9]+):?\\s+(.+)");
+	
+	private final void handleOutputLine(String line) {
+		Matcher m = warningErrorPattern.matcher(line);
+		
+		if (m.find()) {			
+			String filename = m.group(1);
+			int lineNumber = Integer.parseInt(m.group(2));
+			//int colNumber = Integer.parseInt(m.group(3));
+			String msg = m.group(4);
+			
+			// Determine the severity
+			int severity = IMarker.SEVERITY_INFO;
+			if(msg.toLowerCase().contains("error")) severity = IMarker.SEVERITY_ERROR;
+			else if(msg.toLowerCase().contains("warning")) severity = IMarker.SEVERITY_WARNING;
+			
+			// Find the resource and create a marker
+			for(Resource r : sourceResources) {
+				IResource res = getIResource(r);
+				if(filename.equals(res.getName())) {
+					IMarker marker;
+					try {
+						marker = res.createMarker(IMarker.PROBLEM);
+						marker.setAttribute(IMarker.MESSAGE, msg);
+						marker.setAttribute(IMarker.SEVERITY, severity);
+						marker.setAttribute(IMarker.LINE_NUMBER, lineNumber);
+						marker.setAttribute(PreferenceConstants.OCARINA_MARKER, "true");
+					} catch (CoreException e) {
+						throw new RuntimeException(e);
+					}
+				}
+			}
+			
+		}
+		
+		out().println(line);
 	}
 }

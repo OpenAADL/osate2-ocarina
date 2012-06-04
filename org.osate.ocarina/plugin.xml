@@ -1,162 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.2"?>
 <plugin>
-
-   <extension
-         point="org.eclipse.ui.menus">
-      <menuContribution
-            locationURI="popup:org.eclipse.ui.popup.any">
-         <menu
-               id="org.osate.ui.popupMenu.Aadl.ocarinapopup"
-               label="Ocarina">
-            <command
-                  commandId="org.osate.ocarina.commands.generate"
-                  menubarPath="org.osate.ui.popupMenu.Aadl.ocarinapopup/group1" 
-                  label="Generate Code pop up"
-                  style="push">
-            </command>
-         </menu>
-      </menuContribution>
-		
-      <menuContribution allPopups="false" locationURI="popup:#TextEditorContext?after=additions">
-      	<menu
-               id="org.osate.ui.popupMenu.Aadl.ocarinapopup"
-               label="Ocarina">
-			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push">
-				<visibleWhen checkEnabled="false">
-	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
-				</visibleWhen>
-	    	</command>
-			<command commandId="org.osate.ocarina.commands.runbasictests" style="push">
-				<visibleWhen checkEnabled="false">
-	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
-				</visibleWhen>
-	    	</command>
-			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push">
-				<visibleWhen checkEnabled="false">
-	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
-				</visibleWhen>
-	    	</command>
-			<command commandId="org.osate.ocarina.commands.computepriority" tyle="push">
-				<visibleWhen checkEnabled="false">
-	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
-				</visibleWhen>
-	    	</command>
-			<command commandId="org.osate.ocarina.commands.checkreal" tyle="push">
-				<visibleWhen checkEnabled="false">
-	           		<reference definitionId="org.osate.xtext.aadl2.Aadl2.Editor.opened"/>
-				</visibleWhen>
-	    	</command>
-	    </menu>
-  	</menuContribution>
-  	
-	<menuContribution allPopups="false" locationURI="popup:org.osate.xtext.aadl2.ui.outline?after=additions ">
-		<menu
-               id="org.osate.ui.popupMenu.Aadl.ocarinapopup"
-               label="Ocarina">
+   <extension point="org.eclipse.ui.commands">
+	   <command id="org.osate.ocarina.commands.launchcheddar" name="Launch Cheddar" defaultHandler="org.osate.ocarina.handlers.LaunchCheddarHandler"></command>
+	   <command id="org.osate.ocarina.commands.runbasictests" name="Run Basic Scheduling Feasibility Tests" defaultHandler="org.osate.ocarina.handlers.RunBasicFeasibilityTestsHandler"></command>
+	   <command id="org.osate.ocarina.commands.runschedulingtests" name="Run Scheduling Tests" defaultHandler="org.osate.ocarina.handlers.RunSchedulingTestsHandler"></command>
+	   <command id="org.osate.ocarina.commands.computepriority" name="Compute Scheduling Priorities" defaultHandler="org.osate.ocarina.handlers.ComputePrioritiesHandler"></command>
+	   <command id="org.osate.ocarina.commands.checkreal" name="Check REAL Theorems" defaultHandler="org.osate.ocarina.handlers.CheckREALTheoremsHandler"></command>
+	   <command id="org.osate.ocarina.commands.launchocarina" name="Launch Ocarina" defaultHandler="org.osate.ocarina.handlers.LaunchOcarinaHandler">
+	   	<commandParameter id="org.osate.ocarina.commands.launchocarina.generator" name="Generator"/>
+	   </command>
+	   
+   </extension>
+	
+   <extension point="org.eclipse.ui.menus">
+	<menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">		
+		<menu id="org.osate.ocarina.menu" label="Ocarina">
 			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
 			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="petri_nets"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Statistics">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="stats"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Connection Matrix">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="connection_matrix"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-C Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_c"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
+			</command>
 		</menu>
 	</menuContribution>
-	  	
-   </extension>
-   <extension
-         point="org.eclipse.ui.commands">
-      <command
-            id="org.osate.ocarina.commands.generate"
-            name="Generate Code commands">
-      </command>
-   </extension>
-   <extension
-         id="ocarina"
-         name="ocarina"
-         point="org.eclipse.ui.handlers">
-      <handler
-            class="org.osate.ocarina.HandlerGenerate"
-            commandId="org.osate.ocarina.commands.generate">
-      </handler>
+	<menuContribution allPopups="false" locationURI="popup:#TextEditorContext?after=additions">
+		<menu id="org.osate.ocarina.menu" label="Ocarina"/>
+	</menuContribution>
+	<menuContribution allPopups="false" locationURI="popup:org.osate.xtext.aadl2.ui.outline?after=additions">
+		<menu id="org.osate.ocarina.menu" label="Ocarina">
+			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
+			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
+			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
+			<command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
+			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="petri_nets"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Statistics">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="stats"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Connection Matrix">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="connection_matrix"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-C Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_c"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
+			</command>
+		</menu>
+	</menuContribution>
    </extension>
 
-
-   <extension point="org.eclipse.ui.actionSets">
-      <actionSet
-            id="Ocarina.actionSet"
-            label="Ocarina Menu"
-            visible="true">
-         <menu	id="menu.main"
-               	label="Ocarina">
-             <groupMarker name="generation.grp"/>
-             <separator name="group1"/>
-             <groupMarker name="cheddar.grp"/>
-             <separator name="group2"/>
-			 <groupMarker name="real.grp"/>
-         </menu>
-         <action
-               class="org.osate.ocarina.ActionGenerate"
-               icon="icons/sample.gif"
-               id="org.osate.ocarina.ActionGenerate"
-               label="&amp;Generate Code"
-               menubarPath="menu.main/generation.grp"
-               toolbarPath="org.osate.ui.actionSet/generatorGroup"
-               tooltip="Generate code using Ocarina">
-         </action>
-         
-		<action
-              class="org.osate.ocarina.actions.RunBasicFeasibilityTestsAction"
-              icon="icons/sample.gif"
-              id="org.osate.ocarina.actions.RunBasicFeasibilityTestsAction"
-              label="Run Basic Feasibility Tests"
-              menubarPath="menu.main/cheddar.grp"
-              toolbarPath="cheddarGroup"
-              tooltip="Run basic feasibility tests with cheddar"
-              definitionId="org.osate.ocarina.commands.runbasictests">
-        </action>
-        <action
-              class="org.osate.ocarina.actions.RunSchedulingTestsAction"
-              icon="icons/sample.gif"
-              id="org.osate.ocarina.actions.RunSchedulingTestsAction"
-              label="Run Scheduling Tests"
-              menubarPath="menu.main/cheddar.grp"
-              toolbarPath="cheddarGroup"
-              tooltip="Run scheduling tests with cheddar"
-              definitionId="org.osate.ocarina.commands.runschedulingtests">
-        </action>
-        <action
-              class="org.osate.ocarina.actions.ComputePriorityAction"
-              icon="icons/sample.gif"
-              id="org.osate.ocarina.actions.ComputePriorityAction"
-              label="Compute Priority"
-              menubarPath="menu.main/cheddar.grp"
-              toolbarPath="cheddarGroup"
-              tooltip="Compute priority with cheddar"
-              definitionId="org.osate.ocarina.commands.computepriority">
-        </action>
-        <action
-              class="org.osate.ocarina.actions.LaunchCheddarAction"
-              icon="icons/sample.gif"
-              id="org.osate.ocarina.actions.LaunchCheddarAction"
-              label="Launch Cheddar"
-              menubarPath="menu.main/cheddar.grp"
-              toolbarPath="cheddarGroup"
-              tooltip="Instantiate the currently selected System Implementation and open in cheddar"
-              definitionId="org.osate.ocarina.commands.launchcheddar">
-        </action>
-        <action
-              class="org.osate.ocarina.actions.CheckREALTheoremsAction"
-              icon="icons/sample.gif"
-              id="org.osate.ocarina.actions.CheckREALTheoremsAction"
-              label="Check REAL Theorems"
-              menubarPath="menu.main/real.grp"
-              toolbarPath="realGroup"
-              tooltip="Instantiate the currently selected System Implementation and check the REAL theorems"
-              definitionId="org.osate.ocarina.commands.checkreal">
-        </action>
-
-      </actionSet>
-   </extension>
    <extension
          id="org.osate.ocarina.OcarinaPath"
          name="Ocarina Path"

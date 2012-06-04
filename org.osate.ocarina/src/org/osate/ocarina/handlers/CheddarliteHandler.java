@@ -1,23 +1,23 @@
-package org.osate.ocarina.actions;
+package org.osate.ocarina.handlers;
 
 import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.eclipse.jface.action.IAction;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 import org.osate.ocarina.PreferenceConstants;
-import org.osate.ocarina.PreferencesValues;
 import org.osate.ocarina.Utils;
 
-public abstract class CheddarliteAction extends OcarinaAction {
+public abstract class CheddarliteHandler extends AbstractOcarinaHandler {
 	private final String request;
 
-	public CheddarliteAction(String jobName, String request) {
-		super(jobName, "cheddar");
+	public CheddarliteHandler(String jobName, String request) {
+		super(jobName, "cheddar", false);
 		this.request = request;
 	}
 
@@ -25,14 +25,14 @@ public abstract class CheddarliteAction extends OcarinaAction {
 	protected void handleOcarinaResults() {
 		String cheddarProjectFilepath = this.getCheddarProjectFilepath();
 		try {
-			launchCheddarlite(cheddarProjectFilepath, projectFile());
+			launchCheddarlite(cheddarProjectFilepath, workingDirectory());
 		} catch (InterruptedException e) {
 			throw new RuntimeException("Interrupted");
 		}
 	}
 
 	@Override
-	public void run(IAction action) {
+	public Object execute(ExecutionEvent event) throws ExecutionException {
 		if (Utils.getCheddarlitePath() == null) {
 			IWorkbench wb = PlatformUI.getWorkbench();
 			IWorkbenchWindow window = wb.getActiveWorkbenchWindow();
@@ -41,8 +41,10 @@ public abstract class CheddarliteAction extends OcarinaAction {
 							PreferenceConstants.PLUGIN_ID,
 							"Unable to find cheddarlite executable. Check the cheddar path in preferences.");
 		} else {
-			super.run(action);
+			return super.execute(event);
 		}
+		
+		return null;
 	}
 
 	private void launchCheddarlite(String cheddarProjectFilepath,

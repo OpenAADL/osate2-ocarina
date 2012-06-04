@@ -15,7 +15,6 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		store.setDefault(PreferenceConstants.OCARINA_PATH, "/usr/share/local");
 		store.setDefault(PreferenceConstants.GCC_PATH, "/usr/share/local");
-		store.setDefault(PreferenceConstants.USE_AADLV2, true);
 	}
 
 }

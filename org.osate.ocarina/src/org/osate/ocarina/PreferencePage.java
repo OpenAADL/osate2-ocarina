@@ -1,9 +1,7 @@
 package org.osate.ocarina;
 
-import org.eclipse.jface.preference.BooleanFieldEditor;
 import org.eclipse.jface.preference.DirectoryFieldEditor;
 import org.eclipse.jface.preference.FieldEditorPreferencePage;
-import org.eclipse.jface.preference.RadioGroupFieldEditor;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
@@ -38,29 +36,8 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 		
 		addField(new DirectoryFieldEditor(PreferenceConstants.OCARINA_PATH,
 				"&Path to Ocarina bin/ directory:", getFieldEditorParent()));
-
-		addField(new BooleanFieldEditor(PreferenceConstants.USE_AADLV2,
-				"&Use AADL version 2", getFieldEditorParent()));
-		
-		addField(new BooleanFieldEditor(PreferenceConstants.COMPILE_CODE,
-				"&Compile code", getFieldEditorParent()));
-		
-		RadioGroupFieldEditor generatorsButton = new RadioGroupFieldEditor(
-				PreferenceConstants.GENERATOR,
-				"&Runtime for the generated code",
-				1,
-				new String[][] {
-						{ "PolyORB-HI-C", PreferenceConstants.GENERATOR_POLYORB_HI_C },
-						{ "PolyORB-HI-Ada", PreferenceConstants.GENERATOR_POLYORB_HI_ADA },
-						{ "Cheddar",PreferenceConstants.GENERATOR_CHEDDAR },
-						{ "MAST",PreferenceConstants.GENERATOR_MAST },
-						{ "Petri Nets", PreferenceConstants.GENERATOR_PETRI_NETS },
-						{ "REAL", PreferenceConstants.GENERATOR_REAL}},
-				getFieldEditorParent());
-		addField(generatorsButton);
 		
 		// Tab for external tools
-		
 		addTab("External tools");
 		
 		addField(new DirectoryFieldEditor(PreferenceConstants.GCC_PATH,
