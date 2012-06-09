@@ -16,7 +16,15 @@ import org.eclipse.ui.console.IConsoleView;
 import org.eclipse.ui.console.MessageConsole;
 
 public class Utils {
-
+	public static boolean useDebug = true;
+	
+	public static void ocarinaDebug (String str)
+	{
+		if (useDebug)
+		{
+			System.out.println (str);
+		}
+	}
 	/**
 	 * Check that Ocarina is correctly installed
 	 * @param window

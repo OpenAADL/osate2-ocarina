@@ -8,9 +8,13 @@
 	   <command id="org.osate.ocarina.commands.computepriority" name="Compute Scheduling Priorities" defaultHandler="org.osate.ocarina.handlers.ComputePrioritiesHandler"></command>
 	   <command id="org.osate.ocarina.commands.checkreal" name="Check REAL Theorems" defaultHandler="org.osate.ocarina.handlers.CheckREALTheoremsHandler"></command>
 	   <command id="org.osate.ocarina.commands.launchocarina" name="Launch Ocarina" defaultHandler="org.osate.ocarina.handlers.LaunchOcarinaHandler">
-	   	<commandParameter id="org.osate.ocarina.commands.launchocarina.generator" name="Generator"/>
+	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator" name="Generator"/>
 	   </command>
-	   
+	   <command  defaultHandler="org.osate.ocarina.handlers.EnableBuild" id="org.osate.ocarina.commands.enablebuild" 
+      		name="Build after Generating code"> 
+   			<state class="org.eclipse.ui.handlers.RegistryToggleState:false" id="org.eclipse.ui.commands.toggleState"> 
+   			</state> 
+		</command>
    </extension>
 	
    <extension point="org.eclipse.ui.menus">
@@ -42,6 +46,8 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
+			<command commandId="org.osate.ocarina.commands.enablebuild" label="Build" style="toggle" />
+			
 		</menu>
 	</menuContribution>
 	<menuContribution allPopups="false" locationURI="popup:#TextEditorContext?after=additions">
@@ -75,6 +81,7 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
+			<command commandId="org.osate.ocarina.commands.enablebuild" label="Build"/>
 		</menu>
 	</menuContribution>
    </extension>
