@@ -1,5 +1,6 @@
 package org.osate.ocarina;
 
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 
@@ -13,8 +14,16 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 	 */
 	public void initializeDefaultPreferences() {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-		store.setDefault(PreferenceConstants.OCARINA_PATH, "/usr/share/local");
-		store.setDefault(PreferenceConstants.GCC_PATH, "/usr/share/local");
+		if (Platform.getOS().equals(Platform.OS_WIN32))
+		{
+			store.setDefault(PreferenceConstants.OCARINA_PATH, "C:\\ocarina\\bin");
+			store.setDefault(PreferenceConstants.GCC_PATH, "C:\\gcc\\bin");
+		}
+		else
+		{
+			store.setDefault(PreferenceConstants.OCARINA_PATH, "/usr/share/local");
+			store.setDefault(PreferenceConstants.GCC_PATH, "/usr/share/local");
+		}
 	}
 
 }

@@ -68,6 +68,10 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 	public AbstractOcarinaHandler(String jobName) {
 		this(jobName, null, false);
+		if (EnableBuild.buildEnabled)
+		{
+			this.buildCode = true;
+		}
 	}
 	
 	protected void setGenerator(String value) {
@@ -187,7 +191,8 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		
 		cmd.add("-aadlv2");
 		
-		if (buildCode) {
+		if ((buildCode) || (EnableBuild.buildEnabled))
+		{
 			cmd.add("-b");
 		}
 		
@@ -195,11 +200,14 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		cmd.add(generator);
 		cmd.add("-r");
 		cmd.add(systemImplementation.getName());
-
 		// Need to get paths to all the AADL files.
 		for (Resource srcResource : sourceResources) {
-			cmd.add(getAbsoluteSourceFilepath(srcResource));
+			if (srcResource != null)
+			{
+				cmd.add(getAbsoluteSourceFilepath(srcResource));
+			}
 		}
+		Utils.ocarinaDebug ("cmd run : " + cmd.toString());
 
 		launchCommand(cmd, ocarinaWorkingDirectory());
 	}
@@ -207,16 +215,20 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	// Removes all markers from the source resources
 	private final void resetMarkers()	{
 		for(Resource srcResource : sourceResources) {
-			IResource res = getIResource(srcResource);
-			try {
-				IMarker[] markers = res.findMarkers(IMarker.PROBLEM, true, IResource.DEPTH_INFINITE);
-				for (int j = 0; j < markers.length; j++) {
-					if (markers[j].getAttribute(PreferenceConstants.OCARINA_MARKER) != null) {
-						markers[j].delete();
+			if (srcResource != null)
+			{
+				IResource res = getIResource(srcResource);
+				
+				try {
+					IMarker[] markers = res.findMarkers(IMarker.PROBLEM, true, IResource.DEPTH_INFINITE);
+					for (int j = 0; j < markers.length; j++) {
+						if (markers[j].getAttribute(PreferenceConstants.OCARINA_MARKER) != null) {
+							markers[j].delete();
+						}
 					}
+				} catch (CoreException e) {
+					throw new RuntimeException(e);
 				}
-			} catch (CoreException e) {
-				throw new RuntimeException(e);
 			}
 		}
 	}
@@ -262,7 +274,10 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 			// Convert to filenames
 			for (ModelUnit m : closure) {
-				resources.add(m.eResource());
+				if (m.eResource() != null)
+				{
+					resources.add(m.eResource());
+				}
 			}
 		}
 
@@ -272,6 +287,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private static String getAbsoluteSourceFilepath(Resource r) {
 		final IResource resource = getIResource(r);
 		File file = resource.getLocation().toFile();
+		
 		return file.getAbsolutePath();
 	}
 	
@@ -324,6 +340,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			for (String line = reader.readLine(); line != null; line = reader
 					.readLine()) {
 				output.add(line);
+				Utils.ocarinaDebug ("command output: " + line);
 			}
 
 			retVal = process.waitFor();
@@ -374,7 +391,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	// Error/warnings messages are of the form
 	// <filename>:<line>:<col> message
 	// and hold the string "Warning" or "Error"
-	private final Pattern warningErrorPattern = Pattern.compile("([^:]+):([0-9]+):([0-9]+):?\\s+(.+)");
+	private final Pattern warningErrorPattern = Pattern.compile("(.+):([0-9]+):([0-9]+):?\\s+(.+)");
 	
 	private final void handleOutputLine(String line) {
 		Matcher m = warningErrorPattern.matcher(line);
