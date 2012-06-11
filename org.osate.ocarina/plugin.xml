@@ -46,6 +46,7 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
+			<separator name="sep1" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.enablebuild" label="Build" style="toggle" />
 			
 		</menu>
@@ -81,7 +82,8 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
-			<command commandId="org.osate.ocarina.commands.enablebuild" label="Build"/>
+			<separator name="sep1" visible="true"/>
+			<command commandId="org.osate.ocarina.commands.enablebuild" label="Build" style="toggle"/>
 		</menu>
 	</menuContribution>
    </extension>
