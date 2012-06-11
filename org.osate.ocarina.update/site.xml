@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.osate.ocarina.feature_0.0.1.201205231534.jar" id="org.osate.ocarina.feature" version="0.0.1.201205231534">
+   <feature url="features/org.osate.ocarina.feature_0.0.1.201206111556.jar" id="org.osate.ocarina.feature" version="0.0.1.201206111556">
       <category name="org.osate.ocarina"/>
    </feature>
    <category-def name="org.osate.ocarina" label="OSATE2 - Ocarina Plugin"/>

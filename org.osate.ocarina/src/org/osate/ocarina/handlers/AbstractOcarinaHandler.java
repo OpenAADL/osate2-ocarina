@@ -128,7 +128,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		if (this.systemImplementation != null) {
 			// Get the project that contains the system implementation
 			final URI uri = systemImplementation.eResource().getURI();
-			final IPath projectPath = new Path(uri.toPlatformString(false)).uptoSegment(1);
+			final IPath projectPath = new Path(uri.toPlatformString(true)).uptoSegment(1);
 			final IResource projectResource = ResourcesPlugin.getWorkspace().getRoot().findMember(projectPath);
 			this.ocarinaWorkingDirectory = new File(projectResource.getLocation().toFile(), "ocarina_out");
 			this.ocarinaWorkingDirectory.mkdir();
@@ -210,7 +210,6 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			if (srcResource != null)
 			{
 				IResource res = getIResource(srcResource);
-				
 				try {
 					IMarker[] markers = res.findMarkers(IMarker.PROBLEM, true, IResource.DEPTH_INFINITE);
 					for (int j = 0; j < markers.length; j++) {
@@ -285,8 +284,11 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	
 	private static IResource getIResource(Resource r) {
 		final URI uri = r.getURI();
-		final IPath path = new Path(uri.toPlatformString(false));
+		final IPath path = new Path(uri.toPlatformString(true));
 		final IResource resource = ResourcesPlugin.getWorkspace().getRoot().findMember(path);
+		if(resource == null) {
+			throw new RuntimeException("Unable to get IResource for Resource: " + r);
+		}
 		return resource;
 	}
 
