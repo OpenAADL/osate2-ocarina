@@ -11,7 +11,7 @@ import org.eclipse.core.commands.ExecutionException;
 public class LaunchOcarinaHandler  extends AbstractOcarinaHandler {
 
 	public LaunchOcarinaHandler() {
-		super("Running Ocarina");
+		super("Running Ocarina", null, true);
 	}
 	
 	@Override

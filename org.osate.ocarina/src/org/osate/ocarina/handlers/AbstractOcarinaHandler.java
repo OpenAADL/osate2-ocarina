@@ -50,7 +50,7 @@ import org.osate.ocarina.util.SelectionHelper;
 public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private final String jobName;
 	private String generator;
-	private boolean buildCode;
+	private boolean allowBuildCode;
 	private File ocarinaWorkingDirectory;
 	private SystemImplementation systemImplementation; 
 	private Set<Resource> sourceResources;
@@ -60,26 +60,18 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private List<String> output;
 	private List<String> errors;
 
-	public AbstractOcarinaHandler(String jobName, String generator, boolean buildCode) {
+	public AbstractOcarinaHandler(String jobName, String generator, boolean allowBuildCode) {
 		this.jobName = jobName;
 		this.generator = generator;
-		this.buildCode = buildCode;
-	}
-
-	public AbstractOcarinaHandler(String jobName) {
-		this(jobName, null, false);
-		if (EnableBuild.buildEnabled)
-		{
-			this.buildCode = true;
-		}
+		this.allowBuildCode = allowBuildCode;
 	}
 	
 	protected void setGenerator(String value) {
 		this.generator = value;
 	}
 	
-	protected void setBuildCode(boolean value) {
-		this.buildCode = value;
+	protected void setAllowBuildCode(boolean value) {
+		this.allowBuildCode = value;
 	}
 	
 	// Helper method that returns the path to the cheddar project file generated
@@ -191,7 +183,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		
 		cmd.add("-aadlv2");
 		
-		if ((buildCode) || (EnableBuild.buildEnabled))
+		if(allowBuildCode && EnableBuild.buildEnabled)
 		{
 			cmd.add("-b");
 		}
