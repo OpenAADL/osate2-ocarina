@@ -51,17 +51,20 @@ public class LaunchCheddarHandler extends AbstractOcarinaHandler {
 	}
 	
 	protected void handleOcarinaResults() {
-		// Process the XML file
-		String cheddarProjectFilepath = this.getCheddarProjectFilepath();
-
-		// TODO: Determine why this is needed. Not cleaning the XML causes problems with cheddar parsing the XML file
-		processXmlFile(cheddarProjectFilepath);
-
-		// Launch Cheddar
-		try {
-			launchCheddar(cheddarProjectFilepath, ocarinaWorkingDirectory());
-		} catch (InterruptedException e) {
-			throw new RuntimeException("Interrupted");
+		if(this.retVal() == 0)
+		{
+			// Process the XML file
+			String cheddarProjectFilepath = this.getCheddarProjectFilepath();
+	
+			// TODO: Determine why this is needed. Not cleaning the XML causes problems with cheddar parsing the XML file
+			processXmlFile(cheddarProjectFilepath);
+	
+			// Launch Cheddar
+			try {
+				launchCheddar(cheddarProjectFilepath, ocarinaWorkingDirectory());
+			} catch (InterruptedException e) {
+				throw new RuntimeException("Interrupted");
+			}
 		}
 	}
 
