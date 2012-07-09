@@ -1,10 +1,12 @@
 package org.osate.ocarina;
 
 import java.io.File;
+import java.util.regex.Pattern;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.IWorkbench;
@@ -134,8 +136,33 @@ public class Utils {
 		}
 	}
 	
-	public static java.util.List<IFile> findFiles(final IContainer parent, final java.util.regex.Pattern pattern, java.util.List<IFile> files)
-	{
+	/**
+	 * Find all files in the current workspace whose name matches a specified pattern
+	 * @param namePattern is the pattern the name must match
+	 * @return the list of files
+	 */
+	public static java.util.List<IFile> findFilesInWorkspaceByName(final java.util.regex.Pattern namePattern) {
+		return findFilesByName(ResourcesPlugin.getWorkspace().getRoot(), namePattern, null);
+	}
+	
+	/**
+	 * Find all files in the current workspace whose name matches a specified pattern
+	 * @param namePattern is the pattern the name must match
+	 * @param files the list that matching files are added to. A list is created if null.
+	 * @return the list of files
+	 */
+	public static java.util.List<IFile> findFilesInWorkspaceByName(final java.util.regex.Pattern namePattern, java.util.List<IFile> files) {
+		return findFilesByName(ResourcesPlugin.getWorkspace().getRoot(), namePattern, files);
+	}
+	
+	/**
+	 * Find all children files of a specified container whose name matches a specified pattern
+	 * @param parent
+	 * @param namePattern is the pattern the name must match
+	 * @param files the list that matching files are added to. A list is created if null.
+	 * @return the list of files
+	 */
+	public static java.util.List<IFile> findFilesByName(final IContainer parent, final java.util.regex.Pattern namePattern, java.util.List<IFile> files) {
 		// Create the list if it doesn't exist
 		if(files == null)
 		{
@@ -149,12 +176,12 @@ public class Utils {
 			{
 				if(member instanceof IContainer)
 				{
-					findFiles((IContainer)member, pattern, files);
+					findFilesByName((IContainer)member, namePattern, files);
 				}
 				else if(member instanceof IFile)
 				{
 					String name = member.getName();
-					if(pattern.matcher(name).matches())
+					if(namePattern.matcher(name).matches())
 					{
 						files.add((IFile)member);	
 					}

@@ -61,7 +61,7 @@ public class CheckREALTheoremsHandler extends AbstractOcarinaHandler {
 	protected List<String> getAdditionalOcarinaArguments() {
 		List<String> args = super.getAdditionalOcarinaArguments();
 		
-		for(IFile file : Utils.findFiles(ResourcesPlugin.getWorkspace().getRoot(), Pattern.compile(".+\\.real", Pattern.CASE_INSENSITIVE), null)) {
+		for(IFile file : Utils.findFilesInWorkspaceByName(Pattern.compile(".+\\.real", Pattern.CASE_INSENSITIVE))) {
 			args.add("-real_lib");
 			args.add(Utils.getAbsoluteFilepath(file));
 		}
