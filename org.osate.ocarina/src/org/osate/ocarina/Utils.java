@@ -2,6 +2,10 @@ package org.osate.ocarina;
 
 import java.io.File;
 
+import org.eclipse.core.resources.IContainer;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
@@ -130,4 +134,44 @@ public class Utils {
 		}
 	}
 	
+	public static java.util.List<IFile> findFiles(final IContainer parent, final java.util.regex.Pattern pattern, java.util.List<IFile> files)
+	{
+		// Create the list if it doesn't exist
+		if(files == null)
+		{
+			files = new java.util.ArrayList<IFile>();
+		}
+			
+		try
+		{
+			// Find files with names that match the specified pattern
+			for(IResource member : parent.members())
+			{
+				if(member instanceof IContainer)
+				{
+					findFiles((IContainer)member, pattern, files);
+				}
+				else if(member instanceof IFile)
+				{
+					String name = member.getName();
+					if(pattern.matcher(name).matches())
+					{
+						files.add((IFile)member);	
+					}
+				}
+			}
+		}
+		catch(CoreException ex)
+		{
+			throw new RuntimeException(ex);
+		}
+		
+		return files;
+	}
+	
+	public static String getAbsoluteFilepath(IResource resource) {
+		File file = resource.getLocation().toFile();
+		
+		return file.getAbsolutePath();
+	}
 }

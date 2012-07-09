@@ -199,9 +199,16 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 				cmd.add(getAbsoluteSourceFilepath(srcResource));
 			}
 		}
+		
+		cmd.addAll(getAdditionalOcarinaArguments());
+		
 		Utils.ocarinaDebug ("cmd run : " + cmd.toString());
 
 		launchCommand(cmd, ocarinaWorkingDirectory());
+	}
+	
+	protected List<String> getAdditionalOcarinaArguments() {
+		return new LinkedList<String>();
 	}
 	
 	// Removes all markers from the source resources
@@ -277,9 +284,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 	private static String getAbsoluteSourceFilepath(Resource r) {
 		final IResource resource = getIResource(r);
-		File file = resource.getLocation().toFile();
-		
-		return file.getAbsolutePath();
+		return Utils.getAbsoluteFilepath(resource);
 	}
 	
 	private static IResource getIResource(Resource r) {

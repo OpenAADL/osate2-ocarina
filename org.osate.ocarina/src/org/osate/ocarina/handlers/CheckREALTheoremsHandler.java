@@ -2,7 +2,11 @@ package org.osate.ocarina.handlers;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.regex.Pattern;
 
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.osate.ocarina.Utils;
 import org.osate.ocarina.real.REALResultsParser;
 import org.osate.ocarina.real.TheoremResult;
 
@@ -15,25 +19,53 @@ public class CheckREALTheoremsHandler extends AbstractOcarinaHandler {
 
 	@Override
 	protected void handleOcarinaResults() {
-		// Parse the results
-		List<TheoremResult> results = new LinkedList<TheoremResult>();
-		for (String line : output()) {
-			TheoremResult result = parser.process(line);
-			if (result != null) {
-				results.add(result);
+		try {
+			// Parse the results
+			List<TheoremResult> results = new LinkedList<TheoremResult>();
+			{
+				for (String line : output()) {
+					TheoremResult result = parser.process(line);
+					if (result != null) {
+						results.add(result);
+					}
+				}
+				TheoremResult result = parser.processEOF();
+				if(result != null) results.add(result);
 			}
-		}
-
-		// TODO: Create/Update View, Create markers, etc
-		// and theorem.
-		/*
-		out().println("REAL Results Summary");
-		for (TheoremResult theorem : results) {
-			out().println("\t" + theorem.name + " - " + theorem.result);
-			for (TheoremResult.FalseInstance instance : theorem.falseInstances) {
-				out().println("\t\t" + instance.sourceFile + ":" + instance.lineNumber + ":" + instance.characterNumber + ":" + instance.elementName);
+		
+	
+			// TODO: Create/Update View, Create markers, etc and theorem.
+			Utils.ocarinaDebug("REAL Results Summary");
+			for (TheoremResult theorem : results) {
+				printTheoremResult(theorem, "");
 			}
+		} catch(RuntimeException e) {
+			// Do not catch this exception when parsing/visualization of REAL output is complete
+			Utils.ocarinaDebug("Error parsing results: " + e.getMessage());
 		}
-		*/
+		
+	}
+	
+	// Test function
+	private void printTheoremResult(TheoremResult theorem, String indention) {
+		Utils.ocarinaDebug(indention + theorem.getName() + " - " + theorem.getResult());
+		for (TheoremResult.FalseInstance instance : theorem.getFalseInstances()) {
+			Utils.ocarinaDebug(indention + "\t" + instance.sourceFile + ":" + instance.lineNumber + ":" + instance.characterNumber + ":" + instance.elementName);
+		}
+		
+		for(TheoremResult requirement : theorem.getRequirements()) {
+			printTheoremResult(requirement, indention + "\t");
+		}
+	}
+	
+	protected List<String> getAdditionalOcarinaArguments() {
+		List<String> args = super.getAdditionalOcarinaArguments();
+		
+		for(IFile file : Utils.findFiles(ResourcesPlugin.getWorkspace().getRoot(), Pattern.compile(".+\\.real", Pattern.CASE_INSENSITIVE), null)) {
+			args.add("-real_lib");
+			args.add(Utils.getAbsoluteFilepath(file));
+		}
+		
+		return args;
 	}
 }
