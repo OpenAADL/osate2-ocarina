@@ -180,35 +180,34 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		// Build the command
 		List<String> cmd = new LinkedList<String>();
 		cmd.add(getOcarinaExecutablePath());
-		
-		cmd.add("-aadlv2");
-		
-		if(allowBuildCode && EnableBuild.buildEnabled)
-		{
-			cmd.add("-b");
-		}
-		
-		cmd.add("-g");
-		cmd.add(generator);
-		cmd.add("-r");
-		cmd.add(systemImplementation.getName());
-		// Need to get paths to all the AADL files.
-		for (Resource srcResource : sourceResources) {
-			if (srcResource != null)
-			{
-				cmd.add(getAbsoluteSourceFilepath(srcResource));
-			}
-		}
-		
-		cmd.addAll(getAdditionalOcarinaArguments());
+		cmd.addAll(getOcarinaArguments());
 		
 		Utils.ocarinaDebug ("cmd run : " + cmd.toString());
 
 		launchCommand(cmd, ocarinaWorkingDirectory());
 	}
 	
-	protected List<String> getAdditionalOcarinaArguments() {
-		return new LinkedList<String>();
+	protected List<String> getOcarinaArguments() {
+		List<String> args = new LinkedList<String>();
+		args.add("-aadlv2");
+		
+		if(allowBuildCode && EnableBuild.buildEnabled) {
+			args.add("-b");
+		}
+		
+		args.add("-g");
+		args.add(generator);
+		args.add("-r");
+		args.add(systemImplementation.getName());
+		
+		// Need to get paths to all the AADL files.
+		for (Resource srcResource : sourceResources) {
+			if (srcResource != null) {
+				args.add(getAbsoluteSourceFilepath(srcResource));
+			}
+		}
+		
+		return args;
 	}
 	
 	// Removes all markers from the source resources

@@ -58,12 +58,14 @@ public class CheckREALTheoremsHandler extends AbstractOcarinaHandler {
 		}
 	}
 	
-	protected List<String> getAdditionalOcarinaArguments() {
-		List<String> args = super.getAdditionalOcarinaArguments();
+	@Override
+	protected List<String> getOcarinaArguments() {
+		List<String> args = super.getOcarinaArguments();
 		
+		args.add(0, "-real_continue_eval");
 		for(IFile file : Utils.findFilesInWorkspaceByName(Pattern.compile(".+\\.real", Pattern.CASE_INSENSITIVE))) {
-			args.add("-real_lib");
-			args.add(Utils.getAbsoluteFilepath(file));
+			args.add(1, "-real_lib");
+			args.add(2, Utils.getAbsoluteFilepath(file));
 		}
 		
 		return args;
