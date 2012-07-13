@@ -364,6 +364,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		// Get the console
 		final MessageConsole console = Utils.findConsole("ocarina");
 		console.clearConsole();
+		Utils.showConsole(console);
 
 		// Create and configure streams
 		this.out = console.newMessageStream();
@@ -371,11 +372,6 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		this.err.setColor(new Color(Display.getCurrent(), 255, 0, 0));
 	}
 
-	protected void showConsole() {
-		final MessageConsole console = Utils.findConsole("ocarina");
-		Utils.showConsole(console);
-	}
-	
 	private final void onAfterLaunchCommand() {
 		for (String error : errors()) {
 			err.println(error);
