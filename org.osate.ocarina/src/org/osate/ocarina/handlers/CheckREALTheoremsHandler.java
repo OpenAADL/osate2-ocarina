@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.ResourcesPlugin;
 import org.osate.ocarina.Utils;
 import org.osate.ocarina.real.REALResultsParser;
 import org.osate.ocarina.real.TheoremResult;

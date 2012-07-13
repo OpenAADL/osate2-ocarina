@@ -1,8 +1,6 @@
 package org.osate.ocarina;
 
 import java.io.File;
-import java.util.regex.Pattern;
-
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
