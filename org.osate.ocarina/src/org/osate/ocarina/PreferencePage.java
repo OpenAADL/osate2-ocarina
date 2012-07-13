@@ -30,20 +30,19 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 	 */
 	public void createFieldEditors() {
 
-		// First tab: configuration of Ocarina
-		
+		// First tab: configuration of Ocarina	
 		addTab("Ocarina");
 		
-		addField(new DirectoryFieldEditor(PreferenceConstants.OCARINA_PATH,
+		addField(new NoCheckDefaultDirectoryFieldEditor(PreferenceConstants.OCARINA_PATH,
 				"&Path to Ocarina bin/ directory:", getFieldEditorParent()));
 		
 		// Tab for external tools
 		addTab("External tools");
 		
-		addField(new DirectoryFieldEditor(PreferenceConstants.GCC_PATH,
+		addField(new NoCheckDefaultDirectoryFieldEditor(PreferenceConstants.GCC_PATH,
 				"&Path to gcc bin/ directory:", getFieldEditorParent()));
 		
-		addField(new DirectoryFieldEditor(PreferenceConstants.CHEDDAR_PATH,
+		addField(new NoCheckDefaultDirectoryFieldEditor(PreferenceConstants.CHEDDAR_PATH,
 				"&Path to Cheddar bin/ directory:", getFieldEditorParent()));
 	}
 
@@ -122,4 +121,19 @@ public class PreferencePage extends FieldEditorPreferencePage implements
         item.setControl(currentTab);
     }
 	
+	/**
+	 * Version of Direction Field Editor that doesn't trigger an error if the directory is set to the default value.
+	 * Used to prevent eclipse from complaining/forcing the changing of settings the user hasn't changed and may not care about.
+	 */
+	private static class NoCheckDefaultDirectoryFieldEditor extends DirectoryFieldEditor
+	{
+		public NoCheckDefaultDirectoryFieldEditor(String name, String labelText, Composite parent) {
+			super(name, labelText, parent);
+		}
+		
+		@Override
+		protected boolean checkState() {
+			return super.checkState() || this.getTextControl().getText().equals(Activator.getDefault().getPreferenceStore().getDefaultString(this.getPreferenceName()));
+		}
+	}
 }
