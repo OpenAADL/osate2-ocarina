@@ -3,9 +3,9 @@
 <plugin>
    <extension point="org.eclipse.ui.commands">
 	   <command id="org.osate.ocarina.commands.launchcheddar" name="Launch Cheddar" defaultHandler="org.osate.ocarina.handlers.LaunchCheddarHandler"></command>
-	   <command id="org.osate.ocarina.commands.runbasictests" name="Run Basic Scheduling Feasibility Tests" defaultHandler="org.osate.ocarina.handlers.RunBasicFeasibilityTestsHandler"></command>
-	   <command id="org.osate.ocarina.commands.runschedulingtests" name="Run Scheduling Tests" defaultHandler="org.osate.ocarina.handlers.RunSchedulingTestsHandler"></command>
-	   <command id="org.osate.ocarina.commands.computepriority" name="Compute Scheduling Priorities" defaultHandler="org.osate.ocarina.handlers.ComputePrioritiesHandler"></command>
+	   <command id="org.osate.ocarina.commands.runbasictests" name="Run Basic Scheduling Feasibility Tests using Cheddar" defaultHandler="org.osate.ocarina.handlers.RunBasicFeasibilityTestsHandler"></command>
+	   <command id="org.osate.ocarina.commands.runschedulingtests" name="Run Scheduling Tests using Cheddar" defaultHandler="org.osate.ocarina.handlers.RunSchedulingTestsHandler"></command>
+	   <command id="org.osate.ocarina.commands.computepriority" name="Compute Scheduling Priorities using Cheddar" defaultHandler="org.osate.ocarina.handlers.ComputePrioritiesHandler"></command>
 	   <command id="org.osate.ocarina.commands.checkreal" name="Check REAL Theorems" defaultHandler="org.osate.ocarina.handlers.CheckREALTheoremsHandler"></command>
 	   <command id="org.osate.ocarina.commands.launchocarina" name="Launch Ocarina" defaultHandler="org.osate.ocarina.handlers.LaunchOcarinaHandler">
 	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator" name="Generator"/>
@@ -20,11 +20,20 @@
    <extension point="org.eclipse.ui.menus">
 	<menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">		
 		<menu id="org.osate.ocarina.menu" label="Ocarina">
+			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
+			<separator name="sep1" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
-			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
+			<separator name="sep2" visible="true"/>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
+			</command>
+			<separator name="sep3" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="petri_nets"/>
 			</command>
@@ -34,21 +43,14 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Connection Matrix">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="connection_matrix"/>
 			</command>
-			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
-				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
-			</command>
-			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
-				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
-			</command>
+			<separator name="sep4" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-C Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_c"/>
 			</command>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
-			<separator name="sep1" visible="true"/>
-			<command commandId="org.osate.ocarina.commands.enablebuild" label="Build" style="toggle" />
-			
+			<command commandId="org.osate.ocarina.commands.enablebuild" style="toggle" />
 		</menu>
 	</menuContribution>
 	<menuContribution allPopups="false" locationURI="popup:#TextEditorContext?after=additions">
@@ -56,11 +58,20 @@
 	</menuContribution>
 	<menuContribution allPopups="false" locationURI="popup:org.osate.xtext.aadl2.ui.outline?after=additions">
 		<menu id="org.osate.ocarina.menu" label="Ocarina">
+						<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
+			<separator name="sep1" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
-			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
+			<separator name="sep2" visible="true"/>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
+			</command>
+			<separator name="sep3" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="petri_nets"/>
 			</command>
@@ -70,20 +81,14 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Connection Matrix">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="connection_matrix"/>
 			</command>
-			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
-				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
-			</command>
-			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
-				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
-			</command>
+			<separator name="sep4" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-C Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_c"/>
 			</command>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
-			<separator name="sep1" visible="true"/>
-			<command commandId="org.osate.ocarina.commands.enablebuild" label="Build" style="toggle"/>
+			<command commandId="org.osate.ocarina.commands.enablebuild" style="toggle" />
 		</menu>
 	</menuContribution>
    </extension>
