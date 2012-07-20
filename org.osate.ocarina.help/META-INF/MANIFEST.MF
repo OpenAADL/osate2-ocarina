@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ActivationPolicy: lazy
+Bundle-Name: %pluginName
+Bundle-Localization: plugin
+Bundle-Vendor: %providerName
+Bundle-Version: 0.1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.osate.ocarina.help;singleton:=true

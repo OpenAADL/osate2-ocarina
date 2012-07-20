@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.osate.ocarina.real.xtext/src-gen"
+    editDirectory="/org.osate.ocarina.real.xtext.edit/src" editorDirectory="/org.osate.ocarina.real.xtext.editor/src"
+    modelPluginID="org.osate.ocarina.real.xtext" forceOverwrite="true" modelName="REAL"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.osate.ocarina.real.xtext.edit"
+    editorPluginID="org.osate.ocarina.real.xtext.editor">
+  <genPackages prefix="Real" basePackage="org.osate.ocarina.real.xtext" disposableProviderFactory="true"
+      ecorePackage="REAL.ecore#/">
+    <genClasses ecoreClass="REAL.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Model/theorems"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//Theorem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//Theorem/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/rangeDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/setDeclarations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/requiredDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/verificationExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/evaluationExpression"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//Theorem/endName"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//RangeDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//RangeDefinition/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//RangeDefinition/set"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//SetDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SetDeclaration/set"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SetDeclaration/paramIdentifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//SetDeclaration/elementBinding"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//SetDeclaration/expr"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//ElementBinding">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//ElementBinding/element"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//ElementBinding/set"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//SelectionExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//SelectionExpression/e1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SelectionExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//SelectionExpression/e2"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//TerminalSelectionExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalSelectionExpression/e"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalSelectionExpression/r"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//SelectionRelation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SelectionRelation/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//SelectionRelation/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//SelectionRelationParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//SelectionRelationParameter/l"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SelectionRelationParameter/identifier"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//RequiredDefinition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//RequiredDefinition/theorems"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//VerificationExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//VerificationExpression/e1"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//EvaluationExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//EvaluationExpression/f"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//EvaluationExpression/e"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//GenericExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//GenericExpression/e1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//GenericExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//GenericExpression/e2"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//TerminalGenericExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalGenericExpression/literal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalGenericExpression/fc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalGenericExpression/te"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//SetExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SetExpression/e1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SetExpression/op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SetExpression/e2"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//TernaryExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TernaryExpression/conditional"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TernaryExpression/trueValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TernaryExpression/falseValue"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//VerificationFunctionCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//VerificationFunctionCall/f"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//VerificationFunctionCall/arguments"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//VerificationFunctionParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//VerificationFunctionParameter/l"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//VerificationFunctionParameter/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//VerificationFunctionParameter/vfi"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//Literal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Literal/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//Literal/s"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//Literal/n"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//BOOLEAN">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//BOOLEAN/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
