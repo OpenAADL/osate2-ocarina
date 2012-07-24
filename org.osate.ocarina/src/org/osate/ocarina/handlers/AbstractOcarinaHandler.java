@@ -54,6 +54,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private File ocarinaWorkingDirectory;
 	private SystemImplementation systemImplementation; 
 	private Set<Resource> sourceResources;
+	private boolean automaticallyShowConsole = true;
 	
 	// Results from the last execution of launchCommand()
 	private int retVal;
@@ -111,6 +112,10 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	protected void handleOcarinaResults() {
 	}
 
+	protected final void setAutomaticallyShowConsole(boolean value) {
+		this.automaticallyShowConsole = value;
+	}
+	
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		if(generator == null) {
@@ -364,7 +369,10 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		// Get the console
 		final MessageConsole console = Utils.findConsole("ocarina");
 		console.clearConsole();
-		Utils.showConsole(console);
+		
+		if(automaticallyShowConsole) {
+			Utils.showConsole(console);
+		}
 
 		// Create and configure streams
 		this.out = console.newMessageStream();

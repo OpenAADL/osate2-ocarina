@@ -20,7 +20,7 @@ import org.eclipse.ui.console.IConsoleView;
 import org.eclipse.ui.console.MessageConsole;
 
 public class Utils {
-	public static boolean useDebug = true;
+	public static boolean useDebug = false;//true;
 	
 	public static void ocarinaDebug (String str)
 	{

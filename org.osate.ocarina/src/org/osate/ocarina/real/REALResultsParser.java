@@ -11,8 +11,8 @@ public class REALResultsParser {
 		READING_RESULTS
 	};
 
-	private final Pattern propertyIsFalsePattern = Pattern
-			.compile("([^:]+):([0-9]+):([0-9]+) Backends: error : Property is false for instance [0-9]+ \\((.+)\\)");
+	private final Pattern propertyIsFalsePattern = Pattern.compile("([^:]+):([0-9]+):([0-9]+) Backends: error : Property is false for instance [0-9]+ \\((.+)\\)");
+	private final Pattern propertyResultPattern = Pattern.compile("theorem (\\S+) is: (FALSE|TRUE)$");
 	private State state = State.SCANNING_FOR_EXECUTION_STATEMENT;
 	
 	Stack<TheoremResult> theoremStack = new Stack<TheoremResult>();
@@ -53,6 +53,19 @@ public class REALResultsParser {
 						throw new RuntimeException("Error parsing REAL output");
 					}
 					state = State.READING_RESULTS;
+				} else {
+					Matcher matcher = propertyResultPattern.matcher(line);
+					if(matcher.matches()) {
+						String theoremName = matcher.group(1);
+						if(!theoremName.equals(theoremStack.peek().name))
+						{
+							throw new RuntimeException("Error parsing REAL output - unexpected theorem name");
+						}
+						state = State.READING_RESULTS;
+						
+						// Reprocess the line
+						retVal = process(line);
+					}
 				}
 			}
 			break;
@@ -77,13 +90,16 @@ public class REALResultsParser {
 
 				if(theoremStack.size() == 0) {
 					retVal = theorem;
+					state = State.SCANNING_FOR_EXECUTION_STATEMENT;
 				} else {
+					theorem.theoremRequiredBy = theoremStack.peek();
 					theoremStack.peek().requirements.add(theorem);
-				}
-				
-				state = State.SCANNING_FOR_NAME;
+					state = State.SCANNING_FOR_NAME;
+				}				
 			} else { // Add the line to the theorem result details
-				theorem.details.add(line);
+				if(!theorem.details.isEmpty() || !line.isEmpty()) {
+					theorem.details.add(line);
+				}
 			}
 			break;
 		}

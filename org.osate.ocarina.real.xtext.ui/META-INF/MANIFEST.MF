@@ -19,6 +19,6 @@ Import-Package: org.apache.commons.logging,
  org.apache.log4j,
  org.osate.aadl2,
  org.osate.aadl2.modelsupport.errorreporting
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.osate.ocarina.real.xtext.ui.internal
 Bundle-Activator: org.osate.ocarina.real.xtext.ui.internal.REALActivator
