@@ -53,4 +53,21 @@ public class PreferencesValues {
 		return ocarinaPath;
 	}
 	
+	/**
+	 * Get the value of the MAST_PATH preference
+	 * @return Value of the MAST_PATH preference
+	 */
+	public static String getMAST_PATH() {
+		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
+		String path = store.getString(PreferenceConstants.MAST_PATH);
+	
+		// We ensure that the path has a final / or \
+		if (!path.equals("")) {
+			if (!path.endsWith(File.separator)) {
+				path += File.separator;
+			} 	
+		}
+
+		return path;
+	}
 }

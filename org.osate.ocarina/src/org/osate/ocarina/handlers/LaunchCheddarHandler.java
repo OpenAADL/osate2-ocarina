@@ -51,8 +51,7 @@ public class LaunchCheddarHandler extends AbstractOcarinaHandler {
 	}
 	
 	protected void handleOcarinaResults() {
-		if(this.retVal() == 0)
-		{
+		if(this.retVal() == 0) {
 			// Process the XML file
 			String cheddarProjectFilepath = this.getCheddarProjectFilepath();
 	

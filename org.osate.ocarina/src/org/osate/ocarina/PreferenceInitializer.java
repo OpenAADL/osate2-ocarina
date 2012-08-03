@@ -18,11 +18,13 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 		{
 			store.setDefault(PreferenceConstants.OCARINA_PATH, "C:\\ocarina\\bin");
 			store.setDefault(PreferenceConstants.GCC_PATH, "C:\\gcc\\bin");
+			store.setDefault(PreferenceConstants.MAST_PATH, "C:\\mast\\bin");
 		}
 		else
 		{
 			store.setDefault(PreferenceConstants.OCARINA_PATH, "/usr/share/local");
 			store.setDefault(PreferenceConstants.GCC_PATH, "/usr/share/local");
+			store.setDefault(PreferenceConstants.MAST_PATH, "/usr/bin");
 		}
 	}
 

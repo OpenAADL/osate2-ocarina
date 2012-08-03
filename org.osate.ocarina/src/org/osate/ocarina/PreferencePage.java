@@ -44,6 +44,9 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 		
 		addField(new NoCheckDefaultDirectoryFieldEditor(PreferenceConstants.CHEDDAR_PATH,
 				"&Path to Cheddar bin/ directory:", getFieldEditorParent()));
+		
+		addField(new NoCheckDefaultDirectoryFieldEditor(PreferenceConstants.MAST_PATH,
+				"&Path to MAST bin/ directory:", getFieldEditorParent()));
 	}
 
 	/*

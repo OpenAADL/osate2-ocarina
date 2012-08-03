@@ -16,4 +16,5 @@ public class PreferenceConstants {
     // External tools
     public static final String GCC_PATH     = "org.osate.ocarina.GCC";
     public static final String CHEDDAR_PATH = "org.osate.ocarina.CHEDDAR";
+    public static final String MAST_PATH = "org.osate.ocarina.MAST";
 }

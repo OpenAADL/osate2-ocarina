@@ -53,6 +53,19 @@ public class Utils {
 		return true;
 	}
 	
+	public static String getMASTAnalysisPath() {
+		String executablePath = PreferencesValues.getMAST_PATH();
+		
+		if (!isWindows()) {
+			executablePath += "mast_analysis";
+			
+		} else {
+			executablePath += "mast_analysis.exe";
+		}
+		
+		return new File(executablePath).isFile() ? executablePath : null; 
+	}
+	
 	// Returns the path to cheddar or null of it does not exist
 	public static String getCheddarPath() {
 		String executablePath = PreferencesValues.getCHEDDAR_PATH();
