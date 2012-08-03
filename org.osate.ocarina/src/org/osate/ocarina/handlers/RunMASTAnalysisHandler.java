@@ -1,7 +1,6 @@
 package org.osate.ocarina.handlers;
 
 import java.io.File;
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class RunMASTAnalysisHandler extends AbstractOcarinaHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		if(Utils.getMASTAnalysisPath() == null) {
+		if(Utils.getMASTAnalysisExecutablePath() == null) {
 			IWorkbench wb = PlatformUI.getWorkbench();
 			IWorkbenchWindow window = wb.getActiveWorkbenchWindow();
 			MessageDialog.openError(window.getShell(), PreferenceConstants.PLUGIN_ID, "Unable to find mast_analysis executable. Check the MAST path in preferences.");
@@ -57,7 +56,7 @@ public class RunMASTAnalysisHandler extends AbstractOcarinaHandler {
 	private void launchMASTAnalysis(File workingDirectory) throws InterruptedException {
 		// Build the command
 		List<String> cmd = new LinkedList<String>();
-		cmd.add(Utils.getMASTAnalysisPath());
+		cmd.add(Utils.getMASTAnalysisExecutablePath());
 		cmd.add(prompt.getSelectedTool());
 		cmd.addAll(prompt.getEnteredOptions());
 		cmd.add("mast-model.txt");

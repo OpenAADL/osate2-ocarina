@@ -35,16 +35,8 @@ public class Utils {
 	 * @return Return True is Ocarina is correctly installed
 	 */
 	public static boolean checkOcarina(IWorkbenchWindow window) {
-		File ocarinaBinary = null;
-		String ocarinaPath = PreferencesValues.getOCARINA_PATH();
-	
-		if (!isWindows()) {
-			ocarinaBinary = new File(ocarinaPath + "ocarina");
-		} else {
-			ocarinaBinary = new File(ocarinaPath + "ocarina.exe");
-		}
-
-		if (!ocarinaBinary.isFile()) {
+		String ocarinaPath = getOcarinaExecutablePath();
+		if (ocarinaPath == null) {
 			MessageDialog.openInformation(window.getShell(),
 					PreferenceConstants.PLUGIN_ID,
 					"Path to Ocarina is not set up, update your preferences");
@@ -53,42 +45,43 @@ public class Utils {
 		return true;
 	}
 	
-	public static String getMASTAnalysisPath() {
-		String executablePath = PreferencesValues.getMAST_PATH();
-		
-		if (!isWindows()) {
-			executablePath += "mast_analysis";
-			
-		} else {
-			executablePath += "mast_analysis.exe";
-		}
-		
-		return new File(executablePath).isFile() ? executablePath : null; 
+	/**
+	 * 
+	 * @return the path to the ocarina executable if it exists
+	 */
+	public static String getOcarinaExecutablePath() {
+		return getExecutablePath(PreferencesValues.getOCARINA_PATH(), "ocarina"); 
+	}
+	
+	public static String getMASTAnalysisExecutablePath() {
+		return getExecutablePath(PreferencesValues.getMAST_PATH(), "mast_analysis");
 	}
 	
 	// Returns the path to cheddar or null of it does not exist
-	public static String getCheddarPath() {
-		String executablePath = PreferencesValues.getCHEDDAR_PATH();
-	
-		if (!isWindows()) {
-			executablePath += "cheddar";
-			
-		} else {
-			executablePath += "cheddar.exe";
-		}
-		
-		return new File(executablePath).isFile() ? executablePath : null; 
+	public static String getCheddarExecutablePath() {
+		return getExecutablePath(PreferencesValues.getCHEDDAR_PATH(), "cheddar");
 	}
 
-	// Returns the path to cheddarlite or null of it does not exist
-	public static String getCheddarlitePath() {
-		String executablePath = PreferencesValues.getCHEDDAR_PATH();
+	// Returns the path to cheddarlitev2 or cheddarlite or null of it does not exist
+	public static String getCheddarliteExecutablePath() {
+		String executablePath = getExecutablePath(PreferencesValues.getCHEDDAR_PATH(), "cheddarlitev2");
+		return executablePath == null ? getExecutablePath(PreferencesValues.getCHEDDAR_PATH(), "cheddarlite") : executablePath; 
+	}
 	
+	/**
+	 * Helper function for retrieving a platform specific executable path.
+	 * @param directoryPath the path to the directory that contains the executable. Must include the trailing slash
+	 * @param executableName the name of the executable. Does not include an ".exe" extension on windows
+	 * @return the path to the executable if it exists or null if it can not be found
+	 */
+	private static String getExecutablePath(final String directoryPath, final String executableName) {
+		String executablePath = directoryPath;
+		
 		if (!isWindows()) {
-			executablePath += "cheddarlite";
+			executablePath += executableName;
 			
 		} else {
-			executablePath += "cheddarlite.exe";
+			executablePath += executableName + ".exe";
 		}
 		
 		return new File(executablePath).isFile() ? executablePath : null; 

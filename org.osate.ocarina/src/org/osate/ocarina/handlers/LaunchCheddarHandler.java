@@ -34,7 +34,7 @@ public class LaunchCheddarHandler extends AbstractOcarinaHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		if(Utils.getCheddarPath() == null)
+		if(Utils.getCheddarExecutablePath() == null)
 		{
 			IWorkbench wb = PlatformUI.getWorkbench();
 			IWorkbenchWindow window = wb.getActiveWorkbenchWindow();
@@ -71,7 +71,7 @@ public class LaunchCheddarHandler extends AbstractOcarinaHandler {
 			File workingDirectory) throws InterruptedException {
 		// Build the command
 		List<String> cmd = new LinkedList<String>();
-		cmd.add(Utils.getCheddarPath());
+		cmd.add(Utils.getCheddarExecutablePath());
 		cmd.add(cheddarProjectFilepath);
 
 		launchCommand(cmd, workingDirectory);

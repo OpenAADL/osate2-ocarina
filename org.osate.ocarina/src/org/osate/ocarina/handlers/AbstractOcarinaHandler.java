@@ -184,7 +184,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private final void launchOcarina() throws InterruptedException {
 		// Build the command
 		List<String> cmd = new LinkedList<String>();
-		cmd.add(getOcarinaExecutablePath());
+		cmd.add(Utils.getOcarinaExecutablePath());
 		cmd.addAll(getOcarinaArguments());
 		
 		Utils.ocarinaDebug ("cmd run : " + cmd.toString());
@@ -233,10 +233,6 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 				}
 			}
 		}
-	}
-	private static String getOcarinaExecutablePath() {
-		String executableName = Utils.isWindows() ? "ocarina.exe" : "ocarina";
-		return PreferencesValues.getOCARINA_PATH() + executableName;
 	}
 
 	// orignalModelUnits may be null

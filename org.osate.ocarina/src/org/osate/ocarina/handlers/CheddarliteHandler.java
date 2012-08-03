@@ -36,7 +36,7 @@ public abstract class CheddarliteHandler extends AbstractOcarinaHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		if (Utils.getCheddarlitePath() == null) {
+		if (Utils.getCheddarliteExecutablePath() == null) {
 			IWorkbench wb = PlatformUI.getWorkbench();
 			IWorkbenchWindow window = wb.getActiveWorkbenchWindow();
 			MessageDialog
@@ -54,7 +54,7 @@ public abstract class CheddarliteHandler extends AbstractOcarinaHandler {
 			File workingDirectory) throws InterruptedException {
 		// Build the command
 		List<String> cmd = new LinkedList<String>();
-		cmd.add(Utils.getCheddarlitePath());
+		cmd.add(Utils.getCheddarliteExecutablePath());
 		cmd.add("-file");
 		cmd.add(cheddarProjectFilepath);
 		cmd.add("-request");
