@@ -104,6 +104,19 @@ public class Utils {
 		return new File(executablePath).isFile() ? executablePath : null; 
 	}
 	
+	public static boolean isPathValid(final String path) {
+		// Try to evaluate a path as being relative to the eclipse installation directory
+		File eclipseDirectory = getEclipseHome();
+		if(eclipseDirectory != null) {
+			File file = new File(eclipseDirectory, path);
+			if(file.exists()) {
+				return true;
+			}
+		}
+		
+		return new File(path).exists();	
+	}
+	
 	/**
 	 * Returns the file for the eclipse home directory.
 	 * @return the file representing the directory or null if an error occurred

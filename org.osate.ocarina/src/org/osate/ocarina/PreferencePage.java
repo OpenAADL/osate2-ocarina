@@ -136,7 +136,8 @@ public class PreferencePage extends FieldEditorPreferencePage implements
 		
 		@Override
 		protected boolean checkState() {
-			return super.checkState() || this.getTextControl().getText().equals(Activator.getDefault().getPreferenceStore().getDefaultString(this.getPreferenceName()));
+			final String value = this.getTextControl().getText();
+			return super.checkState() || value.equals(Activator.getDefault().getPreferenceStore().getDefaultString(this.getPreferenceName())) || Utils.isPathValid(value);
 		}
 	}
 }
