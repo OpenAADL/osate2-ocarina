@@ -1,12 +1,16 @@
 package org.osate.ocarina;
 
 import java.io.File;
+import java.net.URISyntaxException;
+
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.URIUtil;
 import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.osgi.service.datalocation.Location;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -18,6 +22,9 @@ import org.eclipse.ui.console.IConsoleConstants;
 import org.eclipse.ui.console.IConsoleManager;
 import org.eclipse.ui.console.IConsoleView;
 import org.eclipse.ui.console.MessageConsole;
+import org.osgi.framework.BundleContext;
+import org.osgi.framework.InvalidSyntaxException;
+import org.osgi.framework.ServiceReference;
 
 public class Utils {
 	public static boolean useDebug = false;//true;
@@ -70,7 +77,7 @@ public class Utils {
 	
 	/**
 	 * Helper function for retrieving a platform specific executable path.
-	 * @param directoryPath the path to the directory that contains the executable. Must include the trailing slash
+	 * @param directoryPath the path to the directory that contains the executable. Must include the trailing slash. May be absolute or relative to the eclipse directory.
 	 * @param executableName the name of the executable. Does not include an ".exe" extension on windows
 	 * @return the path to the executable if it exists or null if it can not be found
 	 */
@@ -84,7 +91,37 @@ public class Utils {
 			executablePath += executableName + ".exe";
 		}
 		
+		// Try to evaluate a path as being relative to the eclipse installation directory
+		File eclipseDirectory = getEclipseHome();
+		if(eclipseDirectory != null) {
+			File executableFile = new File(eclipseDirectory, executablePath);
+			if(executableFile.isFile()) {
+				return executableFile.toString();
+			}
+		}
+			
+		// Use the path as is
 		return new File(executablePath).isFile() ? executablePath : null; 
+	}
+	
+	/**
+	 * Returns the file for the eclipse home directory.
+	 * @return the file representing the directory or null if an error occurred
+	 */
+	private static File getEclipseHome() {
+		BundleContext context = Activator.getDefault().getBundle().getBundleContext();
+		try {
+			for(ServiceReference<Location> ref : context.getServiceReferences(Location.class, Location.ECLIPSE_HOME_FILTER)) {
+				Location location = context.getService(ref);
+				if(location != null && location.isSet()) {
+					return URIUtil.toFile(URIUtil.toURI(location.getURL())).getAbsoluteFile();
+				}
+			}
+		} catch (InvalidSyntaxException e) {
+		} catch (URISyntaxException e) {
+		}
+		
+		return null;
 	}
 	
 	public static int returnValue() {
