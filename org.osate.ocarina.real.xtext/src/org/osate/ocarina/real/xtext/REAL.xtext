@@ -48,7 +48,7 @@ SelectionRelationParameter:
 	l=Literal | identifier=ID;
 
 RequiredDefinition:
-	'requires' PUNC_OPEN_PARENTHESIS theorems+=ID (PUNC_COMMA theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
+	'requires' PUNC_OPEN_PARENTHESIS theorems+=ID ('and' theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
 
 // Should have verification sub expression but that causes problems with parsing currently
 VerificationExpression:
@@ -61,10 +61,10 @@ GenericExpression:
 	e1=TerminalGenericExpression (op+=GenericOperator e2+=TerminalGenericExpression)*;
 	
 TerminalGenericExpression:
-	literal=Literal |
+	UnaryOperator? (literal=Literal |
 	fc=VerificationFunctionCall | 
 	te=TernaryExpression |
-	PUNC_OPEN_PARENTHESIS GenericExpression PUNC_CLOSE_PARENTHESIS;
+	PUNC_OPEN_PARENTHESIS GenericExpression PUNC_CLOSE_PARENTHESIS);
 
 SetExpression:
 	e1=TerminalSetExpression (op+=SetOperator e2+=TerminalSetExpression)*;
@@ -134,11 +134,13 @@ ArithmeticOperator:
 	SLASH | 
 	POWER;
 
-// TODO: Check REAL for meaning of [not]
 BooleanOperator:
-	AND |
-	NOT |
-	OR;
+	'and' |
+	'not' |
+	'or';
+	
+UnaryOperator:
+	'not';
 
 ComparisonOperator:
 	LESS |
@@ -153,9 +155,6 @@ terminal POWER : '**';
 terminal STAR : '*';
 terminal SLASH : '/';
 terminal MINUS : '-';
-terminal AND : 'and';
-terminal NOT : 'not';
-terminal OR : 'or';
 terminal NOT_EQUAL : '<>';
 terminal LESS_EQUAL : '<=';
 terminal GREATER_EQUAL : '>=';

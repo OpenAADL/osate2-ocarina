@@ -488,17 +488,17 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTheoremsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTheoremsIDTerminalRuleCall_2_0 = (RuleCall)cTheoremsAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final RuleCall cPUNC_COMMATerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
+		private final Keyword cAndKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cTheoremsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final RuleCall cTheoremsIDTerminalRuleCall_3_1_0 = (RuleCall)cTheoremsAssignment_3_1.eContents().get(0);
 		private final RuleCall cPUNC_CLOSE_PARENTHESISTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
 		private final RuleCall cPUNC_SEMI_COLONTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
 		
 		//RequiredDefinition:
-		//	"requires" PUNC_OPEN_PARENTHESIS theorems+=ID (PUNC_COMMA theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
+		//	"requires" PUNC_OPEN_PARENTHESIS theorems+=ID ("and" theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
 		public ParserRule getRule() { return rule; }
 
-		//"requires" PUNC_OPEN_PARENTHESIS theorems+=ID (PUNC_COMMA theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON
+		//"requires" PUNC_OPEN_PARENTHESIS theorems+=ID ("and" theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON
 		public Group getGroup() { return cGroup; }
 
 		//"requires"
@@ -513,11 +513,11 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getTheoremsIDTerminalRuleCall_2_0() { return cTheoremsIDTerminalRuleCall_2_0; }
 
-		//(PUNC_COMMA theorems+=ID)*
+		//("and" theorems+=ID)*
 		public Group getGroup_3() { return cGroup_3; }
 
-		//PUNC_COMMA
-		public RuleCall getPUNC_COMMATerminalRuleCall_3_0() { return cPUNC_COMMATerminalRuleCall_3_0; }
+		//"and"
+		public Keyword getAndKeyword_3_0() { return cAndKeyword_3_0; }
 
 		//theorems+=ID
 		public Assignment getTheoremsAssignment_3_1() { return cTheoremsAssignment_3_1; }
@@ -665,56 +665,65 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class TerminalGenericExpressionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TerminalGenericExpression");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cLiteralAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cLiteralLiteralParserRuleCall_0_0 = (RuleCall)cLiteralAssignment_0.eContents().get(0);
-		private final Assignment cFcAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cFcVerificationFunctionCallParserRuleCall_1_0 = (RuleCall)cFcAssignment_1.eContents().get(0);
-		private final Assignment cTeAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cTeTernaryExpressionParserRuleCall_2_0 = (RuleCall)cTeAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final RuleCall cPUNC_OPEN_PARENTHESISTerminalRuleCall_3_0 = (RuleCall)cGroup_3.eContents().get(0);
-		private final RuleCall cGenericExpressionParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
-		private final RuleCall cPUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2 = (RuleCall)cGroup_3.eContents().get(2);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cUnaryOperatorParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Assignment cLiteralAssignment_1_0 = (Assignment)cAlternatives_1.eContents().get(0);
+		private final RuleCall cLiteralLiteralParserRuleCall_1_0_0 = (RuleCall)cLiteralAssignment_1_0.eContents().get(0);
+		private final Assignment cFcAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
+		private final RuleCall cFcVerificationFunctionCallParserRuleCall_1_1_0 = (RuleCall)cFcAssignment_1_1.eContents().get(0);
+		private final Assignment cTeAssignment_1_2 = (Assignment)cAlternatives_1.eContents().get(2);
+		private final RuleCall cTeTernaryExpressionParserRuleCall_1_2_0 = (RuleCall)cTeAssignment_1_2.eContents().get(0);
+		private final Group cGroup_1_3 = (Group)cAlternatives_1.eContents().get(3);
+		private final RuleCall cPUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0 = (RuleCall)cGroup_1_3.eContents().get(0);
+		private final RuleCall cGenericExpressionParserRuleCall_1_3_1 = (RuleCall)cGroup_1_3.eContents().get(1);
+		private final RuleCall cPUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2 = (RuleCall)cGroup_1_3.eContents().get(2);
 		
 		//TerminalGenericExpression:
-		//	literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS GenericExpression
-		//	PUNC_CLOSE_PARENTHESIS;
+		//	UnaryOperator? (literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS
+		//	GenericExpression PUNC_CLOSE_PARENTHESIS);
 		public ParserRule getRule() { return rule; }
+
+		//UnaryOperator? (literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS
+		//GenericExpression PUNC_CLOSE_PARENTHESIS)
+		public Group getGroup() { return cGroup; }
+
+		//UnaryOperator?
+		public RuleCall getUnaryOperatorParserRuleCall_0() { return cUnaryOperatorParserRuleCall_0; }
 
 		//literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS GenericExpression
 		//PUNC_CLOSE_PARENTHESIS
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 
 		//literal=Literal
-		public Assignment getLiteralAssignment_0() { return cLiteralAssignment_0; }
+		public Assignment getLiteralAssignment_1_0() { return cLiteralAssignment_1_0; }
 
 		//Literal
-		public RuleCall getLiteralLiteralParserRuleCall_0_0() { return cLiteralLiteralParserRuleCall_0_0; }
+		public RuleCall getLiteralLiteralParserRuleCall_1_0_0() { return cLiteralLiteralParserRuleCall_1_0_0; }
 
 		//fc=VerificationFunctionCall
-		public Assignment getFcAssignment_1() { return cFcAssignment_1; }
+		public Assignment getFcAssignment_1_1() { return cFcAssignment_1_1; }
 
 		//VerificationFunctionCall
-		public RuleCall getFcVerificationFunctionCallParserRuleCall_1_0() { return cFcVerificationFunctionCallParserRuleCall_1_0; }
+		public RuleCall getFcVerificationFunctionCallParserRuleCall_1_1_0() { return cFcVerificationFunctionCallParserRuleCall_1_1_0; }
 
 		//te=TernaryExpression
-		public Assignment getTeAssignment_2() { return cTeAssignment_2; }
+		public Assignment getTeAssignment_1_2() { return cTeAssignment_1_2; }
 
 		//TernaryExpression
-		public RuleCall getTeTernaryExpressionParserRuleCall_2_0() { return cTeTernaryExpressionParserRuleCall_2_0; }
+		public RuleCall getTeTernaryExpressionParserRuleCall_1_2_0() { return cTeTernaryExpressionParserRuleCall_1_2_0; }
 
 		//PUNC_OPEN_PARENTHESIS GenericExpression PUNC_CLOSE_PARENTHESIS
-		public Group getGroup_3() { return cGroup_3; }
+		public Group getGroup_1_3() { return cGroup_1_3; }
 
 		//PUNC_OPEN_PARENTHESIS
-		public RuleCall getPUNC_OPEN_PARENTHESISTerminalRuleCall_3_0() { return cPUNC_OPEN_PARENTHESISTerminalRuleCall_3_0; }
+		public RuleCall getPUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0() { return cPUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0; }
 
 		//GenericExpression
-		public RuleCall getGenericExpressionParserRuleCall_3_1() { return cGenericExpressionParserRuleCall_3_1; }
+		public RuleCall getGenericExpressionParserRuleCall_1_3_1() { return cGenericExpressionParserRuleCall_1_3_1; }
 
 		//PUNC_CLOSE_PARENTHESIS
-		public RuleCall getPUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2() { return cPUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2; }
+		public RuleCall getPUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2() { return cPUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2; }
 	}
 
 	public class SetExpressionElements extends AbstractParserRuleElementFinder {
@@ -1166,26 +1175,37 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 	public class BooleanOperatorElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BooleanOperator");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cANDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cNOTTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cORTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Keyword cAndKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
+		private final Keyword cNotKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final Keyword cOrKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
 		
-		//// TODO: Check REAL for meaning of [not]
 		//BooleanOperator:
-		//	AND | NOT | OR;
+		//	"and" | "not" | "or";
 		public ParserRule getRule() { return rule; }
 
-		//AND | NOT | OR
+		//"and" | "not" | "or"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//AND
-		public RuleCall getANDTerminalRuleCall_0() { return cANDTerminalRuleCall_0; }
+		//"and"
+		public Keyword getAndKeyword_0() { return cAndKeyword_0; }
 
-		//NOT
-		public RuleCall getNOTTerminalRuleCall_1() { return cNOTTerminalRuleCall_1; }
+		//"not"
+		public Keyword getNotKeyword_1() { return cNotKeyword_1; }
 
-		//OR
-		public RuleCall getORTerminalRuleCall_2() { return cORTerminalRuleCall_2; }
+		//"or"
+		public Keyword getOrKeyword_2() { return cOrKeyword_2; }
+	}
+
+	public class UnaryOperatorElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "UnaryOperator");
+		private final Keyword cNotKeyword = (Keyword)rule.eContents().get(1);
+		
+		//UnaryOperator:
+		//	"not";
+		public ParserRule getRule() { return rule; }
+
+		//"not"
+		public Keyword getNotKeyword() { return cNotKeyword; }
 	}
 
 	public class ComparisonOperatorElements extends AbstractParserRuleElementFinder {
@@ -1253,15 +1273,13 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 	private SetOperatorElements pSetOperator;
 	private ArithmeticOperatorElements pArithmeticOperator;
 	private BooleanOperatorElements pBooleanOperator;
+	private UnaryOperatorElements pUnaryOperator;
 	private ComparisonOperatorElements pComparisonOperator;
 	private TerminalRule tPLUS;
 	private TerminalRule tPOWER;
 	private TerminalRule tSTAR;
 	private TerminalRule tSLASH;
 	private TerminalRule tMINUS;
-	private TerminalRule tAND;
-	private TerminalRule tNOT;
-	private TerminalRule tOR;
 	private TerminalRule tNOT_EQUAL;
 	private TerminalRule tLESS_EQUAL;
 	private TerminalRule tGREATER_EQUAL;
@@ -1402,7 +1420,7 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RequiredDefinition:
-	//	"requires" PUNC_OPEN_PARENTHESIS theorems+=ID (PUNC_COMMA theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
+	//	"requires" PUNC_OPEN_PARENTHESIS theorems+=ID ("and" theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
 	public RequiredDefinitionElements getRequiredDefinitionAccess() {
 		return (pRequiredDefinition != null) ? pRequiredDefinition : (pRequiredDefinition = new RequiredDefinitionElements());
 	}
@@ -1444,8 +1462,8 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TerminalGenericExpression:
-	//	literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS GenericExpression
-	//	PUNC_CLOSE_PARENTHESIS;
+	//	UnaryOperator? (literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS
+	//	GenericExpression PUNC_CLOSE_PARENTHESIS);
 	public TerminalGenericExpressionElements getTerminalGenericExpressionAccess() {
 		return (pTerminalGenericExpression != null) ? pTerminalGenericExpression : (pTerminalGenericExpression = new TerminalGenericExpressionElements());
 	}
@@ -1578,15 +1596,24 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 		return getArithmeticOperatorAccess().getRule();
 	}
 
-	//// TODO: Check REAL for meaning of [not]
 	//BooleanOperator:
-	//	AND | NOT | OR;
+	//	"and" | "not" | "or";
 	public BooleanOperatorElements getBooleanOperatorAccess() {
 		return (pBooleanOperator != null) ? pBooleanOperator : (pBooleanOperator = new BooleanOperatorElements());
 	}
 	
 	public ParserRule getBooleanOperatorRule() {
 		return getBooleanOperatorAccess().getRule();
+	}
+
+	//UnaryOperator:
+	//	"not";
+	public UnaryOperatorElements getUnaryOperatorAccess() {
+		return (pUnaryOperator != null) ? pUnaryOperator : (pUnaryOperator = new UnaryOperatorElements());
+	}
+	
+	public ParserRule getUnaryOperatorRule() {
+		return getUnaryOperatorAccess().getRule();
 	}
 
 	//ComparisonOperator:
@@ -1627,24 +1654,6 @@ public class REALGrammarAccess extends AbstractGrammarElementFinder {
 	//	"-";
 	public TerminalRule getMINUSRule() {
 		return (tMINUS != null) ? tMINUS : (tMINUS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "MINUS"));
-	} 
-
-	//terminal AND:
-	//	"and";
-	public TerminalRule getANDRule() {
-		return (tAND != null) ? tAND : (tAND = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "AND"));
-	} 
-
-	//terminal NOT:
-	//	"not";
-	public TerminalRule getNOTRule() {
-		return (tNOT != null) ? tNOT : (tNOT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NOT"));
-	} 
-
-	//terminal OR:
-	//	"or";
-	public TerminalRule getORRule() {
-		return (tOR != null) ? tOR : (tOR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "OR"));
 	} 
 
 	//terminal NOT_EQUAL:

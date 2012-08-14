@@ -21,81 +21,81 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalREALParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "KEYWORD_46", "KEYWORD_44", "KEYWORD_45", "KEYWORD_43", "KEYWORD_42", "KEYWORD_39", "KEYWORD_40", "KEYWORD_41", "KEYWORD_38", "KEYWORD_37", "KEYWORD_36", "KEYWORD_34", "KEYWORD_35", "KEYWORD_31", "KEYWORD_32", "KEYWORD_33", "KEYWORD_28", "KEYWORD_29", "KEYWORD_30", "KEYWORD_25", "KEYWORD_26", "KEYWORD_27", "KEYWORD_20", "KEYWORD_21", "KEYWORD_22", "KEYWORD_23", "KEYWORD_24", "KEYWORD_11", "KEYWORD_12", "KEYWORD_13", "KEYWORD_14", "KEYWORD_15", "KEYWORD_16", "KEYWORD_17", "KEYWORD_18", "KEYWORD_19", "KEYWORD_5", "KEYWORD_6", "KEYWORD_7", "KEYWORD_8", "KEYWORD_9", "KEYWORD_10", "KEYWORD_2", "KEYWORD_3", "KEYWORD_4", "KEYWORD_1", "RULE_PLUS", "RULE_POWER", "RULE_STAR", "RULE_SLASH", "RULE_MINUS", "RULE_AND", "RULE_NOT", "RULE_OR", "RULE_NOT_EQUAL", "RULE_LESS_EQUAL", "RULE_GREATER_EQUAL", "RULE_GREATER", "RULE_LESS", "RULE_EQUAL", "RULE_AFFECTATION_OPERATOR", "RULE_PUNC_OPEN_BRACE", "RULE_PUNC_CLOSE_BRACE", "RULE_PUNC_SEMI_COLON", "RULE_PUNC_OPEN_PARENTHESIS", "RULE_PUNC_CLOSE_PARENTHESIS", "RULE_PUNC_COMMA", "RULE_ID", "RULE_STRING", "RULE_SL_COMMENT", "RULE_WS", "RULE_NUMERIC"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "KEYWORD_49", "KEYWORD_47", "KEYWORD_48", "KEYWORD_46", "KEYWORD_45", "KEYWORD_42", "KEYWORD_43", "KEYWORD_44", "KEYWORD_41", "KEYWORD_40", "KEYWORD_39", "KEYWORD_37", "KEYWORD_38", "KEYWORD_34", "KEYWORD_35", "KEYWORD_36", "KEYWORD_31", "KEYWORD_32", "KEYWORD_33", "KEYWORD_28", "KEYWORD_29", "KEYWORD_30", "KEYWORD_23", "KEYWORD_24", "KEYWORD_25", "KEYWORD_26", "KEYWORD_27", "KEYWORD_14", "KEYWORD_15", "KEYWORD_16", "KEYWORD_17", "KEYWORD_18", "KEYWORD_19", "KEYWORD_20", "KEYWORD_21", "KEYWORD_22", "KEYWORD_6", "KEYWORD_7", "KEYWORD_8", "KEYWORD_9", "KEYWORD_10", "KEYWORD_11", "KEYWORD_12", "KEYWORD_13", "KEYWORD_2", "KEYWORD_3", "KEYWORD_4", "KEYWORD_5", "KEYWORD_1", "RULE_PLUS", "RULE_POWER", "RULE_STAR", "RULE_SLASH", "RULE_MINUS", "RULE_NOT_EQUAL", "RULE_LESS_EQUAL", "RULE_GREATER_EQUAL", "RULE_GREATER", "RULE_LESS", "RULE_EQUAL", "RULE_AFFECTATION_OPERATOR", "RULE_PUNC_OPEN_BRACE", "RULE_PUNC_CLOSE_BRACE", "RULE_PUNC_SEMI_COLON", "RULE_PUNC_OPEN_PARENTHESIS", "RULE_PUNC_CLOSE_PARENTHESIS", "RULE_PUNC_COMMA", "RULE_ID", "RULE_STRING", "RULE_SL_COMMENT", "RULE_WS", "RULE_NUMERIC"
     };
     public static final int RULE_ID=71;
     public static final int RULE_AFFECTATION_OPERATOR=64;
     public static final int RULE_PUNC_CLOSE_PARENTHESIS=69;
     public static final int RULE_PUNC_OPEN_PARENTHESIS=68;
-    public static final int RULE_OR=57;
     public static final int RULE_NOT_EQUAL=58;
     public static final int RULE_GREATER_EQUAL=60;
-    public static final int KEYWORD_19=39;
-    public static final int KEYWORD_17=37;
-    public static final int KEYWORD_18=38;
+    public static final int KEYWORD_19=36;
+    public static final int KEYWORD_17=34;
+    public static final int KEYWORD_18=35;
     public static final int RULE_PUNC_CLOSE_BRACE=66;
-    public static final int KEYWORD_15=35;
-    public static final int RULE_AND=55;
-    public static final int KEYWORD_16=36;
-    public static final int KEYWORD_13=33;
-    public static final int KEYWORD_14=34;
-    public static final int KEYWORD_11=31;
-    public static final int EOF=-1;
+    public static final int KEYWORD_15=32;
+    public static final int KEYWORD_16=33;
+    public static final int KEYWORD_13=47;
+    public static final int KEYWORD_14=31;
+    public static final int KEYWORD_11=45;
     public static final int RULE_PUNC_COMMA=70;
-    public static final int KEYWORD_12=32;
-    public static final int RULE_NOT=56;
-    public static final int KEYWORD_10=45;
-    public static final int KEYWORD_6=41;
-    public static final int KEYWORD_7=42;
-    public static final int KEYWORD_8=43;
-    public static final int KEYWORD_9=44;
+    public static final int EOF=-1;
+    public static final int KEYWORD_12=46;
+    public static final int KEYWORD_10=44;
+    public static final int KEYWORD_6=40;
+    public static final int KEYWORD_7=41;
+    public static final int KEYWORD_8=42;
+    public static final int KEYWORD_9=43;
     public static final int RULE_LESS_EQUAL=59;
-    public static final int KEYWORD_28=20;
-    public static final int KEYWORD_29=21;
-    public static final int KEYWORD_24=30;
-    public static final int KEYWORD_25=23;
-    public static final int RULE_POWER=51;
-    public static final int KEYWORD_26=24;
-    public static final int KEYWORD_27=25;
-    public static final int KEYWORD_20=26;
-    public static final int KEYWORD_21=27;
-    public static final int KEYWORD_22=28;
-    public static final int KEYWORD_23=29;
+    public static final int KEYWORD_28=23;
+    public static final int KEYWORD_29=24;
+    public static final int KEYWORD_24=27;
+    public static final int KEYWORD_25=28;
+    public static final int RULE_POWER=54;
+    public static final int KEYWORD_26=29;
+    public static final int KEYWORD_27=30;
+    public static final int KEYWORD_20=37;
+    public static final int KEYWORD_21=38;
+    public static final int KEYWORD_22=39;
+    public static final int KEYWORD_23=26;
     public static final int RULE_GREATER=61;
-    public static final int RULE_PLUS=50;
-    public static final int KEYWORD_30=22;
-    public static final int KEYWORD_1=49;
+    public static final int RULE_PLUS=53;
+    public static final int KEYWORD_1=52;
+    public static final int KEYWORD_30=25;
     public static final int RULE_PUNC_SEMI_COLON=67;
-    public static final int KEYWORD_5=40;
-    public static final int KEYWORD_34=15;
-    public static final int KEYWORD_33=19;
-    public static final int KEYWORD_4=48;
+    public static final int KEYWORD_34=17;
+    public static final int KEYWORD_5=51;
+    public static final int KEYWORD_33=22;
+    public static final int KEYWORD_4=50;
     public static final int RULE_EQUAL=63;
-    public static final int KEYWORD_32=18;
-    public static final int KEYWORD_3=47;
-    public static final int KEYWORD_31=17;
-    public static final int KEYWORD_2=46;
-    public static final int KEYWORD_38=12;
-    public static final int KEYWORD_37=13;
+    public static final int KEYWORD_32=21;
+    public static final int KEYWORD_3=49;
+    public static final int KEYWORD_31=20;
+    public static final int KEYWORD_2=48;
+    public static final int KEYWORD_38=16;
+    public static final int KEYWORD_37=15;
     public static final int RULE_SL_COMMENT=73;
-    public static final int KEYWORD_36=14;
-    public static final int KEYWORD_35=16;
-    public static final int KEYWORD_39=9;
-    public static final int RULE_MINUS=54;
+    public static final int KEYWORD_36=19;
+    public static final int KEYWORD_35=18;
+    public static final int KEYWORD_39=14;
+    public static final int RULE_MINUS=57;
     public static final int RULE_STRING=72;
     public static final int RULE_PUNC_OPEN_BRACE=65;
     public static final int RULE_NUMERIC=75;
-    public static final int RULE_STAR=52;
-    public static final int KEYWORD_41=11;
-    public static final int KEYWORD_40=10;
+    public static final int RULE_STAR=55;
+    public static final int KEYWORD_41=12;
+    public static final int KEYWORD_40=13;
     public static final int RULE_LESS=62;
-    public static final int KEYWORD_43=7;
-    public static final int KEYWORD_42=8;
-    public static final int RULE_SLASH=53;
-    public static final int KEYWORD_45=6;
-    public static final int KEYWORD_44=5;
+    public static final int KEYWORD_43=10;
+    public static final int KEYWORD_42=9;
+    public static final int RULE_SLASH=56;
+    public static final int KEYWORD_45=8;
+    public static final int KEYWORD_44=11;
+    public static final int KEYWORD_47=5;
     public static final int RULE_WS=74;
-    public static final int KEYWORD_46=4;
+    public static final int KEYWORD_46=7;
+    public static final int KEYWORD_49=4;
+    public static final int KEYWORD_48=6;
 
     // delegates
     // delegators
@@ -192,7 +192,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( (LA1_0==KEYWORD_30) ) {
+                if ( (LA1_0==KEYWORD_33) ) {
                     alt1=1;
                 }
 
@@ -289,7 +289,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTheorem"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:109:1: ruleTheorem returns [EObject current=null] : (otherlv_0= KEYWORD_30 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_10 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:109:1: ruleTheorem returns [EObject current=null] : (otherlv_0= KEYWORD_33 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_12 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON ) ;
     public final EObject ruleTheorem() throws RecognitionException {
         EObject current = null;
 
@@ -312,13 +312,13 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:112:28: ( (otherlv_0= KEYWORD_30 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_10 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:113:1: (otherlv_0= KEYWORD_30 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_10 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:112:28: ( (otherlv_0= KEYWORD_33 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_12 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:113:1: (otherlv_0= KEYWORD_33 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_12 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:113:1: (otherlv_0= KEYWORD_30 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_10 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:114:2: otherlv_0= KEYWORD_30 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_10 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:113:1: (otherlv_0= KEYWORD_33 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_12 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:114:2: otherlv_0= KEYWORD_33 ( (lv_name_1_0= RULE_ID ) ) ( (lv_rangeDefinition_2_0= ruleRangeDefinition ) ) ( (lv_setDeclarations_3_0= ruleSetDeclaration ) )* ( (lv_requiredDefinition_4_0= ruleRequiredDefinition ) )? ( ( (lv_verificationExpression_5_0= ruleVerificationExpression ) ) | ( (lv_evaluationExpression_6_0= ruleEvaluationExpression ) ) ) otherlv_7= KEYWORD_12 ( (lv_endName_8_0= RULE_ID ) )? this_PUNC_SEMI_COLON_9= RULE_PUNC_SEMI_COLON
             {
-            otherlv_0=(Token)match(input,KEYWORD_30,FOLLOW_KEYWORD_30_in_ruleTheorem205); 
+            otherlv_0=(Token)match(input,KEYWORD_33,FOLLOW_KEYWORD_33_in_ruleTheorem205); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTheoremAccess().getTheoremKeyword_0());
                 
@@ -432,7 +432,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==KEYWORD_33) ) {
+            if ( (LA3_0==KEYWORD_36) ) {
                 alt3=1;
             }
             switch (alt3) {
@@ -474,10 +474,10 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==KEYWORD_23) ) {
+            if ( (LA4_0==KEYWORD_26) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==KEYWORD_27) ) {
+            else if ( (LA4_0==KEYWORD_30) ) {
                 alt4=2;
             }
             else {
@@ -564,7 +564,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleTheorem354); 
+            otherlv_7=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleTheorem354); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getTheoremAccess().getEndKeyword_6());
                 
@@ -666,7 +666,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRangeDefinition"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:271:1: ruleRangeDefinition returns [EObject current=null] : (otherlv_0= KEYWORD_29 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:271:1: ruleRangeDefinition returns [EObject current=null] : (otherlv_0= KEYWORD_32 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 ) ;
     public final EObject ruleRangeDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -680,13 +680,13 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:274:28: ( (otherlv_0= KEYWORD_29 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:275:1: (otherlv_0= KEYWORD_29 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:274:28: ( (otherlv_0= KEYWORD_32 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:275:1: (otherlv_0= KEYWORD_32 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:275:1: (otherlv_0= KEYWORD_29 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:276:2: otherlv_0= KEYWORD_29 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:275:1: (otherlv_0= KEYWORD_32 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:276:2: otherlv_0= KEYWORD_32 ( (lv_element_1_0= RULE_ID ) ) otherlv_2= KEYWORD_4 ( (lv_set_3_0= ruleSetExpression ) ) otherlv_4= KEYWORD_2
             {
-            otherlv_0=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_ruleRangeDefinition469); 
+            otherlv_0=(Token)match(input,KEYWORD_32,FOLLOW_KEYWORD_32_in_ruleRangeDefinition469); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getRangeDefinitionAccess().getForeachKeyword_0());
                 
@@ -1248,7 +1248,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                 int alt7=2;
                 int LA7_0 = input.LA(1);
 
-                if ( ((LA7_0>=RULE_AND && LA7_0<=RULE_OR)) ) {
+                if ( (LA7_0==KEYWORD_11||LA7_0==KEYWORD_13||LA7_0==KEYWORD_5) ) {
                     alt7=1;
                 }
 
@@ -1404,10 +1404,10 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==KEYWORD_44||LA8_0==KEYWORD_41||LA8_0==KEYWORD_34||(LA8_0>=KEYWORD_31 && LA8_0<=KEYWORD_32)||LA8_0==KEYWORD_28||(LA8_0>=KEYWORD_25 && LA8_0<=KEYWORD_26)||(LA8_0>=KEYWORD_20 && LA8_0<=KEYWORD_22)||(LA8_0>=KEYWORD_24 && LA8_0<=KEYWORD_13)||LA8_0==KEYWORD_16||(LA8_0>=KEYWORD_19 && LA8_0<=KEYWORD_9)||LA8_0==KEYWORD_3||LA8_0==RULE_PUNC_OPEN_PARENTHESIS||LA8_0==RULE_STRING||LA8_0==RULE_NUMERIC) ) {
+            if ( (LA8_0==KEYWORD_47||LA8_0==KEYWORD_44||LA8_0==KEYWORD_37||(LA8_0>=KEYWORD_34 && LA8_0<=KEYWORD_35)||LA8_0==KEYWORD_31||(LA8_0>=KEYWORD_28 && LA8_0<=KEYWORD_29)||(LA8_0>=KEYWORD_23 && LA8_0<=KEYWORD_25)||(LA8_0>=KEYWORD_27 && LA8_0<=KEYWORD_16)||LA8_0==KEYWORD_19||(LA8_0>=KEYWORD_22 && LA8_0<=KEYWORD_10)||LA8_0==KEYWORD_13||LA8_0==KEYWORD_3||LA8_0==RULE_PUNC_OPEN_PARENTHESIS||LA8_0==RULE_STRING||LA8_0==RULE_NUMERIC) ) {
                 alt8=1;
             }
-            else if ( (LA8_0==KEYWORD_46||(LA8_0>=KEYWORD_45 && LA8_0<=KEYWORD_40)||(LA8_0>=KEYWORD_38 && LA8_0<=KEYWORD_36)||LA8_0==KEYWORD_35) ) {
+            else if ( (LA8_0==KEYWORD_49||(LA8_0>=KEYWORD_48 && LA8_0<=KEYWORD_43)||(LA8_0>=KEYWORD_41 && LA8_0<=KEYWORD_39)||LA8_0==KEYWORD_38) ) {
                 alt8=2;
             }
             else {
@@ -1610,7 +1610,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             int alt10=2;
             int LA10_0 = input.LA(1);
 
-            if ( (LA10_0==KEYWORD_24||LA10_0==KEYWORD_19||(LA10_0>=RULE_ID && LA10_0<=RULE_STRING)||LA10_0==RULE_NUMERIC) ) {
+            if ( (LA10_0==KEYWORD_27||LA10_0==KEYWORD_22||(LA10_0>=RULE_ID && LA10_0<=RULE_STRING)||LA10_0==RULE_NUMERIC) ) {
                 alt10=1;
             }
             switch (alt10) {
@@ -1774,7 +1774,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSelectionRelationIdentifier"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:747:1: ruleSelectionRelationIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_45 | kw= KEYWORD_36 | kw= KEYWORD_43 | kw= KEYWORD_40 | kw= KEYWORD_46 | kw= KEYWORD_37 | kw= KEYWORD_35 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_39 ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:747:1: ruleSelectionRelationIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_48 | kw= KEYWORD_39 | kw= KEYWORD_46 | kw= KEYWORD_43 | kw= KEYWORD_49 | kw= KEYWORD_40 | kw= KEYWORD_38 | kw= KEYWORD_41 | kw= KEYWORD_45 | kw= KEYWORD_42 ) ;
     public final AntlrDatatypeRuleToken ruleSelectionRelationIdentifier() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1783,58 +1783,58 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:751:6: ( (kw= KEYWORD_45 | kw= KEYWORD_36 | kw= KEYWORD_43 | kw= KEYWORD_40 | kw= KEYWORD_46 | kw= KEYWORD_37 | kw= KEYWORD_35 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_39 ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:752:1: (kw= KEYWORD_45 | kw= KEYWORD_36 | kw= KEYWORD_43 | kw= KEYWORD_40 | kw= KEYWORD_46 | kw= KEYWORD_37 | kw= KEYWORD_35 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_39 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:751:6: ( (kw= KEYWORD_48 | kw= KEYWORD_39 | kw= KEYWORD_46 | kw= KEYWORD_43 | kw= KEYWORD_49 | kw= KEYWORD_40 | kw= KEYWORD_38 | kw= KEYWORD_41 | kw= KEYWORD_45 | kw= KEYWORD_42 ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:752:1: (kw= KEYWORD_48 | kw= KEYWORD_39 | kw= KEYWORD_46 | kw= KEYWORD_43 | kw= KEYWORD_49 | kw= KEYWORD_40 | kw= KEYWORD_38 | kw= KEYWORD_41 | kw= KEYWORD_45 | kw= KEYWORD_42 )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:752:1: (kw= KEYWORD_45 | kw= KEYWORD_36 | kw= KEYWORD_43 | kw= KEYWORD_40 | kw= KEYWORD_46 | kw= KEYWORD_37 | kw= KEYWORD_35 | kw= KEYWORD_38 | kw= KEYWORD_42 | kw= KEYWORD_39 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:752:1: (kw= KEYWORD_48 | kw= KEYWORD_39 | kw= KEYWORD_46 | kw= KEYWORD_43 | kw= KEYWORD_49 | kw= KEYWORD_40 | kw= KEYWORD_38 | kw= KEYWORD_41 | kw= KEYWORD_45 | kw= KEYWORD_42 )
             int alt11=10;
             switch ( input.LA(1) ) {
-            case KEYWORD_45:
+            case KEYWORD_48:
                 {
                 alt11=1;
                 }
                 break;
-            case KEYWORD_36:
+            case KEYWORD_39:
                 {
                 alt11=2;
                 }
                 break;
-            case KEYWORD_43:
+            case KEYWORD_46:
                 {
                 alt11=3;
                 }
                 break;
-            case KEYWORD_40:
+            case KEYWORD_43:
                 {
                 alt11=4;
                 }
                 break;
-            case KEYWORD_46:
+            case KEYWORD_49:
                 {
                 alt11=5;
                 }
                 break;
-            case KEYWORD_37:
+            case KEYWORD_40:
                 {
                 alt11=6;
                 }
                 break;
-            case KEYWORD_35:
+            case KEYWORD_38:
                 {
                 alt11=7;
                 }
                 break;
-            case KEYWORD_38:
+            case KEYWORD_41:
                 {
                 alt11=8;
                 }
                 break;
-            case KEYWORD_42:
+            case KEYWORD_45:
                 {
                 alt11=9;
                 }
                 break;
-            case KEYWORD_39:
+            case KEYWORD_42:
                 {
                 alt11=10;
                 }
@@ -1848,9 +1848,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             switch (alt11) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:753:2: kw= KEYWORD_45
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:753:2: kw= KEYWORD_48
                     {
-                    kw=(Token)match(input,KEYWORD_45,FOLLOW_KEYWORD_45_in_ruleSelectionRelationIdentifier1399); 
+                    kw=(Token)match(input,KEYWORD_48,FOLLOW_KEYWORD_48_in_ruleSelectionRelationIdentifier1399); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Subcomponent_OfKeyword_0()); 
@@ -1859,9 +1859,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:760:2: kw= KEYWORD_36
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:760:2: kw= KEYWORD_39
                     {
-                    kw=(Token)match(input,KEYWORD_36,FOLLOW_KEYWORD_36_in_ruleSelectionRelationIdentifier1418); 
+                    kw=(Token)match(input,KEYWORD_39,FOLLOW_KEYWORD_39_in_ruleSelectionRelationIdentifier1418); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Bound_ToKeyword_1()); 
@@ -1870,9 +1870,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:767:2: kw= KEYWORD_43
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:767:2: kw= KEYWORD_46
                     {
-                    kw=(Token)match(input,KEYWORD_43,FOLLOW_KEYWORD_43_in_ruleSelectionRelationIdentifier1437); 
+                    kw=(Token)match(input,KEYWORD_46,FOLLOW_KEYWORD_46_in_ruleSelectionRelationIdentifier1437); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Provided_ClassKeyword_2()); 
@@ -1881,9 +1881,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:774:2: kw= KEYWORD_40
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:774:2: kw= KEYWORD_43
                     {
-                    kw=(Token)match(input,KEYWORD_40,FOLLOW_KEYWORD_40_in_ruleSelectionRelationIdentifier1456); 
+                    kw=(Token)match(input,KEYWORD_43,FOLLOW_KEYWORD_43_in_ruleSelectionRelationIdentifier1456); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Connected_ToKeyword_3()); 
@@ -1892,9 +1892,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:781:2: kw= KEYWORD_46
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:781:2: kw= KEYWORD_49
                     {
-                    kw=(Token)match(input,KEYWORD_46,FOLLOW_KEYWORD_46_in_ruleSelectionRelationIdentifier1475); 
+                    kw=(Token)match(input,KEYWORD_49,FOLLOW_KEYWORD_49_in_ruleSelectionRelationIdentifier1475); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getCompare_Property_ValueKeyword_4()); 
@@ -1903,9 +1903,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:788:2: kw= KEYWORD_37
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:788:2: kw= KEYWORD_40
                     {
-                    kw=(Token)match(input,KEYWORD_37,FOLLOW_KEYWORD_37_in_ruleSelectionRelationIdentifier1494); 
+                    kw=(Token)match(input,KEYWORD_40,FOLLOW_KEYWORD_40_in_ruleSelectionRelationIdentifier1494); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Called_ByKeyword_5()); 
@@ -1914,9 +1914,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:795:2: kw= KEYWORD_35
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:795:2: kw= KEYWORD_38
                     {
-                    kw=(Token)match(input,KEYWORD_35,FOLLOW_KEYWORD_35_in_ruleSelectionRelationIdentifier1513); 
+                    kw=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_ruleSelectionRelationIdentifier1513); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_CallingKeyword_6()); 
@@ -1925,9 +1925,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:802:2: kw= KEYWORD_38
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:802:2: kw= KEYWORD_41
                     {
-                    kw=(Token)match(input,KEYWORD_38,FOLLOW_KEYWORD_38_in_ruleSelectionRelationIdentifier1532); 
+                    kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleSelectionRelationIdentifier1532); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Accessed_ByKeyword_7()); 
@@ -1936,9 +1936,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:809:2: kw= KEYWORD_42
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:809:2: kw= KEYWORD_45
                     {
-                    kw=(Token)match(input,KEYWORD_42,FOLLOW_KEYWORD_42_in_ruleSelectionRelationIdentifier1551); 
+                    kw=(Token)match(input,KEYWORD_45,FOLLOW_KEYWORD_45_in_ruleSelectionRelationIdentifier1551); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Connecting_ToKeyword_8()); 
@@ -1947,9 +1947,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:816:2: kw= KEYWORD_39
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:816:2: kw= KEYWORD_42
                     {
-                    kw=(Token)match(input,KEYWORD_39,FOLLOW_KEYWORD_39_in_ruleSelectionRelationIdentifier1570); 
+                    kw=(Token)match(input,KEYWORD_42,FOLLOW_KEYWORD_42_in_ruleSelectionRelationIdentifier1570); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Accessing_ToKeyword_9()); 
@@ -2033,7 +2033,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             int alt12=2;
             int LA12_0 = input.LA(1);
 
-            if ( (LA12_0==KEYWORD_24||LA12_0==KEYWORD_19||LA12_0==RULE_STRING||LA12_0==RULE_NUMERIC) ) {
+            if ( (LA12_0==KEYWORD_27||LA12_0==KEYWORD_22||LA12_0==RULE_STRING||LA12_0==RULE_NUMERIC) ) {
                 alt12=1;
             }
             else if ( (LA12_0==RULE_ID) ) {
@@ -2172,14 +2172,14 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRequiredDefinition"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:896:1: ruleRequiredDefinition returns [EObject current=null] : (otherlv_0= KEYWORD_33 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:896:1: ruleRequiredDefinition returns [EObject current=null] : (otherlv_0= KEYWORD_36 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (otherlv_3= KEYWORD_11 ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON ) ;
     public final EObject ruleRequiredDefinition() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token this_PUNC_OPEN_PARENTHESIS_1=null;
         Token lv_theorems_2_0=null;
-        Token this_PUNC_COMMA_3=null;
+        Token otherlv_3=null;
         Token lv_theorems_4_0=null;
         Token this_PUNC_CLOSE_PARENTHESIS_5=null;
         Token this_PUNC_SEMI_COLON_6=null;
@@ -2187,13 +2187,13 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:899:28: ( (otherlv_0= KEYWORD_33 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:900:1: (otherlv_0= KEYWORD_33 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:899:28: ( (otherlv_0= KEYWORD_36 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (otherlv_3= KEYWORD_11 ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:900:1: (otherlv_0= KEYWORD_36 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (otherlv_3= KEYWORD_11 ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:900:1: (otherlv_0= KEYWORD_33 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:901:2: otherlv_0= KEYWORD_33 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:900:1: (otherlv_0= KEYWORD_36 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (otherlv_3= KEYWORD_11 ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:901:2: otherlv_0= KEYWORD_36 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_theorems_2_0= RULE_ID ) ) (otherlv_3= KEYWORD_11 ( (lv_theorems_4_0= RULE_ID ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_6= RULE_PUNC_SEMI_COLON
             {
-            otherlv_0=(Token)match(input,KEYWORD_33,FOLLOW_KEYWORD_33_in_ruleRequiredDefinition1776); 
+            otherlv_0=(Token)match(input,KEYWORD_36,FOLLOW_KEYWORD_36_in_ruleRequiredDefinition1776); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getRequiredDefinitionAccess().getRequiresKeyword_0());
                 
@@ -2227,32 +2227,32 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:927:2: (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_theorems_4_0= RULE_ID ) ) )*
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:927:2: (otherlv_3= KEYWORD_11 ( (lv_theorems_4_0= RULE_ID ) ) )*
             loop13:
             do {
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
-                if ( (LA13_0==RULE_PUNC_COMMA) ) {
+                if ( (LA13_0==KEYWORD_11) ) {
                     alt13=1;
                 }
 
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:927:3: this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_theorems_4_0= RULE_ID ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:928:2: otherlv_3= KEYWORD_11 ( (lv_theorems_4_0= RULE_ID ) )
             	    {
-            	    this_PUNC_COMMA_3=(Token)match(input,RULE_PUNC_COMMA,FOLLOW_RULE_PUNC_COMMA_in_ruleRequiredDefinition1819); 
-            	     
-            	        newLeafNode(this_PUNC_COMMA_3, grammarAccess.getRequiredDefinitionAccess().getPUNC_COMMATerminalRuleCall_3_0()); 
+            	    otherlv_3=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_ruleRequiredDefinition1821); 
+
+            	        	newLeafNode(otherlv_3, grammarAccess.getRequiredDefinitionAccess().getAndKeyword_3_0());
             	        
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:931:1: ( (lv_theorems_4_0= RULE_ID ) )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:932:1: (lv_theorems_4_0= RULE_ID )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:932:1: ( (lv_theorems_4_0= RULE_ID ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:933:1: (lv_theorems_4_0= RULE_ID )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:932:1: (lv_theorems_4_0= RULE_ID )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:933:3: lv_theorems_4_0= RULE_ID
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:933:1: (lv_theorems_4_0= RULE_ID )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:934:3: lv_theorems_4_0= RULE_ID
             	    {
-            	    lv_theorems_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRequiredDefinition1835); 
+            	    lv_theorems_4_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleRequiredDefinition1837); 
 
             	    			newLeafNode(lv_theorems_4_0, grammarAccess.getRequiredDefinitionAccess().getTheoremsIDTerminalRuleCall_3_1_0()); 
             	    		
@@ -2281,11 +2281,11 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            this_PUNC_CLOSE_PARENTHESIS_5=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleRequiredDefinition1853); 
+            this_PUNC_CLOSE_PARENTHESIS_5=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleRequiredDefinition1855); 
              
                 newLeafNode(this_PUNC_CLOSE_PARENTHESIS_5, grammarAccess.getRequiredDefinitionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_4()); 
                 
-            this_PUNC_SEMI_COLON_6=(Token)match(input,RULE_PUNC_SEMI_COLON,FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleRequiredDefinition1863); 
+            this_PUNC_SEMI_COLON_6=(Token)match(input,RULE_PUNC_SEMI_COLON,FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleRequiredDefinition1865); 
              
                 newLeafNode(this_PUNC_SEMI_COLON_6, grammarAccess.getRequiredDefinitionAccess().getPUNC_SEMI_COLONTerminalRuleCall_5()); 
                 
@@ -2310,7 +2310,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVerificationExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:965:1: entryRuleVerificationExpression returns [EObject current=null] : iv_ruleVerificationExpression= ruleVerificationExpression EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:966:1: entryRuleVerificationExpression returns [EObject current=null] : iv_ruleVerificationExpression= ruleVerificationExpression EOF ;
     public final EObject entryRuleVerificationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2318,17 +2318,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:966:2: (iv_ruleVerificationExpression= ruleVerificationExpression EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:967:2: iv_ruleVerificationExpression= ruleVerificationExpression EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:967:2: (iv_ruleVerificationExpression= ruleVerificationExpression EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:968:2: iv_ruleVerificationExpression= ruleVerificationExpression EOF
             {
              newCompositeNode(grammarAccess.getVerificationExpressionRule()); 
-            pushFollow(FOLLOW_ruleVerificationExpression_in_entryRuleVerificationExpression1897);
+            pushFollow(FOLLOW_ruleVerificationExpression_in_entryRuleVerificationExpression1899);
             iv_ruleVerificationExpression=ruleVerificationExpression();
 
             state._fsp--;
 
              current =iv_ruleVerificationExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationExpression1907); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationExpression1909); 
 
             }
 
@@ -2346,7 +2346,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVerificationExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:974:1: ruleVerificationExpression returns [EObject current=null] : (otherlv_0= KEYWORD_23 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:975:1: ruleVerificationExpression returns [EObject current=null] : (otherlv_0= KEYWORD_26 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON ) ;
     public final EObject ruleVerificationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2360,30 +2360,30 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:977:28: ( (otherlv_0= KEYWORD_23 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:978:1: (otherlv_0= KEYWORD_23 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:978:28: ( (otherlv_0= KEYWORD_26 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:979:1: (otherlv_0= KEYWORD_26 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:978:1: (otherlv_0= KEYWORD_23 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:979:2: otherlv_0= KEYWORD_23 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:979:1: (otherlv_0= KEYWORD_26 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:980:2: otherlv_0= KEYWORD_26 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e1_2_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_3= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_4= RULE_PUNC_SEMI_COLON
             {
-            otherlv_0=(Token)match(input,KEYWORD_23,FOLLOW_KEYWORD_23_in_ruleVerificationExpression1945); 
+            otherlv_0=(Token)match(input,KEYWORD_26,FOLLOW_KEYWORD_26_in_ruleVerificationExpression1947); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getVerificationExpressionAccess().getCheckKeyword_0());
                 
-            this_PUNC_OPEN_PARENTHESIS_1=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationExpression1955); 
+            this_PUNC_OPEN_PARENTHESIS_1=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationExpression1957); 
              
                 newLeafNode(this_PUNC_OPEN_PARENTHESIS_1, grammarAccess.getVerificationExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_1()); 
                 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:987:1: ( (lv_e1_2_0= ruleGenericExpression ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:988:1: (lv_e1_2_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:988:1: ( (lv_e1_2_0= ruleGenericExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:989:1: (lv_e1_2_0= ruleGenericExpression )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:988:1: (lv_e1_2_0= ruleGenericExpression )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:989:3: lv_e1_2_0= ruleGenericExpression
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:989:1: (lv_e1_2_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:990:3: lv_e1_2_0= ruleGenericExpression
             {
              
             	        newCompositeNode(grammarAccess.getVerificationExpressionAccess().getE1GenericExpressionParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleGenericExpression_in_ruleVerificationExpression1975);
+            pushFollow(FOLLOW_ruleGenericExpression_in_ruleVerificationExpression1977);
             lv_e1_2_0=ruleGenericExpression();
 
             state._fsp--;
@@ -2405,11 +2405,11 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_PUNC_CLOSE_PARENTHESIS_3=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationExpression1986); 
+            this_PUNC_CLOSE_PARENTHESIS_3=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationExpression1988); 
              
                 newLeafNode(this_PUNC_CLOSE_PARENTHESIS_3, grammarAccess.getVerificationExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_3()); 
                 
-            this_PUNC_SEMI_COLON_4=(Token)match(input,RULE_PUNC_SEMI_COLON,FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleVerificationExpression1996); 
+            this_PUNC_SEMI_COLON_4=(Token)match(input,RULE_PUNC_SEMI_COLON,FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleVerificationExpression1998); 
              
                 newLeafNode(this_PUNC_SEMI_COLON_4, grammarAccess.getVerificationExpressionAccess().getPUNC_SEMI_COLONTerminalRuleCall_4()); 
                 
@@ -2434,7 +2434,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEvaluationExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1021:1: entryRuleEvaluationExpression returns [EObject current=null] : iv_ruleEvaluationExpression= ruleEvaluationExpression EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1022:1: entryRuleEvaluationExpression returns [EObject current=null] : iv_ruleEvaluationExpression= ruleEvaluationExpression EOF ;
     public final EObject entryRuleEvaluationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2442,17 +2442,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1022:2: (iv_ruleEvaluationExpression= ruleEvaluationExpression EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1023:2: iv_ruleEvaluationExpression= ruleEvaluationExpression EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1023:2: (iv_ruleEvaluationExpression= ruleEvaluationExpression EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1024:2: iv_ruleEvaluationExpression= ruleEvaluationExpression EOF
             {
              newCompositeNode(grammarAccess.getEvaluationExpressionRule()); 
-            pushFollow(FOLLOW_ruleEvaluationExpression_in_entryRuleEvaluationExpression2030);
+            pushFollow(FOLLOW_ruleEvaluationExpression_in_entryRuleEvaluationExpression2032);
             iv_ruleEvaluationExpression=ruleEvaluationExpression();
 
             state._fsp--;
 
              current =iv_ruleEvaluationExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationExpression2040); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvaluationExpression2042); 
 
             }
 
@@ -2470,7 +2470,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvaluationExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1030:1: ruleEvaluationExpression returns [EObject current=null] : (otherlv_0= KEYWORD_27 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1031:1: ruleEvaluationExpression returns [EObject current=null] : (otherlv_0= KEYWORD_30 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON ) ;
     public final EObject ruleEvaluationExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2488,30 +2488,30 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1033:28: ( (otherlv_0= KEYWORD_27 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1034:1: (otherlv_0= KEYWORD_27 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1034:28: ( (otherlv_0= KEYWORD_30 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1035:1: (otherlv_0= KEYWORD_30 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1034:1: (otherlv_0= KEYWORD_27 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1035:2: otherlv_0= KEYWORD_27 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1035:1: (otherlv_0= KEYWORD_30 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1036:2: otherlv_0= KEYWORD_30 this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS ( (lv_e_4_0= ruleGenericExpression ) ) this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS this_PUNC_SEMI_COLON_7= RULE_PUNC_SEMI_COLON
             {
-            otherlv_0=(Token)match(input,KEYWORD_27,FOLLOW_KEYWORD_27_in_ruleEvaluationExpression2078); 
+            otherlv_0=(Token)match(input,KEYWORD_30,FOLLOW_KEYWORD_30_in_ruleEvaluationExpression2080); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEvaluationExpressionAccess().getReturnKeyword_0());
                 
-            this_PUNC_OPEN_PARENTHESIS_1=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2088); 
+            this_PUNC_OPEN_PARENTHESIS_1=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2090); 
              
                 newLeafNode(this_PUNC_OPEN_PARENTHESIS_1, grammarAccess.getEvaluationExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_1()); 
                 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1043:1: ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1044:1: (lv_f_2_0= ruleAggregationFunctionIdentifier )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1044:1: ( (lv_f_2_0= ruleAggregationFunctionIdentifier ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1045:1: (lv_f_2_0= ruleAggregationFunctionIdentifier )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1044:1: (lv_f_2_0= ruleAggregationFunctionIdentifier )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1045:3: lv_f_2_0= ruleAggregationFunctionIdentifier
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1045:1: (lv_f_2_0= ruleAggregationFunctionIdentifier )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1046:3: lv_f_2_0= ruleAggregationFunctionIdentifier
             {
              
             	        newCompositeNode(grammarAccess.getEvaluationExpressionAccess().getFAggregationFunctionIdentifierParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleAggregationFunctionIdentifier_in_ruleEvaluationExpression2108);
+            pushFollow(FOLLOW_ruleAggregationFunctionIdentifier_in_ruleEvaluationExpression2110);
             lv_f_2_0=ruleAggregationFunctionIdentifier();
 
             state._fsp--;
@@ -2533,20 +2533,20 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_PUNC_OPEN_PARENTHESIS_3=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2119); 
+            this_PUNC_OPEN_PARENTHESIS_3=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2121); 
              
                 newLeafNode(this_PUNC_OPEN_PARENTHESIS_3, grammarAccess.getEvaluationExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_3()); 
                 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1065:1: ( (lv_e_4_0= ruleGenericExpression ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1066:1: (lv_e_4_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1066:1: ( (lv_e_4_0= ruleGenericExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1067:1: (lv_e_4_0= ruleGenericExpression )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1066:1: (lv_e_4_0= ruleGenericExpression )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1067:3: lv_e_4_0= ruleGenericExpression
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1067:1: (lv_e_4_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1068:3: lv_e_4_0= ruleGenericExpression
             {
              
             	        newCompositeNode(grammarAccess.getEvaluationExpressionAccess().getEGenericExpressionParserRuleCall_4_0()); 
             	    
-            pushFollow(FOLLOW_ruleGenericExpression_in_ruleEvaluationExpression2139);
+            pushFollow(FOLLOW_ruleGenericExpression_in_ruleEvaluationExpression2141);
             lv_e_4_0=ruleGenericExpression();
 
             state._fsp--;
@@ -2568,15 +2568,15 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_PUNC_CLOSE_PARENTHESIS_5=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2150); 
+            this_PUNC_CLOSE_PARENTHESIS_5=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2152); 
              
                 newLeafNode(this_PUNC_CLOSE_PARENTHESIS_5, grammarAccess.getEvaluationExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_5()); 
                 
-            this_PUNC_CLOSE_PARENTHESIS_6=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2160); 
+            this_PUNC_CLOSE_PARENTHESIS_6=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2162); 
              
                 newLeafNode(this_PUNC_CLOSE_PARENTHESIS_6, grammarAccess.getEvaluationExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_6()); 
                 
-            this_PUNC_SEMI_COLON_7=(Token)match(input,RULE_PUNC_SEMI_COLON,FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleEvaluationExpression2170); 
+            this_PUNC_SEMI_COLON_7=(Token)match(input,RULE_PUNC_SEMI_COLON,FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleEvaluationExpression2172); 
              
                 newLeafNode(this_PUNC_SEMI_COLON_7, grammarAccess.getEvaluationExpressionAccess().getPUNC_SEMI_COLONTerminalRuleCall_7()); 
                 
@@ -2601,7 +2601,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGenericExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1103:1: entryRuleGenericExpression returns [EObject current=null] : iv_ruleGenericExpression= ruleGenericExpression EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1104:1: entryRuleGenericExpression returns [EObject current=null] : iv_ruleGenericExpression= ruleGenericExpression EOF ;
     public final EObject entryRuleGenericExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2609,17 +2609,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1104:2: (iv_ruleGenericExpression= ruleGenericExpression EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1105:2: iv_ruleGenericExpression= ruleGenericExpression EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1105:2: (iv_ruleGenericExpression= ruleGenericExpression EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1106:2: iv_ruleGenericExpression= ruleGenericExpression EOF
             {
              newCompositeNode(grammarAccess.getGenericExpressionRule()); 
-            pushFollow(FOLLOW_ruleGenericExpression_in_entryRuleGenericExpression2204);
+            pushFollow(FOLLOW_ruleGenericExpression_in_entryRuleGenericExpression2206);
             iv_ruleGenericExpression=ruleGenericExpression();
 
             state._fsp--;
 
              current =iv_ruleGenericExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGenericExpression2214); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGenericExpression2216); 
 
             }
 
@@ -2637,7 +2637,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGenericExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1112:1: ruleGenericExpression returns [EObject current=null] : ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1113:1: ruleGenericExpression returns [EObject current=null] : ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* ) ;
     public final EObject ruleGenericExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2651,22 +2651,22 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1115:28: ( ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1116:1: ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1116:28: ( ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1117:1: ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1116:1: ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1116:2: ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )*
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1117:1: ( ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )* )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1117:2: ( (lv_e1_0_0= ruleTerminalGenericExpression ) ) ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )*
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1116:2: ( (lv_e1_0_0= ruleTerminalGenericExpression ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1117:1: (lv_e1_0_0= ruleTerminalGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1117:2: ( (lv_e1_0_0= ruleTerminalGenericExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1118:1: (lv_e1_0_0= ruleTerminalGenericExpression )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1117:1: (lv_e1_0_0= ruleTerminalGenericExpression )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1118:3: lv_e1_0_0= ruleTerminalGenericExpression
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1118:1: (lv_e1_0_0= ruleTerminalGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1119:3: lv_e1_0_0= ruleTerminalGenericExpression
             {
              
             	        newCompositeNode(grammarAccess.getGenericExpressionAccess().getE1TerminalGenericExpressionParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2260);
+            pushFollow(FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2262);
             lv_e1_0_0=ruleTerminalGenericExpression();
 
             state._fsp--;
@@ -2688,25 +2688,25 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1134:2: ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )*
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1135:2: ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )*
             loop14:
             do {
                 int alt14=2;
                 alt14 = dfa14.predict(input);
                 switch (alt14) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1134:3: ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1135:3: ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1134:3: ( (lv_op_1_0= ruleGenericOperator ) )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1135:1: (lv_op_1_0= ruleGenericOperator )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1135:3: ( (lv_op_1_0= ruleGenericOperator ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1136:1: (lv_op_1_0= ruleGenericOperator )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1135:1: (lv_op_1_0= ruleGenericOperator )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1136:3: lv_op_1_0= ruleGenericOperator
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1136:1: (lv_op_1_0= ruleGenericOperator )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1137:3: lv_op_1_0= ruleGenericOperator
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getGenericExpressionAccess().getOpGenericOperatorParserRuleCall_1_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleGenericOperator_in_ruleGenericExpression2282);
+            	    pushFollow(FOLLOW_ruleGenericOperator_in_ruleGenericExpression2284);
             	    lv_op_1_0=ruleGenericOperator();
 
             	    state._fsp--;
@@ -2728,16 +2728,16 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1152:2: ( (lv_e2_2_0= ruleTerminalGenericExpression ) )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1153:1: (lv_e2_2_0= ruleTerminalGenericExpression )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1153:2: ( (lv_e2_2_0= ruleTerminalGenericExpression ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1154:1: (lv_e2_2_0= ruleTerminalGenericExpression )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1153:1: (lv_e2_2_0= ruleTerminalGenericExpression )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1154:3: lv_e2_2_0= ruleTerminalGenericExpression
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1154:1: (lv_e2_2_0= ruleTerminalGenericExpression )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1155:3: lv_e2_2_0= ruleTerminalGenericExpression
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getGenericExpressionAccess().getE2TerminalGenericExpressionParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2303);
+            	    pushFollow(FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2305);
             	    lv_e2_2_0=ruleTerminalGenericExpression();
 
             	    state._fsp--;
@@ -2789,7 +2789,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTerminalGenericExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1178:1: entryRuleTerminalGenericExpression returns [EObject current=null] : iv_ruleTerminalGenericExpression= ruleTerminalGenericExpression EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1179:1: entryRuleTerminalGenericExpression returns [EObject current=null] : iv_ruleTerminalGenericExpression= ruleTerminalGenericExpression EOF ;
     public final EObject entryRuleTerminalGenericExpression() throws RecognitionException {
         EObject current = null;
 
@@ -2797,17 +2797,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1179:2: (iv_ruleTerminalGenericExpression= ruleTerminalGenericExpression EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1180:2: iv_ruleTerminalGenericExpression= ruleTerminalGenericExpression EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1180:2: (iv_ruleTerminalGenericExpression= ruleTerminalGenericExpression EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1181:2: iv_ruleTerminalGenericExpression= ruleTerminalGenericExpression EOF
             {
              newCompositeNode(grammarAccess.getTerminalGenericExpressionRule()); 
-            pushFollow(FOLLOW_ruleTerminalGenericExpression_in_entryRuleTerminalGenericExpression2340);
+            pushFollow(FOLLOW_ruleTerminalGenericExpression_in_entryRuleTerminalGenericExpression2342);
             iv_ruleTerminalGenericExpression=ruleTerminalGenericExpression();
 
             state._fsp--;
 
              current =iv_ruleTerminalGenericExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerminalGenericExpression2350); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTerminalGenericExpression2352); 
 
             }
 
@@ -2825,94 +2825,125 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerminalGenericExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1187:1: ruleTerminalGenericExpression returns [EObject current=null] : ( ( (lv_literal_0_0= ruleLiteral ) ) | ( (lv_fc_1_0= ruleVerificationFunctionCall ) ) | ( (lv_te_2_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_4= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1188:1: ruleTerminalGenericExpression returns [EObject current=null] : ( ( ruleUnaryOperator )? ( ( (lv_literal_1_0= ruleLiteral ) ) | ( (lv_fc_2_0= ruleVerificationFunctionCall ) ) | ( (lv_te_3_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS ) ) ) ;
     public final EObject ruleTerminalGenericExpression() throws RecognitionException {
         EObject current = null;
 
-        Token this_PUNC_OPEN_PARENTHESIS_3=null;
-        Token this_PUNC_CLOSE_PARENTHESIS_5=null;
-        EObject lv_literal_0_0 = null;
+        Token this_PUNC_OPEN_PARENTHESIS_4=null;
+        Token this_PUNC_CLOSE_PARENTHESIS_6=null;
+        EObject lv_literal_1_0 = null;
 
-        EObject lv_fc_1_0 = null;
+        EObject lv_fc_2_0 = null;
 
-        EObject lv_te_2_0 = null;
+        EObject lv_te_3_0 = null;
 
-        EObject this_GenericExpression_4 = null;
+        EObject this_GenericExpression_5 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1190:28: ( ( ( (lv_literal_0_0= ruleLiteral ) ) | ( (lv_fc_1_0= ruleVerificationFunctionCall ) ) | ( (lv_te_2_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_4= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1191:1: ( ( (lv_literal_0_0= ruleLiteral ) ) | ( (lv_fc_1_0= ruleVerificationFunctionCall ) ) | ( (lv_te_2_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_4= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1191:28: ( ( ( ruleUnaryOperator )? ( ( (lv_literal_1_0= ruleLiteral ) ) | ( (lv_fc_2_0= ruleVerificationFunctionCall ) ) | ( (lv_te_3_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS ) ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1192:1: ( ( ruleUnaryOperator )? ( ( (lv_literal_1_0= ruleLiteral ) ) | ( (lv_fc_2_0= ruleVerificationFunctionCall ) ) | ( (lv_te_3_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS ) ) )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1191:1: ( ( (lv_literal_0_0= ruleLiteral ) ) | ( (lv_fc_1_0= ruleVerificationFunctionCall ) ) | ( (lv_te_2_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_4= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) )
-            int alt15=4;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1192:1: ( ( ruleUnaryOperator )? ( ( (lv_literal_1_0= ruleLiteral ) ) | ( (lv_fc_2_0= ruleVerificationFunctionCall ) ) | ( (lv_te_3_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1192:2: ( ruleUnaryOperator )? ( ( (lv_literal_1_0= ruleLiteral ) ) | ( (lv_fc_2_0= ruleVerificationFunctionCall ) ) | ( (lv_te_3_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS ) )
+            {
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1192:2: ( ruleUnaryOperator )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==KEYWORD_13) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1193:5: ruleUnaryOperator
+                    {
+                     
+                            newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getUnaryOperatorParserRuleCall_0()); 
+                        
+                    pushFollow(FOLLOW_ruleUnaryOperator_in_ruleTerminalGenericExpression2394);
+                    ruleUnaryOperator();
+
+                    state._fsp--;
+
+
+                            afterParserOrEnumRuleCall();
+                        
+
+                    }
+                    break;
+
+            }
+
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1200:3: ( ( (lv_literal_1_0= ruleLiteral ) ) | ( (lv_fc_2_0= ruleVerificationFunctionCall ) ) | ( (lv_te_3_0= ruleTernaryExpression ) ) | (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS ) )
+            int alt16=4;
             switch ( input.LA(1) ) {
-            case KEYWORD_24:
-            case KEYWORD_19:
+            case KEYWORD_27:
+            case KEYWORD_22:
             case RULE_STRING:
             case RULE_NUMERIC:
                 {
-                alt15=1;
+                alt16=1;
                 }
                 break;
+            case KEYWORD_47:
             case KEYWORD_44:
-            case KEYWORD_41:
+            case KEYWORD_37:
             case KEYWORD_34:
+            case KEYWORD_35:
             case KEYWORD_31:
-            case KEYWORD_32:
             case KEYWORD_28:
+            case KEYWORD_29:
+            case KEYWORD_23:
+            case KEYWORD_24:
             case KEYWORD_25:
-            case KEYWORD_26:
-            case KEYWORD_20:
-            case KEYWORD_21:
-            case KEYWORD_22:
-            case KEYWORD_11:
-            case KEYWORD_12:
-            case KEYWORD_13:
+            case KEYWORD_14:
+            case KEYWORD_15:
             case KEYWORD_16:
-            case KEYWORD_5:
+            case KEYWORD_19:
             case KEYWORD_6:
             case KEYWORD_7:
             case KEYWORD_8:
             case KEYWORD_9:
+            case KEYWORD_10:
                 {
-                alt15=2;
+                alt16=2;
                 }
                 break;
             case KEYWORD_3:
                 {
-                alt15=3;
+                alt16=3;
                 }
                 break;
             case RULE_PUNC_OPEN_PARENTHESIS:
                 {
-                alt15=4;
+                alt16=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 15, 0, input);
+                    new NoViableAltException("", 16, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt15) {
+            switch (alt16) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1191:2: ( (lv_literal_0_0= ruleLiteral ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1200:4: ( (lv_literal_1_0= ruleLiteral ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1191:2: ( (lv_literal_0_0= ruleLiteral ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1192:1: (lv_literal_0_0= ruleLiteral )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1200:4: ( (lv_literal_1_0= ruleLiteral ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1201:1: (lv_literal_1_0= ruleLiteral )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1192:1: (lv_literal_0_0= ruleLiteral )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1193:3: lv_literal_0_0= ruleLiteral
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1201:1: (lv_literal_1_0= ruleLiteral )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1202:3: lv_literal_1_0= ruleLiteral
                     {
                      
-                    	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getLiteralLiteralParserRuleCall_0_0()); 
+                    	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getLiteralLiteralParserRuleCall_1_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLiteral_in_ruleTerminalGenericExpression2396);
-                    lv_literal_0_0=ruleLiteral();
+                    pushFollow(FOLLOW_ruleLiteral_in_ruleTerminalGenericExpression2417);
+                    lv_literal_1_0=ruleLiteral();
 
                     state._fsp--;
 
@@ -2923,7 +2954,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"literal",
-                            		lv_literal_0_0, 
+                            		lv_literal_1_0, 
                             		"Literal");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -2937,19 +2968,19 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1210:6: ( (lv_fc_1_0= ruleVerificationFunctionCall ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1219:6: ( (lv_fc_2_0= ruleVerificationFunctionCall ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1210:6: ( (lv_fc_1_0= ruleVerificationFunctionCall ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1211:1: (lv_fc_1_0= ruleVerificationFunctionCall )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1219:6: ( (lv_fc_2_0= ruleVerificationFunctionCall ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1220:1: (lv_fc_2_0= ruleVerificationFunctionCall )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1211:1: (lv_fc_1_0= ruleVerificationFunctionCall )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1212:3: lv_fc_1_0= ruleVerificationFunctionCall
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1220:1: (lv_fc_2_0= ruleVerificationFunctionCall )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1221:3: lv_fc_2_0= ruleVerificationFunctionCall
                     {
                      
-                    	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getFcVerificationFunctionCallParserRuleCall_1_0()); 
+                    	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getFcVerificationFunctionCallParserRuleCall_1_1_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleVerificationFunctionCall_in_ruleTerminalGenericExpression2423);
-                    lv_fc_1_0=ruleVerificationFunctionCall();
+                    pushFollow(FOLLOW_ruleVerificationFunctionCall_in_ruleTerminalGenericExpression2444);
+                    lv_fc_2_0=ruleVerificationFunctionCall();
 
                     state._fsp--;
 
@@ -2960,7 +2991,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"fc",
-                            		lv_fc_1_0, 
+                            		lv_fc_2_0, 
                             		"VerificationFunctionCall");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -2974,19 +3005,19 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1229:6: ( (lv_te_2_0= ruleTernaryExpression ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1238:6: ( (lv_te_3_0= ruleTernaryExpression ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1229:6: ( (lv_te_2_0= ruleTernaryExpression ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1230:1: (lv_te_2_0= ruleTernaryExpression )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1238:6: ( (lv_te_3_0= ruleTernaryExpression ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1239:1: (lv_te_3_0= ruleTernaryExpression )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1230:1: (lv_te_2_0= ruleTernaryExpression )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1231:3: lv_te_2_0= ruleTernaryExpression
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1239:1: (lv_te_3_0= ruleTernaryExpression )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1240:3: lv_te_3_0= ruleTernaryExpression
                     {
                      
-                    	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getTeTernaryExpressionParserRuleCall_2_0()); 
+                    	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getTeTernaryExpressionParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleTernaryExpression_in_ruleTerminalGenericExpression2450);
-                    lv_te_2_0=ruleTernaryExpression();
+                    pushFollow(FOLLOW_ruleTernaryExpression_in_ruleTerminalGenericExpression2471);
+                    lv_te_3_0=ruleTernaryExpression();
 
                     state._fsp--;
 
@@ -2997,7 +3028,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                            		set(
                            			current, 
                            			"te",
-                            		lv_te_2_0, 
+                            		lv_te_3_0, 
                             		"TernaryExpression");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -3011,30 +3042,30 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1248:6: (this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_4= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1257:6: (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1248:6: (this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_4= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1248:7: this_PUNC_OPEN_PARENTHESIS_3= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_4= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1257:6: (this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1257:7: this_PUNC_OPEN_PARENTHESIS_4= RULE_PUNC_OPEN_PARENTHESIS this_GenericExpression_5= ruleGenericExpression this_PUNC_CLOSE_PARENTHESIS_6= RULE_PUNC_CLOSE_PARENTHESIS
                     {
-                    this_PUNC_OPEN_PARENTHESIS_3=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleTerminalGenericExpression2468); 
+                    this_PUNC_OPEN_PARENTHESIS_4=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleTerminalGenericExpression2489); 
                      
-                        newLeafNode(this_PUNC_OPEN_PARENTHESIS_3, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_3_0()); 
+                        newLeafNode(this_PUNC_OPEN_PARENTHESIS_4, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0()); 
                         
                      
-                            newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getGenericExpressionParserRuleCall_3_1()); 
+                            newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getGenericExpressionParserRuleCall_1_3_1()); 
                         
-                    pushFollow(FOLLOW_ruleGenericExpression_in_ruleTerminalGenericExpression2489);
-                    this_GenericExpression_4=ruleGenericExpression();
+                    pushFollow(FOLLOW_ruleGenericExpression_in_ruleTerminalGenericExpression2510);
+                    this_GenericExpression_5=ruleGenericExpression();
 
                     state._fsp--;
 
 
-                            current = this_GenericExpression_4;
+                            current = this_GenericExpression_5;
                             afterParserOrEnumRuleCall();
                         
-                    this_PUNC_CLOSE_PARENTHESIS_5=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleTerminalGenericExpression2499); 
+                    this_PUNC_CLOSE_PARENTHESIS_6=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleTerminalGenericExpression2520); 
                      
-                        newLeafNode(this_PUNC_CLOSE_PARENTHESIS_5, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2()); 
+                        newLeafNode(this_PUNC_CLOSE_PARENTHESIS_6, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2()); 
                         
 
                     }
@@ -3042,6 +3073,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+
+            }
+
 
             }
 
@@ -3063,7 +3097,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1273:1: entryRuleSetExpression returns [EObject current=null] : iv_ruleSetExpression= ruleSetExpression EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1282:1: entryRuleSetExpression returns [EObject current=null] : iv_ruleSetExpression= ruleSetExpression EOF ;
     public final EObject entryRuleSetExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3071,17 +3105,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1274:2: (iv_ruleSetExpression= ruleSetExpression EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1275:2: iv_ruleSetExpression= ruleSetExpression EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1283:2: (iv_ruleSetExpression= ruleSetExpression EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1284:2: iv_ruleSetExpression= ruleSetExpression EOF
             {
              newCompositeNode(grammarAccess.getSetExpressionRule()); 
-            pushFollow(FOLLOW_ruleSetExpression_in_entryRuleSetExpression2534);
+            pushFollow(FOLLOW_ruleSetExpression_in_entryRuleSetExpression2556);
             iv_ruleSetExpression=ruleSetExpression();
 
             state._fsp--;
 
              current =iv_ruleSetExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetExpression2544); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetExpression2566); 
 
             }
 
@@ -3099,7 +3133,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1282:1: ruleSetExpression returns [EObject current=null] : ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1291:1: ruleSetExpression returns [EObject current=null] : ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* ) ;
     public final EObject ruleSetExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3113,22 +3147,22 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1285:28: ( ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1286:1: ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1294:28: ( ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1295:1: ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1286:1: ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1286:2: ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )*
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1295:1: ( ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )* )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1295:2: ( (lv_e1_0_0= ruleTerminalSetExpression ) ) ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )*
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1286:2: ( (lv_e1_0_0= ruleTerminalSetExpression ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1287:1: (lv_e1_0_0= ruleTerminalSetExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1295:2: ( (lv_e1_0_0= ruleTerminalSetExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1296:1: (lv_e1_0_0= ruleTerminalSetExpression )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1287:1: (lv_e1_0_0= ruleTerminalSetExpression )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1288:3: lv_e1_0_0= ruleTerminalSetExpression
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1296:1: (lv_e1_0_0= ruleTerminalSetExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1297:3: lv_e1_0_0= ruleTerminalSetExpression
             {
              
             	        newCompositeNode(grammarAccess.getSetExpressionAccess().getE1TerminalSetExpressionParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2590);
+            pushFollow(FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2612);
             lv_e1_0_0=ruleTerminalSetExpression();
 
             state._fsp--;
@@ -3150,31 +3184,31 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1304:2: ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )*
-            loop16:
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1313:2: ( ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) ) )*
+            loop17:
             do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA16_0==RULE_PLUS||(LA16_0>=RULE_STAR && LA16_0<=RULE_SLASH)) ) {
-                    alt16=1;
+                if ( (LA17_0==RULE_PLUS||(LA17_0>=RULE_STAR && LA17_0<=RULE_SLASH)) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt16) {
+                switch (alt17) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1304:3: ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1313:3: ( (lv_op_1_0= ruleSetOperator ) ) ( (lv_e2_2_0= ruleTerminalSetExpression ) )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1304:3: ( (lv_op_1_0= ruleSetOperator ) )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1305:1: (lv_op_1_0= ruleSetOperator )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1313:3: ( (lv_op_1_0= ruleSetOperator ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1314:1: (lv_op_1_0= ruleSetOperator )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1305:1: (lv_op_1_0= ruleSetOperator )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1306:3: lv_op_1_0= ruleSetOperator
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1314:1: (lv_op_1_0= ruleSetOperator )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1315:3: lv_op_1_0= ruleSetOperator
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getSetExpressionAccess().getOpSetOperatorParserRuleCall_1_0_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleSetOperator_in_ruleSetExpression2612);
+            	    pushFollow(FOLLOW_ruleSetOperator_in_ruleSetExpression2634);
             	    lv_op_1_0=ruleSetOperator();
 
             	    state._fsp--;
@@ -3196,16 +3230,16 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1322:2: ( (lv_e2_2_0= ruleTerminalSetExpression ) )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1323:1: (lv_e2_2_0= ruleTerminalSetExpression )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1331:2: ( (lv_e2_2_0= ruleTerminalSetExpression ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1332:1: (lv_e2_2_0= ruleTerminalSetExpression )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1323:1: (lv_e2_2_0= ruleTerminalSetExpression )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1324:3: lv_e2_2_0= ruleTerminalSetExpression
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1332:1: (lv_e2_2_0= ruleTerminalSetExpression )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1333:3: lv_e2_2_0= ruleTerminalSetExpression
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getSetExpressionAccess().getE2TerminalSetExpressionParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2633);
+            	    pushFollow(FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2655);
             	    lv_e2_2_0=ruleTerminalSetExpression();
 
             	    state._fsp--;
@@ -3232,7 +3266,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop16;
+            	    break loop17;
                 }
             } while (true);
 
@@ -3257,7 +3291,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTerminalSetExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1348:1: entryRuleTerminalSetExpression returns [String current=null] : iv_ruleTerminalSetExpression= ruleTerminalSetExpression EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1357:1: entryRuleTerminalSetExpression returns [String current=null] : iv_ruleTerminalSetExpression= ruleTerminalSetExpression EOF ;
     public final String entryRuleTerminalSetExpression() throws RecognitionException {
         String current = null;
 
@@ -3265,17 +3299,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1349:1: (iv_ruleTerminalSetExpression= ruleTerminalSetExpression EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1350:2: iv_ruleTerminalSetExpression= ruleTerminalSetExpression EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1358:1: (iv_ruleTerminalSetExpression= ruleTerminalSetExpression EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1359:2: iv_ruleTerminalSetExpression= ruleTerminalSetExpression EOF
             {
              newCompositeNode(grammarAccess.getTerminalSetExpressionRule()); 
-            pushFollow(FOLLOW_ruleTerminalSetExpression_in_entryRuleTerminalSetExpression2671);
+            pushFollow(FOLLOW_ruleTerminalSetExpression_in_entryRuleTerminalSetExpression2693);
             iv_ruleTerminalSetExpression=ruleTerminalSetExpression();
 
             state._fsp--;
 
              current =iv_ruleTerminalSetExpression.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTerminalSetExpression2682); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTerminalSetExpression2704); 
 
             }
 
@@ -3293,7 +3327,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTerminalSetExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1357:1: ruleTerminalSetExpression returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1366:1: ruleTerminalSetExpression returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : this_ID_0= RULE_ID ;
     public final AntlrDatatypeRuleToken ruleTerminalSetExpression() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3302,10 +3336,10 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1361:6: (this_ID_0= RULE_ID )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1362:5: this_ID_0= RULE_ID
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1370:6: (this_ID_0= RULE_ID )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1371:5: this_ID_0= RULE_ID
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTerminalSetExpression2721); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleTerminalSetExpression2743); 
 
             		current.merge(this_ID_0);
                 
@@ -3331,7 +3365,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTernaryExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1377:1: entryRuleTernaryExpression returns [EObject current=null] : iv_ruleTernaryExpression= ruleTernaryExpression EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1386:1: entryRuleTernaryExpression returns [EObject current=null] : iv_ruleTernaryExpression= ruleTernaryExpression EOF ;
     public final EObject entryRuleTernaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3339,17 +3373,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1378:2: (iv_ruleTernaryExpression= ruleTernaryExpression EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1379:2: iv_ruleTernaryExpression= ruleTernaryExpression EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1387:2: (iv_ruleTernaryExpression= ruleTernaryExpression EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1388:2: iv_ruleTernaryExpression= ruleTernaryExpression EOF
             {
              newCompositeNode(grammarAccess.getTernaryExpressionRule()); 
-            pushFollow(FOLLOW_ruleTernaryExpression_in_entryRuleTernaryExpression2764);
+            pushFollow(FOLLOW_ruleTernaryExpression_in_entryRuleTernaryExpression2786);
             iv_ruleTernaryExpression=ruleTernaryExpression();
 
             state._fsp--;
 
              current =iv_ruleTernaryExpression; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTernaryExpression2774); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTernaryExpression2796); 
 
             }
 
@@ -3367,7 +3401,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTernaryExpression"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1386:1: ruleTernaryExpression returns [EObject current=null] : (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_18 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_17 ( (lv_falseValue_5_0= ruleGenericExpression ) ) ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1395:1: ruleTernaryExpression returns [EObject current=null] : (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_21 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_20 ( (lv_falseValue_5_0= ruleGenericExpression ) ) ) ;
     public final EObject ruleTernaryExpression() throws RecognitionException {
         EObject current = null;
 
@@ -3384,26 +3418,26 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1389:28: ( (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_18 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_17 ( (lv_falseValue_5_0= ruleGenericExpression ) ) ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1390:1: (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_18 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_17 ( (lv_falseValue_5_0= ruleGenericExpression ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1398:28: ( (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_21 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_20 ( (lv_falseValue_5_0= ruleGenericExpression ) ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1399:1: (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_21 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_20 ( (lv_falseValue_5_0= ruleGenericExpression ) ) )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1390:1: (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_18 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_17 ( (lv_falseValue_5_0= ruleGenericExpression ) ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1391:2: otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_18 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_17 ( (lv_falseValue_5_0= ruleGenericExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1399:1: (otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_21 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_20 ( (lv_falseValue_5_0= ruleGenericExpression ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1400:2: otherlv_0= KEYWORD_3 ( (lv_conditional_1_0= ruleGenericExpression ) ) otherlv_2= KEYWORD_21 ( (lv_trueValue_3_0= ruleGenericExpression ) ) otherlv_4= KEYWORD_20 ( (lv_falseValue_5_0= ruleGenericExpression ) )
             {
-            otherlv_0=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_ruleTernaryExpression2812); 
+            otherlv_0=(Token)match(input,KEYWORD_3,FOLLOW_KEYWORD_3_in_ruleTernaryExpression2834); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTernaryExpressionAccess().getIfKeyword_0());
                 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1395:1: ( (lv_conditional_1_0= ruleGenericExpression ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1396:1: (lv_conditional_1_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1404:1: ( (lv_conditional_1_0= ruleGenericExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1405:1: (lv_conditional_1_0= ruleGenericExpression )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1396:1: (lv_conditional_1_0= ruleGenericExpression )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1397:3: lv_conditional_1_0= ruleGenericExpression
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1405:1: (lv_conditional_1_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1406:3: lv_conditional_1_0= ruleGenericExpression
             {
              
             	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getConditionalGenericExpressionParserRuleCall_1_0()); 
             	    
-            pushFollow(FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2832);
+            pushFollow(FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2854);
             lv_conditional_1_0=ruleGenericExpression();
 
             state._fsp--;
@@ -3425,20 +3459,20 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,KEYWORD_18,FOLLOW_KEYWORD_18_in_ruleTernaryExpression2845); 
+            otherlv_2=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_ruleTernaryExpression2867); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getTernaryExpressionAccess().getThenKeyword_2());
                 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1418:1: ( (lv_trueValue_3_0= ruleGenericExpression ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1419:1: (lv_trueValue_3_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1427:1: ( (lv_trueValue_3_0= ruleGenericExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1428:1: (lv_trueValue_3_0= ruleGenericExpression )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1419:1: (lv_trueValue_3_0= ruleGenericExpression )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1420:3: lv_trueValue_3_0= ruleGenericExpression
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1428:1: (lv_trueValue_3_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1429:3: lv_trueValue_3_0= ruleGenericExpression
             {
              
             	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getTrueValueGenericExpressionParserRuleCall_3_0()); 
             	    
-            pushFollow(FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2865);
+            pushFollow(FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2887);
             lv_trueValue_3_0=ruleGenericExpression();
 
             state._fsp--;
@@ -3460,20 +3494,20 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,KEYWORD_17,FOLLOW_KEYWORD_17_in_ruleTernaryExpression2878); 
+            otherlv_4=(Token)match(input,KEYWORD_20,FOLLOW_KEYWORD_20_in_ruleTernaryExpression2900); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getTernaryExpressionAccess().getElseKeyword_4());
                 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1441:1: ( (lv_falseValue_5_0= ruleGenericExpression ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1442:1: (lv_falseValue_5_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1450:1: ( (lv_falseValue_5_0= ruleGenericExpression ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1451:1: (lv_falseValue_5_0= ruleGenericExpression )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1442:1: (lv_falseValue_5_0= ruleGenericExpression )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1443:3: lv_falseValue_5_0= ruleGenericExpression
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1451:1: (lv_falseValue_5_0= ruleGenericExpression )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1452:3: lv_falseValue_5_0= ruleGenericExpression
             {
              
             	        newCompositeNode(grammarAccess.getTernaryExpressionAccess().getFalseValueGenericExpressionParserRuleCall_5_0()); 
             	    
-            pushFollow(FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2898);
+            pushFollow(FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2920);
             lv_falseValue_5_0=ruleGenericExpression();
 
             state._fsp--;
@@ -3516,7 +3550,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVerificationFunctionCall"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1467:1: entryRuleVerificationFunctionCall returns [EObject current=null] : iv_ruleVerificationFunctionCall= ruleVerificationFunctionCall EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1476:1: entryRuleVerificationFunctionCall returns [EObject current=null] : iv_ruleVerificationFunctionCall= ruleVerificationFunctionCall EOF ;
     public final EObject entryRuleVerificationFunctionCall() throws RecognitionException {
         EObject current = null;
 
@@ -3524,17 +3558,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1468:2: (iv_ruleVerificationFunctionCall= ruleVerificationFunctionCall EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1469:2: iv_ruleVerificationFunctionCall= ruleVerificationFunctionCall EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1477:2: (iv_ruleVerificationFunctionCall= ruleVerificationFunctionCall EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1478:2: iv_ruleVerificationFunctionCall= ruleVerificationFunctionCall EOF
             {
              newCompositeNode(grammarAccess.getVerificationFunctionCallRule()); 
-            pushFollow(FOLLOW_ruleVerificationFunctionCall_in_entryRuleVerificationFunctionCall2933);
+            pushFollow(FOLLOW_ruleVerificationFunctionCall_in_entryRuleVerificationFunctionCall2955);
             iv_ruleVerificationFunctionCall=ruleVerificationFunctionCall();
 
             state._fsp--;
 
              current =iv_ruleVerificationFunctionCall; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationFunctionCall2943); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationFunctionCall2965); 
 
             }
 
@@ -3552,7 +3586,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVerificationFunctionCall"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1476:1: ruleVerificationFunctionCall returns [EObject current=null] : ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1485:1: ruleVerificationFunctionCall returns [EObject current=null] : ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) ;
     public final EObject ruleVerificationFunctionCall() throws RecognitionException {
         EObject current = null;
 
@@ -3569,22 +3603,22 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1479:28: ( ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1480:1: ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1488:28: ( ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1489:1: ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1480:1: ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1480:2: ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1489:1: ( ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1489:2: ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) ) this_PUNC_OPEN_PARENTHESIS_1= RULE_PUNC_OPEN_PARENTHESIS ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) ) (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )* this_PUNC_CLOSE_PARENTHESIS_5= RULE_PUNC_CLOSE_PARENTHESIS
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1480:2: ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1481:1: (lv_f_0_0= ruleVerificationFunctionIdentifier )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1489:2: ( (lv_f_0_0= ruleVerificationFunctionIdentifier ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1490:1: (lv_f_0_0= ruleVerificationFunctionIdentifier )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1481:1: (lv_f_0_0= ruleVerificationFunctionIdentifier )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1482:3: lv_f_0_0= ruleVerificationFunctionIdentifier
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1490:1: (lv_f_0_0= ruleVerificationFunctionIdentifier )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1491:3: lv_f_0_0= ruleVerificationFunctionIdentifier
             {
              
             	        newCompositeNode(grammarAccess.getVerificationFunctionCallAccess().getFVerificationFunctionIdentifierParserRuleCall_0_0()); 
             	    
-            pushFollow(FOLLOW_ruleVerificationFunctionIdentifier_in_ruleVerificationFunctionCall2989);
+            pushFollow(FOLLOW_ruleVerificationFunctionIdentifier_in_ruleVerificationFunctionCall3011);
             lv_f_0_0=ruleVerificationFunctionIdentifier();
 
             state._fsp--;
@@ -3606,20 +3640,20 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_PUNC_OPEN_PARENTHESIS_1=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationFunctionCall3000); 
+            this_PUNC_OPEN_PARENTHESIS_1=(Token)match(input,RULE_PUNC_OPEN_PARENTHESIS,FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationFunctionCall3022); 
              
                 newLeafNode(this_PUNC_OPEN_PARENTHESIS_1, grammarAccess.getVerificationFunctionCallAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_1()); 
                 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1502:1: ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1503:1: (lv_arguments_2_0= ruleVerificationFunctionParameter )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1511:1: ( (lv_arguments_2_0= ruleVerificationFunctionParameter ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1512:1: (lv_arguments_2_0= ruleVerificationFunctionParameter )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1503:1: (lv_arguments_2_0= ruleVerificationFunctionParameter )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1504:3: lv_arguments_2_0= ruleVerificationFunctionParameter
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1512:1: (lv_arguments_2_0= ruleVerificationFunctionParameter )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1513:3: lv_arguments_2_0= ruleVerificationFunctionParameter
             {
              
             	        newCompositeNode(grammarAccess.getVerificationFunctionCallAccess().getArgumentsVerificationFunctionParameterParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3020);
+            pushFollow(FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3042);
             lv_arguments_2_0=ruleVerificationFunctionParameter();
 
             state._fsp--;
@@ -3641,35 +3675,35 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1520:2: (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )*
-            loop17:
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1529:2: (this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) ) )*
+            loop18:
             do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-                if ( (LA17_0==RULE_PUNC_COMMA) ) {
-                    alt17=1;
+                if ( (LA18_0==RULE_PUNC_COMMA) ) {
+                    alt18=1;
                 }
 
 
-                switch (alt17) {
+                switch (alt18) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1520:3: this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1529:3: this_PUNC_COMMA_3= RULE_PUNC_COMMA ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) )
             	    {
-            	    this_PUNC_COMMA_3=(Token)match(input,RULE_PUNC_COMMA,FOLLOW_RULE_PUNC_COMMA_in_ruleVerificationFunctionCall3032); 
+            	    this_PUNC_COMMA_3=(Token)match(input,RULE_PUNC_COMMA,FOLLOW_RULE_PUNC_COMMA_in_ruleVerificationFunctionCall3054); 
             	     
             	        newLeafNode(this_PUNC_COMMA_3, grammarAccess.getVerificationFunctionCallAccess().getPUNC_COMMATerminalRuleCall_3_0()); 
             	        
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1524:1: ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1525:1: (lv_arguments_4_0= ruleVerificationFunctionParameter )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1533:1: ( (lv_arguments_4_0= ruleVerificationFunctionParameter ) )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1534:1: (lv_arguments_4_0= ruleVerificationFunctionParameter )
             	    {
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1525:1: (lv_arguments_4_0= ruleVerificationFunctionParameter )
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1526:3: lv_arguments_4_0= ruleVerificationFunctionParameter
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1534:1: (lv_arguments_4_0= ruleVerificationFunctionParameter )
+            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1535:3: lv_arguments_4_0= ruleVerificationFunctionParameter
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getVerificationFunctionCallAccess().getArgumentsVerificationFunctionParameterParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3052);
+            	    pushFollow(FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3074);
             	    lv_arguments_4_0=ruleVerificationFunctionParameter();
 
             	    state._fsp--;
@@ -3696,11 +3730,11 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop17;
+            	    break loop18;
                 }
             } while (true);
 
-            this_PUNC_CLOSE_PARENTHESIS_5=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationFunctionCall3065); 
+            this_PUNC_CLOSE_PARENTHESIS_5=(Token)match(input,RULE_PUNC_CLOSE_PARENTHESIS,FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationFunctionCall3087); 
              
                 newLeafNode(this_PUNC_CLOSE_PARENTHESIS_5, grammarAccess.getVerificationFunctionCallAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_4()); 
                 
@@ -3725,7 +3759,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVerificationFunctionParameter"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1554:1: entryRuleVerificationFunctionParameter returns [EObject current=null] : iv_ruleVerificationFunctionParameter= ruleVerificationFunctionParameter EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1563:1: entryRuleVerificationFunctionParameter returns [EObject current=null] : iv_ruleVerificationFunctionParameter= ruleVerificationFunctionParameter EOF ;
     public final EObject entryRuleVerificationFunctionParameter() throws RecognitionException {
         EObject current = null;
 
@@ -3733,17 +3767,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1555:2: (iv_ruleVerificationFunctionParameter= ruleVerificationFunctionParameter EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1556:2: iv_ruleVerificationFunctionParameter= ruleVerificationFunctionParameter EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1564:2: (iv_ruleVerificationFunctionParameter= ruleVerificationFunctionParameter EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1565:2: iv_ruleVerificationFunctionParameter= ruleVerificationFunctionParameter EOF
             {
              newCompositeNode(grammarAccess.getVerificationFunctionParameterRule()); 
-            pushFollow(FOLLOW_ruleVerificationFunctionParameter_in_entryRuleVerificationFunctionParameter3099);
+            pushFollow(FOLLOW_ruleVerificationFunctionParameter_in_entryRuleVerificationFunctionParameter3121);
             iv_ruleVerificationFunctionParameter=ruleVerificationFunctionParameter();
 
             state._fsp--;
 
              current =iv_ruleVerificationFunctionParameter; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationFunctionParameter3109); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationFunctionParameter3131); 
 
             }
 
@@ -3761,7 +3795,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVerificationFunctionParameter"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1563:1: ruleVerificationFunctionParameter returns [EObject current=null] : ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1572:1: ruleVerificationFunctionParameter returns [EObject current=null] : ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) ) ;
     public final EObject ruleVerificationFunctionParameter() throws RecognitionException {
         EObject current = null;
 
@@ -3774,70 +3808,70 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1566:28: ( ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1567:1: ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1575:28: ( ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1576:1: ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1567:1: ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) )
-            int alt18=3;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1576:1: ( ( (lv_l_0_0= ruleLiteral ) ) | ( (lv_identifier_1_0= RULE_ID ) ) | ( (lv_vfi_2_0= ruleVerificationFunctionCall ) ) )
+            int alt19=3;
             switch ( input.LA(1) ) {
-            case KEYWORD_24:
-            case KEYWORD_19:
+            case KEYWORD_27:
+            case KEYWORD_22:
             case RULE_STRING:
             case RULE_NUMERIC:
                 {
-                alt18=1;
+                alt19=1;
                 }
                 break;
             case RULE_ID:
                 {
-                alt18=2;
+                alt19=2;
                 }
                 break;
+            case KEYWORD_47:
             case KEYWORD_44:
-            case KEYWORD_41:
+            case KEYWORD_37:
             case KEYWORD_34:
+            case KEYWORD_35:
             case KEYWORD_31:
-            case KEYWORD_32:
             case KEYWORD_28:
+            case KEYWORD_29:
+            case KEYWORD_23:
+            case KEYWORD_24:
             case KEYWORD_25:
-            case KEYWORD_26:
-            case KEYWORD_20:
-            case KEYWORD_21:
-            case KEYWORD_22:
-            case KEYWORD_11:
-            case KEYWORD_12:
-            case KEYWORD_13:
+            case KEYWORD_14:
+            case KEYWORD_15:
             case KEYWORD_16:
-            case KEYWORD_5:
+            case KEYWORD_19:
             case KEYWORD_6:
             case KEYWORD_7:
             case KEYWORD_8:
             case KEYWORD_9:
+            case KEYWORD_10:
                 {
-                alt18=3;
+                alt19=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 18, 0, input);
+                    new NoViableAltException("", 19, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt18) {
+            switch (alt19) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1567:2: ( (lv_l_0_0= ruleLiteral ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1576:2: ( (lv_l_0_0= ruleLiteral ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1567:2: ( (lv_l_0_0= ruleLiteral ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1568:1: (lv_l_0_0= ruleLiteral )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1576:2: ( (lv_l_0_0= ruleLiteral ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1577:1: (lv_l_0_0= ruleLiteral )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1568:1: (lv_l_0_0= ruleLiteral )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1569:3: lv_l_0_0= ruleLiteral
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1577:1: (lv_l_0_0= ruleLiteral )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1578:3: lv_l_0_0= ruleLiteral
                     {
                      
                     	        newCompositeNode(grammarAccess.getVerificationFunctionParameterAccess().getLLiteralParserRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleLiteral_in_ruleVerificationFunctionParameter3155);
+                    pushFollow(FOLLOW_ruleLiteral_in_ruleVerificationFunctionParameter3177);
                     lv_l_0_0=ruleLiteral();
 
                     state._fsp--;
@@ -3863,15 +3897,15 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1586:6: ( (lv_identifier_1_0= RULE_ID ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1595:6: ( (lv_identifier_1_0= RULE_ID ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1586:6: ( (lv_identifier_1_0= RULE_ID ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1587:1: (lv_identifier_1_0= RULE_ID )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1595:6: ( (lv_identifier_1_0= RULE_ID ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1596:1: (lv_identifier_1_0= RULE_ID )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1587:1: (lv_identifier_1_0= RULE_ID )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1588:3: lv_identifier_1_0= RULE_ID
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1596:1: (lv_identifier_1_0= RULE_ID )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1597:3: lv_identifier_1_0= RULE_ID
                     {
-                    lv_identifier_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleVerificationFunctionParameter3178); 
+                    lv_identifier_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleVerificationFunctionParameter3200); 
 
                     			newLeafNode(lv_identifier_1_0, grammarAccess.getVerificationFunctionParameterAccess().getIdentifierIDTerminalRuleCall_1_0()); 
                     		
@@ -3895,18 +3929,18 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1605:6: ( (lv_vfi_2_0= ruleVerificationFunctionCall ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1614:6: ( (lv_vfi_2_0= ruleVerificationFunctionCall ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1605:6: ( (lv_vfi_2_0= ruleVerificationFunctionCall ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1606:1: (lv_vfi_2_0= ruleVerificationFunctionCall )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1614:6: ( (lv_vfi_2_0= ruleVerificationFunctionCall ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1615:1: (lv_vfi_2_0= ruleVerificationFunctionCall )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1606:1: (lv_vfi_2_0= ruleVerificationFunctionCall )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1607:3: lv_vfi_2_0= ruleVerificationFunctionCall
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1615:1: (lv_vfi_2_0= ruleVerificationFunctionCall )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1616:3: lv_vfi_2_0= ruleVerificationFunctionCall
                     {
                      
                     	        newCompositeNode(grammarAccess.getVerificationFunctionParameterAccess().getVfiVerificationFunctionCallParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleVerificationFunctionCall_in_ruleVerificationFunctionParameter3210);
+                    pushFollow(FOLLOW_ruleVerificationFunctionCall_in_ruleVerificationFunctionParameter3232);
                     lv_vfi_2_0=ruleVerificationFunctionCall();
 
                     state._fsp--;
@@ -3952,7 +3986,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAggregationFunctionIdentifier"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1631:1: entryRuleAggregationFunctionIdentifier returns [String current=null] : iv_ruleAggregationFunctionIdentifier= ruleAggregationFunctionIdentifier EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1640:1: entryRuleAggregationFunctionIdentifier returns [String current=null] : iv_ruleAggregationFunctionIdentifier= ruleAggregationFunctionIdentifier EOF ;
     public final String entryRuleAggregationFunctionIdentifier() throws RecognitionException {
         String current = null;
 
@@ -3960,17 +3994,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1632:1: (iv_ruleAggregationFunctionIdentifier= ruleAggregationFunctionIdentifier EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1633:2: iv_ruleAggregationFunctionIdentifier= ruleAggregationFunctionIdentifier EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1641:1: (iv_ruleAggregationFunctionIdentifier= ruleAggregationFunctionIdentifier EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1642:2: iv_ruleAggregationFunctionIdentifier= ruleAggregationFunctionIdentifier EOF
             {
              newCompositeNode(grammarAccess.getAggregationFunctionIdentifierRule()); 
-            pushFollow(FOLLOW_ruleAggregationFunctionIdentifier_in_entryRuleAggregationFunctionIdentifier3246);
+            pushFollow(FOLLOW_ruleAggregationFunctionIdentifier_in_entryRuleAggregationFunctionIdentifier3268);
             iv_ruleAggregationFunctionIdentifier=ruleAggregationFunctionIdentifier();
 
             state._fsp--;
 
              current =iv_ruleAggregationFunctionIdentifier.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleAggregationFunctionIdentifier3257); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAggregationFunctionIdentifier3279); 
 
             }
 
@@ -3988,7 +4022,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAggregationFunctionIdentifier"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1640:1: ruleAggregationFunctionIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_15 | kw= KEYWORD_14 ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1649:1: ruleAggregationFunctionIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_18 | kw= KEYWORD_17 ) ;
     public final AntlrDatatypeRuleToken ruleAggregationFunctionIdentifier() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -3997,30 +4031,30 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1644:6: ( (kw= KEYWORD_15 | kw= KEYWORD_14 ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1645:1: (kw= KEYWORD_15 | kw= KEYWORD_14 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1653:6: ( (kw= KEYWORD_18 | kw= KEYWORD_17 ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1654:1: (kw= KEYWORD_18 | kw= KEYWORD_17 )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1645:1: (kw= KEYWORD_15 | kw= KEYWORD_14 )
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1654:1: (kw= KEYWORD_18 | kw= KEYWORD_17 )
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA19_0==KEYWORD_15) ) {
-                alt19=1;
+            if ( (LA20_0==KEYWORD_18) ) {
+                alt20=1;
             }
-            else if ( (LA19_0==KEYWORD_14) ) {
-                alt19=2;
+            else if ( (LA20_0==KEYWORD_17) ) {
+                alt20=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 19, 0, input);
+                    new NoViableAltException("", 20, 0, input);
 
                 throw nvae;
             }
-            switch (alt19) {
+            switch (alt20) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1646:2: kw= KEYWORD_15
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1655:2: kw= KEYWORD_18
                     {
-                    kw=(Token)match(input,KEYWORD_15,FOLLOW_KEYWORD_15_in_ruleAggregationFunctionIdentifier3295); 
+                    kw=(Token)match(input,KEYWORD_18,FOLLOW_KEYWORD_18_in_ruleAggregationFunctionIdentifier3317); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getAggregationFunctionIdentifierAccess().getMSumKeyword_0()); 
@@ -4029,9 +4063,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1653:2: kw= KEYWORD_14
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1662:2: kw= KEYWORD_17
                     {
-                    kw=(Token)match(input,KEYWORD_14,FOLLOW_KEYWORD_14_in_ruleAggregationFunctionIdentifier3314); 
+                    kw=(Token)match(input,KEYWORD_17,FOLLOW_KEYWORD_17_in_ruleAggregationFunctionIdentifier3336); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getAggregationFunctionIdentifierAccess().getMMaxKeyword_1()); 
@@ -4061,7 +4095,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVerificationFunctionIdentifier"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1666:1: entryRuleVerificationFunctionIdentifier returns [String current=null] : iv_ruleVerificationFunctionIdentifier= ruleVerificationFunctionIdentifier EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1675:1: entryRuleVerificationFunctionIdentifier returns [String current=null] : iv_ruleVerificationFunctionIdentifier= ruleVerificationFunctionIdentifier EOF ;
     public final String entryRuleVerificationFunctionIdentifier() throws RecognitionException {
         String current = null;
 
@@ -4069,17 +4103,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1667:1: (iv_ruleVerificationFunctionIdentifier= ruleVerificationFunctionIdentifier EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1668:2: iv_ruleVerificationFunctionIdentifier= ruleVerificationFunctionIdentifier EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1676:1: (iv_ruleVerificationFunctionIdentifier= ruleVerificationFunctionIdentifier EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1677:2: iv_ruleVerificationFunctionIdentifier= ruleVerificationFunctionIdentifier EOF
             {
              newCompositeNode(grammarAccess.getVerificationFunctionIdentifierRule()); 
-            pushFollow(FOLLOW_ruleVerificationFunctionIdentifier_in_entryRuleVerificationFunctionIdentifier3354);
+            pushFollow(FOLLOW_ruleVerificationFunctionIdentifier_in_entryRuleVerificationFunctionIdentifier3376);
             iv_ruleVerificationFunctionIdentifier=ruleVerificationFunctionIdentifier();
 
             state._fsp--;
 
              current =iv_ruleVerificationFunctionIdentifier.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationFunctionIdentifier3365); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleVerificationFunctionIdentifier3387); 
 
             }
 
@@ -4097,7 +4131,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVerificationFunctionIdentifier"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1675:1: ruleVerificationFunctionIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_31 | kw= KEYWORD_9 | kw= KEYWORD_7 | kw= KEYWORD_8 | kw= KEYWORD_28 | kw= KEYWORD_5 | kw= KEYWORD_6 | kw= KEYWORD_44 | kw= KEYWORD_32 | kw= KEYWORD_41 | kw= KEYWORD_34 | kw= KEYWORD_25 | kw= KEYWORD_26 | kw= KEYWORD_20 | kw= KEYWORD_12 | kw= KEYWORD_11 | kw= KEYWORD_22 | kw= KEYWORD_13 | kw= KEYWORD_16 | kw= KEYWORD_21 ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1684:1: ruleVerificationFunctionIdentifier returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_34 | kw= KEYWORD_10 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_31 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_47 | kw= KEYWORD_35 | kw= KEYWORD_44 | kw= KEYWORD_37 | kw= KEYWORD_28 | kw= KEYWORD_29 | kw= KEYWORD_23 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_25 | kw= KEYWORD_16 | kw= KEYWORD_19 | kw= KEYWORD_24 ) ;
     public final AntlrDatatypeRuleToken ruleVerificationFunctionIdentifier() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4106,124 +4140,124 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1679:6: ( (kw= KEYWORD_31 | kw= KEYWORD_9 | kw= KEYWORD_7 | kw= KEYWORD_8 | kw= KEYWORD_28 | kw= KEYWORD_5 | kw= KEYWORD_6 | kw= KEYWORD_44 | kw= KEYWORD_32 | kw= KEYWORD_41 | kw= KEYWORD_34 | kw= KEYWORD_25 | kw= KEYWORD_26 | kw= KEYWORD_20 | kw= KEYWORD_12 | kw= KEYWORD_11 | kw= KEYWORD_22 | kw= KEYWORD_13 | kw= KEYWORD_16 | kw= KEYWORD_21 ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1680:1: (kw= KEYWORD_31 | kw= KEYWORD_9 | kw= KEYWORD_7 | kw= KEYWORD_8 | kw= KEYWORD_28 | kw= KEYWORD_5 | kw= KEYWORD_6 | kw= KEYWORD_44 | kw= KEYWORD_32 | kw= KEYWORD_41 | kw= KEYWORD_34 | kw= KEYWORD_25 | kw= KEYWORD_26 | kw= KEYWORD_20 | kw= KEYWORD_12 | kw= KEYWORD_11 | kw= KEYWORD_22 | kw= KEYWORD_13 | kw= KEYWORD_16 | kw= KEYWORD_21 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1688:6: ( (kw= KEYWORD_34 | kw= KEYWORD_10 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_31 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_47 | kw= KEYWORD_35 | kw= KEYWORD_44 | kw= KEYWORD_37 | kw= KEYWORD_28 | kw= KEYWORD_29 | kw= KEYWORD_23 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_25 | kw= KEYWORD_16 | kw= KEYWORD_19 | kw= KEYWORD_24 ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1689:1: (kw= KEYWORD_34 | kw= KEYWORD_10 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_31 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_47 | kw= KEYWORD_35 | kw= KEYWORD_44 | kw= KEYWORD_37 | kw= KEYWORD_28 | kw= KEYWORD_29 | kw= KEYWORD_23 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_25 | kw= KEYWORD_16 | kw= KEYWORD_19 | kw= KEYWORD_24 )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1680:1: (kw= KEYWORD_31 | kw= KEYWORD_9 | kw= KEYWORD_7 | kw= KEYWORD_8 | kw= KEYWORD_28 | kw= KEYWORD_5 | kw= KEYWORD_6 | kw= KEYWORD_44 | kw= KEYWORD_32 | kw= KEYWORD_41 | kw= KEYWORD_34 | kw= KEYWORD_25 | kw= KEYWORD_26 | kw= KEYWORD_20 | kw= KEYWORD_12 | kw= KEYWORD_11 | kw= KEYWORD_22 | kw= KEYWORD_13 | kw= KEYWORD_16 | kw= KEYWORD_21 )
-            int alt20=20;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1689:1: (kw= KEYWORD_34 | kw= KEYWORD_10 | kw= KEYWORD_8 | kw= KEYWORD_9 | kw= KEYWORD_31 | kw= KEYWORD_6 | kw= KEYWORD_7 | kw= KEYWORD_47 | kw= KEYWORD_35 | kw= KEYWORD_44 | kw= KEYWORD_37 | kw= KEYWORD_28 | kw= KEYWORD_29 | kw= KEYWORD_23 | kw= KEYWORD_15 | kw= KEYWORD_14 | kw= KEYWORD_25 | kw= KEYWORD_16 | kw= KEYWORD_19 | kw= KEYWORD_24 )
+            int alt21=20;
             switch ( input.LA(1) ) {
-            case KEYWORD_31:
+            case KEYWORD_34:
                 {
-                alt20=1;
+                alt21=1;
                 }
                 break;
-            case KEYWORD_9:
+            case KEYWORD_10:
                 {
-                alt20=2;
-                }
-                break;
-            case KEYWORD_7:
-                {
-                alt20=3;
+                alt21=2;
                 }
                 break;
             case KEYWORD_8:
                 {
-                alt20=4;
+                alt21=3;
                 }
                 break;
-            case KEYWORD_28:
+            case KEYWORD_9:
                 {
-                alt20=5;
+                alt21=4;
                 }
                 break;
-            case KEYWORD_5:
+            case KEYWORD_31:
                 {
-                alt20=6;
+                alt21=5;
                 }
                 break;
             case KEYWORD_6:
                 {
-                alt20=7;
+                alt21=6;
+                }
+                break;
+            case KEYWORD_7:
+                {
+                alt21=7;
+                }
+                break;
+            case KEYWORD_47:
+                {
+                alt21=8;
+                }
+                break;
+            case KEYWORD_35:
+                {
+                alt21=9;
                 }
                 break;
             case KEYWORD_44:
                 {
-                alt20=8;
+                alt21=10;
                 }
                 break;
-            case KEYWORD_32:
+            case KEYWORD_37:
                 {
-                alt20=9;
+                alt21=11;
                 }
                 break;
-            case KEYWORD_41:
+            case KEYWORD_28:
                 {
-                alt20=10;
+                alt21=12;
                 }
                 break;
-            case KEYWORD_34:
+            case KEYWORD_29:
                 {
-                alt20=11;
+                alt21=13;
+                }
+                break;
+            case KEYWORD_23:
+                {
+                alt21=14;
+                }
+                break;
+            case KEYWORD_15:
+                {
+                alt21=15;
+                }
+                break;
+            case KEYWORD_14:
+                {
+                alt21=16;
                 }
                 break;
             case KEYWORD_25:
                 {
-                alt20=12;
-                }
-                break;
-            case KEYWORD_26:
-                {
-                alt20=13;
-                }
-                break;
-            case KEYWORD_20:
-                {
-                alt20=14;
-                }
-                break;
-            case KEYWORD_12:
-                {
-                alt20=15;
-                }
-                break;
-            case KEYWORD_11:
-                {
-                alt20=16;
-                }
-                break;
-            case KEYWORD_22:
-                {
-                alt20=17;
-                }
-                break;
-            case KEYWORD_13:
-                {
-                alt20=18;
+                alt21=17;
                 }
                 break;
             case KEYWORD_16:
                 {
-                alt20=19;
+                alt21=18;
                 }
                 break;
-            case KEYWORD_21:
+            case KEYWORD_19:
                 {
-                alt20=20;
+                alt21=19;
+                }
+                break;
+            case KEYWORD_24:
+                {
+                alt21=20;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 20, 0, input);
+                    new NoViableAltException("", 21, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt20) {
+            switch (alt21) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1681:2: kw= KEYWORD_31
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1690:2: kw= KEYWORD_34
                     {
-                    kw=(Token)match(input,KEYWORD_31,FOLLOW_KEYWORD_31_in_ruleVerificationFunctionIdentifier3403); 
+                    kw=(Token)match(input,KEYWORD_34,FOLLOW_KEYWORD_34_in_ruleVerificationFunctionIdentifier3425); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getCardinalKeyword_0()); 
@@ -4232,9 +4266,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1688:2: kw= KEYWORD_9
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1697:2: kw= KEYWORD_10
                     {
-                    kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_ruleVerificationFunctionIdentifier3422); 
+                    kw=(Token)match(input,KEYWORD_10,FOLLOW_KEYWORD_10_in_ruleVerificationFunctionIdentifier3444); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getSumKeyword_1()); 
@@ -4243,9 +4277,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1695:2: kw= KEYWORD_7
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1704:2: kw= KEYWORD_8
                     {
-                    kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_ruleVerificationFunctionIdentifier3441); 
+                    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleVerificationFunctionIdentifier3463); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getMaxKeyword_2()); 
@@ -4254,9 +4288,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1702:2: kw= KEYWORD_8
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1711:2: kw= KEYWORD_9
                     {
-                    kw=(Token)match(input,KEYWORD_8,FOLLOW_KEYWORD_8_in_ruleVerificationFunctionIdentifier3460); 
+                    kw=(Token)match(input,KEYWORD_9,FOLLOW_KEYWORD_9_in_ruleVerificationFunctionIdentifier3482); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getMinKeyword_3()); 
@@ -4265,9 +4299,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1709:2: kw= KEYWORD_28
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1718:2: kw= KEYWORD_31
                     {
-                    kw=(Token)match(input,KEYWORD_28,FOLLOW_KEYWORD_28_in_ruleVerificationFunctionIdentifier3479); 
+                    kw=(Token)match(input,KEYWORD_31,FOLLOW_KEYWORD_31_in_ruleVerificationFunctionIdentifier3501); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getProductKeyword_4()); 
@@ -4276,9 +4310,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1716:2: kw= KEYWORD_5
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1725:2: kw= KEYWORD_6
                     {
-                    kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleVerificationFunctionIdentifier3498); 
+                    kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleVerificationFunctionIdentifier3520); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getGCDKeyword_5()); 
@@ -4287,9 +4321,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1723:2: kw= KEYWORD_6
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1732:2: kw= KEYWORD_7
                     {
-                    kw=(Token)match(input,KEYWORD_6,FOLLOW_KEYWORD_6_in_ruleVerificationFunctionIdentifier3517); 
+                    kw=(Token)match(input,KEYWORD_7,FOLLOW_KEYWORD_7_in_ruleVerificationFunctionIdentifier3539); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getLCMKeyword_6()); 
@@ -4298,9 +4332,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1730:2: kw= KEYWORD_44
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1739:2: kw= KEYWORD_47
                     {
-                    kw=(Token)match(input,KEYWORD_44,FOLLOW_KEYWORD_44_in_ruleVerificationFunctionIdentifier3536); 
+                    kw=(Token)match(input,KEYWORD_47,FOLLOW_KEYWORD_47_in_ruleVerificationFunctionIdentifier3558); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getGet_Property_ValueKeyword_7()); 
@@ -4309,9 +4343,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1737:2: kw= KEYWORD_32
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1746:2: kw= KEYWORD_35
                     {
-                    kw=(Token)match(input,KEYWORD_32,FOLLOW_KEYWORD_32_in_ruleVerificationFunctionIdentifier3555); 
+                    kw=(Token)match(input,KEYWORD_35,FOLLOW_KEYWORD_35_in_ruleVerificationFunctionIdentifier3577); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getPropertyKeyword_8()); 
@@ -4320,9 +4354,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1744:2: kw= KEYWORD_41
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1753:2: kw= KEYWORD_44
                     {
-                    kw=(Token)match(input,KEYWORD_41,FOLLOW_KEYWORD_41_in_ruleVerificationFunctionIdentifier3574); 
+                    kw=(Token)match(input,KEYWORD_44,FOLLOW_KEYWORD_44_in_ruleVerificationFunctionIdentifier3596); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getProperty_ExistsKeyword_9()); 
@@ -4331,9 +4365,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1751:2: kw= KEYWORD_34
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1760:2: kw= KEYWORD_37
                     {
-                    kw=(Token)match(input,KEYWORD_34,FOLLOW_KEYWORD_34_in_ruleVerificationFunctionIdentifier3593); 
+                    kw=(Token)match(input,KEYWORD_37,FOLLOW_KEYWORD_37_in_ruleVerificationFunctionIdentifier3615); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getAll_EqualsKeyword_10()); 
@@ -4342,9 +4376,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1758:2: kw= KEYWORD_25
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1767:2: kw= KEYWORD_28
                     {
-                    kw=(Token)match(input,KEYWORD_25,FOLLOW_KEYWORD_25_in_ruleVerificationFunctionIdentifier3612); 
+                    kw=(Token)match(input,KEYWORD_28,FOLLOW_KEYWORD_28_in_ruleVerificationFunctionIdentifier3634); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getExistsKeyword_11()); 
@@ -4353,9 +4387,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1765:2: kw= KEYWORD_26
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1774:2: kw= KEYWORD_29
                     {
-                    kw=(Token)match(input,KEYWORD_26,FOLLOW_KEYWORD_26_in_ruleVerificationFunctionIdentifier3631); 
+                    kw=(Token)match(input,KEYWORD_29,FOLLOW_KEYWORD_29_in_ruleVerificationFunctionIdentifier3653); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getSystemKeyword_12()); 
@@ -4364,9 +4398,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1772:2: kw= KEYWORD_20
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1781:2: kw= KEYWORD_23
                     {
-                    kw=(Token)match(input,KEYWORD_20,FOLLOW_KEYWORD_20_in_ruleVerificationFunctionIdentifier3650); 
+                    kw=(Token)match(input,KEYWORD_23,FOLLOW_KEYWORD_23_in_ruleVerificationFunctionIdentifier3672); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getFirstKeyword_13()); 
@@ -4375,9 +4409,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1779:2: kw= KEYWORD_12
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1788:2: kw= KEYWORD_15
                     {
-                    kw=(Token)match(input,KEYWORD_12,FOLLOW_KEYWORD_12_in_ruleVerificationFunctionIdentifier3669); 
+                    kw=(Token)match(input,KEYWORD_15,FOLLOW_KEYWORD_15_in_ruleVerificationFunctionIdentifier3691); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getLastKeyword_14()); 
@@ -4386,9 +4420,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1786:2: kw= KEYWORD_11
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1795:2: kw= KEYWORD_14
                     {
-                    kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_ruleVerificationFunctionIdentifier3688); 
+                    kw=(Token)match(input,KEYWORD_14,FOLLOW_KEYWORD_14_in_ruleVerificationFunctionIdentifier3710); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getHeadKeyword_15()); 
@@ -4397,9 +4431,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 17 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1793:2: kw= KEYWORD_22
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1802:2: kw= KEYWORD_25
                     {
-                    kw=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_ruleVerificationFunctionIdentifier3707); 
+                    kw=(Token)match(input,KEYWORD_25,FOLLOW_KEYWORD_25_in_ruleVerificationFunctionIdentifier3729); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getQueueKeyword_16()); 
@@ -4408,9 +4442,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 18 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1800:2: kw= KEYWORD_13
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1809:2: kw= KEYWORD_16
                     {
-                    kw=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_ruleVerificationFunctionIdentifier3726); 
+                    kw=(Token)match(input,KEYWORD_16,FOLLOW_KEYWORD_16_in_ruleVerificationFunctionIdentifier3748); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getListKeyword_17()); 
@@ -4419,9 +4453,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 19 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1807:2: kw= KEYWORD_16
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1816:2: kw= KEYWORD_19
                     {
-                    kw=(Token)match(input,KEYWORD_16,FOLLOW_KEYWORD_16_in_ruleVerificationFunctionIdentifier3745); 
+                    kw=(Token)match(input,KEYWORD_19,FOLLOW_KEYWORD_19_in_ruleVerificationFunctionIdentifier3767); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getSizeKeyword_18()); 
@@ -4430,9 +4464,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 20 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1814:2: kw= KEYWORD_21
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1823:2: kw= KEYWORD_24
                     {
-                    kw=(Token)match(input,KEYWORD_21,FOLLOW_KEYWORD_21_in_ruleVerificationFunctionIdentifier3764); 
+                    kw=(Token)match(input,KEYWORD_24,FOLLOW_KEYWORD_24_in_ruleVerificationFunctionIdentifier3786); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getFloatKeyword_19()); 
@@ -4462,7 +4496,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleGenericOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1827:1: entryRuleGenericOperator returns [String current=null] : iv_ruleGenericOperator= ruleGenericOperator EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1836:1: entryRuleGenericOperator returns [String current=null] : iv_ruleGenericOperator= ruleGenericOperator EOF ;
     public final String entryRuleGenericOperator() throws RecognitionException {
         String current = null;
 
@@ -4470,17 +4504,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1828:1: (iv_ruleGenericOperator= ruleGenericOperator EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1829:2: iv_ruleGenericOperator= ruleGenericOperator EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1837:1: (iv_ruleGenericOperator= ruleGenericOperator EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1838:2: iv_ruleGenericOperator= ruleGenericOperator EOF
             {
              newCompositeNode(grammarAccess.getGenericOperatorRule()); 
-            pushFollow(FOLLOW_ruleGenericOperator_in_entryRuleGenericOperator3804);
+            pushFollow(FOLLOW_ruleGenericOperator_in_entryRuleGenericOperator3826);
             iv_ruleGenericOperator=ruleGenericOperator();
 
             state._fsp--;
 
              current =iv_ruleGenericOperator.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGenericOperator3815); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGenericOperator3837); 
 
             }
 
@@ -4498,7 +4532,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGenericOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1836:1: ruleGenericOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1845:1: ruleGenericOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator ) ;
     public final AntlrDatatypeRuleToken ruleGenericOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -4512,11 +4546,11 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1840:6: ( (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1841:1: (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1849:6: ( (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1850:1: (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1841:1: (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator )
-            int alt21=3;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1850:1: (this_ComparisonOperator_0= ruleComparisonOperator | this_BooleanOperator_1= ruleBooleanOperator | this_ArithmeticOperator_2= ruleArithmeticOperator )
+            int alt22=3;
             switch ( input.LA(1) ) {
             case RULE_NOT_EQUAL:
             case RULE_LESS_EQUAL:
@@ -4525,14 +4559,14 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             case RULE_LESS:
             case RULE_EQUAL:
                 {
-                alt21=1;
+                alt22=1;
                 }
                 break;
-            case RULE_AND:
-            case RULE_NOT:
-            case RULE_OR:
+            case KEYWORD_11:
+            case KEYWORD_13:
+            case KEYWORD_5:
                 {
-                alt21=2;
+                alt22=2;
                 }
                 break;
             case RULE_PLUS:
@@ -4541,24 +4575,24 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             case RULE_SLASH:
             case RULE_MINUS:
                 {
-                alt21=3;
+                alt22=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 21, 0, input);
+                    new NoViableAltException("", 22, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt21) {
+            switch (alt22) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1842:5: this_ComparisonOperator_0= ruleComparisonOperator
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1851:5: this_ComparisonOperator_0= ruleComparisonOperator
                     {
                      
                             newCompositeNode(grammarAccess.getGenericOperatorAccess().getComparisonOperatorParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleComparisonOperator_in_ruleGenericOperator3862);
+                    pushFollow(FOLLOW_ruleComparisonOperator_in_ruleGenericOperator3884);
                     this_ComparisonOperator_0=ruleComparisonOperator();
 
                     state._fsp--;
@@ -4573,12 +4607,12 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1854:5: this_BooleanOperator_1= ruleBooleanOperator
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1863:5: this_BooleanOperator_1= ruleBooleanOperator
                     {
                      
                             newCompositeNode(grammarAccess.getGenericOperatorAccess().getBooleanOperatorParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleBooleanOperator_in_ruleGenericOperator3895);
+                    pushFollow(FOLLOW_ruleBooleanOperator_in_ruleGenericOperator3917);
                     this_BooleanOperator_1=ruleBooleanOperator();
 
                     state._fsp--;
@@ -4593,12 +4627,12 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1866:5: this_ArithmeticOperator_2= ruleArithmeticOperator
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1875:5: this_ArithmeticOperator_2= ruleArithmeticOperator
                     {
                      
                             newCompositeNode(grammarAccess.getGenericOperatorAccess().getArithmeticOperatorParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleArithmeticOperator_in_ruleGenericOperator3928);
+                    pushFollow(FOLLOW_ruleArithmeticOperator_in_ruleGenericOperator3950);
                     this_ArithmeticOperator_2=ruleArithmeticOperator();
 
                     state._fsp--;
@@ -4634,7 +4668,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLiteral"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1884:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1893:1: entryRuleLiteral returns [EObject current=null] : iv_ruleLiteral= ruleLiteral EOF ;
     public final EObject entryRuleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4642,17 +4676,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1885:2: (iv_ruleLiteral= ruleLiteral EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1886:2: iv_ruleLiteral= ruleLiteral EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1894:2: (iv_ruleLiteral= ruleLiteral EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1895:2: iv_ruleLiteral= ruleLiteral EOF
             {
              newCompositeNode(grammarAccess.getLiteralRule()); 
-            pushFollow(FOLLOW_ruleLiteral_in_entryRuleLiteral3972);
+            pushFollow(FOLLOW_ruleLiteral_in_entryRuleLiteral3994);
             iv_ruleLiteral=ruleLiteral();
 
             state._fsp--;
 
              current =iv_ruleLiteral; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteral3982); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleLiteral4004); 
 
             }
 
@@ -4670,7 +4704,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLiteral"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1893:1: ruleLiteral returns [EObject current=null] : ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1902:1: ruleLiteral returns [EObject current=null] : ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) ) ;
     public final EObject ruleLiteral() throws RecognitionException {
         EObject current = null;
 
@@ -4682,49 +4716,49 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1896:28: ( ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1897:1: ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1905:28: ( ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1906:1: ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1897:1: ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) )
-            int alt22=3;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1906:1: ( ( (lv_b_0_0= ruleBOOLEAN ) ) | ( (lv_s_1_0= RULE_STRING ) ) | ( (lv_n_2_0= RULE_NUMERIC ) ) )
+            int alt23=3;
             switch ( input.LA(1) ) {
-            case KEYWORD_24:
-            case KEYWORD_19:
+            case KEYWORD_27:
+            case KEYWORD_22:
                 {
-                alt22=1;
+                alt23=1;
                 }
                 break;
             case RULE_STRING:
                 {
-                alt22=2;
+                alt23=2;
                 }
                 break;
             case RULE_NUMERIC:
                 {
-                alt22=3;
+                alt23=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 22, 0, input);
+                    new NoViableAltException("", 23, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt22) {
+            switch (alt23) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1897:2: ( (lv_b_0_0= ruleBOOLEAN ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1906:2: ( (lv_b_0_0= ruleBOOLEAN ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1897:2: ( (lv_b_0_0= ruleBOOLEAN ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1898:1: (lv_b_0_0= ruleBOOLEAN )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1906:2: ( (lv_b_0_0= ruleBOOLEAN ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1907:1: (lv_b_0_0= ruleBOOLEAN )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1898:1: (lv_b_0_0= ruleBOOLEAN )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1899:3: lv_b_0_0= ruleBOOLEAN
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1907:1: (lv_b_0_0= ruleBOOLEAN )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1908:3: lv_b_0_0= ruleBOOLEAN
                     {
                      
                     	        newCompositeNode(grammarAccess.getLiteralAccess().getBBOOLEANParserRuleCall_0_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleBOOLEAN_in_ruleLiteral4028);
+                    pushFollow(FOLLOW_ruleBOOLEAN_in_ruleLiteral4050);
                     lv_b_0_0=ruleBOOLEAN();
 
                     state._fsp--;
@@ -4750,15 +4784,15 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1916:6: ( (lv_s_1_0= RULE_STRING ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1925:6: ( (lv_s_1_0= RULE_STRING ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1916:6: ( (lv_s_1_0= RULE_STRING ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1917:1: (lv_s_1_0= RULE_STRING )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1925:6: ( (lv_s_1_0= RULE_STRING ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1926:1: (lv_s_1_0= RULE_STRING )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1917:1: (lv_s_1_0= RULE_STRING )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1918:3: lv_s_1_0= RULE_STRING
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1926:1: (lv_s_1_0= RULE_STRING )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1927:3: lv_s_1_0= RULE_STRING
                     {
-                    lv_s_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLiteral4051); 
+                    lv_s_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleLiteral4073); 
 
                     			newLeafNode(lv_s_1_0, grammarAccess.getLiteralAccess().getSSTRINGTerminalRuleCall_1_0()); 
                     		
@@ -4782,15 +4816,15 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1935:6: ( (lv_n_2_0= RULE_NUMERIC ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1944:6: ( (lv_n_2_0= RULE_NUMERIC ) )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1935:6: ( (lv_n_2_0= RULE_NUMERIC ) )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1936:1: (lv_n_2_0= RULE_NUMERIC )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1944:6: ( (lv_n_2_0= RULE_NUMERIC ) )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1945:1: (lv_n_2_0= RULE_NUMERIC )
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1936:1: (lv_n_2_0= RULE_NUMERIC )
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1937:3: lv_n_2_0= RULE_NUMERIC
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1945:1: (lv_n_2_0= RULE_NUMERIC )
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1946:3: lv_n_2_0= RULE_NUMERIC
                     {
-                    lv_n_2_0=(Token)match(input,RULE_NUMERIC,FOLLOW_RULE_NUMERIC_in_ruleLiteral4079); 
+                    lv_n_2_0=(Token)match(input,RULE_NUMERIC,FOLLOW_RULE_NUMERIC_in_ruleLiteral4101); 
 
                     			newLeafNode(lv_n_2_0, grammarAccess.getLiteralAccess().getNNUMERICTerminalRuleCall_2_0()); 
                     		
@@ -4834,7 +4868,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBOOLEAN"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1961:1: entryRuleBOOLEAN returns [EObject current=null] : iv_ruleBOOLEAN= ruleBOOLEAN EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1970:1: entryRuleBOOLEAN returns [EObject current=null] : iv_ruleBOOLEAN= ruleBOOLEAN EOF ;
     public final EObject entryRuleBOOLEAN() throws RecognitionException {
         EObject current = null;
 
@@ -4842,17 +4876,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1962:2: (iv_ruleBOOLEAN= ruleBOOLEAN EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1963:2: iv_ruleBOOLEAN= ruleBOOLEAN EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1971:2: (iv_ruleBOOLEAN= ruleBOOLEAN EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1972:2: iv_ruleBOOLEAN= ruleBOOLEAN EOF
             {
              newCompositeNode(grammarAccess.getBOOLEANRule()); 
-            pushFollow(FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN4119);
+            pushFollow(FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN4141);
             iv_ruleBOOLEAN=ruleBOOLEAN();
 
             state._fsp--;
 
              current =iv_ruleBOOLEAN; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBOOLEAN4129); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBOOLEAN4151); 
 
             }
 
@@ -4870,7 +4904,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBOOLEAN"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1970:1: ruleBOOLEAN returns [EObject current=null] : ( ( (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 ) ) ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1979:1: ruleBOOLEAN returns [EObject current=null] : ( ( (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 ) ) ) ;
     public final EObject ruleBOOLEAN() throws RecognitionException {
         EObject current = null;
 
@@ -4880,36 +4914,36 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1973:28: ( ( ( (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 ) ) ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1974:1: ( ( (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1982:28: ( ( ( (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 ) ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1983:1: ( ( (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 ) ) )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1974:1: ( ( (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 ) ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1975:1: ( (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1983:1: ( ( (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 ) ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1984:1: ( (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 ) )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1975:1: ( (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1976:1: (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1984:1: ( (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1985:1: (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1976:1: (lv_value_0_1= KEYWORD_19 | lv_value_0_2= KEYWORD_24 )
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1985:1: (lv_value_0_1= KEYWORD_22 | lv_value_0_2= KEYWORD_27 )
+            int alt24=2;
+            int LA24_0 = input.LA(1);
 
-            if ( (LA23_0==KEYWORD_19) ) {
-                alt23=1;
+            if ( (LA24_0==KEYWORD_22) ) {
+                alt24=1;
             }
-            else if ( (LA23_0==KEYWORD_24) ) {
-                alt23=2;
+            else if ( (LA24_0==KEYWORD_27) ) {
+                alt24=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 23, 0, input);
+                    new NoViableAltException("", 24, 0, input);
 
                 throw nvae;
             }
-            switch (alt23) {
+            switch (alt24) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1977:3: lv_value_0_1= KEYWORD_19
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1986:3: lv_value_0_1= KEYWORD_22
                     {
-                    lv_value_0_1=(Token)match(input,KEYWORD_19,FOLLOW_KEYWORD_19_in_ruleBOOLEAN4174); 
+                    lv_value_0_1=(Token)match(input,KEYWORD_22,FOLLOW_KEYWORD_22_in_ruleBOOLEAN4196); 
 
                             newLeafNode(lv_value_0_1, grammarAccess.getBOOLEANAccess().getValueTrueKeyword_0_0());
                         
@@ -4923,9 +4957,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1990:8: lv_value_0_2= KEYWORD_24
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:1999:8: lv_value_0_2= KEYWORD_27
                     {
-                    lv_value_0_2=(Token)match(input,KEYWORD_24,FOLLOW_KEYWORD_24_in_ruleBOOLEAN4202); 
+                    lv_value_0_2=(Token)match(input,KEYWORD_27,FOLLOW_KEYWORD_27_in_ruleBOOLEAN4224); 
 
                             newLeafNode(lv_value_0_2, grammarAccess.getBOOLEANAccess().getValueFalseKeyword_0_1());
                         
@@ -4965,7 +4999,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSetOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2014:1: entryRuleSetOperator returns [String current=null] : iv_ruleSetOperator= ruleSetOperator EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2023:1: entryRuleSetOperator returns [String current=null] : iv_ruleSetOperator= ruleSetOperator EOF ;
     public final String entryRuleSetOperator() throws RecognitionException {
         String current = null;
 
@@ -4973,17 +5007,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2015:1: (iv_ruleSetOperator= ruleSetOperator EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2016:2: iv_ruleSetOperator= ruleSetOperator EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2024:1: (iv_ruleSetOperator= ruleSetOperator EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2025:2: iv_ruleSetOperator= ruleSetOperator EOF
             {
              newCompositeNode(grammarAccess.getSetOperatorRule()); 
-            pushFollow(FOLLOW_ruleSetOperator_in_entryRuleSetOperator4251);
+            pushFollow(FOLLOW_ruleSetOperator_in_entryRuleSetOperator4273);
             iv_ruleSetOperator=ruleSetOperator();
 
             state._fsp--;
 
              current =iv_ruleSetOperator.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSetOperator4262); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSetOperator4284); 
 
             }
 
@@ -5001,7 +5035,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2023:1: ruleSetOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2032:1: ruleSetOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH ) ;
     public final AntlrDatatypeRuleToken ruleSetOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5012,39 +5046,39 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2027:6: ( (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2028:1: (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2036:6: ( (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2037:1: (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2028:1: (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH )
-            int alt24=3;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2037:1: (this_PLUS_0= RULE_PLUS | this_STAR_1= RULE_STAR | this_SLASH_2= RULE_SLASH )
+            int alt25=3;
             switch ( input.LA(1) ) {
             case RULE_PLUS:
                 {
-                alt24=1;
+                alt25=1;
                 }
                 break;
             case RULE_STAR:
                 {
-                alt24=2;
+                alt25=2;
                 }
                 break;
             case RULE_SLASH:
                 {
-                alt24=3;
+                alt25=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 24, 0, input);
+                    new NoViableAltException("", 25, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt24) {
+            switch (alt25) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2028:6: this_PLUS_0= RULE_PLUS
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2037:6: this_PLUS_0= RULE_PLUS
                     {
-                    this_PLUS_0=(Token)match(input,RULE_PLUS,FOLLOW_RULE_PLUS_in_ruleSetOperator4302); 
+                    this_PLUS_0=(Token)match(input,RULE_PLUS,FOLLOW_RULE_PLUS_in_ruleSetOperator4324); 
 
                     		current.merge(this_PLUS_0);
                         
@@ -5055,9 +5089,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2036:10: this_STAR_1= RULE_STAR
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2045:10: this_STAR_1= RULE_STAR
                     {
-                    this_STAR_1=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleSetOperator4328); 
+                    this_STAR_1=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleSetOperator4350); 
 
                     		current.merge(this_STAR_1);
                         
@@ -5068,9 +5102,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2044:10: this_SLASH_2= RULE_SLASH
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2053:10: this_SLASH_2= RULE_SLASH
                     {
-                    this_SLASH_2=(Token)match(input,RULE_SLASH,FOLLOW_RULE_SLASH_in_ruleSetOperator4354); 
+                    this_SLASH_2=(Token)match(input,RULE_SLASH,FOLLOW_RULE_SLASH_in_ruleSetOperator4376); 
 
                     		current.merge(this_SLASH_2);
                         
@@ -5102,7 +5136,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArithmeticOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2059:1: entryRuleArithmeticOperator returns [String current=null] : iv_ruleArithmeticOperator= ruleArithmeticOperator EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2068:1: entryRuleArithmeticOperator returns [String current=null] : iv_ruleArithmeticOperator= ruleArithmeticOperator EOF ;
     public final String entryRuleArithmeticOperator() throws RecognitionException {
         String current = null;
 
@@ -5110,17 +5144,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2060:1: (iv_ruleArithmeticOperator= ruleArithmeticOperator EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2061:2: iv_ruleArithmeticOperator= ruleArithmeticOperator EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2069:1: (iv_ruleArithmeticOperator= ruleArithmeticOperator EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2070:2: iv_ruleArithmeticOperator= ruleArithmeticOperator EOF
             {
              newCompositeNode(grammarAccess.getArithmeticOperatorRule()); 
-            pushFollow(FOLLOW_ruleArithmeticOperator_in_entryRuleArithmeticOperator4399);
+            pushFollow(FOLLOW_ruleArithmeticOperator_in_entryRuleArithmeticOperator4421);
             iv_ruleArithmeticOperator=ruleArithmeticOperator();
 
             state._fsp--;
 
              current =iv_ruleArithmeticOperator.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArithmeticOperator4410); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArithmeticOperator4432); 
 
             }
 
@@ -5138,7 +5172,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArithmeticOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2068:1: ruleArithmeticOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2077:1: ruleArithmeticOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER ) ;
     public final AntlrDatatypeRuleToken ruleArithmeticOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5151,49 +5185,49 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2072:6: ( (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2073:1: (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2081:6: ( (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2082:1: (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2073:1: (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER )
-            int alt25=5;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2082:1: (this_PLUS_0= RULE_PLUS | this_MINUS_1= RULE_MINUS | this_STAR_2= RULE_STAR | this_SLASH_3= RULE_SLASH | this_POWER_4= RULE_POWER )
+            int alt26=5;
             switch ( input.LA(1) ) {
             case RULE_PLUS:
                 {
-                alt25=1;
+                alt26=1;
                 }
                 break;
             case RULE_MINUS:
                 {
-                alt25=2;
+                alt26=2;
                 }
                 break;
             case RULE_STAR:
                 {
-                alt25=3;
+                alt26=3;
                 }
                 break;
             case RULE_SLASH:
                 {
-                alt25=4;
+                alt26=4;
                 }
                 break;
             case RULE_POWER:
                 {
-                alt25=5;
+                alt26=5;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 25, 0, input);
+                    new NoViableAltException("", 26, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt25) {
+            switch (alt26) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2073:6: this_PLUS_0= RULE_PLUS
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2082:6: this_PLUS_0= RULE_PLUS
                     {
-                    this_PLUS_0=(Token)match(input,RULE_PLUS,FOLLOW_RULE_PLUS_in_ruleArithmeticOperator4450); 
+                    this_PLUS_0=(Token)match(input,RULE_PLUS,FOLLOW_RULE_PLUS_in_ruleArithmeticOperator4472); 
 
                     		current.merge(this_PLUS_0);
                         
@@ -5204,9 +5238,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2081:10: this_MINUS_1= RULE_MINUS
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2090:10: this_MINUS_1= RULE_MINUS
                     {
-                    this_MINUS_1=(Token)match(input,RULE_MINUS,FOLLOW_RULE_MINUS_in_ruleArithmeticOperator4476); 
+                    this_MINUS_1=(Token)match(input,RULE_MINUS,FOLLOW_RULE_MINUS_in_ruleArithmeticOperator4498); 
 
                     		current.merge(this_MINUS_1);
                         
@@ -5217,9 +5251,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2089:10: this_STAR_2= RULE_STAR
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2098:10: this_STAR_2= RULE_STAR
                     {
-                    this_STAR_2=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleArithmeticOperator4502); 
+                    this_STAR_2=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleArithmeticOperator4524); 
 
                     		current.merge(this_STAR_2);
                         
@@ -5230,9 +5264,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2097:10: this_SLASH_3= RULE_SLASH
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2106:10: this_SLASH_3= RULE_SLASH
                     {
-                    this_SLASH_3=(Token)match(input,RULE_SLASH,FOLLOW_RULE_SLASH_in_ruleArithmeticOperator4528); 
+                    this_SLASH_3=(Token)match(input,RULE_SLASH,FOLLOW_RULE_SLASH_in_ruleArithmeticOperator4550); 
 
                     		current.merge(this_SLASH_3);
                         
@@ -5243,9 +5277,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2105:10: this_POWER_4= RULE_POWER
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2114:10: this_POWER_4= RULE_POWER
                     {
-                    this_POWER_4=(Token)match(input,RULE_POWER,FOLLOW_RULE_POWER_in_ruleArithmeticOperator4554); 
+                    this_POWER_4=(Token)match(input,RULE_POWER,FOLLOW_RULE_POWER_in_ruleArithmeticOperator4576); 
 
                     		current.merge(this_POWER_4);
                         
@@ -5277,7 +5311,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBooleanOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2120:1: entryRuleBooleanOperator returns [String current=null] : iv_ruleBooleanOperator= ruleBooleanOperator EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2129:1: entryRuleBooleanOperator returns [String current=null] : iv_ruleBooleanOperator= ruleBooleanOperator EOF ;
     public final String entryRuleBooleanOperator() throws RecognitionException {
         String current = null;
 
@@ -5285,17 +5319,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2121:1: (iv_ruleBooleanOperator= ruleBooleanOperator EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2122:2: iv_ruleBooleanOperator= ruleBooleanOperator EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2130:1: (iv_ruleBooleanOperator= ruleBooleanOperator EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2131:2: iv_ruleBooleanOperator= ruleBooleanOperator EOF
             {
              newCompositeNode(grammarAccess.getBooleanOperatorRule()); 
-            pushFollow(FOLLOW_ruleBooleanOperator_in_entryRuleBooleanOperator4599);
+            pushFollow(FOLLOW_ruleBooleanOperator_in_entryRuleBooleanOperator4621);
             iv_ruleBooleanOperator=ruleBooleanOperator();
 
             state._fsp--;
 
              current =iv_ruleBooleanOperator.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanOperator4610); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBooleanOperator4632); 
 
             }
 
@@ -5313,81 +5347,73 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2129:1: ruleBooleanOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_AND_0= RULE_AND | this_NOT_1= RULE_NOT | this_OR_2= RULE_OR ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2138:1: ruleBooleanOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= KEYWORD_11 | kw= KEYWORD_13 | kw= KEYWORD_5 ) ;
     public final AntlrDatatypeRuleToken ruleBooleanOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
-        Token this_AND_0=null;
-        Token this_NOT_1=null;
-        Token this_OR_2=null;
+        Token kw=null;
 
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2133:6: ( (this_AND_0= RULE_AND | this_NOT_1= RULE_NOT | this_OR_2= RULE_OR ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2134:1: (this_AND_0= RULE_AND | this_NOT_1= RULE_NOT | this_OR_2= RULE_OR )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2142:6: ( (kw= KEYWORD_11 | kw= KEYWORD_13 | kw= KEYWORD_5 ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2143:1: (kw= KEYWORD_11 | kw= KEYWORD_13 | kw= KEYWORD_5 )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2134:1: (this_AND_0= RULE_AND | this_NOT_1= RULE_NOT | this_OR_2= RULE_OR )
-            int alt26=3;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2143:1: (kw= KEYWORD_11 | kw= KEYWORD_13 | kw= KEYWORD_5 )
+            int alt27=3;
             switch ( input.LA(1) ) {
-            case RULE_AND:
+            case KEYWORD_11:
                 {
-                alt26=1;
+                alt27=1;
                 }
                 break;
-            case RULE_NOT:
+            case KEYWORD_13:
                 {
-                alt26=2;
+                alt27=2;
                 }
                 break;
-            case RULE_OR:
+            case KEYWORD_5:
                 {
-                alt26=3;
+                alt27=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 26, 0, input);
+                    new NoViableAltException("", 27, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt26) {
+            switch (alt27) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2134:6: this_AND_0= RULE_AND
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2144:2: kw= KEYWORD_11
                     {
-                    this_AND_0=(Token)match(input,RULE_AND,FOLLOW_RULE_AND_in_ruleBooleanOperator4650); 
+                    kw=(Token)match(input,KEYWORD_11,FOLLOW_KEYWORD_11_in_ruleBooleanOperator4670); 
 
-                    		current.merge(this_AND_0);
-                        
-                     
-                        newLeafNode(this_AND_0, grammarAccess.getBooleanOperatorAccess().getANDTerminalRuleCall_0()); 
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getBooleanOperatorAccess().getAndKeyword_0()); 
                         
 
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2142:10: this_NOT_1= RULE_NOT
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2151:2: kw= KEYWORD_13
                     {
-                    this_NOT_1=(Token)match(input,RULE_NOT,FOLLOW_RULE_NOT_in_ruleBooleanOperator4676); 
+                    kw=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_ruleBooleanOperator4689); 
 
-                    		current.merge(this_NOT_1);
-                        
-                     
-                        newLeafNode(this_NOT_1, grammarAccess.getBooleanOperatorAccess().getNOTTerminalRuleCall_1()); 
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getBooleanOperatorAccess().getNotKeyword_1()); 
                         
 
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2150:10: this_OR_2= RULE_OR
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2158:2: kw= KEYWORD_5
                     {
-                    this_OR_2=(Token)match(input,RULE_OR,FOLLOW_RULE_OR_in_ruleBooleanOperator4702); 
+                    kw=(Token)match(input,KEYWORD_5,FOLLOW_KEYWORD_5_in_ruleBooleanOperator4708); 
 
-                    		current.merge(this_OR_2);
-                        
-                     
-                        newLeafNode(this_OR_2, grammarAccess.getBooleanOperatorAccess().getORTerminalRuleCall_2()); 
+                            current.merge(kw);
+                            newLeafNode(kw, grammarAccess.getBooleanOperatorAccess().getOrKeyword_2()); 
                         
 
                     }
@@ -5413,8 +5439,80 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleBooleanOperator"
 
 
+    // $ANTLR start "entryRuleUnaryOperator"
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2171:1: entryRuleUnaryOperator returns [String current=null] : iv_ruleUnaryOperator= ruleUnaryOperator EOF ;
+    public final String entryRuleUnaryOperator() throws RecognitionException {
+        String current = null;
+
+        AntlrDatatypeRuleToken iv_ruleUnaryOperator = null;
+
+
+        try {
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2172:1: (iv_ruleUnaryOperator= ruleUnaryOperator EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2173:2: iv_ruleUnaryOperator= ruleUnaryOperator EOF
+            {
+             newCompositeNode(grammarAccess.getUnaryOperatorRule()); 
+            pushFollow(FOLLOW_ruleUnaryOperator_in_entryRuleUnaryOperator4748);
+            iv_ruleUnaryOperator=ruleUnaryOperator();
+
+            state._fsp--;
+
+             current =iv_ruleUnaryOperator.getText(); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleUnaryOperator4759); 
+
+            }
+
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleUnaryOperator"
+
+
+    // $ANTLR start "ruleUnaryOperator"
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2180:1: ruleUnaryOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= KEYWORD_13 ;
+    public final AntlrDatatypeRuleToken ruleUnaryOperator() throws RecognitionException {
+        AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
+
+        Token kw=null;
+
+         enterRule(); 
+            
+        try {
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2184:6: (kw= KEYWORD_13 )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2186:2: kw= KEYWORD_13
+            {
+            kw=(Token)match(input,KEYWORD_13,FOLLOW_KEYWORD_13_in_ruleUnaryOperator4796); 
+
+                    current.merge(kw);
+                    newLeafNode(kw, grammarAccess.getUnaryOperatorAccess().getNotKeyword()); 
+                
+
+            }
+
+             leaveRule();
+                
+        }
+         
+        	catch (RecognitionException re) { 
+        	    recover(input,re); 
+        	    appendSkippedTokens();
+        	}
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleUnaryOperator"
+
+
     // $ANTLR start "entryRuleComparisonOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2165:1: entryRuleComparisonOperator returns [String current=null] : iv_ruleComparisonOperator= ruleComparisonOperator EOF ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2199:1: entryRuleComparisonOperator returns [String current=null] : iv_ruleComparisonOperator= ruleComparisonOperator EOF ;
     public final String entryRuleComparisonOperator() throws RecognitionException {
         String current = null;
 
@@ -5422,17 +5520,17 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2166:1: (iv_ruleComparisonOperator= ruleComparisonOperator EOF )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2167:2: iv_ruleComparisonOperator= ruleComparisonOperator EOF
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2200:1: (iv_ruleComparisonOperator= ruleComparisonOperator EOF )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2201:2: iv_ruleComparisonOperator= ruleComparisonOperator EOF
             {
              newCompositeNode(grammarAccess.getComparisonOperatorRule()); 
-            pushFollow(FOLLOW_ruleComparisonOperator_in_entryRuleComparisonOperator4747);
+            pushFollow(FOLLOW_ruleComparisonOperator_in_entryRuleComparisonOperator4835);
             iv_ruleComparisonOperator=ruleComparisonOperator();
 
             state._fsp--;
 
              current =iv_ruleComparisonOperator.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComparisonOperator4758); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleComparisonOperator4846); 
 
             }
 
@@ -5450,7 +5548,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparisonOperator"
-    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2174:1: ruleComparisonOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL ) ;
+    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2208:1: ruleComparisonOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL ) ;
     public final AntlrDatatypeRuleToken ruleComparisonOperator() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -5464,54 +5562,54 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2178:6: ( (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2179:1: (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2212:6: ( (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL ) )
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2213:1: (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2179:1: (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL )
-            int alt27=6;
+            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2213:1: (this_LESS_0= RULE_LESS | this_LESS_EQUAL_1= RULE_LESS_EQUAL | this_EQUAL_2= RULE_EQUAL | this_GREATER_EQUAL_3= RULE_GREATER_EQUAL | this_GREATER_4= RULE_GREATER | this_NOT_EQUAL_5= RULE_NOT_EQUAL )
+            int alt28=6;
             switch ( input.LA(1) ) {
             case RULE_LESS:
                 {
-                alt27=1;
+                alt28=1;
                 }
                 break;
             case RULE_LESS_EQUAL:
                 {
-                alt27=2;
+                alt28=2;
                 }
                 break;
             case RULE_EQUAL:
                 {
-                alt27=3;
+                alt28=3;
                 }
                 break;
             case RULE_GREATER_EQUAL:
                 {
-                alt27=4;
+                alt28=4;
                 }
                 break;
             case RULE_GREATER:
                 {
-                alt27=5;
+                alt28=5;
                 }
                 break;
             case RULE_NOT_EQUAL:
                 {
-                alt27=6;
+                alt28=6;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 27, 0, input);
+                    new NoViableAltException("", 28, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt27) {
+            switch (alt28) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2179:6: this_LESS_0= RULE_LESS
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2213:6: this_LESS_0= RULE_LESS
                     {
-                    this_LESS_0=(Token)match(input,RULE_LESS,FOLLOW_RULE_LESS_in_ruleComparisonOperator4798); 
+                    this_LESS_0=(Token)match(input,RULE_LESS,FOLLOW_RULE_LESS_in_ruleComparisonOperator4886); 
 
                     		current.merge(this_LESS_0);
                         
@@ -5522,9 +5620,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2187:10: this_LESS_EQUAL_1= RULE_LESS_EQUAL
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2221:10: this_LESS_EQUAL_1= RULE_LESS_EQUAL
                     {
-                    this_LESS_EQUAL_1=(Token)match(input,RULE_LESS_EQUAL,FOLLOW_RULE_LESS_EQUAL_in_ruleComparisonOperator4824); 
+                    this_LESS_EQUAL_1=(Token)match(input,RULE_LESS_EQUAL,FOLLOW_RULE_LESS_EQUAL_in_ruleComparisonOperator4912); 
 
                     		current.merge(this_LESS_EQUAL_1);
                         
@@ -5535,9 +5633,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2195:10: this_EQUAL_2= RULE_EQUAL
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2229:10: this_EQUAL_2= RULE_EQUAL
                     {
-                    this_EQUAL_2=(Token)match(input,RULE_EQUAL,FOLLOW_RULE_EQUAL_in_ruleComparisonOperator4850); 
+                    this_EQUAL_2=(Token)match(input,RULE_EQUAL,FOLLOW_RULE_EQUAL_in_ruleComparisonOperator4938); 
 
                     		current.merge(this_EQUAL_2);
                         
@@ -5548,9 +5646,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2203:10: this_GREATER_EQUAL_3= RULE_GREATER_EQUAL
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2237:10: this_GREATER_EQUAL_3= RULE_GREATER_EQUAL
                     {
-                    this_GREATER_EQUAL_3=(Token)match(input,RULE_GREATER_EQUAL,FOLLOW_RULE_GREATER_EQUAL_in_ruleComparisonOperator4876); 
+                    this_GREATER_EQUAL_3=(Token)match(input,RULE_GREATER_EQUAL,FOLLOW_RULE_GREATER_EQUAL_in_ruleComparisonOperator4964); 
 
                     		current.merge(this_GREATER_EQUAL_3);
                         
@@ -5561,9 +5659,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2211:10: this_GREATER_4= RULE_GREATER
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2245:10: this_GREATER_4= RULE_GREATER
                     {
-                    this_GREATER_4=(Token)match(input,RULE_GREATER,FOLLOW_RULE_GREATER_in_ruleComparisonOperator4902); 
+                    this_GREATER_4=(Token)match(input,RULE_GREATER,FOLLOW_RULE_GREATER_in_ruleComparisonOperator4990); 
 
                     		current.merge(this_GREATER_4);
                         
@@ -5574,9 +5672,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2219:10: this_NOT_EQUAL_5= RULE_NOT_EQUAL
+                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/internal/InternalREALParser.g:2253:10: this_NOT_EQUAL_5= RULE_NOT_EQUAL
                     {
-                    this_NOT_EQUAL_5=(Token)match(input,RULE_NOT_EQUAL,FOLLOW_RULE_NOT_EQUAL_in_ruleComparisonOperator4928); 
+                    this_NOT_EQUAL_5=(Token)match(input,RULE_NOT_EQUAL,FOLLOW_RULE_NOT_EQUAL_in_ruleComparisonOperator5016); 
 
                     		current.merge(this_NOT_EQUAL_5);
                         
@@ -5623,8 +5721,9 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
     static final String DFA14_specialS =
         "\20\uffff}>";
     static final String[] DFA14_transitionS = {
-            "\2\4\13\uffff\1\13\1\17\1\15\1\16\1\14\1\1\1\2\1\3\1\12\1\6"+
-            "\1\10\1\11\1\5\1\7\2\uffff\1\4\2\uffff\1\4",
+            "\2\4\6\uffff\1\1\1\uffff\1\2\3\uffff\1\3\1\uffff\1\13\1\17\1"+
+            "\15\1\16\1\14\1\12\1\6\1\10\1\11\1\5\1\7\2\uffff\1\4\2\uffff"+
+            "\1\4",
             "",
             "",
             "",
@@ -5672,7 +5771,7 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
             this.transition = DFA14_transition;
         }
         public String getDescription() {
-            return "()* loopback of 1134:2: ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )*";
+            return "()* loopback of 1135:2: ( ( (lv_op_1_0= ruleGenericOperator ) ) ( (lv_e2_2_0= ruleTerminalGenericExpression ) ) )*";
         }
     }
  
@@ -5682,22 +5781,22 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleTheorem_in_ruleModel122 = new BitSet(new long[]{0x0000000000400002L});
     public static final BitSet FOLLOW_ruleTheorem_in_entryRuleTheorem157 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTheorem167 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_30_in_ruleTheorem205 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_KEYWORD_33_in_ruleTheorem205 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleTheorem221 = new BitSet(new long[]{0x0000000000200000L});
     public static final BitSet FOLLOW_ruleRangeDefinition_in_ruleTheorem247 = new BitSet(new long[]{0x0000000022080000L,0x0000000000000080L});
     public static final BitSet FOLLOW_ruleSetDeclaration_in_ruleTheorem268 = new BitSet(new long[]{0x0000000022080000L,0x0000000000000080L});
     public static final BitSet FOLLOW_ruleRequiredDefinition_in_ruleTheorem290 = new BitSet(new long[]{0x0000000022080000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleVerificationExpression_in_ruleTheorem313 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_ruleEvaluationExpression_in_ruleTheorem340 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_KEYWORD_10_in_ruleTheorem354 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000088L});
+    public static final BitSet FOLLOW_ruleVerificationExpression_in_ruleTheorem313 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_ruleEvaluationExpression_in_ruleTheorem340 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_KEYWORD_12_in_ruleTheorem354 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000088L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleTheorem370 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
     public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleTheorem387 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRangeDefinition_in_entryRuleRangeDefinition421 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRangeDefinition431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_29_in_ruleRangeDefinition469 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRangeDefinition485 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_KEYWORD_32_in_ruleRangeDefinition469 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRangeDefinition485 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_KEYWORD_4_in_ruleRangeDefinition503 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleSetExpression_in_ruleRangeDefinition523 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_ruleSetExpression_in_ruleRangeDefinition523 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_KEYWORD_2_in_ruleRangeDefinition536 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSetDeclaration_in_entryRuleSetDeclaration570 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSetDeclaration580 = new BitSet(new long[]{0x0000000000000002L});
@@ -5707,21 +5806,21 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleSetDeclaration671 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
     public static final BitSet FOLLOW_RULE_AFFECTATION_OPERATOR_in_ruleSetDeclaration683 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_PUNC_OPEN_BRACE_in_ruleSetDeclaration693 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleElementBinding_in_ruleSetDeclaration713 = new BitSet(new long[]{0x0002000000000000L});
-    public static final BitSet FOLLOW_KEYWORD_1_in_ruleSetDeclaration726 = new BitSet(new long[]{0x00009F93DD97FFF0L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleElementBinding_in_ruleSetDeclaration713 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_KEYWORD_1_in_ruleSetDeclaration726 = new BitSet(new long[]{0x00029F93DD97FFF0L,0x0000000000000910L});
     public static final BitSet FOLLOW_ruleSelectionExpression_in_ruleSetDeclaration746 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
     public static final BitSet FOLLOW_RULE_PUNC_CLOSE_BRACE_in_ruleSetDeclaration757 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
     public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleSetDeclaration767 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleElementBinding_in_entryRuleElementBinding801 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleElementBinding811 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleElementBinding853 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleElementBinding853 = new BitSet(new long[]{0x0004000000000000L});
     public static final BitSet FOLLOW_KEYWORD_4_in_ruleElementBinding871 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
     public static final BitSet FOLLOW_ruleSetExpression_in_ruleElementBinding891 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSelectionExpression_in_entryRuleSelectionExpression926 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSelectionExpression936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalSelectionExpression_in_ruleSelectionExpression982 = new BitSet(new long[]{0x0380000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanOperator_in_ruleSelectionExpression1004 = new BitSet(new long[]{0x00009F93DD97FFF0L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleTerminalSelectionExpression_in_ruleSelectionExpression1025 = new BitSet(new long[]{0x0380000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalSelectionExpression_in_ruleSelectionExpression982 = new BitSet(new long[]{0x0008A00000000002L});
+    public static final BitSet FOLLOW_ruleBooleanOperator_in_ruleSelectionExpression1004 = new BitSet(new long[]{0x00029F93DD97FFF0L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleTerminalSelectionExpression_in_ruleSelectionExpression1025 = new BitSet(new long[]{0x0008A00000000002L});
     public static final BitSet FOLLOW_ruleTerminalSelectionExpression_in_entryRuleTerminalSelectionExpression1062 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTerminalSelectionExpression1072 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTerminalSelectionExpression1118 = new BitSet(new long[]{0x0000000000000002L});
@@ -5736,152 +5835,156 @@ public class InternalREALParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleSelectionRelation1315 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSelectionRelationIdentifier_in_entryRuleSelectionRelationIdentifier1350 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSelectionRelationIdentifier1361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_45_in_ruleSelectionRelationIdentifier1399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_36_in_ruleSelectionRelationIdentifier1418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_43_in_ruleSelectionRelationIdentifier1437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_40_in_ruleSelectionRelationIdentifier1456 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_46_in_ruleSelectionRelationIdentifier1475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_37_in_ruleSelectionRelationIdentifier1494 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_35_in_ruleSelectionRelationIdentifier1513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_38_in_ruleSelectionRelationIdentifier1532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_42_in_ruleSelectionRelationIdentifier1551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_39_in_ruleSelectionRelationIdentifier1570 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_48_in_ruleSelectionRelationIdentifier1399 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_39_in_ruleSelectionRelationIdentifier1418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_46_in_ruleSelectionRelationIdentifier1437 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_43_in_ruleSelectionRelationIdentifier1456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_49_in_ruleSelectionRelationIdentifier1475 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_40_in_ruleSelectionRelationIdentifier1494 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_38_in_ruleSelectionRelationIdentifier1513 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_41_in_ruleSelectionRelationIdentifier1532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_45_in_ruleSelectionRelationIdentifier1551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_42_in_ruleSelectionRelationIdentifier1570 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSelectionRelationParameter_in_entryRuleSelectionRelationParameter1609 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSelectionRelationParameter1619 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLiteral_in_ruleSelectionRelationParameter1665 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleSelectionRelationParameter1688 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleRequiredDefinition_in_entryRuleRequiredDefinition1728 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRequiredDefinition1738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_33_in_ruleRequiredDefinition1776 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_KEYWORD_36_in_ruleRequiredDefinition1776 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleRequiredDefinition1786 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRequiredDefinition1802 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000060L});
-    public static final BitSet FOLLOW_RULE_PUNC_COMMA_in_ruleRequiredDefinition1819 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleRequiredDefinition1835 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000060L});
-    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleRequiredDefinition1853 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleRequiredDefinition1863 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerificationExpression_in_entryRuleVerificationExpression1897 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationExpression1907 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_23_in_ruleVerificationExpression1945 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationExpression1955 = new BitSet(new long[]{0x00009F93DD968820L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleVerificationExpression1975 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationExpression1986 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleVerificationExpression1996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvaluationExpression_in_entryRuleEvaluationExpression2030 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationExpression2040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_27_in_ruleEvaluationExpression2078 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2088 = new BitSet(new long[]{0x0000000C00000000L});
-    public static final BitSet FOLLOW_ruleAggregationFunctionIdentifier_in_ruleEvaluationExpression2108 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2119 = new BitSet(new long[]{0x00009F93DD968820L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleEvaluationExpression2139 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2150 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2160 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleEvaluationExpression2170 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGenericExpression_in_entryRuleGenericExpression2204 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGenericExpression2214 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2260 = new BitSet(new long[]{0xFFFC000000000002L});
-    public static final BitSet FOLLOW_ruleGenericOperator_in_ruleGenericExpression2282 = new BitSet(new long[]{0x00009F93DD968820L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2303 = new BitSet(new long[]{0xFFFC000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalGenericExpression_in_entryRuleTerminalGenericExpression2340 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerminalGenericExpression2350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_ruleTerminalGenericExpression2396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionCall_in_ruleTerminalGenericExpression2423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTernaryExpression_in_ruleTerminalGenericExpression2450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleTerminalGenericExpression2468 = new BitSet(new long[]{0x00009F93DD968820L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTerminalGenericExpression2489 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleTerminalGenericExpression2499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetExpression_in_entryRuleSetExpression2534 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetExpression2544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2590 = new BitSet(new long[]{0x0034000000000002L});
-    public static final BitSet FOLLOW_ruleSetOperator_in_ruleSetExpression2612 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2633 = new BitSet(new long[]{0x0034000000000002L});
-    public static final BitSet FOLLOW_ruleTerminalSetExpression_in_entryRuleTerminalSetExpression2671 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTerminalSetExpression2682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleTerminalSetExpression2721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTernaryExpression_in_entryRuleTernaryExpression2764 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTernaryExpression2774 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_3_in_ruleTernaryExpression2812 = new BitSet(new long[]{0x00009F93DD968820L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2832 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_KEYWORD_18_in_ruleTernaryExpression2845 = new BitSet(new long[]{0x00009F93DD968820L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2865 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_KEYWORD_17_in_ruleTernaryExpression2878 = new BitSet(new long[]{0x00009F93DD968820L,0x0000000000000910L});
-    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2898 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionCall_in_entryRuleVerificationFunctionCall2933 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationFunctionCall2943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionIdentifier_in_ruleVerificationFunctionCall2989 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationFunctionCall3000 = new BitSet(new long[]{0x00001F93DD968820L,0x0000000000000980L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3020 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000060L});
-    public static final BitSet FOLLOW_RULE_PUNC_COMMA_in_ruleVerificationFunctionCall3032 = new BitSet(new long[]{0x00001F93DD968820L,0x0000000000000980L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3052 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000060L});
-    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationFunctionCall3065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionParameter_in_entryRuleVerificationFunctionParameter3099 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationFunctionParameter3109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_ruleVerificationFunctionParameter3155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleVerificationFunctionParameter3178 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionCall_in_ruleVerificationFunctionParameter3210 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAggregationFunctionIdentifier_in_entryRuleAggregationFunctionIdentifier3246 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleAggregationFunctionIdentifier3257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_15_in_ruleAggregationFunctionIdentifier3295 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_14_in_ruleAggregationFunctionIdentifier3314 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleVerificationFunctionIdentifier_in_entryRuleVerificationFunctionIdentifier3354 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationFunctionIdentifier3365 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_31_in_ruleVerificationFunctionIdentifier3403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_9_in_ruleVerificationFunctionIdentifier3422 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_7_in_ruleVerificationFunctionIdentifier3441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_8_in_ruleVerificationFunctionIdentifier3460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_28_in_ruleVerificationFunctionIdentifier3479 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_5_in_ruleVerificationFunctionIdentifier3498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_6_in_ruleVerificationFunctionIdentifier3517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_44_in_ruleVerificationFunctionIdentifier3536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_32_in_ruleVerificationFunctionIdentifier3555 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_41_in_ruleVerificationFunctionIdentifier3574 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_34_in_ruleVerificationFunctionIdentifier3593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_25_in_ruleVerificationFunctionIdentifier3612 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_26_in_ruleVerificationFunctionIdentifier3631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_20_in_ruleVerificationFunctionIdentifier3650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_12_in_ruleVerificationFunctionIdentifier3669 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_11_in_ruleVerificationFunctionIdentifier3688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_22_in_ruleVerificationFunctionIdentifier3707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_13_in_ruleVerificationFunctionIdentifier3726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_16_in_ruleVerificationFunctionIdentifier3745 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_21_in_ruleVerificationFunctionIdentifier3764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGenericOperator_in_entryRuleGenericOperator3804 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGenericOperator3815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparisonOperator_in_ruleGenericOperator3862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanOperator_in_ruleGenericOperator3895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArithmeticOperator_in_ruleGenericOperator3928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLiteral_in_entryRuleLiteral3972 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLiteral3982 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBOOLEAN_in_ruleLiteral4028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleLiteral4051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NUMERIC_in_ruleLiteral4079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN4119 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBOOLEAN4129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_19_in_ruleBOOLEAN4174 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KEYWORD_24_in_ruleBOOLEAN4202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSetOperator_in_entryRuleSetOperator4251 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSetOperator4262 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_PLUS_in_ruleSetOperator4302 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STAR_in_ruleSetOperator4328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SLASH_in_ruleSetOperator4354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArithmeticOperator_in_entryRuleArithmeticOperator4399 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArithmeticOperator4410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_PLUS_in_ruleArithmeticOperator4450 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_MINUS_in_ruleArithmeticOperator4476 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STAR_in_ruleArithmeticOperator4502 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_SLASH_in_ruleArithmeticOperator4528 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_POWER_in_ruleArithmeticOperator4554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBooleanOperator_in_entryRuleBooleanOperator4599 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanOperator4610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_AND_in_ruleBooleanOperator4650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NOT_in_ruleBooleanOperator4676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_OR_in_ruleBooleanOperator4702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComparisonOperator_in_entryRuleComparisonOperator4747 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComparisonOperator4758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LESS_in_ruleComparisonOperator4798 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LESS_EQUAL_in_ruleComparisonOperator4824 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_EQUAL_in_ruleComparisonOperator4850 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_GREATER_EQUAL_in_ruleComparisonOperator4876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_GREATER_in_ruleComparisonOperator4902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NOT_EQUAL_in_ruleComparisonOperator4928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRequiredDefinition1802 = new BitSet(new long[]{0x0000200000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_KEYWORD_11_in_ruleRequiredDefinition1821 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleRequiredDefinition1837 = new BitSet(new long[]{0x0000200000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleRequiredDefinition1855 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleRequiredDefinition1865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerificationExpression_in_entryRuleVerificationExpression1899 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationExpression1909 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_26_in_ruleVerificationExpression1947 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationExpression1957 = new BitSet(new long[]{0x00029F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleVerificationExpression1977 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationExpression1988 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleVerificationExpression1998 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvaluationExpression_in_entryRuleEvaluationExpression2032 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvaluationExpression2042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_30_in_ruleEvaluationExpression2080 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2090 = new BitSet(new long[]{0x0000000C00000000L});
+    public static final BitSet FOLLOW_ruleAggregationFunctionIdentifier_in_ruleEvaluationExpression2110 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleEvaluationExpression2121 = new BitSet(new long[]{0x00029F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleEvaluationExpression2141 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2152 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleEvaluationExpression2162 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_RULE_PUNC_SEMI_COLON_in_ruleEvaluationExpression2172 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericExpression_in_entryRuleGenericExpression2206 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGenericExpression2216 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2262 = new BitSet(new long[]{0xFFE8A00000000002L});
+    public static final BitSet FOLLOW_ruleGenericOperator_in_ruleGenericExpression2284 = new BitSet(new long[]{0x00029F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleTerminalGenericExpression_in_ruleGenericExpression2305 = new BitSet(new long[]{0xFFE8A00000000002L});
+    public static final BitSet FOLLOW_ruleTerminalGenericExpression_in_entryRuleTerminalGenericExpression2342 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTerminalGenericExpression2352 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOperator_in_ruleTerminalGenericExpression2394 = new BitSet(new long[]{0x00021F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleLiteral_in_ruleTerminalGenericExpression2417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionCall_in_ruleTerminalGenericExpression2444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTernaryExpression_in_ruleTerminalGenericExpression2471 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleTerminalGenericExpression2489 = new BitSet(new long[]{0x00029F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTerminalGenericExpression2510 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleTerminalGenericExpression2520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetExpression_in_entryRuleSetExpression2556 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetExpression2566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2612 = new BitSet(new long[]{0x01A0000000000002L});
+    public static final BitSet FOLLOW_ruleSetOperator_in_ruleSetExpression2634 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
+    public static final BitSet FOLLOW_ruleTerminalSetExpression_in_ruleSetExpression2655 = new BitSet(new long[]{0x01A0000000000002L});
+    public static final BitSet FOLLOW_ruleTerminalSetExpression_in_entryRuleTerminalSetExpression2693 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTerminalSetExpression2704 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleTerminalSetExpression2743 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTernaryExpression_in_entryRuleTernaryExpression2786 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTernaryExpression2796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_3_in_ruleTernaryExpression2834 = new BitSet(new long[]{0x00029F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2854 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_KEYWORD_21_in_ruleTernaryExpression2867 = new BitSet(new long[]{0x00029F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2887 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_KEYWORD_20_in_ruleTernaryExpression2900 = new BitSet(new long[]{0x00029F93DD968820L,0x0000000000000910L});
+    public static final BitSet FOLLOW_ruleGenericExpression_in_ruleTernaryExpression2920 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionCall_in_entryRuleVerificationFunctionCall2955 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationFunctionCall2965 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionIdentifier_in_ruleVerificationFunctionCall3011 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_PUNC_OPEN_PARENTHESIS_in_ruleVerificationFunctionCall3022 = new BitSet(new long[]{0x00001F93DD968820L,0x0000000000000980L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3042 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000060L});
+    public static final BitSet FOLLOW_RULE_PUNC_COMMA_in_ruleVerificationFunctionCall3054 = new BitSet(new long[]{0x00001F93DD968820L,0x0000000000000980L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionParameter_in_ruleVerificationFunctionCall3074 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000060L});
+    public static final BitSet FOLLOW_RULE_PUNC_CLOSE_PARENTHESIS_in_ruleVerificationFunctionCall3087 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionParameter_in_entryRuleVerificationFunctionParameter3121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationFunctionParameter3131 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteral_in_ruleVerificationFunctionParameter3177 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleVerificationFunctionParameter3200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionCall_in_ruleVerificationFunctionParameter3232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAggregationFunctionIdentifier_in_entryRuleAggregationFunctionIdentifier3268 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAggregationFunctionIdentifier3279 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_18_in_ruleAggregationFunctionIdentifier3317 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_17_in_ruleAggregationFunctionIdentifier3336 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleVerificationFunctionIdentifier_in_entryRuleVerificationFunctionIdentifier3376 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleVerificationFunctionIdentifier3387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_34_in_ruleVerificationFunctionIdentifier3425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_10_in_ruleVerificationFunctionIdentifier3444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_8_in_ruleVerificationFunctionIdentifier3463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_9_in_ruleVerificationFunctionIdentifier3482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_31_in_ruleVerificationFunctionIdentifier3501 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_6_in_ruleVerificationFunctionIdentifier3520 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_7_in_ruleVerificationFunctionIdentifier3539 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_47_in_ruleVerificationFunctionIdentifier3558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_35_in_ruleVerificationFunctionIdentifier3577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_44_in_ruleVerificationFunctionIdentifier3596 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_37_in_ruleVerificationFunctionIdentifier3615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_28_in_ruleVerificationFunctionIdentifier3634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_29_in_ruleVerificationFunctionIdentifier3653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_23_in_ruleVerificationFunctionIdentifier3672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_15_in_ruleVerificationFunctionIdentifier3691 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_14_in_ruleVerificationFunctionIdentifier3710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_25_in_ruleVerificationFunctionIdentifier3729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_16_in_ruleVerificationFunctionIdentifier3748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_19_in_ruleVerificationFunctionIdentifier3767 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_24_in_ruleVerificationFunctionIdentifier3786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGenericOperator_in_entryRuleGenericOperator3826 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGenericOperator3837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparisonOperator_in_ruleGenericOperator3884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanOperator_in_ruleGenericOperator3917 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArithmeticOperator_in_ruleGenericOperator3950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLiteral_in_entryRuleLiteral3994 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleLiteral4004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBOOLEAN_in_ruleLiteral4050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleLiteral4073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NUMERIC_in_ruleLiteral4101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBOOLEAN_in_entryRuleBOOLEAN4141 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBOOLEAN4151 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_22_in_ruleBOOLEAN4196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_27_in_ruleBOOLEAN4224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSetOperator_in_entryRuleSetOperator4273 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSetOperator4284 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_PLUS_in_ruleSetOperator4324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STAR_in_ruleSetOperator4350 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SLASH_in_ruleSetOperator4376 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArithmeticOperator_in_entryRuleArithmeticOperator4421 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArithmeticOperator4432 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_PLUS_in_ruleArithmeticOperator4472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_MINUS_in_ruleArithmeticOperator4498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STAR_in_ruleArithmeticOperator4524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_SLASH_in_ruleArithmeticOperator4550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_POWER_in_ruleArithmeticOperator4576 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBooleanOperator_in_entryRuleBooleanOperator4621 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBooleanOperator4632 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_11_in_ruleBooleanOperator4670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_13_in_ruleBooleanOperator4689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_5_in_ruleBooleanOperator4708 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnaryOperator_in_entryRuleUnaryOperator4748 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleUnaryOperator4759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KEYWORD_13_in_ruleUnaryOperator4796 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleComparisonOperator_in_entryRuleComparisonOperator4835 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleComparisonOperator4846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LESS_in_ruleComparisonOperator4886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LESS_EQUAL_in_ruleComparisonOperator4912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_EQUAL_in_ruleComparisonOperator4938 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_GREATER_EQUAL_in_ruleComparisonOperator4964 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_GREATER_in_ruleComparisonOperator4990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NOT_EQUAL_in_ruleComparisonOperator5016 = new BitSet(new long[]{0x0000000000000002L});
 
 }

@@ -44,7 +44,7 @@ protected class ThisRootNode extends RootToken {
 			case 10: return new VerificationExpression_Group(this, this, 10, inst);
 			case 11: return new EvaluationExpression_Group(this, this, 11, inst);
 			case 12: return new GenericExpression_Group(this, this, 12, inst);
-			case 13: return new TerminalGenericExpression_Alternatives(this, this, 13, inst);
+			case 13: return new TerminalGenericExpression_Group(this, this, 13, inst);
 			case 14: return new SetExpression_Group(this, this, 14, inst);
 			case 15: return new TernaryExpression_Group(this, this, 15, inst);
 			case 16: return new VerificationFunctionCall_Group(this, this, 16, inst);
@@ -1982,11 +1982,11 @@ protected class SelectionRelationParameter_IdentifierAssignment_1 extends Assign
 /************ begin Rule RequiredDefinition ****************
  *
  * RequiredDefinition:
- * 	"requires" PUNC_OPEN_PARENTHESIS theorems+=ID (PUNC_COMMA theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
+ * 	"requires" PUNC_OPEN_PARENTHESIS theorems+=ID ("and" theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
  *
  **/
 
-// "requires" PUNC_OPEN_PARENTHESIS theorems+=ID (PUNC_COMMA theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON
+// "requires" PUNC_OPEN_PARENTHESIS theorems+=ID ("and" theorems+=ID)* PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON
 protected class RequiredDefinition_Group extends GroupToken {
 	
 	public RequiredDefinition_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2092,7 +2092,7 @@ protected class RequiredDefinition_TheoremsAssignment_2 extends AssignmentToken 
 
 }
 
-// (PUNC_COMMA theorems+=ID)*
+// ("and" theorems+=ID)*
 protected class RequiredDefinition_Group_3 extends GroupToken {
 	
 	public RequiredDefinition_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
@@ -2114,16 +2114,16 @@ protected class RequiredDefinition_Group_3 extends GroupToken {
 
 }
 
-// PUNC_COMMA
-protected class RequiredDefinition_PUNC_COMMATerminalRuleCall_3_0 extends UnassignedTextToken {
-
-	public RequiredDefinition_PUNC_COMMATerminalRuleCall_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+// "and"
+protected class RequiredDefinition_AndKeyword_3_0 extends KeywordToken  {
+	
+	public RequiredDefinition_AndKeyword_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public RuleCall getGrammarElement() {
-		return grammarAccess.getRequiredDefinitionAccess().getPUNC_COMMATerminalRuleCall_3_0();
+	public Keyword getGrammarElement() {
+		return grammarAccess.getRequiredDefinitionAccess().getAndKeyword_3_0();
 	}
 
     @Override
@@ -2152,7 +2152,7 @@ protected class RequiredDefinition_TheoremsAssignment_3_1 extends AssignmentToke
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new RequiredDefinition_PUNC_COMMATerminalRuleCall_3_0(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new RequiredDefinition_AndKeyword_3_0(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2700,7 +2700,7 @@ protected class GenericExpression_E1Assignment_0 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new TerminalGenericExpression_Alternatives(this, this, 0, inst);
+			case 0: return new TerminalGenericExpression_Group(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2802,7 +2802,7 @@ protected class GenericExpression_E2Assignment_1_1 extends AssignmentToken  {
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new TerminalGenericExpression_Alternatives(this, this, 0, inst);
+			case 0: return new TerminalGenericExpression_Group(this, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2841,31 +2841,28 @@ protected class GenericExpression_E2Assignment_1_1 extends AssignmentToken  {
 /************ begin Rule TerminalGenericExpression ****************
  *
  * TerminalGenericExpression:
- * 	literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS GenericExpression
- * 	PUNC_CLOSE_PARENTHESIS;
+ * 	UnaryOperator? (literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS
+ * 	GenericExpression PUNC_CLOSE_PARENTHESIS);
  *
  **/
 
-// literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS GenericExpression
-// PUNC_CLOSE_PARENTHESIS
-protected class TerminalGenericExpression_Alternatives extends AlternativesToken {
-
-	public TerminalGenericExpression_Alternatives(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+// UnaryOperator? (literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS
+// GenericExpression PUNC_CLOSE_PARENTHESIS)
+protected class TerminalGenericExpression_Group extends GroupToken {
+	
+	public TerminalGenericExpression_Group(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
-	public Alternatives getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getAlternatives();
+	public Group getGrammarElement() {
+		return grammarAccess.getTerminalGenericExpressionAccess().getGroup();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new TerminalGenericExpression_LiteralAssignment_0(lastRuleCallOrigin, this, 0, inst);
-			case 1: return new TerminalGenericExpression_FcAssignment_1(lastRuleCallOrigin, this, 1, inst);
-			case 2: return new TerminalGenericExpression_TeAssignment_2(lastRuleCallOrigin, this, 2, inst);
-			case 3: return new TerminalGenericExpression_Group_3(lastRuleCallOrigin, this, 3, inst);
+			case 0: return new TerminalGenericExpression_Alternatives_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -2880,16 +2877,42 @@ protected class TerminalGenericExpression_Alternatives extends AlternativesToken
 
 }
 
-// literal=Literal
-protected class TerminalGenericExpression_LiteralAssignment_0 extends AssignmentToken  {
+// literal=Literal | fc=VerificationFunctionCall | te=TernaryExpression | PUNC_OPEN_PARENTHESIS GenericExpression
+// PUNC_CLOSE_PARENTHESIS
+protected class TerminalGenericExpression_Alternatives_1 extends AlternativesToken {
+
+	public TerminalGenericExpression_Alternatives_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
+	}
 	
-	public TerminalGenericExpression_LiteralAssignment_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	@Override
+	public Alternatives getGrammarElement() {
+		return grammarAccess.getTerminalGenericExpressionAccess().getAlternatives_1();
+	}
+
+    @Override
+	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
+		switch(index) {
+			case 0: return new TerminalGenericExpression_LiteralAssignment_1_0(lastRuleCallOrigin, this, 0, inst);
+			case 1: return new TerminalGenericExpression_FcAssignment_1_1(lastRuleCallOrigin, this, 1, inst);
+			case 2: return new TerminalGenericExpression_TeAssignment_1_2(lastRuleCallOrigin, this, 2, inst);
+			case 3: return new TerminalGenericExpression_Group_1_3(lastRuleCallOrigin, this, 3, inst);
+			default: return null;
+		}	
+	}
+
+}
+
+// literal=Literal
+protected class TerminalGenericExpression_LiteralAssignment_1_0 extends AssignmentToken  {
+	
+	public TerminalGenericExpression_LiteralAssignment_1_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getLiteralAssignment_0();
+		return grammarAccess.getTerminalGenericExpressionAccess().getLiteralAssignment_1_0();
 	}
 
     @Override
@@ -2910,7 +2933,7 @@ protected class TerminalGenericExpression_LiteralAssignment_0 extends Assignment
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getLiteralRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getTerminalGenericExpressionAccess().getLiteralLiteralParserRuleCall_0_0(); 
+				element = grammarAccess.getTerminalGenericExpressionAccess().getLiteralLiteralParserRuleCall_1_0_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -2928,15 +2951,15 @@ protected class TerminalGenericExpression_LiteralAssignment_0 extends Assignment
 }
 
 // fc=VerificationFunctionCall
-protected class TerminalGenericExpression_FcAssignment_1 extends AssignmentToken  {
+protected class TerminalGenericExpression_FcAssignment_1_1 extends AssignmentToken  {
 	
-	public TerminalGenericExpression_FcAssignment_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public TerminalGenericExpression_FcAssignment_1_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getFcAssignment_1();
+		return grammarAccess.getTerminalGenericExpressionAccess().getFcAssignment_1_1();
 	}
 
     @Override
@@ -2957,7 +2980,7 @@ protected class TerminalGenericExpression_FcAssignment_1 extends AssignmentToken
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getVerificationFunctionCallRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getTerminalGenericExpressionAccess().getFcVerificationFunctionCallParserRuleCall_1_0(); 
+				element = grammarAccess.getTerminalGenericExpressionAccess().getFcVerificationFunctionCallParserRuleCall_1_1_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -2975,15 +2998,15 @@ protected class TerminalGenericExpression_FcAssignment_1 extends AssignmentToken
 }
 
 // te=TernaryExpression
-protected class TerminalGenericExpression_TeAssignment_2 extends AssignmentToken  {
+protected class TerminalGenericExpression_TeAssignment_1_2 extends AssignmentToken  {
 	
-	public TerminalGenericExpression_TeAssignment_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public TerminalGenericExpression_TeAssignment_1_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Assignment getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getTeAssignment_2();
+		return grammarAccess.getTerminalGenericExpressionAccess().getTeAssignment_1_2();
 	}
 
     @Override
@@ -3004,7 +3027,7 @@ protected class TerminalGenericExpression_TeAssignment_2 extends AssignmentToken
 			IEObjectConsumer param = createEObjectConsumer((EObject)value);
 			if(param.isInstanceOf(grammarAccess.getTernaryExpressionRule().getType().getClassifier())) {
 				type = AssignmentType.PARSER_RULE_CALL;
-				element = grammarAccess.getTerminalGenericExpressionAccess().getTeTernaryExpressionParserRuleCall_2_0(); 
+				element = grammarAccess.getTerminalGenericExpressionAccess().getTeTernaryExpressionParserRuleCall_1_2_0(); 
 				consumed = obj;
 				return param;
 			}
@@ -3022,21 +3045,21 @@ protected class TerminalGenericExpression_TeAssignment_2 extends AssignmentToken
 }
 
 // PUNC_OPEN_PARENTHESIS GenericExpression PUNC_CLOSE_PARENTHESIS
-protected class TerminalGenericExpression_Group_3 extends GroupToken {
+protected class TerminalGenericExpression_Group_1_3 extends GroupToken {
 	
-	public TerminalGenericExpression_Group_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public TerminalGenericExpression_Group_1_3(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public Group getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getGroup_3();
+		return grammarAccess.getTerminalGenericExpressionAccess().getGroup_1_3();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new TerminalGenericExpression_PUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new TerminalGenericExpression_PUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
@@ -3051,15 +3074,15 @@ protected class TerminalGenericExpression_Group_3 extends GroupToken {
 }
 
 // PUNC_OPEN_PARENTHESIS
-protected class TerminalGenericExpression_PUNC_OPEN_PARENTHESISTerminalRuleCall_3_0 extends UnassignedTextToken {
+protected class TerminalGenericExpression_PUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0 extends UnassignedTextToken {
 
-	public TerminalGenericExpression_PUNC_OPEN_PARENTHESISTerminalRuleCall_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public TerminalGenericExpression_PUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_3_0();
+		return grammarAccess.getTerminalGenericExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0();
 	}
 
     @Override
@@ -3072,15 +3095,15 @@ protected class TerminalGenericExpression_PUNC_OPEN_PARENTHESISTerminalRuleCall_
 }
 
 // GenericExpression
-protected class TerminalGenericExpression_GenericExpressionParserRuleCall_3_1 extends RuleCallToken {
+protected class TerminalGenericExpression_GenericExpressionParserRuleCall_1_3_1 extends RuleCallToken {
 	
-	public TerminalGenericExpression_GenericExpressionParserRuleCall_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public TerminalGenericExpression_GenericExpressionParserRuleCall_1_3_1(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getGenericExpressionParserRuleCall_3_1();
+		return grammarAccess.getTerminalGenericExpressionAccess().getGenericExpressionParserRuleCall_1_3_1();
 	}
 
     @Override
@@ -3100,33 +3123,34 @@ protected class TerminalGenericExpression_GenericExpressionParserRuleCall_3_1 ex
     @Override
 	public AbstractToken createFollowerAfterReturn(AbstractToken next,	int actIndex, int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new TerminalGenericExpression_PUNC_OPEN_PARENTHESISTerminalRuleCall_3_0(lastRuleCallOrigin, next, actIndex, inst);
+			case 0: return new TerminalGenericExpression_PUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0(lastRuleCallOrigin, next, actIndex, inst);
 			default: return null;
 		}	
 	}	
 }
 
 // PUNC_CLOSE_PARENTHESIS
-protected class TerminalGenericExpression_PUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2 extends UnassignedTextToken {
+protected class TerminalGenericExpression_PUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2 extends UnassignedTextToken {
 
-	public TerminalGenericExpression_PUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
+	public TerminalGenericExpression_PUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2(AbstractToken lastRuleCallOrigin, AbstractToken next, int transitionIndex, IEObjectConsumer eObjectConsumer) {
 		super(lastRuleCallOrigin, next, transitionIndex, eObjectConsumer);
 	}
 	
 	@Override
 	public RuleCall getGrammarElement() {
-		return grammarAccess.getTerminalGenericExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2();
+		return grammarAccess.getTerminalGenericExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2();
 	}
 
     @Override
 	public AbstractToken createFollower(int index, IEObjectConsumer inst) {
 		switch(index) {
-			case 0: return new TerminalGenericExpression_GenericExpressionParserRuleCall_3_1(lastRuleCallOrigin, this, 0, inst);
+			case 0: return new TerminalGenericExpression_GenericExpressionParserRuleCall_1_3_1(lastRuleCallOrigin, this, 0, inst);
 			default: return null;
 		}	
 	}
 
 }
+
 
 
 
@@ -4172,6 +4196,7 @@ protected class BOOLEAN_ValueAssignment extends AssignmentToken  {
 }
 
 /************ end Rule BOOLEAN ****************/
+
 
 
 

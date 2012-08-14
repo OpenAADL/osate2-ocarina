@@ -111,7 +111,7 @@ ruleTheorem returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
-	otherlv_0=KEYWORD_30
+	otherlv_0=KEYWORD_33
     {
     	newLeafNode(otherlv_0, grammarAccess.getTheoremAccess().getTheoremKeyword_0());
     }
@@ -225,7 +225,7 @@ ruleTheorem returns [EObject current=null]
 
 )
 ))
-	otherlv_7=KEYWORD_10
+	otherlv_7=KEYWORD_12
     {
     	newLeafNode(otherlv_7, grammarAccess.getTheoremAccess().getEndKeyword_6());
     }
@@ -273,7 +273,7 @@ ruleRangeDefinition returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
-	otherlv_0=KEYWORD_29
+	otherlv_0=KEYWORD_32
     {
     	newLeafNode(otherlv_0, grammarAccess.getRangeDefinitionAccess().getForeachKeyword_0());
     }
@@ -750,70 +750,70 @@ ruleSelectionRelationIdentifier returns [AntlrDatatypeRuleToken current=new Antl
     @after { leaveRule();
     }:
 (
-	kw=KEYWORD_45 
+	kw=KEYWORD_48 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Subcomponent_OfKeyword_0()); 
     }
 
     |
-	kw=KEYWORD_36 
+	kw=KEYWORD_39 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Bound_ToKeyword_1()); 
     }
 
     |
-	kw=KEYWORD_43 
+	kw=KEYWORD_46 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Provided_ClassKeyword_2()); 
     }
 
     |
-	kw=KEYWORD_40 
+	kw=KEYWORD_43 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Connected_ToKeyword_3()); 
     }
 
     |
-	kw=KEYWORD_46 
+	kw=KEYWORD_49 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getCompare_Property_ValueKeyword_4()); 
     }
 
     |
-	kw=KEYWORD_37 
+	kw=KEYWORD_40 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Called_ByKeyword_5()); 
     }
 
     |
-	kw=KEYWORD_35 
+	kw=KEYWORD_38 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_CallingKeyword_6()); 
     }
 
     |
-	kw=KEYWORD_38 
+	kw=KEYWORD_41 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Accessed_ByKeyword_7()); 
     }
 
     |
-	kw=KEYWORD_42 
+	kw=KEYWORD_45 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Connecting_ToKeyword_8()); 
     }
 
     |
-	kw=KEYWORD_39 
+	kw=KEYWORD_42 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getSelectionRelationIdentifierAccess().getIs_Accessing_ToKeyword_9()); 
@@ -898,7 +898,7 @@ ruleRequiredDefinition returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
-	otherlv_0=KEYWORD_33
+	otherlv_0=KEYWORD_36
     {
     	newLeafNode(otherlv_0, grammarAccess.getRequiredDefinitionAccess().getRequiresKeyword_0());
     }
@@ -924,9 +924,10 @@ this_PUNC_OPEN_PARENTHESIS_1=RULE_PUNC_OPEN_PARENTHESIS
 	    }
 
 )
-)(this_PUNC_COMMA_3=RULE_PUNC_COMMA
-    { 
-    newLeafNode(this_PUNC_COMMA_3, grammarAccess.getRequiredDefinitionAccess().getPUNC_COMMATerminalRuleCall_3_0()); 
+)(
+	otherlv_3=KEYWORD_11
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getRequiredDefinitionAccess().getAndKeyword_3_0());
     }
 (
 (
@@ -976,7 +977,7 @@ ruleVerificationExpression returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
-	otherlv_0=KEYWORD_23
+	otherlv_0=KEYWORD_26
     {
     	newLeafNode(otherlv_0, grammarAccess.getVerificationExpressionAccess().getCheckKeyword_0());
     }
@@ -1032,7 +1033,7 @@ ruleEvaluationExpression returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
-	otherlv_0=KEYWORD_27
+	otherlv_0=KEYWORD_30
     {
     	newLeafNode(otherlv_0, grammarAccess.getEvaluationExpressionAccess().getReturnKeyword_0());
     }
@@ -1189,18 +1190,26 @@ ruleTerminalGenericExpression returns [EObject current=null]
     }
     @after { leaveRule(); }:
 ((
+    { 
+        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getUnaryOperatorParserRuleCall_0()); 
+    }
+ruleUnaryOperator
+    {
+        afterParserOrEnumRuleCall();
+    }
+)?((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getLiteralLiteralParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getLiteralLiteralParserRuleCall_1_0_0()); 
 	    }
-		lv_literal_0_0=ruleLiteral		{
+		lv_literal_1_0=ruleLiteral		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTerminalGenericExpressionRule());
 	        }
        		set(
        			$current, 
        			"literal",
-        		lv_literal_0_0, 
+        		lv_literal_1_0, 
         		"Literal");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1210,16 +1219,16 @@ ruleTerminalGenericExpression returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getFcVerificationFunctionCallParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getFcVerificationFunctionCallParserRuleCall_1_1_0()); 
 	    }
-		lv_fc_1_0=ruleVerificationFunctionCall		{
+		lv_fc_2_0=ruleVerificationFunctionCall		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTerminalGenericExpressionRule());
 	        }
        		set(
        			$current, 
        			"fc",
-        		lv_fc_1_0, 
+        		lv_fc_2_0, 
         		"VerificationFunctionCall");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -1229,40 +1238,40 @@ ruleTerminalGenericExpression returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getTeTernaryExpressionParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getTeTernaryExpressionParserRuleCall_1_2_0()); 
 	    }
-		lv_te_2_0=ruleTernaryExpression		{
+		lv_te_3_0=ruleTernaryExpression		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTerminalGenericExpressionRule());
 	        }
        		set(
        			$current, 
        			"te",
-        		lv_te_2_0, 
+        		lv_te_3_0, 
         		"TernaryExpression");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
 )
-    |(this_PUNC_OPEN_PARENTHESIS_3=RULE_PUNC_OPEN_PARENTHESIS
+    |(this_PUNC_OPEN_PARENTHESIS_4=RULE_PUNC_OPEN_PARENTHESIS
     { 
-    newLeafNode(this_PUNC_OPEN_PARENTHESIS_3, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_3_0()); 
+    newLeafNode(this_PUNC_OPEN_PARENTHESIS_4, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_OPEN_PARENTHESISTerminalRuleCall_1_3_0()); 
     }
 
     { 
-        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getGenericExpressionParserRuleCall_3_1()); 
+        newCompositeNode(grammarAccess.getTerminalGenericExpressionAccess().getGenericExpressionParserRuleCall_1_3_1()); 
     }
-    this_GenericExpression_4=ruleGenericExpression
+    this_GenericExpression_5=ruleGenericExpression
     {
-        $current = $this_GenericExpression_4.current;
+        $current = $this_GenericExpression_5.current;
         afterParserOrEnumRuleCall();
     }
-this_PUNC_CLOSE_PARENTHESIS_5=RULE_PUNC_CLOSE_PARENTHESIS
+this_PUNC_CLOSE_PARENTHESIS_6=RULE_PUNC_CLOSE_PARENTHESIS
     { 
-    newLeafNode(this_PUNC_CLOSE_PARENTHESIS_5, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_3_2()); 
+    newLeafNode(this_PUNC_CLOSE_PARENTHESIS_6, grammarAccess.getTerminalGenericExpressionAccess().getPUNC_CLOSE_PARENTHESISTerminalRuleCall_1_3_2()); 
     }
-))
+)))
 ;
 
 
@@ -1411,7 +1420,7 @@ ruleTernaryExpression returns [EObject current=null]
 
 )
 )
-	otherlv_2=KEYWORD_18
+	otherlv_2=KEYWORD_21
     {
     	newLeafNode(otherlv_2, grammarAccess.getTernaryExpressionAccess().getThenKeyword_2());
     }
@@ -1434,7 +1443,7 @@ ruleTernaryExpression returns [EObject current=null]
 
 )
 )
-	otherlv_4=KEYWORD_17
+	otherlv_4=KEYWORD_20
     {
     	newLeafNode(otherlv_4, grammarAccess.getTernaryExpressionAccess().getElseKeyword_4());
     }
@@ -1643,14 +1652,14 @@ ruleAggregationFunctionIdentifier returns [AntlrDatatypeRuleToken current=new An
     @after { leaveRule();
     }:
 (
-	kw=KEYWORD_15 
+	kw=KEYWORD_18 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getAggregationFunctionIdentifierAccess().getMSumKeyword_0()); 
     }
 
     |
-	kw=KEYWORD_14 
+	kw=KEYWORD_17 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getAggregationFunctionIdentifierAccess().getMMaxKeyword_1()); 
@@ -1678,140 +1687,140 @@ ruleVerificationFunctionIdentifier returns [AntlrDatatypeRuleToken current=new A
     @after { leaveRule();
     }:
 (
-	kw=KEYWORD_31 
+	kw=KEYWORD_34 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getCardinalKeyword_0()); 
     }
 
     |
-	kw=KEYWORD_9 
+	kw=KEYWORD_10 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getSumKeyword_1()); 
     }
 
     |
-	kw=KEYWORD_7 
+	kw=KEYWORD_8 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getMaxKeyword_2()); 
     }
 
     |
-	kw=KEYWORD_8 
+	kw=KEYWORD_9 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getMinKeyword_3()); 
     }
 
     |
-	kw=KEYWORD_28 
+	kw=KEYWORD_31 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getProductKeyword_4()); 
     }
 
     |
-	kw=KEYWORD_5 
+	kw=KEYWORD_6 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getGCDKeyword_5()); 
     }
 
     |
-	kw=KEYWORD_6 
+	kw=KEYWORD_7 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getLCMKeyword_6()); 
     }
 
     |
-	kw=KEYWORD_44 
+	kw=KEYWORD_47 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getGet_Property_ValueKeyword_7()); 
     }
 
     |
-	kw=KEYWORD_32 
+	kw=KEYWORD_35 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getPropertyKeyword_8()); 
     }
 
     |
-	kw=KEYWORD_41 
+	kw=KEYWORD_44 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getProperty_ExistsKeyword_9()); 
     }
 
     |
-	kw=KEYWORD_34 
+	kw=KEYWORD_37 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getAll_EqualsKeyword_10()); 
     }
 
     |
-	kw=KEYWORD_25 
+	kw=KEYWORD_28 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getExistsKeyword_11()); 
     }
 
     |
-	kw=KEYWORD_26 
+	kw=KEYWORD_29 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getSystemKeyword_12()); 
     }
 
     |
-	kw=KEYWORD_20 
+	kw=KEYWORD_23 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getFirstKeyword_13()); 
     }
 
     |
-	kw=KEYWORD_12 
+	kw=KEYWORD_15 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getLastKeyword_14()); 
     }
 
     |
-	kw=KEYWORD_11 
+	kw=KEYWORD_14 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getHeadKeyword_15()); 
     }
 
     |
-	kw=KEYWORD_22 
+	kw=KEYWORD_25 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getQueueKeyword_16()); 
     }
 
     |
-	kw=KEYWORD_13 
+	kw=KEYWORD_16 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getListKeyword_17()); 
     }
 
     |
-	kw=KEYWORD_16 
+	kw=KEYWORD_19 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getSizeKeyword_18()); 
     }
 
     |
-	kw=KEYWORD_21 
+	kw=KEYWORD_24 
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getVerificationFunctionIdentifierAccess().getFloatKeyword_19()); 
@@ -1975,7 +1984,7 @@ ruleBOOLEAN returns [EObject current=null]
 (
 (
 		lv_value_0_1=
-	KEYWORD_19
+	KEYWORD_22
     {
         newLeafNode(lv_value_0_1, grammarAccess.getBOOLEANAccess().getValueTrueKeyword_0_0());
     }
@@ -1988,7 +1997,7 @@ ruleBOOLEAN returns [EObject current=null]
 	    }
 
     |		lv_value_0_2=
-	KEYWORD_24
+	KEYWORD_27
     {
         newLeafNode(lv_value_0_2, grammarAccess.getBOOLEANAccess().getValueFalseKeyword_0_1());
     }
@@ -2131,30 +2140,55 @@ ruleBooleanOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRul
     }
     @after { leaveRule();
     }:
-(    this_AND_0=RULE_AND    {
-		$current.merge(this_AND_0);
+(
+	kw=KEYWORD_11 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBooleanOperatorAccess().getAndKeyword_0()); 
     }
 
-    { 
-    newLeafNode(this_AND_0, grammarAccess.getBooleanOperatorAccess().getANDTerminalRuleCall_0()); 
+    |
+	kw=KEYWORD_13 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBooleanOperatorAccess().getNotKeyword_1()); 
     }
 
-    |    this_NOT_1=RULE_NOT    {
-		$current.merge(this_NOT_1);
-    }
-
-    { 
-    newLeafNode(this_NOT_1, grammarAccess.getBooleanOperatorAccess().getNOTTerminalRuleCall_1()); 
-    }
-
-    |    this_OR_2=RULE_OR    {
-		$current.merge(this_OR_2);
-    }
-
-    { 
-    newLeafNode(this_OR_2, grammarAccess.getBooleanOperatorAccess().getORTerminalRuleCall_2()); 
+    |
+	kw=KEYWORD_5 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBooleanOperatorAccess().getOrKeyword_2()); 
     }
 )
+    ;
+
+
+
+
+
+// Entry rule entryRuleUnaryOperator
+entryRuleUnaryOperator returns [String current=null] 
+:
+	{ newCompositeNode(grammarAccess.getUnaryOperatorRule()); } 
+	 iv_ruleUnaryOperator=ruleUnaryOperator 
+	 { $current=$iv_ruleUnaryOperator.current.getText(); }  
+	 EOF 
+;
+
+// Rule UnaryOperator
+ruleUnaryOperator returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule();
+    }:
+
+	kw=KEYWORD_13 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getUnaryOperatorAccess().getNotKeyword()); 
+    }
+
     ;
 
 
