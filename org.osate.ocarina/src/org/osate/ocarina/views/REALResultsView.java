@@ -110,11 +110,11 @@ public class REALResultsView extends ViewPart {
 		detailsPane.setLayout(detailsLayout);
 		detailsPane.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		
-		detailsTxt = new Text(detailsPane, SWT.READ_ONLY | SWT.V_SCROLL);
+		detailsTxt = new Text(detailsPane, SWT.READ_ONLY | SWT.V_SCROLL | SWT.WRAP);
 		detailsTxt.setText("");
 		detailsTxt.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		
-		falseInstanceViewer = new ListViewer(detailsPane, SWT.SINGLE | SWT.H_SCROLL | SWT.V_SCROLL);
+		falseInstanceViewer = new ListViewer(detailsPane, SWT.SINGLE | SWT.WRAP | SWT.V_SCROLL);
 		falseInstanceViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 		falseInstanceViewer.setContentProvider(new IStructuredContentProvider() {
 			@Override

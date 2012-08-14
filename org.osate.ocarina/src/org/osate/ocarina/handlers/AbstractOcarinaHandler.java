@@ -160,8 +160,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 					// Refresh the project
 					try {
-						projectResource.refreshLocal(IResource.DEPTH_INFINITE,
-								null);
+						projectResource.refreshLocal(IResource.DEPTH_INFINITE, null);
 					} catch (CoreException ex) {
 						throw new RuntimeException(ex);
 					}
@@ -367,7 +366,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		console.clearConsole();
 		
 		if(automaticallyShowConsole) {
-			Utils.showConsole(console);
+			showConsole();
 		}
 
 		// Create and configure streams
@@ -376,6 +375,11 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		this.err.setColor(new Color(Display.getCurrent(), 255, 0, 0));
 	}
 
+	protected void showConsole() {
+		// Get the console
+		final MessageConsole console = Utils.findConsole("ocarina");
+		Utils.showConsole(console);
+	}
 	private final void onAfterLaunchCommand() {
 		for (String error : errors()) {
 			err.println(error);

@@ -38,8 +38,13 @@ public class CheckREALTheoremsHandler extends AbstractOcarinaHandler {
 				printTheoremResult(theorem, "");
 			}
 		*/	
-			// Open the REAL Results View
-			REALResultsView.show(results);
+			// Open the console
+			showConsole();
+			
+			// Open the REAL Results View if there are results, otherwise just show the console
+			if(results.size() > 0) {
+				REALResultsView.show(results);
+			}
 			
 		} catch(RuntimeException e) {			
 			REALResultsView.show(new LinkedList<TheoremResult>());

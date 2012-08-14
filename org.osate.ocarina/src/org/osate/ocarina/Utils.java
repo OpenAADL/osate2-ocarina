@@ -11,6 +11,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.URIUtil;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.osgi.service.datalocation.Location;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.IWorkbenchWindow;
@@ -22,6 +23,7 @@ import org.eclipse.ui.console.IConsoleConstants;
 import org.eclipse.ui.console.IConsoleManager;
 import org.eclipse.ui.console.IConsoleView;
 import org.eclipse.ui.console.MessageConsole;
+import org.osate.ocarina.views.REALResultsView;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.InvalidSyntaxException;
 import org.osgi.framework.ServiceReference;
@@ -171,23 +173,29 @@ public class Utils {
 		return myConsole;
 	   }
 
-	public static void showConsole(IConsole console) {
-		IWorkbench workbench = PlatformUI.getWorkbench();
-		IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
-		if (window != null) {
-			IWorkbenchPage page = window.getActivePage();
-			if (page != null) {
-				try
-				{
-					IConsoleView view = (IConsoleView) page
-							.showView(IConsoleConstants.ID_CONSOLE_VIEW);
-					view.display(console);
-				} catch (PartInitException e)
-				{
-					throw new RuntimeException(e);
+	public static void showConsole(final IConsole console) {
+		Display.getDefault().asyncExec(new Runnable() {
+		    @Override
+		    public void run() {
+				IWorkbench workbench = PlatformUI.getWorkbench();
+				IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
+				if (window != null) {
+					IWorkbenchPage page = window.getActivePage();
+					if (page != null) {
+						try
+						{
+							IConsoleView view = (IConsoleView) page
+									.showView(IConsoleConstants.ID_CONSOLE_VIEW);
+							view.display(console);
+						} catch (PartInitException e)
+						{
+							throw new RuntimeException(e);
+						}
+					}
 				}
-			}
-		}
+		    }
+		});
+
 	}
 	
 	/**
