@@ -193,12 +193,12 @@
     <extension
           point="org.eclipse.ui.perspectiveExtensions">
        <perspectiveExtension
-             targetID="edu.cmu.sei.osate.ui.perspective.AadlPerspective">
+             targetID="org.osate.ui.perspective.AadlPerspective">
           <view
                 id="org.osate.ocarina.views.REALResultsView"
                 ratio="0.5"
-                relationship="right"
-                relative="org.eclipse.ui.views.ConsoleView">
+                relationship="stack"
+                relative="org.eclipse.ui.views.ProblemView">
           </view>
        </perspectiveExtension>
     </extension>
