@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import org.osate.ocarina.real.xtext.ui.internal.REALActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class REALExecutableExtensionFactory extends AbstractGuiceAwareExecutable
 
 	@Override
 	protected Bundle getBundle() {
-		return org.osate.ocarina.real.xtext.ui.internal.REALActivator.getInstance().getBundle();
+		return REALActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return org.osate.ocarina.real.xtext.ui.internal.REALActivator.getInstance().getInjector("org.osate.ocarina.real.xtext.REAL");
+		return REALActivator.getInstance().getInjector(REALActivator.ORG_OSATE_OCARINA_REAL_XTEXT_REAL);
 	}
 	
 }

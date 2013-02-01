@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<genmodel:GenModel xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.osate.ocarina.real.xtext/src-gen"
-    editDirectory="/org.osate.ocarina.real.xtext.edit/src" editorDirectory="/org.osate.ocarina.real.xtext.editor/src"
-    modelPluginID="org.osate.ocarina.real.xtext" forceOverwrite="true" modelName="REAL"
-    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.osate.ocarina.real.xtext/src-gen" editDirectory="/org.osate.ocarina.real.xtext.edit/src"
+    editorDirectory="/org.osate.ocarina.real.xtext.editor/src" modelPluginID="org.osate.ocarina.real.xtext"
+    forceOverwrite="true" modelName="REAL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="org.osate.ocarina.real.xtext.edit"
-    editorPluginID="org.osate.ocarina.real.xtext.editor">
+    editorPluginID="org.osate.ocarina.real.xtext.editor" runtimeVersion="2.8">
   <genPackages prefix="Real" basePackage="org.osate.ocarina.real.xtext" disposableProviderFactory="true"
       ecorePackage="REAL.ecore#/">
     <genClasses ecoreClass="REAL.ecore#//Model">

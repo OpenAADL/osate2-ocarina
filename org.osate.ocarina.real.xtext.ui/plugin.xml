@@ -151,13 +151,14 @@
     </extension>
 
 
-
+<!--
    <extension
          point="org.eclipse.xtext.builder.participant">
       <participant
             class="org.osate.ocarina.real.xtext.ui.REALExecutableExtensionFactory:org.eclipse.xtext.builder.IXtextBuilderParticipant">
       </participant>
    </extension>
+   -->
    <extension
             point="org.eclipse.ui.preferencePages">
         <page

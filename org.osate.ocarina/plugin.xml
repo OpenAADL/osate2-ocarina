@@ -185,7 +185,6 @@
        <view
              category="aadl.view_category"
              class="org.osate.ocarina.views.REALResultsView"
-             icon="icons/sample.gif"
              id="org.osate.ocarina.views.REALResultsView"
              name="REAL Results">
        </view>

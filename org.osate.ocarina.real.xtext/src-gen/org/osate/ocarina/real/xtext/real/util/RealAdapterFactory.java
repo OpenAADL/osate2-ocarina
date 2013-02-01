@@ -1,7 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
  */
 package org.osate.ocarina.real.xtext.real.util;
 

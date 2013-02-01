@@ -151,6 +151,28 @@
     </extension>
 
 
+    <!-- marker definitions for org.osate.ocarina.real.xtext.REAL -->
+    <extension
+            id="real.check.fast"
+            name="REAL Problem"
+            point="org.eclipse.core.resources.markers">
+        <super type="org.eclipse.xtext.ui.check.fast"/>
+        <persistent value="true"/>
+    </extension>
+    <extension
+            id="real.check.normal"
+            name="REAL Problem"
+            point="org.eclipse.core.resources.markers">
+        <super type="org.eclipse.xtext.ui.check.normal"/>
+        <persistent value="true"/>
+    </extension>
+    <extension
+            id="real.check.expensive"
+            name="REAL Problem"
+            point="org.eclipse.core.resources.markers">
+        <super type="org.eclipse.xtext.ui.check.expensive"/>
+        <persistent value="true"/>
+    </extension>
 
 	<!-- Quick Outline -->
 	<extension
@@ -185,12 +207,33 @@
 			</command>
 		</menuContribution>
 	</extension>
-   <!-- quickfix marker resolution generator -->
-   <extension
-         point="org.eclipse.ui.ide.markerResolution">
-      <markerResolutionGenerator
-            class="org.osate.ocarina.real.xtext.ui.REALExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator">
-      </markerResolutionGenerator>
-   </extension>
+    <!-- quickfix marker resolution generator for org.osate.ocarina.real.xtext.REAL -->
+    <extension
+            point="org.eclipse.ui.ide.markerResolution">
+        <markerResolutionGenerator
+            class="org.osate.ocarina.real.xtext.ui.REALExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.osate.ocarina.real.xtext.ui.real.check.fast">
+            <attribute
+                name="FIXABLE_KEY"
+                value="true">
+            </attribute>
+        </markerResolutionGenerator>
+        <markerResolutionGenerator
+            class="org.osate.ocarina.real.xtext.ui.REALExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.osate.ocarina.real.xtext.ui.real.check.normal">
+            <attribute
+                name="FIXABLE_KEY"
+                value="true">
+            </attribute>
+        </markerResolutionGenerator>
+        <markerResolutionGenerator
+            class="org.osate.ocarina.real.xtext.ui.REALExecutableExtensionFactory:org.eclipse.xtext.ui.editor.quickfix.MarkerResolutionGenerator"
+            markerType="org.osate.ocarina.real.xtext.ui.real.check.expensive">
+            <attribute
+                name="FIXABLE_KEY"
+                value="true">
+            </attribute>
+        </markerResolutionGenerator>
+    </extension>
 
 </plugin>
