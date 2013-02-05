@@ -3,8 +3,8 @@
    <description name="OSATE2 - Ocarina">
       Update site for OSATE2 - Ocarina plugin.
    </description>
-   <feature url="features/org.osate.ocarina.feature_0.0.1.201302011125.jar" id="org.osate.ocarina.feature" version="0.0.1.201302011125">
-      <category name="org.osate.ocarina"/>
+   <feature url="features/org.osate.ocarina.feature_0.0.1.201302051051.jar" id="org.osate.ocarina.feature" version="0.0.1.201302051051">
+      <category name="OSATE2 - Ocarina"/>
    </feature>
-   <category-def name="org.osate.ocarina" label="OSATE2 - Ocarina"/>
+   <category-def name="OSATE2 - Ocarina" label="org.osate.ocarina"/>
 </site>

@@ -48,7 +48,7 @@ public class REALAnnexParser implements AnnexParser
 
 	// TODO: Error reporting
 	private Model parse(String source)
-	{
+	{	
 		Injector injector = new REALStandaloneSetupGenerated().createInjector();
 		IParser parser = injector.getInstance(IParser.class);
 		IParseResult result = parser.parse(new StringReader(source));

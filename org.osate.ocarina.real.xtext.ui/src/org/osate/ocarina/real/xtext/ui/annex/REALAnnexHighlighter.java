@@ -7,7 +7,6 @@
 */
 package org.osate.ocarina.real.xtext.ui.annex;
 
-/*
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.Keyword;
 import org.eclipse.xtext.RuleCall;
@@ -88,4 +87,4 @@ public class REALAnnexHighlighter implements AnnexHighlighter
 
 	}
 }
-*/
+
