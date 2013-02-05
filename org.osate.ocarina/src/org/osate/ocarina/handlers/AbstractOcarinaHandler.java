@@ -15,6 +15,7 @@ import org.apache.commons.lang.StringUtils;
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -25,17 +26,22 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
+import org.eclipse.debug.ui.console.FileLink;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.text.BadLocationException;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.console.IPatternMatchListener;
 import org.eclipse.ui.console.MessageConsole;
 import org.eclipse.ui.console.MessageConsoleStream;
+import org.eclipse.ui.console.PatternMatchEvent;
+import org.eclipse.ui.console.TextConsole;
 import org.osate.aadl2.AadlPackage;
 import org.osate.aadl2.ModelUnit;
 import org.osate.aadl2.PackageSection;
@@ -363,6 +369,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	protected void onBeforeStartJob() {
 		// Get the console
 		final MessageConsole console = Utils.findConsole("ocarina");
+		console.addPatternMatchListener(new AadlFilenamePatternMatchListener());
 		console.clearConsole();
 		
 		if(automaticallyShowConsole) {
@@ -425,9 +432,66 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 					}
 				}
 			}
-			
 		}
 		
 		out().println(line);
 	}
+	
+	private class AadlFilenamePatternMatchListener implements IPatternMatchListener
+	{
+		private TextConsole console;
+		
+		@Override
+		public void connect(TextConsole console) {
+			this.console = console;
+		}
+
+		@Override
+		public void disconnect() {
+			this.console = null;
+		}
+
+		@Override
+		public void matchFound(PatternMatchEvent event) {
+			// Create a hyperlink to the resource
+			try {
+				final String str = console.getDocument().get(event.getOffset(), event.getLength());
+				final String[] segs = str.split(":");
+				final String filename = segs[0];
+				int lineNumber = 0;
+				if(segs.length > 1) {
+					lineNumber = Integer.parseInt(segs[1]); 
+				}
+
+				for(Resource res : sourceResources())
+				{
+					IResource ires = getIResource(res);
+					if(ires instanceof IFile && ires.getName().equals(filename))
+					{
+						console.addHyperlink(new FileLink((IFile)ires, null, -1, -1, lineNumber), event.getOffset(), event.getLength());
+						break;
+					}
+				}
+			} catch (BadLocationException e) {
+				e.printStackTrace();
+			}
+		}
+
+		// Find references to AADL Files
+		@Override
+		public String getPattern() {
+			return ".+\\.aadl:\\d+:\\d+";
+		}
+
+		@Override
+		public int getCompilerFlags() {
+			return 0;
+		}
+
+		@Override
+		public String getLineQualifier() {
+			return null;
+		}
+		
+	};
 }
