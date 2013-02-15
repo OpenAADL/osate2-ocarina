@@ -152,7 +152,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 				protected IStatus run(IProgressMonitor monitor) {
 					// Get the AADL source resources to use during the analysis
 					sourceResources = getTransitiveClosure(systemImplementation);
-					
+
 					// Remove all markers from the source resources
 					resetMarkers();
 					
@@ -242,28 +242,30 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 	// orignalModelUnits may be null
 	private static Set<ModelUnit> getMinimalModelUnitSet(ModelUnit p, Set<ModelUnit> originalModelUnits) {
-		final Set<ModelUnit> modelUnits = originalModelUnits == null ? new HashSet<ModelUnit>()
-				: originalModelUnits;
-		modelUnits.add(p);
+		final Set<ModelUnit> modelUnits = originalModelUnits == null ? new HashSet<ModelUnit>() : originalModelUnits;
+		if(!modelUnits.contains(p))
+		{
+			modelUnits.add(p);
 
-		AadlProcessingSwitch s = new AadlProcessingSwitch() {
-			@Override
-			protected void initSwitches() {
-				this.aadl2Switch = new Aadl2Switch<String>() {
-					@Override
-					public String casePackageSection(PackageSection s) {
-						// Iterate over imports
-						for (ModelUnit u : s.getImportedUnits()) {
-							getMinimalModelUnitSet(u, modelUnits);
+			AadlProcessingSwitch s = new AadlProcessingSwitch() {
+				@Override
+				protected void initSwitches() {
+					this.aadl2Switch = new Aadl2Switch<String>() {
+						@Override
+						public String casePackageSection(PackageSection s) {
+							// Iterate over imports
+							for (ModelUnit u : s.getImportedUnits()) {
+								getMinimalModelUnitSet(u, modelUnits);
+							}
+							return null;
 						}
-						return null;
-					}
-				};
-			}
-
-		};
-
-		s.defaultTraversal(p);
+					};
+				}
+	
+			};
+	
+			s.defaultTraversal(p);
+		}
 
 		return modelUnits;
 	}
