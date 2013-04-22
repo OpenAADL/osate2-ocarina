@@ -24,6 +24,7 @@ import org.osate.ocarina.real.xtext.real.RealPackage;
 import org.osate.ocarina.real.xtext.real.RequiredDefinition;
 import org.osate.ocarina.real.xtext.real.SetDeclaration;
 import org.osate.ocarina.real.xtext.real.Theorem;
+import org.osate.ocarina.real.xtext.real.VarDeclaration;
 import org.osate.ocarina.real.xtext.real.VerificationExpression;
 
 /**
@@ -35,8 +36,9 @@ import org.osate.ocarina.real.xtext.real.VerificationExpression;
  * <ul>
  *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getRangeDefinition <em>Range Definition</em>}</li>
- *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getSetDeclarations <em>Set Declarations</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getRequiredDefinition <em>Required Definition</em>}</li>
+ *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getVarDeclarations <em>Var Declarations</em>}</li>
+ *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getSetDeclarations <em>Set Declarations</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getVerificationExpression <em>Verification Expression</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getEvaluationExpression <em>Evaluation Expression</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.impl.TheoremImpl#getEndName <em>End Name</em>}</li>
@@ -78,16 +80,6 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
   protected RangeDefinition rangeDefinition;
 
   /**
-   * The cached value of the '{@link #getSetDeclarations() <em>Set Declarations</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSetDeclarations()
-   * @generated
-   * @ordered
-   */
-  protected EList<SetDeclaration> setDeclarations;
-
-  /**
    * The cached value of the '{@link #getRequiredDefinition() <em>Required Definition</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -96,6 +88,26 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
    * @ordered
    */
   protected RequiredDefinition requiredDefinition;
+
+  /**
+   * The cached value of the '{@link #getVarDeclarations() <em>Var Declarations</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVarDeclarations()
+   * @generated
+   * @ordered
+   */
+  protected EList<VarDeclaration> varDeclarations;
+
+  /**
+   * The cached value of the '{@link #getSetDeclarations() <em>Set Declarations</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSetDeclarations()
+   * @generated
+   * @ordered
+   */
+  protected EList<SetDeclaration> setDeclarations;
 
   /**
    * The cached value of the '{@link #getVerificationExpression() <em>Verification Expression</em>}' containment reference.
@@ -234,20 +246,6 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<SetDeclaration> getSetDeclarations()
-  {
-    if (setDeclarations == null)
-    {
-      setDeclarations = new EObjectContainmentEList<SetDeclaration>(SetDeclaration.class, this, RealPackage.THEOREM__SET_DECLARATIONS);
-    }
-    return setDeclarations;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public RequiredDefinition getRequiredDefinition()
   {
     return requiredDefinition;
@@ -289,6 +287,34 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, RealPackage.THEOREM__REQUIRED_DEFINITION, newRequiredDefinition, newRequiredDefinition));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<VarDeclaration> getVarDeclarations()
+  {
+    if (varDeclarations == null)
+    {
+      varDeclarations = new EObjectContainmentEList<VarDeclaration>(VarDeclaration.class, this, RealPackage.THEOREM__VAR_DECLARATIONS);
+    }
+    return varDeclarations;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<SetDeclaration> getSetDeclarations()
+  {
+    if (setDeclarations == null)
+    {
+      setDeclarations = new EObjectContainmentEList<SetDeclaration>(SetDeclaration.class, this, RealPackage.THEOREM__SET_DECLARATIONS);
+    }
+    return setDeclarations;
   }
 
   /**
@@ -422,10 +448,12 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
     {
       case RealPackage.THEOREM__RANGE_DEFINITION:
         return basicSetRangeDefinition(null, msgs);
-      case RealPackage.THEOREM__SET_DECLARATIONS:
-        return ((InternalEList<?>)getSetDeclarations()).basicRemove(otherEnd, msgs);
       case RealPackage.THEOREM__REQUIRED_DEFINITION:
         return basicSetRequiredDefinition(null, msgs);
+      case RealPackage.THEOREM__VAR_DECLARATIONS:
+        return ((InternalEList<?>)getVarDeclarations()).basicRemove(otherEnd, msgs);
+      case RealPackage.THEOREM__SET_DECLARATIONS:
+        return ((InternalEList<?>)getSetDeclarations()).basicRemove(otherEnd, msgs);
       case RealPackage.THEOREM__VERIFICATION_EXPRESSION:
         return basicSetVerificationExpression(null, msgs);
       case RealPackage.THEOREM__EVALUATION_EXPRESSION:
@@ -448,10 +476,12 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
         return getName();
       case RealPackage.THEOREM__RANGE_DEFINITION:
         return getRangeDefinition();
-      case RealPackage.THEOREM__SET_DECLARATIONS:
-        return getSetDeclarations();
       case RealPackage.THEOREM__REQUIRED_DEFINITION:
         return getRequiredDefinition();
+      case RealPackage.THEOREM__VAR_DECLARATIONS:
+        return getVarDeclarations();
+      case RealPackage.THEOREM__SET_DECLARATIONS:
+        return getSetDeclarations();
       case RealPackage.THEOREM__VERIFICATION_EXPRESSION:
         return getVerificationExpression();
       case RealPackage.THEOREM__EVALUATION_EXPRESSION:
@@ -479,12 +509,16 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
       case RealPackage.THEOREM__RANGE_DEFINITION:
         setRangeDefinition((RangeDefinition)newValue);
         return;
+      case RealPackage.THEOREM__REQUIRED_DEFINITION:
+        setRequiredDefinition((RequiredDefinition)newValue);
+        return;
+      case RealPackage.THEOREM__VAR_DECLARATIONS:
+        getVarDeclarations().clear();
+        getVarDeclarations().addAll((Collection<? extends VarDeclaration>)newValue);
+        return;
       case RealPackage.THEOREM__SET_DECLARATIONS:
         getSetDeclarations().clear();
         getSetDeclarations().addAll((Collection<? extends SetDeclaration>)newValue);
-        return;
-      case RealPackage.THEOREM__REQUIRED_DEFINITION:
-        setRequiredDefinition((RequiredDefinition)newValue);
         return;
       case RealPackage.THEOREM__VERIFICATION_EXPRESSION:
         setVerificationExpression((VerificationExpression)newValue);
@@ -515,11 +549,14 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
       case RealPackage.THEOREM__RANGE_DEFINITION:
         setRangeDefinition((RangeDefinition)null);
         return;
-      case RealPackage.THEOREM__SET_DECLARATIONS:
-        getSetDeclarations().clear();
-        return;
       case RealPackage.THEOREM__REQUIRED_DEFINITION:
         setRequiredDefinition((RequiredDefinition)null);
+        return;
+      case RealPackage.THEOREM__VAR_DECLARATIONS:
+        getVarDeclarations().clear();
+        return;
+      case RealPackage.THEOREM__SET_DECLARATIONS:
+        getSetDeclarations().clear();
         return;
       case RealPackage.THEOREM__VERIFICATION_EXPRESSION:
         setVerificationExpression((VerificationExpression)null);
@@ -548,10 +585,12 @@ public class TheoremImpl extends MinimalEObjectImpl.Container implements Theorem
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case RealPackage.THEOREM__RANGE_DEFINITION:
         return rangeDefinition != null;
-      case RealPackage.THEOREM__SET_DECLARATIONS:
-        return setDeclarations != null && !setDeclarations.isEmpty();
       case RealPackage.THEOREM__REQUIRED_DEFINITION:
         return requiredDefinition != null;
+      case RealPackage.THEOREM__VAR_DECLARATIONS:
+        return varDeclarations != null && !varDeclarations.isEmpty();
+      case RealPackage.THEOREM__SET_DECLARATIONS:
+        return setDeclarations != null && !setDeclarations.isEmpty();
       case RealPackage.THEOREM__VERIFICATION_EXPRESSION:
         return verificationExpression != null;
       case RealPackage.THEOREM__EVALUATION_EXPRESSION:

@@ -50,6 +50,15 @@ public interface RealFactory extends EFactory
   RangeDefinition createRangeDefinition();
 
   /**
+   * Returns a new object of class '<em>Var Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Var Declaration</em>'.
+   * @generated
+   */
+  VarDeclaration createVarDeclaration();
+
+  /**
    * Returns a new object of class '<em>Set Declaration</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -75,6 +84,15 @@ public interface RealFactory extends EFactory
    * @generated
    */
   SelectionExpression createSelectionExpression();
+
+  /**
+   * Returns a new object of class '<em>Compute Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Compute Expression</em>'.
+   * @generated
+   */
+  ComputeExpression createComputeExpression();
 
   /**
    * Returns a new object of class '<em>Terminal Selection Expression</em>'.

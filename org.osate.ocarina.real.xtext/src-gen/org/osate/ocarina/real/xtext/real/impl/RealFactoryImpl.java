@@ -67,9 +67,11 @@ public class RealFactoryImpl extends EFactoryImpl implements RealFactory
       case RealPackage.MODEL: return createModel();
       case RealPackage.THEOREM: return createTheorem();
       case RealPackage.RANGE_DEFINITION: return createRangeDefinition();
+      case RealPackage.VAR_DECLARATION: return createVarDeclaration();
       case RealPackage.SET_DECLARATION: return createSetDeclaration();
       case RealPackage.ELEMENT_BINDING: return createElementBinding();
       case RealPackage.SELECTION_EXPRESSION: return createSelectionExpression();
+      case RealPackage.COMPUTE_EXPRESSION: return createComputeExpression();
       case RealPackage.TERMINAL_SELECTION_EXPRESSION: return createTerminalSelectionExpression();
       case RealPackage.SELECTION_RELATION: return createSelectionRelation();
       case RealPackage.SELECTION_RELATION_PARAMETER: return createSelectionRelationParameter();
@@ -127,6 +129,17 @@ public class RealFactoryImpl extends EFactoryImpl implements RealFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public VarDeclaration createVarDeclaration()
+  {
+    VarDeclarationImpl varDeclaration = new VarDeclarationImpl();
+    return varDeclaration;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public SetDeclaration createSetDeclaration()
   {
     SetDeclarationImpl setDeclaration = new SetDeclarationImpl();
@@ -153,6 +166,17 @@ public class RealFactoryImpl extends EFactoryImpl implements RealFactory
   {
     SelectionExpressionImpl selectionExpression = new SelectionExpressionImpl();
     return selectionExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ComputeExpression createComputeExpression()
+  {
+    ComputeExpressionImpl computeExpression = new ComputeExpressionImpl();
+    return computeExpression;
   }
 
   /**

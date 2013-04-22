@@ -1,8 +1,8 @@
-package org.osate.ocarina.real.xtext.parser.antlr.lexer;
+package org.osate.ocarina.real.xtext.ui.contentassist.antlr.lexer;
 
 // Hack: Use our own Lexer superclass by means of import. 
 // Currently there is no other way to specify the superclass for the lexer.
-import org.eclipse.xtext.parser.antlr.Lexer;
+import org.eclipse.xtext.ui.editor.contentassist.antlr.internal.Lexer;
 
 
 import org.antlr.runtime.*;
@@ -102,15 +102,15 @@ public class InternalREALLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g"; }
+    public String getGrammarFileName() { return "../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g"; }
 
     // $ANTLR start "KEYWORD_54"
     public final void mKEYWORD_54() throws RecognitionException {
         try {
             int _type = KEYWORD_54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:19:12: ( ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'E' | 'e' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:19:14: ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'E' | 'e' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:19:12: ( ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'E' | 'e' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:19:14: ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'E' | 'e' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='C'||input.LA(1)=='c' ) {
                 input.consume();
@@ -310,8 +310,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:21:12: ( ( 'G' | 'g' ) ( 'E' | 'e' ) ( 'T' | 't' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:21:14: ( 'G' | 'g' ) ( 'E' | 'e' ) ( 'T' | 't' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:21:12: ( ( 'G' | 'g' ) ( 'E' | 'e' ) ( 'T' | 't' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:21:14: ( 'G' | 'g' ) ( 'E' | 'e' ) ( 'T' | 't' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'U' | 'u' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
                 input.consume();
@@ -475,8 +475,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:23:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'H' | 'h' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'G' | 'g' ) ( 'H' | 'h' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:23:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'H' | 'h' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'G' | 'g' ) ( 'H' | 'h' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:23:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'H' | 'h' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'G' | 'g' ) ( 'H' | 'h' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:23:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'H' | 'h' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'G' | 'g' ) ( 'H' | 'h' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -640,8 +640,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:25:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'S' | 's' ) ( 'U' | 'u' ) ( 'B' | 'b' ) ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'T' | 't' ) '_' ( 'O' | 'o' ) ( 'F' | 'f' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:25:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'S' | 's' ) ( 'U' | 'u' ) ( 'B' | 'b' ) ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'T' | 't' ) '_' ( 'O' | 'o' ) ( 'F' | 'f' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:25:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'S' | 's' ) ( 'U' | 'u' ) ( 'B' | 'b' ) ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'T' | 't' ) '_' ( 'O' | 'o' ) ( 'F' | 'f' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:25:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'S' | 's' ) ( 'U' | 'u' ) ( 'B' | 'b' ) ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'T' | 't' ) '_' ( 'O' | 'o' ) ( 'F' | 'f' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -805,8 +805,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:27:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'V' | 'v' ) ( 'I' | 'i' ) ( 'D' | 'd' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'C' | 'c' ) ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:27:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'V' | 'v' ) ( 'I' | 'i' ) ( 'D' | 'd' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'C' | 'c' ) ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:27:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'V' | 'v' ) ( 'I' | 'i' ) ( 'D' | 'd' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'C' | 'c' ) ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:27:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'V' | 'v' ) ( 'I' | 'i' ) ( 'D' | 'd' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'C' | 'c' ) ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'S' | 's' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -961,8 +961,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:29:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:29:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:29:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:29:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -1108,8 +1108,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:31:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:31:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:31:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:31:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -1246,8 +1246,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:33:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:33:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:33:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:33:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'N' | 'n' ) ( 'N' | 'n' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -1384,8 +1384,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:35:12: ( ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:35:14: ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:35:12: ( ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:35:14: ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) '_' ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' )
             {
             if ( input.LA(1)=='P'||input.LA(1)=='p' ) {
                 input.consume();
@@ -1530,8 +1530,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:37:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:37:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:37:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:37:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'C' | 'c' ) ( 'E' | 'e' ) ( 'S' | 's' ) ( 'S' | 's' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -1659,8 +1659,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:39:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:39:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:39:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:39:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'E' | 'e' ) ( 'D' | 'd' ) '_' ( 'B' | 'b' ) ( 'Y' | 'y' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -1770,8 +1770,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:41:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'B' | 'b' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'N' | 'n' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:41:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'B' | 'b' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'N' | 'n' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:41:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'B' | 'b' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'N' | 'n' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:41:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'B' | 'b' ) ( 'O' | 'o' ) ( 'U' | 'u' ) ( 'N' | 'n' ) ( 'D' | 'd' ) '_' ( 'T' | 't' ) ( 'O' | 'o' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -1872,8 +1872,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:43:12: ( ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) '_' ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:43:14: ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) '_' ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:43:12: ( ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) '_' ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:43:14: ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) '_' ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' )
             {
             if ( input.LA(1)=='A'||input.LA(1)=='a' ) {
                 input.consume();
@@ -1973,8 +1973,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:45:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:45:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:45:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:45:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'G' | 'g' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -2074,8 +2074,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:47:12: ( ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'D' | 'd' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'A' | 'a' ) ( 'L' | 'l' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:47:14: ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'D' | 'd' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'A' | 'a' ) ( 'L' | 'l' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:47:12: ( ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'D' | 'd' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'A' | 'a' ) ( 'L' | 'l' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:47:14: ( 'C' | 'c' ) ( 'A' | 'a' ) ( 'R' | 'r' ) ( 'D' | 'd' ) ( 'I' | 'i' ) ( 'N' | 'n' ) ( 'A' | 'a' ) ( 'L' | 'l' )
             {
             if ( input.LA(1)=='C'||input.LA(1)=='c' ) {
                 input.consume();
@@ -2165,8 +2165,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:49:12: ( ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:49:14: ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:49:12: ( ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:49:14: ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'P' | 'p' ) ( 'E' | 'e' ) ( 'R' | 'r' ) ( 'T' | 't' ) ( 'Y' | 'y' )
             {
             if ( input.LA(1)=='P'||input.LA(1)=='p' ) {
                 input.consume();
@@ -2256,8 +2256,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:51:12: ( ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'S' | 's' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:51:14: ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'S' | 's' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:51:12: ( ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'S' | 's' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:51:14: ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'S' | 's' )
             {
             if ( input.LA(1)=='R'||input.LA(1)=='r' ) {
                 input.consume();
@@ -2347,8 +2347,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:53:12: ( ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'D' | 'd' ) ( 'U' | 'u' ) ( 'C' | 'c' ) ( 'T' | 't' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:53:14: ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'D' | 'd' ) ( 'U' | 'u' ) ( 'C' | 'c' ) ( 'T' | 't' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:53:12: ( ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'D' | 'd' ) ( 'U' | 'u' ) ( 'C' | 'c' ) ( 'T' | 't' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:53:14: ( 'P' | 'p' ) ( 'R' | 'r' ) ( 'O' | 'o' ) ( 'D' | 'd' ) ( 'U' | 'u' ) ( 'C' | 'c' ) ( 'T' | 't' )
             {
             if ( input.LA(1)=='P'||input.LA(1)=='p' ) {
                 input.consume();
@@ -2429,8 +2429,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:55:12: ( ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'U' | 'u' ) ( 'T' | 't' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:55:14: ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'U' | 'u' ) ( 'T' | 't' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:55:12: ( ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'U' | 'u' ) ( 'T' | 't' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:55:14: ( 'C' | 'c' ) ( 'O' | 'o' ) ( 'M' | 'm' ) ( 'P' | 'p' ) ( 'U' | 'u' ) ( 'T' | 't' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='C'||input.LA(1)=='c' ) {
                 input.consume();
@@ -2511,8 +2511,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:57:12: ( ( 'F' | 'f' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'H' | 'h' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:57:14: ( 'F' | 'f' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'H' | 'h' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:57:12: ( ( 'F' | 'f' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'H' | 'h' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:57:14: ( 'F' | 'f' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'C' | 'c' ) ( 'H' | 'h' )
             {
             if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
                 input.consume();
@@ -2593,8 +2593,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:59:12: ( ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'M' | 'm' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:59:14: ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'M' | 'm' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:59:12: ( ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'M' | 'm' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:59:14: ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'O' | 'o' ) ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'M' | 'm' )
             {
             if ( input.LA(1)=='T'||input.LA(1)=='t' ) {
                 input.consume();
@@ -2675,8 +2675,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:61:12: ( ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:61:14: ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:61:12: ( ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:61:14: ( 'E' | 'e' ) ( 'X' | 'x' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'S' | 's' )
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -2748,8 +2748,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:63:12: ( ( 'S' | 's' ) ( 'Y' | 'y' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'M' | 'm' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:63:14: ( 'S' | 's' ) ( 'Y' | 'y' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'M' | 'm' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:63:12: ( ( 'S' | 's' ) ( 'Y' | 'y' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'M' | 'm' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:63:14: ( 'S' | 's' ) ( 'Y' | 'y' ) ( 'S' | 's' ) ( 'T' | 't' ) ( 'E' | 'e' ) ( 'M' | 'm' )
             {
             if ( input.LA(1)=='S'||input.LA(1)=='s' ) {
                 input.consume();
@@ -2821,8 +2821,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:65:12: ( ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'T' | 't' ) ( 'U' | 'u' ) ( 'R' | 'r' ) ( 'N' | 'n' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:65:14: ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'T' | 't' ) ( 'U' | 'u' ) ( 'R' | 'r' ) ( 'N' | 'n' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:65:12: ( ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'T' | 't' ) ( 'U' | 'u' ) ( 'R' | 'r' ) ( 'N' | 'n' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:65:14: ( 'R' | 'r' ) ( 'E' | 'e' ) ( 'T' | 't' ) ( 'U' | 'u' ) ( 'R' | 'r' ) ( 'N' | 'n' )
             {
             if ( input.LA(1)=='R'||input.LA(1)=='r' ) {
                 input.consume();
@@ -2894,8 +2894,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:67:12: ( ( 'F' | 'f' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'S' | 's' ) ( 'T' | 't' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:67:14: ( 'F' | 'f' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'S' | 's' ) ( 'T' | 't' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:67:12: ( ( 'F' | 'f' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'S' | 's' ) ( 'T' | 't' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:67:14: ( 'F' | 'f' ) ( 'I' | 'i' ) ( 'R' | 'r' ) ( 'S' | 's' ) ( 'T' | 't' )
             {
             if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
                 input.consume();
@@ -2958,8 +2958,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:69:12: ( ( 'F' | 'f' ) ( 'L' | 'l' ) ( 'O' | 'o' ) ( 'A' | 'a' ) ( 'T' | 't' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:69:14: ( 'F' | 'f' ) ( 'L' | 'l' ) ( 'O' | 'o' ) ( 'A' | 'a' ) ( 'T' | 't' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:69:12: ( ( 'F' | 'f' ) ( 'L' | 'l' ) ( 'O' | 'o' ) ( 'A' | 'a' ) ( 'T' | 't' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:69:14: ( 'F' | 'f' ) ( 'L' | 'l' ) ( 'O' | 'o' ) ( 'A' | 'a' ) ( 'T' | 't' )
             {
             if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
                 input.consume();
@@ -3022,8 +3022,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:71:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'I' | 'i' ) ( 'N' | 'n' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:71:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'I' | 'i' ) ( 'N' | 'n' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:71:12: ( ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'I' | 'i' ) ( 'N' | 'n' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:71:14: ( 'I' | 'i' ) ( 'S' | 's' ) '_' ( 'I' | 'i' ) ( 'N' | 'n' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -3078,8 +3078,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:73:12: ( ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'E' | 'e' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:73:14: ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'E' | 'e' ) ( 'U' | 'u' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:73:12: ( ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'E' | 'e' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:73:14: ( 'Q' | 'q' ) ( 'U' | 'u' ) ( 'E' | 'e' ) ( 'U' | 'u' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='Q'||input.LA(1)=='q' ) {
                 input.consume();
@@ -3142,8 +3142,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:75:12: ( ( 'C' | 'c' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'K' | 'k' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:75:14: ( 'C' | 'c' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'K' | 'k' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:75:12: ( ( 'C' | 'c' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'K' | 'k' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:75:14: ( 'C' | 'c' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'C' | 'c' ) ( 'K' | 'k' )
             {
             if ( input.LA(1)=='C'||input.LA(1)=='c' ) {
                 input.consume();
@@ -3206,8 +3206,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:77:12: ( ( 'F' | 'f' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:77:14: ( 'F' | 'f' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:77:12: ( ( 'F' | 'f' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:77:14: ( 'F' | 'f' ) ( 'A' | 'a' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='F'||input.LA(1)=='f' ) {
                 input.consume();
@@ -3270,8 +3270,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:79:12: ( ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'D' | 'd' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:79:14: ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'D' | 'd' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:79:12: ( ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'D' | 'd' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:79:14: ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'A' | 'a' ) ( 'D' | 'd' )
             {
             if ( input.LA(1)=='H'||input.LA(1)=='h' ) {
                 input.consume();
@@ -3325,8 +3325,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:81:12: ( ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'T' | 't' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:81:14: ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'T' | 't' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:81:12: ( ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'T' | 't' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:81:14: ( 'L' | 'l' ) ( 'A' | 'a' ) ( 'S' | 's' ) ( 'T' | 't' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -3380,8 +3380,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:83:12: ( ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:83:14: ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:83:12: ( ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:83:14: ( 'L' | 'l' ) ( 'I' | 'i' ) ( 'S' | 's' ) ( 'T' | 't' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -3435,8 +3435,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:85:12: ( ( 'M' | 'm' ) ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:85:14: ( 'M' | 'm' ) ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:85:12: ( ( 'M' | 'm' ) ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:85:14: ( 'M' | 'm' ) ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' )
             {
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
@@ -3490,8 +3490,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:87:12: ( ( 'M' | 'm' ) ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:87:14: ( 'M' | 'm' ) ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:87:12: ( ( 'M' | 'm' ) ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:87:14: ( 'M' | 'm' ) ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' )
             {
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
@@ -3545,8 +3545,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:89:12: ( ( 'S' | 's' ) ( 'I' | 'i' ) ( 'Z' | 'z' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:89:14: ( 'S' | 's' ) ( 'I' | 'i' ) ( 'Z' | 'z' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:89:12: ( ( 'S' | 's' ) ( 'I' | 'i' ) ( 'Z' | 'z' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:89:14: ( 'S' | 's' ) ( 'I' | 'i' ) ( 'Z' | 'z' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='S'||input.LA(1)=='s' ) {
                 input.consume();
@@ -3600,8 +3600,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:91:12: ( ( 'E' | 'e' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:91:14: ( 'E' | 'e' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:91:12: ( ( 'E' | 'e' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:91:14: ( 'E' | 'e' ) ( 'L' | 'l' ) ( 'S' | 's' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -3655,8 +3655,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:93:12: ( ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'N' | 'n' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:93:14: ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'N' | 'n' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:93:12: ( ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'N' | 'n' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:93:14: ( 'T' | 't' ) ( 'H' | 'h' ) ( 'E' | 'e' ) ( 'N' | 'n' )
             {
             if ( input.LA(1)=='T'||input.LA(1)=='t' ) {
                 input.consume();
@@ -3710,8 +3710,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:95:12: ( ( 'T' | 't' ) ( 'R' | 'r' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:95:14: ( 'T' | 't' ) ( 'R' | 'r' ) ( 'U' | 'u' ) ( 'E' | 'e' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:95:12: ( ( 'T' | 't' ) ( 'R' | 'r' ) ( 'U' | 'u' ) ( 'E' | 'e' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:95:14: ( 'T' | 't' ) ( 'R' | 'r' ) ( 'U' | 'u' ) ( 'E' | 'e' )
             {
             if ( input.LA(1)=='T'||input.LA(1)=='t' ) {
                 input.consume();
@@ -3765,8 +3765,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_6;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:97:11: ( ( 'G' | 'g' ) ( 'C' | 'c' ) ( 'D' | 'd' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:97:13: ( 'G' | 'g' ) ( 'C' | 'c' ) ( 'D' | 'd' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:97:11: ( ( 'G' | 'g' ) ( 'C' | 'c' ) ( 'D' | 'd' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:97:13: ( 'G' | 'g' ) ( 'C' | 'c' ) ( 'D' | 'd' )
             {
             if ( input.LA(1)=='G'||input.LA(1)=='g' ) {
                 input.consume();
@@ -3811,8 +3811,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_7;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:99:11: ( ( 'L' | 'l' ) ( 'C' | 'c' ) ( 'M' | 'm' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:99:13: ( 'L' | 'l' ) ( 'C' | 'c' ) ( 'M' | 'm' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:99:11: ( ( 'L' | 'l' ) ( 'C' | 'c' ) ( 'M' | 'm' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:99:13: ( 'L' | 'l' ) ( 'C' | 'c' ) ( 'M' | 'm' )
             {
             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                 input.consume();
@@ -3857,8 +3857,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_8;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:101:11: ( ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:101:13: ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:101:11: ( ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:101:13: ( 'M' | 'm' ) ( 'A' | 'a' ) ( 'X' | 'x' )
             {
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
@@ -3903,8 +3903,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_9;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:103:11: ( ( 'M' | 'm' ) ( 'I' | 'i' ) ( 'N' | 'n' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:103:13: ( 'M' | 'm' ) ( 'I' | 'i' ) ( 'N' | 'n' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:103:11: ( ( 'M' | 'm' ) ( 'I' | 'i' ) ( 'N' | 'n' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:103:13: ( 'M' | 'm' ) ( 'I' | 'i' ) ( 'N' | 'n' )
             {
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
@@ -3949,8 +3949,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_10;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:105:12: ( ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:105:14: ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:105:12: ( ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:105:14: ( 'S' | 's' ) ( 'U' | 'u' ) ( 'M' | 'm' )
             {
             if ( input.LA(1)=='S'||input.LA(1)=='s' ) {
                 input.consume();
@@ -3995,8 +3995,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:107:12: ( ( 'A' | 'a' ) ( 'N' | 'n' ) ( 'D' | 'd' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:107:14: ( 'A' | 'a' ) ( 'N' | 'n' ) ( 'D' | 'd' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:107:12: ( ( 'A' | 'a' ) ( 'N' | 'n' ) ( 'D' | 'd' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:107:14: ( 'A' | 'a' ) ( 'N' | 'n' ) ( 'D' | 'd' )
             {
             if ( input.LA(1)=='A'||input.LA(1)=='a' ) {
                 input.consume();
@@ -4041,8 +4041,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:109:12: ( ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'D' | 'd' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:109:14: ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'D' | 'd' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:109:12: ( ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'D' | 'd' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:109:14: ( 'E' | 'e' ) ( 'N' | 'n' ) ( 'D' | 'd' )
             {
             if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                 input.consume();
@@ -4087,8 +4087,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:111:12: ( ( 'M' | 'm' ) ( 'O' | 'o' ) ( 'D' | 'd' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:111:14: ( 'M' | 'm' ) ( 'O' | 'o' ) ( 'D' | 'd' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:111:12: ( ( 'M' | 'm' ) ( 'O' | 'o' ) ( 'D' | 'd' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:111:14: ( 'M' | 'm' ) ( 'O' | 'o' ) ( 'D' | 'd' )
             {
             if ( input.LA(1)=='M'||input.LA(1)=='m' ) {
                 input.consume();
@@ -4133,8 +4133,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:113:12: ( ( 'N' | 'n' ) ( 'O' | 'o' ) ( 'T' | 't' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:113:14: ( 'N' | 'n' ) ( 'O' | 'o' ) ( 'T' | 't' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:113:12: ( ( 'N' | 'n' ) ( 'O' | 'o' ) ( 'T' | 't' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:113:14: ( 'N' | 'n' ) ( 'O' | 'o' ) ( 'T' | 't' )
             {
             if ( input.LA(1)=='N'||input.LA(1)=='n' ) {
                 input.consume();
@@ -4179,8 +4179,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:115:12: ( ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'R' | 'r' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:115:14: ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'R' | 'r' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:115:12: ( ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'R' | 'r' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:115:14: ( 'V' | 'v' ) ( 'A' | 'a' ) ( 'R' | 'r' )
             {
             if ( input.LA(1)=='V'||input.LA(1)=='v' ) {
                 input.consume();
@@ -4225,8 +4225,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_2;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:117:11: ( ( 'D' | 'd' ) ( 'O' | 'o' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:117:13: ( 'D' | 'd' ) ( 'O' | 'o' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:117:11: ( ( 'D' | 'd' ) ( 'O' | 'o' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:117:13: ( 'D' | 'd' ) ( 'O' | 'o' )
             {
             if ( input.LA(1)=='D'||input.LA(1)=='d' ) {
                 input.consume();
@@ -4262,8 +4262,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_3;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:119:11: ( ( 'I' | 'i' ) ( 'F' | 'f' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:119:13: ( 'I' | 'i' ) ( 'F' | 'f' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:119:11: ( ( 'I' | 'i' ) ( 'F' | 'f' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:119:13: ( 'I' | 'i' ) ( 'F' | 'f' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -4299,8 +4299,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_4;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:121:11: ( ( 'I' | 'i' ) ( 'N' | 'n' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:121:13: ( 'I' | 'i' ) ( 'N' | 'n' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:121:11: ( ( 'I' | 'i' ) ( 'N' | 'n' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:121:13: ( 'I' | 'i' ) ( 'N' | 'n' )
             {
             if ( input.LA(1)=='I'||input.LA(1)=='i' ) {
                 input.consume();
@@ -4336,8 +4336,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_5;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:123:11: ( ( 'O' | 'o' ) ( 'R' | 'r' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:123:13: ( 'O' | 'o' ) ( 'R' | 'r' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:123:11: ( ( 'O' | 'o' ) ( 'R' | 'r' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:123:13: ( 'O' | 'o' ) ( 'R' | 'r' )
             {
             if ( input.LA(1)=='O'||input.LA(1)=='o' ) {
                 input.consume();
@@ -4373,8 +4373,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = KEYWORD_1;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:125:11: ( '|' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:125:13: '|'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:125:11: ( '|' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:125:13: '|'
             {
             match('|'); 
 
@@ -4393,8 +4393,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:129:11: ( '+' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:129:13: '+'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:129:11: ( '+' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:129:13: '+'
             {
             match('+'); 
 
@@ -4413,8 +4413,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_POWER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:131:12: ( '**' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:131:14: '**'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:131:12: ( '**' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:131:14: '**'
             {
             match("**"); 
 
@@ -4434,8 +4434,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_STAR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:133:11: ( '*' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:133:13: '*'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:133:11: ( '*' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:133:13: '*'
             {
             match('*'); 
 
@@ -4454,8 +4454,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_SLASH;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:135:12: ( '/' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:135:14: '/'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:135:12: ( '/' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:135:14: '/'
             {
             match('/'); 
 
@@ -4474,8 +4474,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:137:12: ( '-' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:137:14: '-'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:137:12: ( '-' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:137:14: '-'
             {
             match('-'); 
 
@@ -4494,8 +4494,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_NOT_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:139:16: ( '<>' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:139:18: '<>'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:139:16: ( '<>' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:139:18: '<>'
             {
             match("<>"); 
 
@@ -4515,8 +4515,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_LESS_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:141:17: ( '<=' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:141:19: '<='
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:141:17: ( '<=' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:141:19: '<='
             {
             match("<="); 
 
@@ -4536,8 +4536,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_GREATER_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:143:20: ( '>=' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:143:22: '>='
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:143:20: ( '>=' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:143:22: '>='
             {
             match(">="); 
 
@@ -4557,8 +4557,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_GREATER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:145:14: ( '>' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:145:16: '>'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:145:14: ( '>' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:145:16: '>'
             {
             match('>'); 
 
@@ -4577,8 +4577,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_LESS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:147:11: ( '<' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:147:13: '<'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:147:11: ( '<' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:147:13: '<'
             {
             match('<'); 
 
@@ -4597,8 +4597,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_EQUAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:149:12: ( '=' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:149:14: '='
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:149:12: ( '=' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:149:14: '='
             {
             match('='); 
 
@@ -4617,8 +4617,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_AFFECTATION_OPERATOR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:151:27: ( ':=' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:151:29: ':='
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:151:27: ( ':=' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:151:29: ':='
             {
             match(":="); 
 
@@ -4638,8 +4638,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_PUNC_OPEN_BRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:153:22: ( '{' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:153:24: '{'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:153:22: ( '{' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:153:24: '{'
             {
             match('{'); 
 
@@ -4658,8 +4658,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_PUNC_CLOSE_BRACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:155:23: ( '}' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:155:25: '}'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:155:23: ( '}' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:155:25: '}'
             {
             match('}'); 
 
@@ -4678,8 +4678,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_PUNC_SEMI_COLON;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:157:22: ( ';' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:157:24: ';'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:157:22: ( ';' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:157:24: ';'
             {
             match(';'); 
 
@@ -4698,8 +4698,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_PUNC_OPEN_PARENTHESIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:159:28: ( '(' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:159:30: '('
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:159:28: ( '(' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:159:30: '('
             {
             match('('); 
 
@@ -4718,8 +4718,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_PUNC_CLOSE_PARENTHESIS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:161:29: ( ')' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:161:31: ')'
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:161:29: ( ')' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:161:31: ')'
             {
             match(')'); 
 
@@ -4738,8 +4738,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_PUNC_COMMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:163:17: ( ',' )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:163:19: ','
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:163:17: ( ',' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:163:19: ','
             {
             match(','); 
 
@@ -4758,8 +4758,8 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:165:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:165:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:165:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:165:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -4770,7 +4770,7 @@ public class InternalREALLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:165:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:165:35: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
@@ -4783,7 +4783,7 @@ public class InternalREALLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:
+            	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:
             	    {
             	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -4819,10 +4819,10 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -4840,10 +4840,10 @@ public class InternalREALLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop2:
                     do {
                         int alt2=3;
@@ -4859,7 +4859,7 @@ public class InternalREALLexer extends Lexer {
 
                         switch (alt2) {
                     	case 1 :
-                    	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -4875,7 +4875,7 @@ public class InternalREALLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:62: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:62: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -4900,10 +4900,10 @@ public class InternalREALLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:82: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:87: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop3:
                     do {
                         int alt3=3;
@@ -4919,7 +4919,7 @@ public class InternalREALLexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:88: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -4935,7 +4935,7 @@ public class InternalREALLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:167:129: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:167:129: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -4978,12 +4978,12 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("--"); 
 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop5:
             do {
                 int alt5=2;
@@ -4996,7 +4996,7 @@ public class InternalREALLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -5016,7 +5016,7 @@ public class InternalREALLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:40: ( ( '\\r' )? '\\n' )?
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:40: ( ( '\\r' )? '\\n' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -5025,9 +5025,9 @@ public class InternalREALLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:41: ( '\\r' )? '\\n'
+                    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:41: ( '\\r' )?
+                    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:41: ( '\\r' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -5036,7 +5036,7 @@ public class InternalREALLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:169:41: '\\r'
+                            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:169:41: '\\r'
                             {
                             match('\r'); 
 
@@ -5068,10 +5068,10 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:171:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:171:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:171:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:171:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:171:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:171:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt8=0;
             loop8:
             do {
@@ -5085,7 +5085,7 @@ public class InternalREALLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:
+            	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:
             	    {
             	    if ( (input.LA(1)>='\t' && input.LA(1)<='\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
             	        input.consume();
@@ -5125,10 +5125,10 @@ public class InternalREALLexer extends Lexer {
         try {
             int _type = RULE_NUMERIC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:173:14: ( ( '0' .. '9' | '.' | '+' | '-' | 'a' .. 'z' | 'A' .. 'Z' )+ )
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:173:16: ( '0' .. '9' | '.' | '+' | '-' | 'a' .. 'z' | 'A' .. 'Z' )+
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:173:14: ( ( '0' .. '9' | '.' | '+' | '-' | 'a' .. 'z' | 'A' .. 'Z' )+ )
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:173:16: ( '0' .. '9' | '.' | '+' | '-' | 'a' .. 'z' | 'A' .. 'Z' )+
             {
-            // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:173:16: ( '0' .. '9' | '.' | '+' | '-' | 'a' .. 'z' | 'A' .. 'Z' )+
+            // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:173:16: ( '0' .. '9' | '.' | '+' | '-' | 'a' .. 'z' | 'A' .. 'Z' )+
             int cnt9=0;
             loop9:
             do {
@@ -5142,7 +5142,7 @@ public class InternalREALLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:
+            	    // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:
             	    {
             	    if ( input.LA(1)=='+'||(input.LA(1)>='-' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
@@ -5178,544 +5178,544 @@ public class InternalREALLexer extends Lexer {
     // $ANTLR end "RULE_NUMERIC"
 
     public void mTokens() throws RecognitionException {
-        // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:8: ( KEYWORD_54 | KEYWORD_51 | KEYWORD_52 | KEYWORD_53 | KEYWORD_50 | KEYWORD_49 | KEYWORD_46 | KEYWORD_47 | KEYWORD_48 | KEYWORD_45 | KEYWORD_44 | KEYWORD_43 | KEYWORD_41 | KEYWORD_42 | KEYWORD_38 | KEYWORD_39 | KEYWORD_40 | KEYWORD_34 | KEYWORD_35 | KEYWORD_36 | KEYWORD_37 | KEYWORD_31 | KEYWORD_32 | KEYWORD_33 | KEYWORD_25 | KEYWORD_26 | KEYWORD_27 | KEYWORD_28 | KEYWORD_29 | KEYWORD_30 | KEYWORD_16 | KEYWORD_17 | KEYWORD_18 | KEYWORD_19 | KEYWORD_20 | KEYWORD_21 | KEYWORD_22 | KEYWORD_23 | KEYWORD_24 | KEYWORD_6 | KEYWORD_7 | KEYWORD_8 | KEYWORD_9 | KEYWORD_10 | KEYWORD_11 | KEYWORD_12 | KEYWORD_13 | KEYWORD_14 | KEYWORD_15 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | KEYWORD_5 | KEYWORD_1 | RULE_PLUS | RULE_POWER | RULE_STAR | RULE_SLASH | RULE_MINUS | RULE_NOT_EQUAL | RULE_LESS_EQUAL | RULE_GREATER_EQUAL | RULE_GREATER | RULE_LESS | RULE_EQUAL | RULE_AFFECTATION_OPERATOR | RULE_PUNC_OPEN_BRACE | RULE_PUNC_CLOSE_BRACE | RULE_PUNC_SEMI_COLON | RULE_PUNC_OPEN_PARENTHESIS | RULE_PUNC_CLOSE_PARENTHESIS | RULE_PUNC_COMMA | RULE_ID | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_NUMERIC )
+        // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:8: ( KEYWORD_54 | KEYWORD_51 | KEYWORD_52 | KEYWORD_53 | KEYWORD_50 | KEYWORD_49 | KEYWORD_46 | KEYWORD_47 | KEYWORD_48 | KEYWORD_45 | KEYWORD_44 | KEYWORD_43 | KEYWORD_41 | KEYWORD_42 | KEYWORD_38 | KEYWORD_39 | KEYWORD_40 | KEYWORD_34 | KEYWORD_35 | KEYWORD_36 | KEYWORD_37 | KEYWORD_31 | KEYWORD_32 | KEYWORD_33 | KEYWORD_25 | KEYWORD_26 | KEYWORD_27 | KEYWORD_28 | KEYWORD_29 | KEYWORD_30 | KEYWORD_16 | KEYWORD_17 | KEYWORD_18 | KEYWORD_19 | KEYWORD_20 | KEYWORD_21 | KEYWORD_22 | KEYWORD_23 | KEYWORD_24 | KEYWORD_6 | KEYWORD_7 | KEYWORD_8 | KEYWORD_9 | KEYWORD_10 | KEYWORD_11 | KEYWORD_12 | KEYWORD_13 | KEYWORD_14 | KEYWORD_15 | KEYWORD_2 | KEYWORD_3 | KEYWORD_4 | KEYWORD_5 | KEYWORD_1 | RULE_PLUS | RULE_POWER | RULE_STAR | RULE_SLASH | RULE_MINUS | RULE_NOT_EQUAL | RULE_LESS_EQUAL | RULE_GREATER_EQUAL | RULE_GREATER | RULE_LESS | RULE_EQUAL | RULE_AFFECTATION_OPERATOR | RULE_PUNC_OPEN_BRACE | RULE_PUNC_CLOSE_BRACE | RULE_PUNC_SEMI_COLON | RULE_PUNC_OPEN_PARENTHESIS | RULE_PUNC_CLOSE_PARENTHESIS | RULE_PUNC_COMMA | RULE_ID | RULE_STRING | RULE_SL_COMMENT | RULE_WS | RULE_NUMERIC )
         int alt10=77;
         alt10 = dfa10.predict(input);
         switch (alt10) {
             case 1 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:10: KEYWORD_54
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:10: KEYWORD_54
                 {
                 mKEYWORD_54(); 
 
                 }
                 break;
             case 2 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:21: KEYWORD_51
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:21: KEYWORD_51
                 {
                 mKEYWORD_51(); 
 
                 }
                 break;
             case 3 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:32: KEYWORD_52
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:32: KEYWORD_52
                 {
                 mKEYWORD_52(); 
 
                 }
                 break;
             case 4 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:43: KEYWORD_53
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:43: KEYWORD_53
                 {
                 mKEYWORD_53(); 
 
                 }
                 break;
             case 5 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:54: KEYWORD_50
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:54: KEYWORD_50
                 {
                 mKEYWORD_50(); 
 
                 }
                 break;
             case 6 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:65: KEYWORD_49
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:65: KEYWORD_49
                 {
                 mKEYWORD_49(); 
 
                 }
                 break;
             case 7 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:76: KEYWORD_46
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:76: KEYWORD_46
                 {
                 mKEYWORD_46(); 
 
                 }
                 break;
             case 8 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:87: KEYWORD_47
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:87: KEYWORD_47
                 {
                 mKEYWORD_47(); 
 
                 }
                 break;
             case 9 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:98: KEYWORD_48
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:98: KEYWORD_48
                 {
                 mKEYWORD_48(); 
 
                 }
                 break;
             case 10 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:109: KEYWORD_45
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:109: KEYWORD_45
                 {
                 mKEYWORD_45(); 
 
                 }
                 break;
             case 11 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:120: KEYWORD_44
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:120: KEYWORD_44
                 {
                 mKEYWORD_44(); 
 
                 }
                 break;
             case 12 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:131: KEYWORD_43
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:131: KEYWORD_43
                 {
                 mKEYWORD_43(); 
 
                 }
                 break;
             case 13 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:142: KEYWORD_41
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:142: KEYWORD_41
                 {
                 mKEYWORD_41(); 
 
                 }
                 break;
             case 14 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:153: KEYWORD_42
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:153: KEYWORD_42
                 {
                 mKEYWORD_42(); 
 
                 }
                 break;
             case 15 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:164: KEYWORD_38
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:164: KEYWORD_38
                 {
                 mKEYWORD_38(); 
 
                 }
                 break;
             case 16 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:175: KEYWORD_39
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:175: KEYWORD_39
                 {
                 mKEYWORD_39(); 
 
                 }
                 break;
             case 17 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:186: KEYWORD_40
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:186: KEYWORD_40
                 {
                 mKEYWORD_40(); 
 
                 }
                 break;
             case 18 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:197: KEYWORD_34
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:197: KEYWORD_34
                 {
                 mKEYWORD_34(); 
 
                 }
                 break;
             case 19 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:208: KEYWORD_35
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:208: KEYWORD_35
                 {
                 mKEYWORD_35(); 
 
                 }
                 break;
             case 20 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:219: KEYWORD_36
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:219: KEYWORD_36
                 {
                 mKEYWORD_36(); 
 
                 }
                 break;
             case 21 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:230: KEYWORD_37
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:230: KEYWORD_37
                 {
                 mKEYWORD_37(); 
 
                 }
                 break;
             case 22 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:241: KEYWORD_31
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:241: KEYWORD_31
                 {
                 mKEYWORD_31(); 
 
                 }
                 break;
             case 23 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:252: KEYWORD_32
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:252: KEYWORD_32
                 {
                 mKEYWORD_32(); 
 
                 }
                 break;
             case 24 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:263: KEYWORD_33
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:263: KEYWORD_33
                 {
                 mKEYWORD_33(); 
 
                 }
                 break;
             case 25 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:274: KEYWORD_25
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:274: KEYWORD_25
                 {
                 mKEYWORD_25(); 
 
                 }
                 break;
             case 26 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:285: KEYWORD_26
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:285: KEYWORD_26
                 {
                 mKEYWORD_26(); 
 
                 }
                 break;
             case 27 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:296: KEYWORD_27
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:296: KEYWORD_27
                 {
                 mKEYWORD_27(); 
 
                 }
                 break;
             case 28 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:307: KEYWORD_28
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:307: KEYWORD_28
                 {
                 mKEYWORD_28(); 
 
                 }
                 break;
             case 29 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:318: KEYWORD_29
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:318: KEYWORD_29
                 {
                 mKEYWORD_29(); 
 
                 }
                 break;
             case 30 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:329: KEYWORD_30
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:329: KEYWORD_30
                 {
                 mKEYWORD_30(); 
 
                 }
                 break;
             case 31 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:340: KEYWORD_16
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:340: KEYWORD_16
                 {
                 mKEYWORD_16(); 
 
                 }
                 break;
             case 32 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:351: KEYWORD_17
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:351: KEYWORD_17
                 {
                 mKEYWORD_17(); 
 
                 }
                 break;
             case 33 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:362: KEYWORD_18
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:362: KEYWORD_18
                 {
                 mKEYWORD_18(); 
 
                 }
                 break;
             case 34 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:373: KEYWORD_19
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:373: KEYWORD_19
                 {
                 mKEYWORD_19(); 
 
                 }
                 break;
             case 35 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:384: KEYWORD_20
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:384: KEYWORD_20
                 {
                 mKEYWORD_20(); 
 
                 }
                 break;
             case 36 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:395: KEYWORD_21
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:395: KEYWORD_21
                 {
                 mKEYWORD_21(); 
 
                 }
                 break;
             case 37 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:406: KEYWORD_22
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:406: KEYWORD_22
                 {
                 mKEYWORD_22(); 
 
                 }
                 break;
             case 38 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:417: KEYWORD_23
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:417: KEYWORD_23
                 {
                 mKEYWORD_23(); 
 
                 }
                 break;
             case 39 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:428: KEYWORD_24
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:428: KEYWORD_24
                 {
                 mKEYWORD_24(); 
 
                 }
                 break;
             case 40 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:439: KEYWORD_6
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:439: KEYWORD_6
                 {
                 mKEYWORD_6(); 
 
                 }
                 break;
             case 41 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:449: KEYWORD_7
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:449: KEYWORD_7
                 {
                 mKEYWORD_7(); 
 
                 }
                 break;
             case 42 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:459: KEYWORD_8
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:459: KEYWORD_8
                 {
                 mKEYWORD_8(); 
 
                 }
                 break;
             case 43 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:469: KEYWORD_9
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:469: KEYWORD_9
                 {
                 mKEYWORD_9(); 
 
                 }
                 break;
             case 44 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:479: KEYWORD_10
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:479: KEYWORD_10
                 {
                 mKEYWORD_10(); 
 
                 }
                 break;
             case 45 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:490: KEYWORD_11
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:490: KEYWORD_11
                 {
                 mKEYWORD_11(); 
 
                 }
                 break;
             case 46 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:501: KEYWORD_12
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:501: KEYWORD_12
                 {
                 mKEYWORD_12(); 
 
                 }
                 break;
             case 47 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:512: KEYWORD_13
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:512: KEYWORD_13
                 {
                 mKEYWORD_13(); 
 
                 }
                 break;
             case 48 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:523: KEYWORD_14
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:523: KEYWORD_14
                 {
                 mKEYWORD_14(); 
 
                 }
                 break;
             case 49 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:534: KEYWORD_15
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:534: KEYWORD_15
                 {
                 mKEYWORD_15(); 
 
                 }
                 break;
             case 50 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:545: KEYWORD_2
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:545: KEYWORD_2
                 {
                 mKEYWORD_2(); 
 
                 }
                 break;
             case 51 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:555: KEYWORD_3
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:555: KEYWORD_3
                 {
                 mKEYWORD_3(); 
 
                 }
                 break;
             case 52 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:565: KEYWORD_4
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:565: KEYWORD_4
                 {
                 mKEYWORD_4(); 
 
                 }
                 break;
             case 53 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:575: KEYWORD_5
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:575: KEYWORD_5
                 {
                 mKEYWORD_5(); 
 
                 }
                 break;
             case 54 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:585: KEYWORD_1
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:585: KEYWORD_1
                 {
                 mKEYWORD_1(); 
 
                 }
                 break;
             case 55 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:595: RULE_PLUS
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:595: RULE_PLUS
                 {
                 mRULE_PLUS(); 
 
                 }
                 break;
             case 56 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:605: RULE_POWER
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:605: RULE_POWER
                 {
                 mRULE_POWER(); 
 
                 }
                 break;
             case 57 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:616: RULE_STAR
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:616: RULE_STAR
                 {
                 mRULE_STAR(); 
 
                 }
                 break;
             case 58 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:626: RULE_SLASH
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:626: RULE_SLASH
                 {
                 mRULE_SLASH(); 
 
                 }
                 break;
             case 59 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:637: RULE_MINUS
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:637: RULE_MINUS
                 {
                 mRULE_MINUS(); 
 
                 }
                 break;
             case 60 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:648: RULE_NOT_EQUAL
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:648: RULE_NOT_EQUAL
                 {
                 mRULE_NOT_EQUAL(); 
 
                 }
                 break;
             case 61 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:663: RULE_LESS_EQUAL
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:663: RULE_LESS_EQUAL
                 {
                 mRULE_LESS_EQUAL(); 
 
                 }
                 break;
             case 62 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:679: RULE_GREATER_EQUAL
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:679: RULE_GREATER_EQUAL
                 {
                 mRULE_GREATER_EQUAL(); 
 
                 }
                 break;
             case 63 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:698: RULE_GREATER
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:698: RULE_GREATER
                 {
                 mRULE_GREATER(); 
 
                 }
                 break;
             case 64 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:711: RULE_LESS
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:711: RULE_LESS
                 {
                 mRULE_LESS(); 
 
                 }
                 break;
             case 65 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:721: RULE_EQUAL
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:721: RULE_EQUAL
                 {
                 mRULE_EQUAL(); 
 
                 }
                 break;
             case 66 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:732: RULE_AFFECTATION_OPERATOR
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:732: RULE_AFFECTATION_OPERATOR
                 {
                 mRULE_AFFECTATION_OPERATOR(); 
 
                 }
                 break;
             case 67 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:758: RULE_PUNC_OPEN_BRACE
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:758: RULE_PUNC_OPEN_BRACE
                 {
                 mRULE_PUNC_OPEN_BRACE(); 
 
                 }
                 break;
             case 68 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:779: RULE_PUNC_CLOSE_BRACE
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:779: RULE_PUNC_CLOSE_BRACE
                 {
                 mRULE_PUNC_CLOSE_BRACE(); 
 
                 }
                 break;
             case 69 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:801: RULE_PUNC_SEMI_COLON
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:801: RULE_PUNC_SEMI_COLON
                 {
                 mRULE_PUNC_SEMI_COLON(); 
 
                 }
                 break;
             case 70 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:822: RULE_PUNC_OPEN_PARENTHESIS
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:822: RULE_PUNC_OPEN_PARENTHESIS
                 {
                 mRULE_PUNC_OPEN_PARENTHESIS(); 
 
                 }
                 break;
             case 71 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:849: RULE_PUNC_CLOSE_PARENTHESIS
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:849: RULE_PUNC_CLOSE_PARENTHESIS
                 {
                 mRULE_PUNC_CLOSE_PARENTHESIS(); 
 
                 }
                 break;
             case 72 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:877: RULE_PUNC_COMMA
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:877: RULE_PUNC_COMMA
                 {
                 mRULE_PUNC_COMMA(); 
 
                 }
                 break;
             case 73 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:893: RULE_ID
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:893: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
             case 74 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:901: RULE_STRING
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:901: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
             case 75 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:913: RULE_SL_COMMENT
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:913: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
             case 76 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:929: RULE_WS
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:929: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
             case 77 :
-                // ../org.osate.ocarina.real.xtext/src-gen/org/osate/ocarina/real/xtext/parser/antlr/lexer/InternalREALLexer.g:1:937: RULE_NUMERIC
+                // ../org.osate.ocarina.real.xtext.ui/src-gen/org/osate/ocarina/real/xtext/ui/contentassist/antlr/lexer/InternalREALLexer.g:1:937: RULE_NUMERIC
                 {
                 mRULE_NUMERIC(); 
 

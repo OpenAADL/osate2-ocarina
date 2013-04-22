@@ -16,8 +16,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getName <em>Name</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getRangeDefinition <em>Range Definition</em>}</li>
- *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getSetDeclarations <em>Set Declarations</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getRequiredDefinition <em>Required Definition</em>}</li>
+ *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getVarDeclarations <em>Var Declarations</em>}</li>
+ *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getSetDeclarations <em>Set Declarations</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getVerificationExpression <em>Verification Expression</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getEvaluationExpression <em>Evaluation Expression</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.Theorem#getEndName <em>End Name</em>}</li>
@@ -83,22 +84,6 @@ public interface Theorem extends EObject
   void setRangeDefinition(RangeDefinition value);
 
   /**
-   * Returns the value of the '<em><b>Set Declarations</b></em>' containment reference list.
-   * The list contents are of type {@link org.osate.ocarina.real.xtext.real.SetDeclaration}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Set Declarations</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Set Declarations</em>' containment reference list.
-   * @see org.osate.ocarina.real.xtext.real.RealPackage#getTheorem_SetDeclarations()
-   * @model containment="true"
-   * @generated
-   */
-  EList<SetDeclaration> getSetDeclarations();
-
-  /**
    * Returns the value of the '<em><b>Required Definition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -123,6 +108,38 @@ public interface Theorem extends EObject
    * @generated
    */
   void setRequiredDefinition(RequiredDefinition value);
+
+  /**
+   * Returns the value of the '<em><b>Var Declarations</b></em>' containment reference list.
+   * The list contents are of type {@link org.osate.ocarina.real.xtext.real.VarDeclaration}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Var Declarations</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Var Declarations</em>' containment reference list.
+   * @see org.osate.ocarina.real.xtext.real.RealPackage#getTheorem_VarDeclarations()
+   * @model containment="true"
+   * @generated
+   */
+  EList<VarDeclaration> getVarDeclarations();
+
+  /**
+   * Returns the value of the '<em><b>Set Declarations</b></em>' containment reference list.
+   * The list contents are of type {@link org.osate.ocarina.real.xtext.real.SetDeclaration}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Set Declarations</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Set Declarations</em>' containment reference list.
+   * @see org.osate.ocarina.real.xtext.real.RealPackage#getTheorem_SetDeclarations()
+   * @model containment="true"
+   * @generated
+   */
+  EList<SetDeclaration> getSetDeclarations();
 
   /**
    * Returns the value of the '<em><b>Verification Expression</b></em>' containment reference.

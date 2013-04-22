@@ -93,6 +93,13 @@ public class RealSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case RealPackage.VAR_DECLARATION:
+      {
+        VarDeclaration varDeclaration = (VarDeclaration)theEObject;
+        T result = caseVarDeclaration(varDeclaration);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case RealPackage.SET_DECLARATION:
       {
         SetDeclaration setDeclaration = (SetDeclaration)theEObject;
@@ -111,6 +118,13 @@ public class RealSwitch<T> extends Switch<T>
       {
         SelectionExpression selectionExpression = (SelectionExpression)theEObject;
         T result = caseSelectionExpression(selectionExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case RealPackage.COMPUTE_EXPRESSION:
+      {
+        ComputeExpression computeExpression = (ComputeExpression)theEObject;
+        T result = caseComputeExpression(computeExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -266,6 +280,22 @@ public class RealSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Var Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Var Declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVarDeclaration(VarDeclaration object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Set Declaration</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -309,6 +339,22 @@ public class RealSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseSelectionExpression(SelectionExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Compute Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Compute Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseComputeExpression(ComputeExpression object)
   {
     return null;
   }

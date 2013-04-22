@@ -113,22 +113,31 @@ public interface RealPackage extends EPackage
   int THEOREM__RANGE_DEFINITION = 1;
 
   /**
-   * The feature id for the '<em><b>Set Declarations</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int THEOREM__SET_DECLARATIONS = 2;
-
-  /**
    * The feature id for the '<em><b>Required Definition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int THEOREM__REQUIRED_DEFINITION = 3;
+  int THEOREM__REQUIRED_DEFINITION = 2;
+
+  /**
+   * The feature id for the '<em><b>Var Declarations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THEOREM__VAR_DECLARATIONS = 3;
+
+  /**
+   * The feature id for the '<em><b>Set Declarations</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int THEOREM__SET_DECLARATIONS = 4;
 
   /**
    * The feature id for the '<em><b>Verification Expression</b></em>' containment reference.
@@ -137,7 +146,7 @@ public interface RealPackage extends EPackage
    * @generated
    * @ordered
    */
-  int THEOREM__VERIFICATION_EXPRESSION = 4;
+  int THEOREM__VERIFICATION_EXPRESSION = 5;
 
   /**
    * The feature id for the '<em><b>Evaluation Expression</b></em>' containment reference.
@@ -146,7 +155,7 @@ public interface RealPackage extends EPackage
    * @generated
    * @ordered
    */
-  int THEOREM__EVALUATION_EXPRESSION = 5;
+  int THEOREM__EVALUATION_EXPRESSION = 6;
 
   /**
    * The feature id for the '<em><b>End Name</b></em>' attribute.
@@ -155,7 +164,7 @@ public interface RealPackage extends EPackage
    * @generated
    * @ordered
    */
-  int THEOREM__END_NAME = 6;
+  int THEOREM__END_NAME = 7;
 
   /**
    * The number of structural features of the '<em>Theorem</em>' class.
@@ -164,7 +173,7 @@ public interface RealPackage extends EPackage
    * @generated
    * @ordered
    */
-  int THEOREM_FEATURE_COUNT = 7;
+  int THEOREM_FEATURE_COUNT = 8;
 
   /**
    * The meta object id for the '{@link org.osate.ocarina.real.xtext.real.impl.RangeDefinitionImpl <em>Range Definition</em>}' class.
@@ -204,6 +213,43 @@ public interface RealPackage extends EPackage
   int RANGE_DEFINITION_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.osate.ocarina.real.xtext.real.impl.VarDeclarationImpl <em>Var Declaration</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.osate.ocarina.real.xtext.real.impl.VarDeclarationImpl
+   * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getVarDeclaration()
+   * @generated
+   */
+  int VAR_DECLARATION = 3;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_DECLARATION__IDENTIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Expr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_DECLARATION__EXPR = 1;
+
+  /**
+   * The number of structural features of the '<em>Var Declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_DECLARATION_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.osate.ocarina.real.xtext.real.impl.SetDeclarationImpl <em>Set Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -211,7 +257,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getSetDeclaration()
    * @generated
    */
-  int SET_DECLARATION = 3;
+  int SET_DECLARATION = 4;
 
   /**
    * The feature id for the '<em><b>Set</b></em>' attribute.
@@ -266,7 +312,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getElementBinding()
    * @generated
    */
-  int ELEMENT_BINDING = 4;
+  int ELEMENT_BINDING = 5;
 
   /**
    * The feature id for the '<em><b>Element</b></em>' attribute.
@@ -303,7 +349,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getSelectionExpression()
    * @generated
    */
-  int SELECTION_EXPRESSION = 5;
+  int SELECTION_EXPRESSION = 6;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -342,6 +388,43 @@ public interface RealPackage extends EPackage
   int SELECTION_EXPRESSION_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.osate.ocarina.real.xtext.real.impl.ComputeExpressionImpl <em>Compute Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.osate.ocarina.real.xtext.real.impl.ComputeExpressionImpl
+   * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getComputeExpression()
+   * @generated
+   */
+  int COMPUTE_EXPRESSION = 7;
+
+  /**
+   * The feature id for the '<em><b>Identifier</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPUTE_EXPRESSION__IDENTIFIER = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPUTE_EXPRESSION__NAME = 1;
+
+  /**
+   * The number of structural features of the '<em>Compute Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPUTE_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.osate.ocarina.real.xtext.real.impl.TerminalSelectionExpressionImpl <em>Terminal Selection Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -349,7 +432,16 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getTerminalSelectionExpression()
    * @generated
    */
-  int TERMINAL_SELECTION_EXPRESSION = 6;
+  int TERMINAL_SELECTION_EXPRESSION = 8;
+
+  /**
+   * The feature id for the '<em><b>C</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERMINAL_SELECTION_EXPRESSION__C = 0;
 
   /**
    * The feature id for the '<em><b>E</b></em>' containment reference.
@@ -358,7 +450,7 @@ public interface RealPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMINAL_SELECTION_EXPRESSION__E = 0;
+  int TERMINAL_SELECTION_EXPRESSION__E = 1;
 
   /**
    * The feature id for the '<em><b>R</b></em>' containment reference.
@@ -367,7 +459,7 @@ public interface RealPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMINAL_SELECTION_EXPRESSION__R = 1;
+  int TERMINAL_SELECTION_EXPRESSION__R = 2;
 
   /**
    * The number of structural features of the '<em>Terminal Selection Expression</em>' class.
@@ -376,7 +468,7 @@ public interface RealPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TERMINAL_SELECTION_EXPRESSION_FEATURE_COUNT = 2;
+  int TERMINAL_SELECTION_EXPRESSION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.osate.ocarina.real.xtext.real.impl.SelectionRelationImpl <em>Selection Relation</em>}' class.
@@ -386,7 +478,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getSelectionRelation()
    * @generated
    */
-  int SELECTION_RELATION = 7;
+  int SELECTION_RELATION = 9;
 
   /**
    * The feature id for the '<em><b>Identifier</b></em>' attribute.
@@ -423,7 +515,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getSelectionRelationParameter()
    * @generated
    */
-  int SELECTION_RELATION_PARAMETER = 8;
+  int SELECTION_RELATION_PARAMETER = 10;
 
   /**
    * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -460,7 +552,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getRequiredDefinition()
    * @generated
    */
-  int REQUIRED_DEFINITION = 9;
+  int REQUIRED_DEFINITION = 11;
 
   /**
    * The feature id for the '<em><b>Theorems</b></em>' attribute list.
@@ -488,7 +580,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getVerificationExpression()
    * @generated
    */
-  int VERIFICATION_EXPRESSION = 10;
+  int VERIFICATION_EXPRESSION = 12;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' containment reference.
@@ -516,7 +608,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getEvaluationExpression()
    * @generated
    */
-  int EVALUATION_EXPRESSION = 11;
+  int EVALUATION_EXPRESSION = 13;
 
   /**
    * The feature id for the '<em><b>F</b></em>' attribute.
@@ -553,7 +645,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getTerminalGenericExpression()
    * @generated
    */
-  int TERMINAL_GENERIC_EXPRESSION = 13;
+  int TERMINAL_GENERIC_EXPRESSION = 15;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' containment reference.
@@ -599,7 +691,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getGenericExpression()
    * @generated
    */
-  int GENERIC_EXPRESSION = 12;
+  int GENERIC_EXPRESSION = 14;
 
   /**
    * The feature id for the '<em><b>Literal</b></em>' containment reference.
@@ -672,7 +764,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getSetExpression()
    * @generated
    */
-  int SET_EXPRESSION = 14;
+  int SET_EXPRESSION = 16;
 
   /**
    * The feature id for the '<em><b>E1</b></em>' attribute.
@@ -718,7 +810,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getTernaryExpression()
    * @generated
    */
-  int TERNARY_EXPRESSION = 15;
+  int TERNARY_EXPRESSION = 17;
 
   /**
    * The feature id for the '<em><b>Conditional</b></em>' containment reference.
@@ -764,7 +856,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getVerificationFunctionCall()
    * @generated
    */
-  int VERIFICATION_FUNCTION_CALL = 16;
+  int VERIFICATION_FUNCTION_CALL = 18;
 
   /**
    * The feature id for the '<em><b>F</b></em>' attribute.
@@ -801,7 +893,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getVerificationFunctionParameter()
    * @generated
    */
-  int VERIFICATION_FUNCTION_PARAMETER = 17;
+  int VERIFICATION_FUNCTION_PARAMETER = 19;
 
   /**
    * The feature id for the '<em><b>L</b></em>' containment reference.
@@ -847,7 +939,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getLiteral()
    * @generated
    */
-  int LITERAL = 18;
+  int LITERAL = 20;
 
   /**
    * The feature id for the '<em><b>B</b></em>' containment reference.
@@ -893,7 +985,7 @@ public interface RealPackage extends EPackage
    * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getBOOLEAN()
    * @generated
    */
-  int BOOLEAN = 19;
+  int BOOLEAN = 21;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -968,17 +1060,6 @@ public interface RealPackage extends EPackage
   EReference getTheorem_RangeDefinition();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.osate.ocarina.real.xtext.real.Theorem#getSetDeclarations <em>Set Declarations</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Set Declarations</em>'.
-   * @see org.osate.ocarina.real.xtext.real.Theorem#getSetDeclarations()
-   * @see #getTheorem()
-   * @generated
-   */
-  EReference getTheorem_SetDeclarations();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.osate.ocarina.real.xtext.real.Theorem#getRequiredDefinition <em>Required Definition</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -988,6 +1069,28 @@ public interface RealPackage extends EPackage
    * @generated
    */
   EReference getTheorem_RequiredDefinition();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.osate.ocarina.real.xtext.real.Theorem#getVarDeclarations <em>Var Declarations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Var Declarations</em>'.
+   * @see org.osate.ocarina.real.xtext.real.Theorem#getVarDeclarations()
+   * @see #getTheorem()
+   * @generated
+   */
+  EReference getTheorem_VarDeclarations();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.osate.ocarina.real.xtext.real.Theorem#getSetDeclarations <em>Set Declarations</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Set Declarations</em>'.
+   * @see org.osate.ocarina.real.xtext.real.Theorem#getSetDeclarations()
+   * @see #getTheorem()
+   * @generated
+   */
+  EReference getTheorem_SetDeclarations();
 
   /**
    * Returns the meta object for the containment reference '{@link org.osate.ocarina.real.xtext.real.Theorem#getVerificationExpression <em>Verification Expression</em>}'.
@@ -1053,6 +1156,38 @@ public interface RealPackage extends EPackage
    * @generated
    */
   EReference getRangeDefinition_Set();
+
+  /**
+   * Returns the meta object for class '{@link org.osate.ocarina.real.xtext.real.VarDeclaration <em>Var Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Var Declaration</em>'.
+   * @see org.osate.ocarina.real.xtext.real.VarDeclaration
+   * @generated
+   */
+  EClass getVarDeclaration();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.osate.ocarina.real.xtext.real.VarDeclaration#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.osate.ocarina.real.xtext.real.VarDeclaration#getIdentifier()
+   * @see #getVarDeclaration()
+   * @generated
+   */
+  EAttribute getVarDeclaration_Identifier();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.osate.ocarina.real.xtext.real.VarDeclaration#getExpr <em>Expr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Expr</em>'.
+   * @see org.osate.ocarina.real.xtext.real.VarDeclaration#getExpr()
+   * @see #getVarDeclaration()
+   * @generated
+   */
+  EReference getVarDeclaration_Expr();
 
   /**
    * Returns the meta object for class '{@link org.osate.ocarina.real.xtext.real.SetDeclaration <em>Set Declaration</em>}'.
@@ -1184,6 +1319,38 @@ public interface RealPackage extends EPackage
   EReference getSelectionExpression_E2();
 
   /**
+   * Returns the meta object for class '{@link org.osate.ocarina.real.xtext.real.ComputeExpression <em>Compute Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Compute Expression</em>'.
+   * @see org.osate.ocarina.real.xtext.real.ComputeExpression
+   * @generated
+   */
+  EClass getComputeExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.osate.ocarina.real.xtext.real.ComputeExpression#getIdentifier <em>Identifier</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identifier</em>'.
+   * @see org.osate.ocarina.real.xtext.real.ComputeExpression#getIdentifier()
+   * @see #getComputeExpression()
+   * @generated
+   */
+  EAttribute getComputeExpression_Identifier();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.osate.ocarina.real.xtext.real.ComputeExpression#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Name</em>'.
+   * @see org.osate.ocarina.real.xtext.real.ComputeExpression#getName()
+   * @see #getComputeExpression()
+   * @generated
+   */
+  EAttribute getComputeExpression_Name();
+
+  /**
    * Returns the meta object for class '{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression <em>Terminal Selection Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1192,6 +1359,17 @@ public interface RealPackage extends EPackage
    * @generated
    */
   EClass getTerminalSelectionExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getC <em>C</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>C</em>'.
+   * @see org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getC()
+   * @see #getTerminalSelectionExpression()
+   * @generated
+   */
+  EReference getTerminalSelectionExpression_C();
 
   /**
    * Returns the meta object for the containment reference '{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getE <em>E</em>}'.
@@ -1732,20 +1910,28 @@ public interface RealPackage extends EPackage
     EReference THEOREM__RANGE_DEFINITION = eINSTANCE.getTheorem_RangeDefinition();
 
     /**
-     * The meta object literal for the '<em><b>Set Declarations</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference THEOREM__SET_DECLARATIONS = eINSTANCE.getTheorem_SetDeclarations();
-
-    /**
      * The meta object literal for the '<em><b>Required Definition</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference THEOREM__REQUIRED_DEFINITION = eINSTANCE.getTheorem_RequiredDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Var Declarations</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference THEOREM__VAR_DECLARATIONS = eINSTANCE.getTheorem_VarDeclarations();
+
+    /**
+     * The meta object literal for the '<em><b>Set Declarations</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference THEOREM__SET_DECLARATIONS = eINSTANCE.getTheorem_SetDeclarations();
 
     /**
      * The meta object literal for the '<em><b>Verification Expression</b></em>' containment reference feature.
@@ -1796,6 +1982,32 @@ public interface RealPackage extends EPackage
      * @generated
      */
     EReference RANGE_DEFINITION__SET = eINSTANCE.getRangeDefinition_Set();
+
+    /**
+     * The meta object literal for the '{@link org.osate.ocarina.real.xtext.real.impl.VarDeclarationImpl <em>Var Declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.osate.ocarina.real.xtext.real.impl.VarDeclarationImpl
+     * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getVarDeclaration()
+     * @generated
+     */
+    EClass VAR_DECLARATION = eINSTANCE.getVarDeclaration();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VAR_DECLARATION__IDENTIFIER = eINSTANCE.getVarDeclaration_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Expr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VAR_DECLARATION__EXPR = eINSTANCE.getVarDeclaration_Expr();
 
     /**
      * The meta object literal for the '{@link org.osate.ocarina.real.xtext.real.impl.SetDeclarationImpl <em>Set Declaration</em>}' class.
@@ -1900,6 +2112,32 @@ public interface RealPackage extends EPackage
     EReference SELECTION_EXPRESSION__E2 = eINSTANCE.getSelectionExpression_E2();
 
     /**
+     * The meta object literal for the '{@link org.osate.ocarina.real.xtext.real.impl.ComputeExpressionImpl <em>Compute Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.osate.ocarina.real.xtext.real.impl.ComputeExpressionImpl
+     * @see org.osate.ocarina.real.xtext.real.impl.RealPackageImpl#getComputeExpression()
+     * @generated
+     */
+    EClass COMPUTE_EXPRESSION = eINSTANCE.getComputeExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Identifier</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPUTE_EXPRESSION__IDENTIFIER = eINSTANCE.getComputeExpression_Identifier();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPUTE_EXPRESSION__NAME = eINSTANCE.getComputeExpression_Name();
+
+    /**
      * The meta object literal for the '{@link org.osate.ocarina.real.xtext.real.impl.TerminalSelectionExpressionImpl <em>Terminal Selection Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1908,6 +2146,14 @@ public interface RealPackage extends EPackage
      * @generated
      */
     EClass TERMINAL_SELECTION_EXPRESSION = eINSTANCE.getTerminalSelectionExpression();
+
+    /**
+     * The meta object literal for the '<em><b>C</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERMINAL_SELECTION_EXPRESSION__C = eINSTANCE.getTerminalSelectionExpression_C();
 
     /**
      * The meta object literal for the '<em><b>E</b></em>' containment reference feature.

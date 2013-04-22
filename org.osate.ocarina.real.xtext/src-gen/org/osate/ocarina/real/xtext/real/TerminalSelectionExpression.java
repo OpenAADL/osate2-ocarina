@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getC <em>C</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getE <em>E</em>}</li>
  *   <li>{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getR <em>R</em>}</li>
  * </ul>
@@ -24,6 +25,32 @@ import org.eclipse.emf.ecore.EObject;
 public interface TerminalSelectionExpression extends EObject
 {
   /**
+   * Returns the value of the '<em><b>C</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>C</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>C</em>' containment reference.
+   * @see #setC(ComputeExpression)
+   * @see org.osate.ocarina.real.xtext.real.RealPackage#getTerminalSelectionExpression_C()
+   * @model containment="true"
+   * @generated
+   */
+  ComputeExpression getC();
+
+  /**
+   * Sets the value of the '{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getC <em>C</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>C</em>' containment reference.
+   * @see #getC()
+   * @generated
+   */
+  void setC(ComputeExpression value);
+
+  /**
    * Returns the value of the '<em><b>E</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -32,12 +59,12 @@ public interface TerminalSelectionExpression extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>E</em>' containment reference.
-   * @see #setE(GenericExpression)
+   * @see #setE(TerminalGenericExpression)
    * @see org.osate.ocarina.real.xtext.real.RealPackage#getTerminalSelectionExpression_E()
    * @model containment="true"
    * @generated
    */
-  GenericExpression getE();
+  TerminalGenericExpression getE();
 
   /**
    * Sets the value of the '{@link org.osate.ocarina.real.xtext.real.TerminalSelectionExpression#getE <em>E</em>}' containment reference.
@@ -47,7 +74,7 @@ public interface TerminalSelectionExpression extends EObject
    * @see #getE()
    * @generated
    */
-  void setE(GenericExpression value);
+  void setE(TerminalGenericExpression value);
 
   /**
    * Returns the value of the '<em><b>R</b></em>' containment reference.

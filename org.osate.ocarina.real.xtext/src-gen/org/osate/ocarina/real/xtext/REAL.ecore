@@ -10,10 +10,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rangeDefinition" eType="#//RangeDefinition"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="setDeclarations" upperBound="-1"
-        eType="#//SetDeclaration" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredDefinition" eType="#//RequiredDefinition"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="varDeclarations" upperBound="-1"
+        eType="#//VarDeclaration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setDeclarations" upperBound="-1"
+        eType="#//SetDeclaration" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="verificationExpression"
         eType="#//VerificationExpression" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="evaluationExpression" eType="#//EvaluationExpression"
@@ -23,6 +25,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="RangeDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="element" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="set" eType="#//SetExpression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarDeclaration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expr" eType="#//TerminalSelectionExpression"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SetDeclaration">
@@ -46,8 +53,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="e2" upperBound="-1" eType="#//TerminalSelectionExpression"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComputeExpression">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TerminalSelectionExpression">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//GenericExpression"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c" eType="#//ComputeExpression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//TerminalGenericExpression"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="r" eType="#//SelectionRelation"
         containment="true"/>

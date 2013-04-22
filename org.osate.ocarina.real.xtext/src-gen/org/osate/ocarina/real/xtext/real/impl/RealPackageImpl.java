@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.osate.ocarina.real.xtext.real.ComputeExpression;
 import org.osate.ocarina.real.xtext.real.ElementBinding;
 import org.osate.ocarina.real.xtext.real.EvaluationExpression;
 import org.osate.ocarina.real.xtext.real.GenericExpression;
@@ -27,6 +28,7 @@ import org.osate.ocarina.real.xtext.real.TerminalGenericExpression;
 import org.osate.ocarina.real.xtext.real.TerminalSelectionExpression;
 import org.osate.ocarina.real.xtext.real.TernaryExpression;
 import org.osate.ocarina.real.xtext.real.Theorem;
+import org.osate.ocarina.real.xtext.real.VarDeclaration;
 import org.osate.ocarina.real.xtext.real.VerificationExpression;
 import org.osate.ocarina.real.xtext.real.VerificationFunctionCall;
 import org.osate.ocarina.real.xtext.real.VerificationFunctionParameter;
@@ -65,6 +67,13 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass varDeclarationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass setDeclarationEClass = null;
 
   /**
@@ -80,6 +89,13 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * @generated
    */
   private EClass selectionExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass computeExpressionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -297,7 +313,7 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTheorem_SetDeclarations()
+  public EReference getTheorem_RequiredDefinition()
   {
     return (EReference)theoremEClass.getEStructuralFeatures().get(2);
   }
@@ -307,7 +323,7 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTheorem_RequiredDefinition()
+  public EReference getTheorem_VarDeclarations()
   {
     return (EReference)theoremEClass.getEStructuralFeatures().get(3);
   }
@@ -317,7 +333,7 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTheorem_VerificationExpression()
+  public EReference getTheorem_SetDeclarations()
   {
     return (EReference)theoremEClass.getEStructuralFeatures().get(4);
   }
@@ -327,7 +343,7 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTheorem_EvaluationExpression()
+  public EReference getTheorem_VerificationExpression()
   {
     return (EReference)theoremEClass.getEStructuralFeatures().get(5);
   }
@@ -337,9 +353,19 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getTheorem_EvaluationExpression()
+  {
+    return (EReference)theoremEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getTheorem_EndName()
   {
-    return (EAttribute)theoremEClass.getEStructuralFeatures().get(6);
+    return (EAttribute)theoremEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -370,6 +396,36 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
   public EReference getRangeDefinition_Set()
   {
     return (EReference)rangeDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVarDeclaration()
+  {
+    return varDeclarationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVarDeclaration_Identifier()
+  {
+    return (EAttribute)varDeclarationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVarDeclaration_Expr()
+  {
+    return (EReference)varDeclarationEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -497,6 +553,36 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getComputeExpression()
+  {
+    return computeExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComputeExpression_Identifier()
+  {
+    return (EAttribute)computeExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getComputeExpression_Name()
+  {
+    return (EAttribute)computeExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getTerminalSelectionExpression()
   {
     return terminalSelectionExpressionEClass;
@@ -507,7 +593,7 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTerminalSelectionExpression_E()
+  public EReference getTerminalSelectionExpression_C()
   {
     return (EReference)terminalSelectionExpressionEClass.getEStructuralFeatures().get(0);
   }
@@ -517,9 +603,19 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTerminalSelectionExpression_R()
+  public EReference getTerminalSelectionExpression_E()
   {
     return (EReference)terminalSelectionExpressionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTerminalSelectionExpression_R()
+  {
+    return (EReference)terminalSelectionExpressionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -978,8 +1074,9 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
     theoremEClass = createEClass(THEOREM);
     createEAttribute(theoremEClass, THEOREM__NAME);
     createEReference(theoremEClass, THEOREM__RANGE_DEFINITION);
-    createEReference(theoremEClass, THEOREM__SET_DECLARATIONS);
     createEReference(theoremEClass, THEOREM__REQUIRED_DEFINITION);
+    createEReference(theoremEClass, THEOREM__VAR_DECLARATIONS);
+    createEReference(theoremEClass, THEOREM__SET_DECLARATIONS);
     createEReference(theoremEClass, THEOREM__VERIFICATION_EXPRESSION);
     createEReference(theoremEClass, THEOREM__EVALUATION_EXPRESSION);
     createEAttribute(theoremEClass, THEOREM__END_NAME);
@@ -987,6 +1084,10 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
     rangeDefinitionEClass = createEClass(RANGE_DEFINITION);
     createEAttribute(rangeDefinitionEClass, RANGE_DEFINITION__ELEMENT);
     createEReference(rangeDefinitionEClass, RANGE_DEFINITION__SET);
+
+    varDeclarationEClass = createEClass(VAR_DECLARATION);
+    createEAttribute(varDeclarationEClass, VAR_DECLARATION__IDENTIFIER);
+    createEReference(varDeclarationEClass, VAR_DECLARATION__EXPR);
 
     setDeclarationEClass = createEClass(SET_DECLARATION);
     createEAttribute(setDeclarationEClass, SET_DECLARATION__SET);
@@ -1003,7 +1104,12 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
     createEAttribute(selectionExpressionEClass, SELECTION_EXPRESSION__OP);
     createEReference(selectionExpressionEClass, SELECTION_EXPRESSION__E2);
 
+    computeExpressionEClass = createEClass(COMPUTE_EXPRESSION);
+    createEAttribute(computeExpressionEClass, COMPUTE_EXPRESSION__IDENTIFIER);
+    createEAttribute(computeExpressionEClass, COMPUTE_EXPRESSION__NAME);
+
     terminalSelectionExpressionEClass = createEClass(TERMINAL_SELECTION_EXPRESSION);
+    createEReference(terminalSelectionExpressionEClass, TERMINAL_SELECTION_EXPRESSION__C);
     createEReference(terminalSelectionExpressionEClass, TERMINAL_SELECTION_EXPRESSION__E);
     createEReference(terminalSelectionExpressionEClass, TERMINAL_SELECTION_EXPRESSION__R);
 
@@ -1101,8 +1207,9 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
     initEClass(theoremEClass, Theorem.class, "Theorem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTheorem_Name(), ecorePackage.getEString(), "name", null, 0, 1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTheorem_RangeDefinition(), this.getRangeDefinition(), null, "rangeDefinition", null, 0, 1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTheorem_SetDeclarations(), this.getSetDeclaration(), null, "setDeclarations", null, 0, -1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTheorem_RequiredDefinition(), this.getRequiredDefinition(), null, "requiredDefinition", null, 0, 1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTheorem_VarDeclarations(), this.getVarDeclaration(), null, "varDeclarations", null, 0, -1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTheorem_SetDeclarations(), this.getSetDeclaration(), null, "setDeclarations", null, 0, -1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTheorem_VerificationExpression(), this.getVerificationExpression(), null, "verificationExpression", null, 0, 1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTheorem_EvaluationExpression(), this.getEvaluationExpression(), null, "evaluationExpression", null, 0, 1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTheorem_EndName(), ecorePackage.getEString(), "endName", null, 0, 1, Theorem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1110,6 +1217,10 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
     initEClass(rangeDefinitionEClass, RangeDefinition.class, "RangeDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRangeDefinition_Element(), ecorePackage.getEString(), "element", null, 0, 1, RangeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getRangeDefinition_Set(), this.getSetExpression(), null, "set", null, 0, 1, RangeDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(varDeclarationEClass, VarDeclaration.class, "VarDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getVarDeclaration_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, VarDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getVarDeclaration_Expr(), this.getTerminalSelectionExpression(), null, "expr", null, 0, 1, VarDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(setDeclarationEClass, SetDeclaration.class, "SetDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSetDeclaration_Set(), ecorePackage.getEString(), "set", null, 0, 1, SetDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1126,8 +1237,13 @@ public class RealPackageImpl extends EPackageImpl implements RealPackage
     initEAttribute(getSelectionExpression_Op(), ecorePackage.getEString(), "op", null, 0, -1, SelectionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSelectionExpression_E2(), this.getTerminalSelectionExpression(), null, "e2", null, 0, -1, SelectionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(computeExpressionEClass, ComputeExpression.class, "ComputeExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComputeExpression_Identifier(), ecorePackage.getEString(), "identifier", null, 0, 1, ComputeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getComputeExpression_Name(), ecorePackage.getEString(), "name", null, 0, -1, ComputeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(terminalSelectionExpressionEClass, TerminalSelectionExpression.class, "TerminalSelectionExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTerminalSelectionExpression_E(), this.getGenericExpression(), null, "e", null, 0, 1, TerminalSelectionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerminalSelectionExpression_C(), this.getComputeExpression(), null, "c", null, 0, 1, TerminalSelectionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTerminalSelectionExpression_E(), this.getTerminalGenericExpression(), null, "e", null, 0, 1, TerminalSelectionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTerminalSelectionExpression_R(), this.getSelectionRelation(), null, "r", null, 0, 1, TerminalSelectionExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(selectionRelationEClass, SelectionRelation.class, "SelectionRelation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -13,8 +13,9 @@
     <genClasses ecoreClass="REAL.ecore#//Theorem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//Theorem/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/rangeDefinition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/setDeclarations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/requiredDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/varDeclarations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/setDeclarations"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/verificationExpression"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//Theorem/evaluationExpression"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//Theorem/endName"/>
@@ -22,6 +23,10 @@
     <genClasses ecoreClass="REAL.ecore#//RangeDefinition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//RangeDefinition/element"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//RangeDefinition/set"/>
+    </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//VarDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//VarDeclaration/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//VarDeclaration/expr"/>
     </genClasses>
     <genClasses ecoreClass="REAL.ecore#//SetDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SetDeclaration/set"/>
@@ -38,7 +43,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//SelectionExpression/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//SelectionExpression/e2"/>
     </genClasses>
+    <genClasses ecoreClass="REAL.ecore#//ComputeExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//ComputeExpression/identifier"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute REAL.ecore#//ComputeExpression/name"/>
+    </genClasses>
     <genClasses ecoreClass="REAL.ecore#//TerminalSelectionExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalSelectionExpression/c"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalSelectionExpression/e"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference REAL.ecore#//TerminalSelectionExpression/r"/>
     </genClasses>

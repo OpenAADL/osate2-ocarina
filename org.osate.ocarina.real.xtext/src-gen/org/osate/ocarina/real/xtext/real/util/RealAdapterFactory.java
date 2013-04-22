@@ -90,6 +90,11 @@ public class RealAdapterFactory extends AdapterFactoryImpl
         return createRangeDefinitionAdapter();
       }
       @Override
+      public Adapter caseVarDeclaration(VarDeclaration object)
+      {
+        return createVarDeclarationAdapter();
+      }
+      @Override
       public Adapter caseSetDeclaration(SetDeclaration object)
       {
         return createSetDeclarationAdapter();
@@ -103,6 +108,11 @@ public class RealAdapterFactory extends AdapterFactoryImpl
       public Adapter caseSelectionExpression(SelectionExpression object)
       {
         return createSelectionExpressionAdapter();
+      }
+      @Override
+      public Adapter caseComputeExpression(ComputeExpression object)
+      {
+        return createComputeExpressionAdapter();
       }
       @Override
       public Adapter caseTerminalSelectionExpression(TerminalSelectionExpression object)
@@ -242,6 +252,21 @@ public class RealAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.osate.ocarina.real.xtext.real.VarDeclaration <em>Var Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.osate.ocarina.real.xtext.real.VarDeclaration
+   * @generated
+   */
+  public Adapter createVarDeclarationAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.osate.ocarina.real.xtext.real.SetDeclaration <em>Set Declaration</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -282,6 +307,21 @@ public class RealAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSelectionExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.osate.ocarina.real.xtext.real.ComputeExpression <em>Compute Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.osate.ocarina.real.xtext.real.ComputeExpression
+   * @generated
+   */
+  public Adapter createComputeExpressionAdapter()
   {
     return null;
   }
