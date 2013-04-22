@@ -167,7 +167,7 @@
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            category="org.osate.internal.ui.preferences.OsatePreferencePage"
+            category="org.osate.ocarina.real.xtext.REAL"
             class="org.osate.ocarina.real.xtext.ui.REALExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
             id="org.osate.ocarina.real.xtext.REAL.compiler.preferencePage"
             name="Compiler">
