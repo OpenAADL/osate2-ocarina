@@ -20,7 +20,8 @@ Require-Bundle: org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe2.launch;resolution:=optional,
  org.eclipse.xtext.xbase;resolution:=optional,
  org.eclipse.xtext.generator;resolution:=optional,
- org.eclipse.xtext
+ org.eclipse.xtext,
+ org.apache.commons.logging;bundle-version="1.0.4"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: org.osate.ocarina.real.xtext,
  org.osate.ocarina.real.xtext.services,
