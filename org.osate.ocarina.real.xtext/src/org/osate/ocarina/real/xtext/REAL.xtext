@@ -8,11 +8,18 @@ Model:
 	theorems+=Theorem*;
 	
 Theorem:
-	'theorem' name=ID rangeDefinition=RangeDefinition (setDeclarations+=SetDeclaration)* (requiredDefinition=RequiredDefinition)?
-	(verificationExpression=VerificationExpression | evaluationExpression=EvaluationExpression) 'end' (endName=ID)? PUNC_SEMI_COLON;
+	'theorem' name=ID rangeDefinition=RangeDefinition 
+	(requiredDefinition=RequiredDefinition)? 
+	(varDeclarations+=VarDeclaration | setDeclarations+=SetDeclaration )*	
+	(verificationExpression=VerificationExpression | evaluationExpression=EvaluationExpression)  
+	'end' (endName=ID)? PUNC_SEMI_COLON;
 
 RangeDefinition:
 	'foreach' element=ID 'in' set=SetExpression 'do';
+
+VarDeclaration:
+	'var' identifier=ID AFFECTATION_OPERATOR expr=TerminalSelectionExpression PUNC_SEMI_COLON
+;
 
 SetDeclaration:
 	set=ID (PUNC_OPEN_PARENTHESIS paramIdentifier=ID PUNC_CLOSE_PARENTHESIS)? AFFECTATION_OPERATOR PUNC_OPEN_BRACE elementBinding=ElementBinding '|' expr=SelectionExpression PUNC_CLOSE_BRACE PUNC_SEMI_COLON;
@@ -23,8 +30,13 @@ ElementBinding:
 SelectionExpression:
 	e1=TerminalSelectionExpression (op+=BooleanOperator e2+=TerminalSelectionExpression)*;
 
+ComputeExpression:
+	'compute' identifier=ID  (PUNC_OPEN_PARENTHESIS name+=ID (PUNC_COMMA name+=ID)* PUNC_CLOSE_PARENTHESIS)?
+;
+
 TerminalSelectionExpression:
-		e=GenericExpression |
+		c=ComputeExpression |
+		e=TerminalGenericExpression |
 		r=SelectionRelation;
 
 SelectionRelation:
@@ -42,7 +54,9 @@ SelectionRelationIdentifier:
 	'Is_Calling' |
 	'Is_Accessed_By' | 
 	'Is_Connecting_To' |
-	'Is_Accessing_To';
+	'Is_Accessing_To'|
+	'Is_In' |
+	'Is_Passing_Through';
 
 SelectionRelationParameter:
 	l=Literal | identifier=ID;
@@ -58,7 +72,8 @@ EvaluationExpression:
 	'return' PUNC_OPEN_PARENTHESIS f=AggregationFunctionIdentifier PUNC_OPEN_PARENTHESIS e=GenericExpression PUNC_CLOSE_PARENTHESIS PUNC_CLOSE_PARENTHESIS PUNC_SEMI_COLON;
 
 GenericExpression:
-	e1=TerminalGenericExpression (op+=GenericOperator e2+=TerminalGenericExpression)*;
+	e1=TerminalGenericExpression (op+=GenericOperator e2+=TerminalGenericExpression)*
+	;
 	
 TerminalGenericExpression:
 	UnaryOperator? (literal=Literal |
@@ -132,7 +147,8 @@ ArithmeticOperator:
 	MINUS | 
 	STAR | 
 	SLASH | 
-	POWER;
+	POWER |
+	'mod';
 
 BooleanOperator:
 	'and' |
@@ -161,7 +177,6 @@ terminal GREATER_EQUAL : '>=';
 terminal GREATER : '>';
 terminal LESS : '<';
 terminal EQUAL : '=';
-
 terminal AFFECTATION_OPERATOR : ':=';
 terminal PUNC_OPEN_BRACE : '{';
 terminal PUNC_CLOSE_BRACE : '}';
