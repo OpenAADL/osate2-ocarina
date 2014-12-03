@@ -49,6 +49,9 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-C Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_c"/>
 			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
+			</command>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
@@ -88,6 +91,9 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-C Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_c"/>
 			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
+			</command>			
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
