@@ -36,6 +36,7 @@
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
 			</command>
 			<separator name="sep3" visible="true"/>
+			<menu label="Code Generation">
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="petri_nets"/>
 			</command>
@@ -52,10 +53,14 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
 			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate ARINC653 Configuration">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="arinc653_conf"/>
+			</command>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
 			<command commandId="org.osate.ocarina.commands.enablebuild" style="toggle" />
+			</menu>
 		</menu>
 	</menuContribution>
 	<menuContribution allPopups="false" locationURI="popup:#TextEditorContext?after=additions">
