@@ -65,6 +65,9 @@
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate ARINC653 Configuration">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="arinc653_conf"/>
 			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate DeOS Configuration">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="deos_conf"/>
+			</command>			
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
