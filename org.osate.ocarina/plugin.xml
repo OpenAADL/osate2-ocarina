@@ -10,6 +10,7 @@
 	   <command id="org.osate.ocarina.commands.checkreal" name="Check REAL Theorems" defaultHandler="org.osate.ocarina.handlers.CheckREALTheoremsHandler"></command>
 	   <command id="org.osate.ocarina.commands.launchocarina" name="Launch Ocarina" defaultHandler="org.osate.ocarina.handlers.LaunchOcarinaHandler">
 	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator" name="Generator"/>
+	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator_options" name="Generator Options"/>
 	   </command>
 	   <command  defaultHandler="org.osate.ocarina.handlers.EnableBuild" id="org.osate.ocarina.commands.enablebuild" 
       		name="Build after Generating code"> 
@@ -49,6 +50,14 @@
 			<separator name="sep4" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-C Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_c"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK/ARINC653 Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator_options" value="no-assert,arinc653"/>
+			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK/DeOS Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator_options" value="no-assert,deos"/>
 			</command>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>

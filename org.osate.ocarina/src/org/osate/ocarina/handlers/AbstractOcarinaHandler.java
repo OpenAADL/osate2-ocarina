@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -58,10 +59,11 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	private String generator;
 	private boolean allowBuildCode;
 	private File ocarinaWorkingDirectory;
-	private SystemImplementation systemImplementation; 
+	private SystemImplementation systemImplementation;
 	private Set<Resource> sourceResources;
+	private List<String> generatorOptions;
 	private boolean automaticallyShowConsole = true;
-	
+
 	// Results from the last execution of launchCommand()
 	private int retVal;
 	private List<String> output;
@@ -71,34 +73,40 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		this.jobName = jobName;
 		this.generator = generator;
 		this.allowBuildCode = allowBuildCode;
+		this.generatorOptions = new ArrayList<String>();
 	}
-	
+
+	public void addGeneratorOption(String opt) {
+		if (!this.generatorOptions.contains(opt)) {
+			this.generatorOptions.add(opt);
+		}
+	}
+
 	protected void setGenerator(String value) {
 		this.generator = value;
+		this.generatorOptions = new ArrayList<String>();
 	}
-	
+
 	protected void setAllowBuildCode(boolean value) {
 		this.allowBuildCode = value;
 	}
-	
+
 	// Helper method that returns the path to the cheddar project file generated
 	// by Ocarina
 	protected String getCheddarProjectFilepath() {
-		return ocarinaWorkingDirectory().getAbsolutePath()
-				+ File.separatorChar
-				+ systemImplementation.getName().toLowerCase()
-						.replace('.', '_') + "_cheddar.xml";
+		return ocarinaWorkingDirectory().getAbsolutePath() + File.separatorChar
+				+ systemImplementation.getName().toLowerCase().replace('.', '_') + "_cheddar.xml";
 	}
 
 	// Used to get values set during execute()
 	protected final File ocarinaWorkingDirectory() {
 		return this.ocarinaWorkingDirectory;
 	}
-	
+
 	protected final SystemImplementation systemImplementation() {
 		return this.systemImplementation;
 	}
-	
+
 	protected final Set<Resource> sourceResources() {
 		return this.sourceResources;
 	}
@@ -114,28 +122,27 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	protected final List<String> errors() {
 		return this.errors;
 	}
-	
+
 	protected void handleOcarinaResults() {
 	}
 
 	protected final void setAutomaticallyShowConsole(boolean value) {
 		this.automaticallyShowConsole = value;
 	}
-	
+
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		if(generator == null) {
+		if (generator == null) {
 			throw new RuntimeException("Generator is null");
 		}
-		
+
 		final IWorkbench wb = PlatformUI.getWorkbench();
 		final IWorkbenchWindow window = wb.getActiveWorkbenchWindow();
-		if(!Utils.checkOcarina(window)) {
+		if (!Utils.checkOcarina(window)) {
 			return null;
 		}
-		
-		this.systemImplementation = SelectionHelper
-				.getSelectedSystemImplementation();
+
+		this.systemImplementation = SelectionHelper.getSelectedSystemImplementation();
 		if (this.systemImplementation != null) {
 			// Get the project that contains the system implementation
 			final URI uri = systemImplementation.eResource().getURI();
@@ -143,7 +150,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			final IResource projectResource = ResourcesPlugin.getWorkspace().getRoot().findMember(projectPath);
 			this.ocarinaWorkingDirectory = new File(projectResource.getLocation().toFile(), "ocarina_out");
 			this.ocarinaWorkingDirectory.mkdir();
-			
+
 			onBeforeStartJob();
 
 			// Create a job to run the analysis
@@ -155,7 +162,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 					// Remove all markers from the source resources
 					resetMarkers();
-					
+
 					// Launch Ocarina
 					try {
 						launchOcarina();
@@ -178,11 +185,10 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			job.setPriority(Job.LONG);
 			job.schedule();
 		} else {
-			MessageDialog.openError(window.getShell(),
-					PreferenceConstants.PLUGIN_ID,
+			MessageDialog.openError(window.getShell(), PreferenceConstants.PLUGIN_ID,
 					"Please select a System Implementation");
 		}
-		
+
 		return null;
 	}
 
@@ -191,40 +197,46 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		List<String> cmd = new LinkedList<String>();
 		cmd.add(Utils.getOcarinaExecutablePath());
 		cmd.addAll(getOcarinaArguments());
-		
-		Utils.ocarinaDebug ("cmd run : " + cmd.toString());
+
+		Utils.ocarinaDebug("cmd run : " + cmd.toString());
 
 		launchCommand(cmd, ocarinaWorkingDirectory());
 	}
-	
+
 	protected List<String> getOcarinaArguments() {
 		List<String> args = new LinkedList<String>();
+
+		for (String generatorOption : this.generatorOptions) {
+			System.out.println("prout" + generatorOption);
+			args.add("-k");
+			args.add(generatorOption);
+		}
+
 		args.add("-aadlv2");
-		
-		if(allowBuildCode && EnableBuild.buildEnabled) {
+
+		if (allowBuildCode && EnableBuild.buildEnabled) {
 			args.add("-b");
 		}
-		
+
 		args.add("-g");
 		args.add(generator);
 		args.add("-r");
 		args.add(systemImplementation.getName());
-		
+
 		// Need to get paths to all the AADL files.
 		for (Resource srcResource : sourceResources) {
 			if (srcResource != null) {
 				args.add(getAbsoluteSourceFilepath(srcResource));
 			}
 		}
-		
+
 		return args;
 	}
-	
+
 	// Removes all markers from the source resources
-	private final void resetMarkers()	{
-		for(Resource srcResource : sourceResources) {
-			if (srcResource != null)
-			{
+	private final void resetMarkers() {
+		for (Resource srcResource : sourceResources) {
+			if (srcResource != null) {
 				IResource res = getIResource(srcResource);
 				try {
 					IMarker[] markers = res.findMarkers(IMarker.PROBLEM, true, IResource.DEPTH_INFINITE);
@@ -243,8 +255,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	// orignalModelUnits may be null
 	private static Set<ModelUnit> getMinimalModelUnitSet(ModelUnit p, Set<ModelUnit> originalModelUnits) {
 		final Set<ModelUnit> modelUnits = originalModelUnits == null ? new HashSet<ModelUnit>() : originalModelUnits;
-		if(!modelUnits.contains(p))
-		{
+		if (!modelUnits.contains(p)) {
 			modelUnits.add(p);
 
 			AadlProcessingSwitch s = new AadlProcessingSwitch() {
@@ -261,9 +272,9 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 						}
 					};
 				}
-	
+
 			};
-	
+
 			s.defaultTraversal(p);
 		}
 
@@ -279,8 +290,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 			// Convert to filenames
 			for (ModelUnit m : closure) {
-				if (m.eResource() != null)
-				{
+				if (m.eResource() != null) {
 					resources.add(m.eResource());
 				}
 			}
@@ -293,20 +303,19 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		final IResource resource = getIResource(r);
 		return Utils.getAbsoluteFilepath(resource);
 	}
-	
+
 	private static IResource getIResource(Resource r) {
 		final URI uri = r.getURI();
 		final IPath path = new Path(uri.toPlatformString(true));
 		final IResource resource = ResourcesPlugin.getWorkspace().getRoot().findMember(path);
-		if(resource == null) {
+		if (resource == null) {
 			throw new RuntimeException("Unable to get IResource for Resource: " + r);
 		}
 		return resource;
 	}
 
 	// If workingDirectory is null, then it is not set
-	protected final void launchCommand(List<String> cmd, File workingDirectory)
-			throws InterruptedException {
+	protected final void launchCommand(List<String> cmd, File workingDirectory) throws InterruptedException {
 		retVal = -1000;
 		output = new LinkedList<String>();
 		errors = new LinkedList<String>();
@@ -315,19 +324,13 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 		// Redirect stderr to stdout
 		pb.redirectErrorStream(true);
-		
+
 		// Update PATH variable to include external tools used by
 		// the plug-in
-		pb.environment().put(
-				"PATH",
-				PreferencesValues.getGCC_PATH()
-						+ File.pathSeparator
-						+ pb.environment().get("PATH"));
-		pb.environment().put(
-				"PATH",
-				PreferencesValues.getCHEDDAR_PATH()
-						+ File.pathSeparator
-						+ pb.environment().get("PATH"));
+		pb.environment().put("PATH",
+				PreferencesValues.getGCC_PATH() + File.pathSeparator + pb.environment().get("PATH"));
+		pb.environment().put("PATH",
+				PreferencesValues.getCHEDDAR_PATH() + File.pathSeparator + pb.environment().get("PATH"));
 
 		// Set working directory
 		if (workingDirectory != null) {
@@ -340,13 +343,11 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		try {
 			Process process = pb.start();
 
-			BufferedReader reader = new BufferedReader(new InputStreamReader(
-					process.getInputStream()));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 
-			for (String line = reader.readLine(); line != null; line = reader
-					.readLine()) {
+			for (String line = reader.readLine(); line != null; line = reader.readLine()) {
 				output.add(line);
-				Utils.ocarinaDebug ("command output: " + line);
+				Utils.ocarinaDebug("command output: " + line);
 			}
 
 			retVal = process.waitFor();
@@ -373,8 +374,8 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		final MessageConsole console = Utils.findConsole("ocarina");
 		console.addPatternMatchListener(new AadlFilenamePatternMatchListener());
 		console.clearConsole();
-		
-		if(automaticallyShowConsole) {
+
+		if (automaticallyShowConsole) {
 			showConsole();
 		}
 
@@ -389,6 +390,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		final MessageConsole console = Utils.findConsole("ocarina");
 		Utils.showConsole(console);
 	}
+
 	private final void onAfterLaunchCommand() {
 		for (String error : errors()) {
 			err.println(error);
@@ -398,30 +400,32 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			handleOutputLine(line);
 		}
 	}
-	
+
 	// Error/warnings messages are of the form
 	// <filename>:<line>:<col> message
 	// and hold the string "Warning" or "Error"
 	private final Pattern warningErrorPattern = Pattern.compile("(.+):([0-9]+):([0-9]+):?\\s+(.+)");
-	
+
 	private final void handleOutputLine(String line) {
 		Matcher m = warningErrorPattern.matcher(line);
-		
-		if (m.find()) {			
+
+		if (m.find()) {
 			String filename = m.group(1);
 			int lineNumber = Integer.parseInt(m.group(2));
-			//int colNumber = Integer.parseInt(m.group(3));
+			// int colNumber = Integer.parseInt(m.group(3));
 			String msg = m.group(4);
-			
+
 			// Determine the severity
 			int severity = IMarker.SEVERITY_INFO;
-			if(msg.toLowerCase().contains("error")) severity = IMarker.SEVERITY_ERROR;
-			else if(msg.toLowerCase().contains("warning")) severity = IMarker.SEVERITY_WARNING;
-			
+			if (msg.toLowerCase().contains("error"))
+				severity = IMarker.SEVERITY_ERROR;
+			else if (msg.toLowerCase().contains("warning"))
+				severity = IMarker.SEVERITY_WARNING;
+
 			// Find the resource and create a marker
-			for(Resource r : sourceResources) {
+			for (Resource r : sourceResources) {
 				IResource res = getIResource(r);
-				if(filename.equals(res.getName())) {
+				if (filename.equals(res.getName())) {
 					IMarker marker;
 					try {
 						marker = res.createMarker(IMarker.PROBLEM);
@@ -435,14 +439,13 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 				}
 			}
 		}
-		
+
 		out().println(line);
 	}
-	
-	private class AadlFilenamePatternMatchListener implements IPatternMatchListener
-	{
+
+	private class AadlFilenamePatternMatchListener implements IPatternMatchListener {
 		private TextConsole console;
-		
+
 		@Override
 		public void connect(TextConsole console) {
 			this.console = console;
@@ -461,16 +464,15 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 				final String[] segs = str.split(":");
 				final String filename = segs[0];
 				int lineNumber = 0;
-				if(segs.length > 1) {
-					lineNumber = Integer.parseInt(segs[1]); 
+				if (segs.length > 1) {
+					lineNumber = Integer.parseInt(segs[1]);
 				}
 
-				for(Resource res : sourceResources())
-				{
+				for (Resource res : sourceResources()) {
 					IResource ires = getIResource(res);
-					if(ires instanceof IFile && ires.getName().equals(filename))
-					{
-						console.addHyperlink(new FileLink((IFile)ires, null, -1, -1, lineNumber), event.getOffset(), event.getLength());
+					if (ires instanceof IFile && ires.getName().equals(filename)) {
+						console.addHyperlink(new FileLink((IFile) ires, null, -1, -1, lineNumber), event.getOffset(),
+								event.getLength());
 						break;
 					}
 				}
@@ -494,6 +496,6 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		public String getLineQualifier() {
 			return null;
 		}
-		
+
 	};
 }
