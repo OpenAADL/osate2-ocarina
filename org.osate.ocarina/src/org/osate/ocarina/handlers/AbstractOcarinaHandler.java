@@ -207,7 +207,6 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		List<String> args = new LinkedList<String>();
 
 		for (String generatorOption : this.generatorOptions) {
-			System.out.println("prout" + generatorOption);
 			args.add("-k");
 			args.add(generatorOption);
 		}
