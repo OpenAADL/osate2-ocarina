@@ -20,8 +20,11 @@
    </extension>
 	
    <extension point="org.eclipse.ui.menus">
-	<menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">		
-		<menu id="org.osate.ocarina.menu" label="Ocarina">
+	<menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">	
+		<menu
+               id="menu.osate"
+               label="OSATE">		
+		<menu id="org.osate.ocarina.menu" label="Ocarina Bridge">
 			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
 			<separator name="sep1" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
@@ -37,7 +40,6 @@
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
 			</command>
 			<separator name="sep3" visible="true"/>
-			<menu label="Code Generation">
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="petri_nets"/>
 			</command>
@@ -72,6 +74,7 @@
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
 			<command commandId="org.osate.ocarina.commands.enablebuild" style="toggle" />
+			
 			</menu>
 		</menu>
 	</menuContribution>
