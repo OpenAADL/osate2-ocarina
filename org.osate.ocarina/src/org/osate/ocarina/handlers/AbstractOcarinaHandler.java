@@ -204,6 +204,8 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 	}
 
 	protected List<String> getOcarinaArguments() {
+		String outputPath = null;
+
 		List<String> args = new LinkedList<String>();
 
 		for (String generatorOption : this.generatorOptions) {
@@ -222,9 +224,26 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		args.add("-r");
 		args.add(systemImplementation.getName());
 
+		// Try to find the outputPath
+		for (Resource srcResource : sourceResources) {
+			if (srcResource != null) {
+				if (!srcResource.getURI().toString().contains("Plugin_Resources")) {
+					outputPath = getIResource(srcResource).getLocation().toFile().getParentFile().getAbsolutePath();
+				}
+			}
+		}
+
+		if (outputPath != null) {
+			args.add("-o");
+			args.add(outputPath);
+		}
+
 		// Need to get paths to all the AADL files.
 		for (Resource srcResource : sourceResources) {
 			if (srcResource != null) {
+				if (!srcResource.getURI().toString().contains("Plugin_Resources")) {
+					outputPath = getIResource(srcResource).getLocation().toFile().getParentFile().getAbsolutePath();
+				}
 				args.add(getAbsoluteSourceFilepath(srcResource));
 			}
 		}
