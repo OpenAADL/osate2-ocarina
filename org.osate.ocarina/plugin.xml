@@ -61,6 +61,10 @@
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator_options" value="no-assert,deos"/>
 			</command>
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK/VxWorks Code">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator_options" value="no-assert,vxworks653"/>
+			</command>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate POK Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="pok_c"/>
 			</command>
@@ -69,7 +73,10 @@
 			</command>
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate DeOS Configuration">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="deos_conf"/>
-			</command>			
+			</command>		
+			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate VxWorks653 Configuration">
+				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="vxworks653_conf"/>
+			</command>		
 			<command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate PolyORB-HI-Ada Code">
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
