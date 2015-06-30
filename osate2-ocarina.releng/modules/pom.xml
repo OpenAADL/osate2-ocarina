@@ -14,17 +14,13 @@
 	<version>2.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<properties>
-		<plugins.root>../..</plugins.root>
-	</properties>
-
 	<modules>
-		<module>${plugins.root}/org.osate.ocarina</module>
-		<module>${plugins.root}/org.osate.ocarina.aadlcontribution</module>
-		<module>${plugins.root}/org.osate.ocarina.feature</module>
-		<module>${plugins.root}/org.osate.ocarina.help</module>
-		<module>${plugins.root}/org.osate.ocarina.real.xtext</module>
-		<module>${plugins.root}/org.osate.ocarina.real.xtext.ui</module>
+		<module>../../org.osate.ocarina</module>
+		<module>../../org.osate.ocarina.aadlcontribution</module>
+		<module>../../org.osate.ocarina.feature</module>
+		<module>../../org.osate.ocarina.help</module>
+		<module>../../org.osate.ocarina.real.xtext</module>
+		<module>../../org.osate.ocarina.real.xtext.ui</module>
 	</modules>
 
 </project>
