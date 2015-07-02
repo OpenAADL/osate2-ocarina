@@ -15,6 +15,7 @@
 	<packaging>pom</packaging>
 
 	<modules>
+		<module>..</module>
 		<module>../../org.osate.ocarina</module>
 		<module>../../org.osate.ocarina.aadlcontribution</module>
 		<module>../../org.osate.ocarina.feature</module>
