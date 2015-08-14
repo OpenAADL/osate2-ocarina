@@ -7,7 +7,6 @@
 	   <command id="org.osate.ocarina.commands.runschedulingtests" name="Run Scheduling Tests using Cheddar" defaultHandler="org.osate.ocarina.handlers.RunSchedulingTestsHandler"></command>
 	   <command id="org.osate.ocarina.commands.computepriority" name="Compute Scheduling Priorities using Cheddar" defaultHandler="org.osate.ocarina.handlers.ComputePrioritiesHandler"></command>
 	   <command id="org.osate.ocarina.commands.runmastanalysis" name="Run MAST Analysis" defaultHandler="org.osate.ocarina.handlers.RunMASTAnalysisHandler"></command>
-	   <command id="org.osate.ocarina.commands.checkreal" name="Check REAL Theorems" defaultHandler="org.osate.ocarina.handlers.CheckREALTheoremsHandler"></command>
 	   <command id="org.osate.ocarina.commands.launchocarina" name="Launch Ocarina" defaultHandler="org.osate.ocarina.handlers.LaunchOcarinaHandler">
 	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator" name="Generator"/>
 	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator_options" name="Generator Options"/>
@@ -25,8 +24,6 @@
                id="menu.osate"
                label="OSATE">		
 		<menu id="org.osate.ocarina.menu" label="Ocarina Bridge">
-			<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
-			<separator name="sep1" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
@@ -90,8 +87,6 @@
 	</menuContribution>
 	<menuContribution allPopups="false" locationURI="popup:org.osate.xtext.aadl2.ui.outline?after=additions">
 		<menu id="org.osate.ocarina.menu" label="Ocarina">
-						<command commandId="org.osate.ocarina.commands.checkreal" style="push"/>
-			<separator name="sep1" visible="true"/>
 			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>

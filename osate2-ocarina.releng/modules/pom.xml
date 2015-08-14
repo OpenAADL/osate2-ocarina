@@ -20,8 +20,6 @@
 		<module>../../org.osate.ocarina.aadlcontribution</module>
 		<module>../../org.osate.ocarina.feature</module>
 		<module>../../org.osate.ocarina.help</module>
-		<module>../../org.osate.ocarina.real.xtext</module>
-		<module>../../org.osate.ocarina.real.xtext.ui</module>
 	</modules>
 
 </project>
