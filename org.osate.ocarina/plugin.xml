@@ -208,25 +208,4 @@
    </extension>
    
 
-    <extension
-          point="org.eclipse.ui.views">
-       <view
-             category="aadl.view_category"
-             class="org.osate.ocarina.views.REALResultsView"
-             id="org.osate.ocarina.views.REALResultsView"
-             name="REAL Results">
-       </view>
-    </extension>
-    <extension
-          point="org.eclipse.ui.perspectiveExtensions">
-       <perspectiveExtension
-             targetID="org.osate.ui.perspective.AadlPerspective">
-          <view
-                id="org.osate.ocarina.views.REALResultsView"
-                ratio="0.5"
-                relationship="stack"
-                relative="org.eclipse.ui.views.ProblemView">
-          </view>
-       </perspectiveExtension>
-    </extension>
 </plugin>
