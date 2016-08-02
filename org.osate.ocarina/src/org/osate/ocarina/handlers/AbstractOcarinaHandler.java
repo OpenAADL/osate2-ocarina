@@ -49,9 +49,11 @@ import org.osate.aadl2.PackageSection;
 import org.osate.aadl2.SystemImplementation;
 import org.osate.aadl2.modelsupport.modeltraversal.AadlProcessingSwitch;
 import org.osate.aadl2.util.Aadl2Switch;
+import org.osate.aadl2.util.OsateDebug;
 import org.osate.ocarina.PreferenceConstants;
 import org.osate.ocarina.PreferencesValues;
 import org.osate.ocarina.Utils;
+import org.osate.ocarina.util.FileHelper;
 import org.osate.ocarina.util.SelectionHelper;
 
 public abstract class AbstractOcarinaHandler extends AbstractHandler {
@@ -201,6 +203,20 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		Utils.ocarinaDebug("cmd run : " + cmd.toString());
 
 		launchCommand(cmd, ocarinaWorkingDirectory());
+		
+		postExecution (cmd);
+	}
+	
+	protected final void postExecution (List<String> cmd)
+	{
+		boolean usesPok = cmd.stream().anyMatch(s -> s.equalsIgnoreCase("pok_c"));
+		if (usesPok)
+		{
+			int i = cmd.indexOf("-o");
+			String outputDirectory = cmd.get(i + 1);
+			OsateDebug.osateDebug("output=" + outputDirectory);
+			FileHelper.updatePokMakefile(outputDirectory  + File.separatorChar + "generated-code");
+		}
 	}
 
 	protected List<String> getOcarinaArguments() {
