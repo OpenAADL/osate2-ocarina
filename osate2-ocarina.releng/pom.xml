@@ -13,11 +13,4 @@
 	<artifactId>osate2-ocarina.parent</artifactId>
 	<packaging>pom</packaging>
 	<version>2.2.2-SNAPSHOT</version>
-	<repositories>
-		<repository>
-			<id>eclipse-orbit-repo</id>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160221192158/repository/</url>
-			<layout>p2</layout>
-		</repository>
-	</repositories>
 </project>
