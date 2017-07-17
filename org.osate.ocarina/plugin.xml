@@ -19,13 +19,13 @@
    </extension>
 	
    <extension point="org.eclipse.ui.menus">
-	<menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=additions">	
-		<menu
-               id="menu.osate"
-               label="OSATE">		
-		<menu id="org.osate.ocarina.menu" label="Ocarina Bridge">
-			<command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
-			<command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
+      <menuContribution
+            locationURI="menu:org.osate.ui.osateMenu?before=org.osate.ui.reinstantiateAllAadl">
+         <menu
+               id="org.osate.ocarina.ocarinaBridgeMenu"
+               label="Ocarina Bridge">
+            <command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
+            <command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
 			<command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
 			<separator name="sep2" visible="true"/>
@@ -78,10 +78,12 @@
 				<parameter name="org.osate.ocarina.commands.launchocarina.generator" value="polyorb_hi_ada"/>
 			</command>
 			<command commandId="org.osate.ocarina.commands.enablebuild" style="toggle" />
-			
-			</menu>
-		</menu>
-	</menuContribution>
+         </menu>
+         <separator
+               name="org.osate.ocarina.separator1"
+               visible="true">
+         </separator>
+      </menuContribution>
 	<menuContribution allPopups="false" locationURI="popup:#TextEditorContext?after=additions">
 		<menu id="org.osate.ocarina.menu" label="Ocarina"/>
 	</menuContribution>
