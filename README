@@ -4,11 +4,6 @@ Description
 This is an Ocarina plugin for OSATE 2.
 
 =============================================================================
-Installation - Update Site
-=============================================================================
-An eclipse update site is available at: https://raw.github.com/yoogx/osate2-ocarina/master/org.osate.ocarina.update/
-
-=============================================================================
 Requirements
 =============================================================================
 OSATE 2
