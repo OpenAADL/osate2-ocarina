@@ -1,13 +1,5 @@
-=============================================================================
-Description
-=============================================================================
-This is an Ocarina plugin for OSATE 2.
+# OSATE2 Ocarina plugin
 
-=============================================================================
-Requirements
-=============================================================================
-OSATE 2
-Ocarina - A recent version from the TASTE project is recommended. Available at http://www.assert-project.net/taste
-Cheddar - Needed to open generated cheddar project files.
-cheddarlite - Needed to initiate analysis from OSATE2.
-MAST - Needed to initate MAST analysis from OSATE2
+This plug-in adds [Ocarina](https://github.com/openaadl/ocarina) features to OSATE. It is now part of default OSATE2 installation.
+
+See http://www.openaadl.org/osate-ocarina.html for a quick installation/configuration guide.
