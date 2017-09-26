@@ -1,4 +1,3 @@
--- Provided by OSATE 2 - Ocarina plugin. Copied from Ocarina resources.
 property set Deployment is
 
   Allowed_Transport_APIs : type enumeration
@@ -15,12 +14,6 @@ property set Deployment is
   Port_Number : aadlinteger applies to (process, device);
   --  IP port number of a process (BSD_Sockets specific)
 
-  Process_ID : aadlinteger applies to (process, device);
-  --  Process identifier (SpaceWire specific)
-
-  Channel_Address : aadlinteger applies to (process, device);
-  --  Communication channel address (SpaceWire specific)
-
   Protocol_Type : type enumeration (iiop, diop);
   --  Supported communication protocols
   Protocol : Deployment::Protocol_Type applies to (system);
@@ -28,10 +21,11 @@ property set Deployment is
   Allowed_Execution_Platform : type enumeration
    (Native,                   -- Native platforms (GNU/Linux, Solaris, Windows...)
     Native_Compcert,          -- Native platforms using the Compcert compiler
-    sel4,
     bench,                    -- Benchmark platform (native with instrumentation).
+    GNAT_Runtime,             -- Use a GNAT Runtime, e.g. from the Ada_Drivers_Library
     LEON_RTEMS,               -- LEON2 board or tsim-leon (RTEMS)
     LEON_RTEMS_POSIX,         -- LEON2 board or tsim-leon (RTEMS)
+    LEON3_SCOC3,              -- LEON3 with RTEMS for SCOC3
     LEON3_XTRATUM,            -- LEON3 with Xtratum
     LEON3_XM3,                -- RTEMS for XTRATUM/LEON3
     LEON_ORK,                 -- LEON2 board or tsim-leon (ORK)
@@ -49,13 +43,24 @@ property set Deployment is
     X86_RTEMS_POSIX,          -- x86 under RTEMS with POSIX layer
     X86_LINUXTASTE,           -- TASTE-specific linux distribution
     MARTE_OS,                 -- MaRTE OS
-    VXWORKS                   -- VXWORKS
+    WIN32,                    -- WIN32
+    VXWORKS,                  -- VXWORKS
+    FREERTOS                  -- FREERTOS
     );
   --  Supported platforms
 
   Execution_Platform : Deployment::Allowed_Execution_Platform
     applies to (all);
   --  Execution platform of a processor
+
+  Ada_Runtime : aadlstring applies to (processor);
+  --  If Execution_Platform is set to GNAT_Runtime, this property
+  --  points to the name of the GNAT Project file that configures the
+  --  Ada_Runtime, e.g. from the Ada Device Drivers project.
+
+  USER_CFLAGS : aadlstring applies to (processor);
+  USER_LDFLAGS : aadlstring applies to (processor);
+  --  User defined CFLAGS and LDFLAGS
 
   Supported_Execution_Platform : list of Deployment::Allowed_Execution_Platform
     applies to (device);
@@ -77,7 +82,7 @@ property set Deployment is
 
   Driver_Name : aadlstring applies to (device);
 
-  Configuration : aadlstring applies to (device);
+  Configuration : aadlstring applies to (device, thread);
 
   Config : aadlstring applies to (device);
 
