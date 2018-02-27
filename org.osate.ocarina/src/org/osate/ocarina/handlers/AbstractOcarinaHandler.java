@@ -235,6 +235,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 			args.add("-b");
 		}
 
+		args.add("-f");
 		args.add("-g");
 		args.add(generator);
 		args.add("-r");
@@ -243,7 +244,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		// Try to find the outputPath
 		for (Resource srcResource : sourceResources) {
 			if (srcResource != null) {
-				if (!srcResource.getURI().toString().contains("Plugin_Resources")) {
+				if (!srcResource.getURI().toString().contains("org.osate.ocarina.aadlcontribution")) {
 					outputPath = getIResource(srcResource).getLocation().toFile().getParentFile().getAbsolutePath();
 				}
 			}
@@ -257,10 +258,9 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		// Need to get paths to all the AADL files.
 		for (Resource srcResource : sourceResources) {
 			if (srcResource != null) {
-				if (!srcResource.getURI().toString().contains("Plugin_Resources")) {
-					outputPath = getIResource(srcResource).getLocation().toFile().getParentFile().getAbsolutePath();
+				if (!srcResource.getURI().toString().contains("org.osate.ocarina.aadlcontribution")) {
+					args.add(getAbsoluteSourceFilepath(srcResource));
 				}
-				args.add(getAbsoluteSourceFilepath(srcResource));
 			}
 		}
 
@@ -306,7 +306,6 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 						}
 					};
 				}
-
 			};
 
 			s.defaultTraversal(p);
@@ -324,7 +323,8 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 			// Convert to filenames
 			for (ModelUnit m : closure) {
-				if (m.eResource() != null) {
+				if (m.eResource() != null
+						&& !m.eResource().getURI().toString().contains("org.osate.ocarina.aadlcontribution")) {
 					resources.add(m.eResource());
 				}
 			}
