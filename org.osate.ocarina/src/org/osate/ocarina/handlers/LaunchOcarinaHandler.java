@@ -27,7 +27,7 @@ public class LaunchOcarinaHandler extends AbstractOcarinaHandler {
 		String generatorOptions = e.getParameter("org.osate.ocarina.commands.launchocarina.generator_options");
 
 		if (generator == null) {
-			throw new RuntimeException("Unable to retrive generator argument");
+			throw new RuntimeException("Unable to retrieve generator argument");
 		}
 
 		this.setGenerator(generator);
