@@ -4,3 +4,4 @@ Bundle-Name: Aadlcontribution
 Bundle-SymbolicName: org.osate.ocarina.aadlcontribution;singleton:=true
 Bundle-Version: 0.0.1.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Automatic-Module-Name: org.osate.ocarina.aadlcontribution
