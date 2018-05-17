@@ -20,6 +20,7 @@
 		<module>../../org.osate.ocarina.aadlcontribution</module>
 		<module>../../org.osate.ocarina.feature</module>
 		<module>../../org.osate.ocarina.help</module>
+		<module>../../org.osate.ocarina.repository</module>
 	</modules>
 
 </project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="org.osate.ocarina.feature">
+      <category name="ocarina"/>
+   </feature>
+   <feature id="org.osate.ocarina.feature.source">
+      <category name="ocarina.source"/>
+   </feature>
+   <category-def name="ocarina" label="Ocarina Plugin for OSATE2">
+      <description>
+         OCarina Plugin for OSATE2
+      </description>
+   </category-def>
+   <category-def name="ocarina.source" label="Ocarina Plugin for OSATE2 Source Code">
+      <category name="osate2"/>
+   </category-def>
+</site>
