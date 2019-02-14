@@ -2,11 +2,6 @@
 <?eclipse version="3.2"?>
 <plugin>
    <extension point="org.eclipse.ui.commands">
-	   <command id="org.osate.ocarina.commands.launchcheddar" name="Launch Cheddar" defaultHandler="org.osate.ocarina.handlers.LaunchCheddarHandler"></command>
-	   <command id="org.osate.ocarina.commands.runbasictests" name="Run Basic Scheduling Feasibility Tests using Cheddar" defaultHandler="org.osate.ocarina.handlers.RunBasicFeasibilityTestsHandler"></command>
-	   <command id="org.osate.ocarina.commands.runschedulingtests" name="Run Scheduling Tests using Cheddar" defaultHandler="org.osate.ocarina.handlers.RunSchedulingTestsHandler"></command>
-	   <command id="org.osate.ocarina.commands.computepriority" name="Compute Scheduling Priorities using Cheddar" defaultHandler="org.osate.ocarina.handlers.ComputePrioritiesHandler"></command>
-	   <command id="org.osate.ocarina.commands.runmastanalysis" name="Run MAST Analysis" defaultHandler="org.osate.ocarina.handlers.RunMASTAnalysisHandler"></command>
 	   <command id="org.osate.ocarina.commands.launchocarina" name="Launch Ocarina" defaultHandler="org.osate.ocarina.handlers.LaunchOcarinaHandler">
 	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator" name="Generator"/>
 	   <commandParameter id="org.osate.ocarina.commands.launchocarina.generator_options" name="Generator Options"/>
@@ -21,19 +16,6 @@
    <extension point="org.eclipse.ui.menus">
       <menuContribution
             locationURI="menu:org.osate.ui.ocarinaMenu?after=core">
-         <command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
-         <command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
-         <command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
-         <command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
-         <separator name="sep2" visible="true"/>
-         <command commandId="org.osate.ocarina.commands.runmastanalysis" style="push"/>
-         <command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
-            <parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
-         </command>
-         <command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
-            <parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
-         </command>
-         <separator name="sep3" visible="true"/>
          <command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
             <parameter name="org.osate.ocarina.commands.launchocarina.generator" value="petri_nets"/>
          </command>
@@ -81,17 +63,8 @@
 	</menuContribution>
 	<menuContribution
           locationURI="popup:org.osate.ui.ocarinaOutlinePopup?after=core">
-       <command commandId="org.osate.ocarina.commands.launchcheddar" style="push"/>
-       <command commandId="org.osate.ocarina.commands.runbasictests" style="push"/>
-       <command commandId="org.osate.ocarina.commands.runschedulingtests" style="push"/>
-       <command commandId="org.osate.ocarina.commands.computepriority" style="push"/>
-       <separator name="sep2" visible="true"/>
-       <command commandId="org.osate.ocarina.commands.runmastanalysis" style="push"/>
        <command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate MAST Model">
           <parameter name="org.osate.ocarina.commands.launchocarina.generator" value="mast"/>
-       </command>
-       <command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate CARTS File">
-          <parameter name="org.osate.ocarina.commands.launchocarina.generator" value="carts"/>
        </command>
        <separator name="sep3" visible="true"/>
        <command commandId="org.osate.ocarina.commands.launchocarina" style="push" label="Generate Petri Nets">
@@ -168,14 +141,6 @@
    <extension
          id="org.osate.ocarina.MAST"
          name="MAST Path"
-         point="org.eclipse.core.runtime.preferences">
-          <initializer
-            class="org.osate.ocarina.PreferenceInitializer">
-      </initializer>
-   </extension>
-   <extension
-         id="org.osate.ocarina.CHEDDAR"
-         name="Cheddar Path"
          point="org.eclipse.core.runtime.preferences">
           <initializer
             class="org.osate.ocarina.PreferenceInitializer">
