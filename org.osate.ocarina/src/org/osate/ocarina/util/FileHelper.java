@@ -26,7 +26,7 @@ public class FileHelper {
 		try {
 			List<String> lines;
 
-			lines = FileUtils.readLines(makefile, null);
+			lines = FileUtils.readLines(makefile, (String) null);
 
 			List<String> newContent = new ArrayList<String>();
 
