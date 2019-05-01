@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('Get Sources') { 
-            steps {
-                git url: 'https://github.com/OpenAADL/osate2-ocarina', branch: 'master', changelog: true
-            }
-        }
         stage('Build') {
             steps {
                 withMaven(
