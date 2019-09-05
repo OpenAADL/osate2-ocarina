@@ -2,7 +2,6 @@
 <?eclipse version="3.2"?>
 <plugin>
    <extension point="org.osate.pluginsupport.aadlcontribution">
-      <aadlcontribution file="resources/properties/Cheddar_Properties.aadl" id="org.ocarina.aadlcontribution.cheddarproperties"/>
       <aadlcontribution file="resources/properties/deployment.aadl" id="org.ocarina.aadlcontribution.deployment"/>
       <aadlcontribution file="resources/properties/pok_properties.aadl" id="org.ocarina.aadlcontribution.pok"/>
    </extension>
