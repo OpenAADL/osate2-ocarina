@@ -203,10 +203,10 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		Utils.ocarinaDebug("cmd run : " + cmd.toString());
 
 		launchCommand(cmd, ocarinaWorkingDirectory());
-		
+
 		postExecution (cmd);
 	}
-	
+
 	protected final void postExecution (List<String> cmd)
 	{
 		boolean usesPok = cmd.stream().anyMatch(s -> s.equalsIgnoreCase("pok_c"));
@@ -236,6 +236,7 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 		}
 
 		args.add("-f");
+		args.add("-disable-annexes=emv2");
 		args.add("-g");
 		args.add(generator);
 		args.add("-r");
@@ -457,10 +458,11 @@ public abstract class AbstractOcarinaHandler extends AbstractHandler {
 
 			// Determine the severity
 			int severity = IMarker.SEVERITY_INFO;
-			if (msg.toLowerCase().contains("error"))
+			if (msg.toLowerCase().contains("error")) {
 				severity = IMarker.SEVERITY_ERROR;
-			else if (msg.toLowerCase().contains("warning"))
+			} else if (msg.toLowerCase().contains("warning")) {
 				severity = IMarker.SEVERITY_WARNING;
+			}
 
 			// Find the resource and create a marker
 			for (Resource r : sourceResources) {
