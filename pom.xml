@@ -33,4 +33,5 @@
         <spotbugs.configdir>${project.parent.basedir}/osate2-ocarina.releng/src/main/resources/spotbugs</spotbugs.configdir>
     </properties>
  
+<version>2.6.0.vfinal</version>
 </project>
