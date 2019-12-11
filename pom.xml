@@ -7,11 +7,12 @@
 	<parent>
 		<groupId>org.osate</groupId>
 		<artifactId>osate2</artifactId>
-		<version>2.6.0-SNAPSHOT</version>
+		<version>2.6.1.vfinal</version>
 	</parent>
 
 	<groupId>org.osate</groupId>
 	<artifactId>ocarina.parent</artifactId>
+	<version>2.6.1.vfinal</version>
 	<packaging>pom</packaging>
 	<modules>
 		<module>org.osate.ocarina</module>
@@ -33,5 +34,4 @@
         <spotbugs.configdir>${project.parent.basedir}/osate2-ocarina.releng/src/main/resources/spotbugs</spotbugs.configdir>
     </properties>
  
-<version>2.6.1-SNAPSHOT</version>
 </project>
