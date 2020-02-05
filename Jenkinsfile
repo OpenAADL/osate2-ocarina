@@ -12,7 +12,7 @@ pipeline {
                     mavenLocalRepo: '.repository'
                 ) {
                     // Run the maven build
-                    sh 'mvn -T 3 clean install -Pfull -U -Dtycho.disableP2Mirrors=true -DfailIfNoTests=false -Dspotbugs=true'
+                    sh 'mvn -T 3 -s settings.xml clean install -Pfull -U -Dtycho.disableP2Mirrors=true -DfailIfNoTests=false -Dspotbugs=true'
                 }
             }
         }
