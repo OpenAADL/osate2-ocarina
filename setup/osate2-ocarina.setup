@@ -26,7 +26,7 @@
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="git:GitCloneTask"
-      id="git.clone.ocarina2-osate"
+      id="git.clone.osate2-ocarina"
       remoteURI="OpenAADL/osate2-ocarina"
       pushURI="">
     <annotation
@@ -44,7 +44,7 @@
         <value>remoteURI</value>
       </detail>
     </annotation>
-    <description>${scope.project.stream.name}</description>
+    <description>OSATE2 Ocarina Connector</description>
   </setupTask>
   <setupTask
       xsi:type="setup.targlets:TargletTask"
@@ -57,7 +57,7 @@
       <requirement
           name="*"/>
       <sourceLocator
-          rootFolder="${git.clone.ocarina2-ocarina.location}"/>
+          rootFolder="${git.clone.osate2-ocarina.location}"/>
     </targlet>
     <description></description>
   </setupTask>
