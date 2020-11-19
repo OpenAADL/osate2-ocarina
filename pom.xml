@@ -30,4 +30,8 @@
     </repository>
   </repositories>
 
+  <properties>
+    <spotbugs.configdir>${project.parent.basedir}/osate2-ocarina.releng/src/main/resources/spotbugs</spotbugs.configdir>
+  </properties>
+
 </project>
