@@ -34,6 +34,6 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source-directory: 'osate2-ocarina/org.osate.ocarina.repository/target'
-        destination-github-username: 'yoogx'
+        destination-github-username: 'openaadl'
         destination-repository-name: 'osate2-ocarina-update-site'
         user-email: hugues.jerome@gmail.com
