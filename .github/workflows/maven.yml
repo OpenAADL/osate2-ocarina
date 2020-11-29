@@ -36,4 +36,5 @@ jobs:
         source-directory: 'osate2-ocarina/org.osate.ocarina.repository/target'
         destination-github-username: 'openaadl'
         destination-repository-name: 'osate2-ocarina-update-site'
+        target-branch: main
         user-email: hugues.jerome@gmail.com
